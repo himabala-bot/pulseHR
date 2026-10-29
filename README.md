@@ -12,6 +12,13 @@ Redesigned with a **premium, minimal SaaS analytics aesthetic**:
 
 ---
 
+### Intermediate Executive Capabilities
+- **Feature 1: Interactive "What-If" Scenario Simulator**: Dynamic slider-driven turnover reduction & retention ROI modeling that calculates projected staff exits avoided, turnover cost savings, retention budget, and net financial ROI in real time.
+- **Feature 2: Click-to-Inspect "Employee 360° Dossier" Modal**: Clicking any row or the "Inspect" button in the talent roster opens an executive dossier featuring an interactive salary compa-ratio gauge against market midpoint, a 3-year performance review trajectory, 9-box succession quadrant, and retention diagnostics.
+- **Feature 3: Power BI-Style Chart Cross-Filtering**: Clicking any department bar or doughnut slice across charts cross-filters the entire dashboard to that department with dimmed non-selected visual states, an active cross-filter pill badge, and one-click reset.
+
+---
+
 ## Live Dashboard & Links
 
 - **GitHub Repository**: [https://github.com/himabala-bot/pulseHR](https://github.com/himabala-bot/pulseHR)
@@ -19,7 +26,7 @@ Redesigned with a **premium, minimal SaaS analytics aesthetic**:
 - **Local Dev Server**: [http://localhost:3456](http://localhost:3456)
 
 
-## 📁 Project Directory Structure
+## Project Directory Structure
 
 All project deliverables are stored in:
 `C:\Users\Himabala\.gemini\antigravity-ide\scratch\hr_analytics_powerbi\`
@@ -52,13 +59,13 @@ hr_analytics_powerbi/
 ├── build_pbip.py                   <-- Script that constructed the PBIP model
 ├── index.html                      <-- Interactive web dashboard application
 ├── index.css                       <-- Executive modern styling & theme engine
-├── app.js                          <-- Real-time DAX calculation & chart cross-filtering
+├── app.js                          <-- Real-time DAX calculation, cross-filtering, and dossier logic
 └── app_data.js                     <-- Pre-packaged relational data payload
 ```
 
 ---
 
-## 🖥️ How to Open in Power BI Desktop
+## How to Open in Power BI Desktop
 
 ### Method 1: Direct PBIP Launch (Fastest)
 1. Open Windows File Explorer and navigate to:
@@ -97,7 +104,7 @@ If you prefer building a standard `.pbix` file manually:
 
 ---
 
-## 🧩 Star Schema Architecture
+## Star Schema Architecture
 
 ```mermaid
 erDiagram
@@ -116,7 +123,7 @@ erDiagram
 
 ---
 
-## 📊 Core DAX Measures Included
+## Core DAX Measures Included
 
 | Metric | Business Definition | DAX Expression |
 | :--- | :--- | :--- |
@@ -131,14 +138,17 @@ erDiagram
 
 ---
 
-## 🎨 Design System & Visual Palette
+## Design System & Visual Palette
 
 | Token | Hex Code | Purpose |
 | :--- | :--- | :--- |
-| **Primary Navy** | `#0F172A` | Backgrounds, dark mode surfaces, primary typography |
-| **Accent Blue** | `#2563EB` | Primary bars, selections, line charts |
-| **Accent Teal** | `#0D9488` | Active headcount, positive metrics, high ratings |
-| **Accent Rose** | `#E11D48` | Terminations, attrition alerts, flight risks |
-| **Accent Amber** | `#D97706` | Overtime spend, moderate risks, targets |
-| **Accent Purple** | `#7C3AED` | 9-Box potential ratings, leadership pipeline |
-| **Card White** | `#FFFFFF` | Canvas cards with soft drop shadows |
+| **Page Neutral** | `#F1F1F1` | Calm warm-neutral backdrop |
+| **Shell Container** | `#FFFFFF` | Centered 26px rounded application container |
+| **Action Dark** | `#171717` | High-contrast interactive buttons, active pills |
+| **Lavender Pastel** | `#C9B8F5` | Primary KPI highlight, female cohort, selection accent |
+| **Green Pastel** | `#DCEFBF` | Healthy engagement, low flight risk, turnover savings |
+| **Blue Pastel** | `#DDEBFF` | Active headcount, male cohort, benchmark comparisons |
+| **Rose Pastel** | `#F8DCE4` | Departures, voluntary exits, retention alerts |
+| **Amber Pastel** | `#F7E8B4` | Compa-ratio midpoint, overtime spend, normal band |
+| **Purple Accent** | `#8A63D2` | Focused states, cross-filter badges, ROI metric callouts |
+
