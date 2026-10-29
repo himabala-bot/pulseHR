@@ -10,8 +10,14 @@ Redesigned with a **premium, minimal SaaS analytics aesthetic**:
 - **5-Column KPI Row**: High-density executive scorecard with comparison indicators.
 - **Interactive Two-Column Dashboard Grid**: 62% / 38% split with minimal Chart.js charts.
 
-
 ---
+
+## Live Dashboard & Links
+
+- **GitHub Repository**: [https://github.com/himabala-bot/pulseHR](https://github.com/himabala-bot/pulseHR)
+- **Live Interactive Dashboard**: [https://himabala-bot.github.io/pulseHR/](https://himabala-bot.github.io/pulseHR/)
+- **Local Dev Server**: [http://localhost:3456](http://localhost:3456)
+
 
 ## 📁 Project Directory Structure
 
