@@ -123,62 +123,143 @@ document.addEventListener("DOMContentLoaded", () => {
   const wsCurrentName = document.getElementById("current-workspace-name");
   const wsOptions = document.querySelectorAll(".workspace-option");
 
-  if (wsToggle && wsDropdown) {
+  function setWorkspaceDropdownState(isOpen) {
+    if (!wsDropdown || !wsWrapper) return;
+    if (isOpen) {
+      wsDropdown.classList.add("show");
+      wsWrapper.classList.add("open");
+      if (wsToggle) wsToggle.setAttribute("aria-expanded", "true");
+    } else {
+      wsDropdown.classList.remove("show");
+      wsWrapper.classList.remove("open");
+      if (wsToggle) wsToggle.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  if (wsToggle) {
     wsToggle.addEventListener("click", (e) => {
+      e.preventDefault();
       e.stopPropagation();
-      const isHidden = wsDropdown.style.display === "none";
-      if (isHidden) {
-        wsDropdown.style.display = "flex";
-        wsWrapper.classList.add("open");
-        wsToggle.setAttribute("aria-expanded", "true");
-      } else {
-        wsDropdown.style.display = "none";
-        wsWrapper.classList.remove("open");
-        wsToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-
-    wsOptions.forEach(opt => {
-      opt.addEventListener("click", () => {
-        const wsKey = opt.getAttribute("data-workspace");
-        state.workspace = wsKey;
-        const optTitle = opt.querySelector(".ws-opt-title");
-        if (wsCurrentName) wsCurrentName.textContent = optTitle ? optTitle.textContent : wsKey;
-        wsOptions.forEach(o => o.classList.remove("active"));
-        opt.classList.add("active");
-
-        wsDropdown.style.display = "none";
-        if (wsWrapper) wsWrapper.classList.remove("open");
-        wsToggle.setAttribute("aria-expanded", "false");
-
-        state.currentPage = 1;
-        applyFiltersAndRefresh();
-      });
-    });
-
-    document.addEventListener("click", (e) => {
-      if (wsWrapper && !wsWrapper.contains(e.target)) {
-        wsDropdown.style.display = "none";
-        wsWrapper.classList.remove("open");
-        wsToggle.setAttribute("aria-expanded", "false");
-      }
+      const isCurrentlyOpen = wsWrapper.classList.contains("open") || wsDropdown.classList.contains("show");
+      setWorkspaceDropdownState(!isCurrentlyOpen);
     });
   }
 
-  // ==========================================
-  // SUB-TABS QUICK FILTER (Item 2)
-  // All Units / Core Operations / Leadership
-  // ==========================================
-  const subTabs = document.querySelectorAll(".sub-tab");
-  subTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      subTabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-      state.unitFilter = tab.getAttribute("data-unit") || tab.textContent.trim();
+  wsOptions.forEach(opt => {
+    opt.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const wsKey = opt.getAttribute("data-workspace");
+      state.workspace = wsKey;
+      const optTitle = opt.querySelector(".ws-opt-title");
+      if (wsCurrentName) wsCurrentName.textContent = optTitle ? optTitle.textContent.trim() : wsKey;
+      wsOptions.forEach(o => o.classList.remove("active"));
+      opt.classList.add("active");
+      setWorkspaceDropdownState(false);
       state.currentPage = 1;
       applyFiltersAndRefresh();
     });
   });
+
+  document.addEventListener("click", (e) => {
+    if (wsWrapper && !wsWrapper.contains(e.target)) {
+      setWorkspaceDropdownState(false);
+    }
+  });
+
+  // ==========================================
+  // SUB-TABS & FOCUS SECTIONS (Item 2)
+  // Opens dedicated Core Operations & Leadership sections
+  // ==========================================
+  const subTabs = document.querySelectorAll(".sub-tab");
+  const secCoreOps = document.getElementById("section-core-operations");
+  const secLeadership = document.getElementById("section-leadership");
+  const closeCoreOpsBtn = document.getElementById("close-core-ops");
+  const closeLeadershipBtn = document.getElementById("close-leadership");
+
+  function activateUnitFilter(unitName) {
+    state.unitFilter = unitName;
+    subTabs.forEach(t => {
+      const u = t.getAttribute("data-unit") || t.textContent.trim();
+      if (u === unitName) {
+        t.classList.add("active");
+      } else {
+        t.classList.remove("active");
+      }
+    });
+
+    if (unitName === "Core Operations") {
+      if (secCoreOps) {
+        secCoreOps.classList.add("active");
+        if (typeof secCoreOps.scrollIntoView === "function") {
+          secCoreOps.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      }
+      if (secLeadership) secLeadership.classList.remove("active");
+    } else if (unitName === "Leadership") {
+      if (secLeadership) {
+        secLeadership.classList.add("active");
+        if (typeof secLeadership.scrollIntoView === "function") {
+          secLeadership.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      }
+      if (secCoreOps) secCoreOps.classList.remove("active");
+    } else {
+      // All Units
+      if (secCoreOps) secCoreOps.classList.remove("active");
+      if (secLeadership) secLeadership.classList.remove("active");
+    }
+
+    state.currentPage = 1;
+    applyFiltersAndRefresh();
+  }
+
+  subTabs.forEach(tab => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+      const unit = tab.getAttribute("data-unit") || tab.textContent.trim();
+      activateUnitFilter(unit);
+    });
+  });
+
+  if (closeCoreOpsBtn) {
+    closeCoreOpsBtn.addEventListener("click", () => activateUnitFilter("All Units"));
+  }
+  if (closeLeadershipBtn) {
+    closeLeadershipBtn.addEventListener("click", () => activateUnitFilter("All Units"));
+  }
+
+  // Department cards inside Core Operations focus section
+  if (secCoreOps) {
+    secCoreOps.querySelectorAll(".focus-dept-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const dept = card.getAttribute("data-dept");
+        if (dept) {
+          state.filters.department = dept;
+          if (slicerDept) slicerDept.value = dept;
+          syncCrossFilterUI();
+          state.currentPage = 1;
+          applyFiltersAndRefresh();
+        }
+      });
+    });
+  }
+
+  // Level cards inside Leadership focus section
+  if (secLeadership) {
+    secLeadership.querySelectorAll(".focus-dept-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const level = card.getAttribute("data-level");
+        if (level) {
+          state.filters.jobLevel = level;
+          if (slicerLevel) slicerLevel.value = level;
+          state.currentPage = 1;
+          applyFiltersAndRefresh();
+        } else if (card.id === "open-succession-grid-btn") {
+          switchTab("tab-performance");
+        }
+      });
+    });
+  }
 
   // ==========================================
   // CHART CROSS-FILTERING (Feature 3)
@@ -265,6 +346,9 @@ document.addEventListener("DOMContentLoaded", () => {
       state.unitFilter = "All Units";
       state.workspace = "Global Enterprise";
 
+      if (secCoreOps) secCoreOps.classList.remove("active");
+      if (secLeadership) secLeadership.classList.remove("active");
+
       if (wsCurrentName) wsCurrentName.textContent = "Global Enterprise";
       wsOptions.forEach((o, idx) => {
         if (idx === 0) o.classList.add("active");
@@ -283,6 +367,13 @@ document.addEventListener("DOMContentLoaded", () => {
       
       const searchInput = document.getElementById("employee-search");
       if (searchInput) searchInput.value = "";
+      const searchClearBtn = document.getElementById("search-clear-btn");
+      if (searchClearBtn) searchClearBtn.style.display = "none";
+      const searchDropdown = document.getElementById("search-results-dropdown");
+      if (searchDropdown) {
+        searchDropdown.classList.remove("show");
+        searchDropdown.innerHTML = "";
+      }
       const searchClear = document.getElementById("search-clear-btn");
       if (searchClear) searchClear.style.display = "none";
       const searchDrop = document.getElementById("search-results-dropdown");
@@ -1389,33 +1480,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ==========================================
   // GLOBAL SEARCH CONTROLLER (Item 1)
-  // Search action button, live dropdown suggestions, dossier drilldown, enter navigation
+  // Search action button, quick directory dropdown, live suggestions, dossier drilldown, enter navigation
   // ==========================================
   const searchInput = document.getElementById("employee-search");
   const searchActionBtn = document.getElementById("search-action-btn");
   const searchClearBtn = document.getElementById("search-clear-btn");
   const searchDropdown = document.getElementById("search-results-dropdown");
 
-  function renderSearchDropdown(query) {
+  function openSearchDirectoryDropdown(query) {
     if (!searchDropdown) return;
     const cleanQuery = (query || "").trim().toLowerCase();
-    if (!cleanQuery) {
-      searchDropdown.style.display = "none";
-      searchDropdown.innerHTML = "";
+
+    let matches = [];
+    let isDefaultList = false;
+
+    if (cleanQuery.length === 0) {
+      // Curated quick directory list when input is empty
+      matches = (data.employees || []).slice(0, 6);
+      isDefaultList = true;
       if (searchClearBtn) searchClearBtn.style.display = "none";
-      return;
+    } else {
+      matches = (data.employees || []).filter(e => {
+        const fullName = `${e.FirstName || ""} ${e.LastName || ""}`.toLowerCase();
+        const id = (e.EmployeeID || "").toLowerCase();
+        const role = (e.JobTitle || "").toLowerCase();
+        const dept = (e.DepartmentName || "").toLowerCase();
+        return fullName.includes(cleanQuery) || id.includes(cleanQuery) || role.includes(cleanQuery) || dept.includes(cleanQuery);
+      });
+      if (searchClearBtn) searchClearBtn.style.display = "flex";
     }
-
-    if (searchClearBtn) searchClearBtn.style.display = "flex";
-
-    // Match employees across the organization
-    const matches = (data.employees || []).filter(e => {
-      const fullName = `${e.FirstName || ""} ${e.LastName || ""}`.toLowerCase();
-      const id = (e.EmployeeID || "").toLowerCase();
-      const role = (e.JobTitle || "").toLowerCase();
-      const dept = (e.DepartmentName || "").toLowerCase();
-      return fullName.includes(cleanQuery) || id.includes(cleanQuery) || role.includes(cleanQuery) || dept.includes(cleanQuery);
-    });
 
     if (matches.length === 0) {
       searchDropdown.innerHTML = `
@@ -1423,19 +1516,23 @@ document.addEventListener("DOMContentLoaded", () => {
           No personnel found matching "${cleanQuery.replace(/"/g, '&quot;')}"
         </div>
       `;
-      searchDropdown.style.display = "flex";
+      searchDropdown.classList.add("show");
       return;
     }
+
+    const headerHtml = isDefaultList 
+      ? `<div class="dropdown-header" style="padding: 4px 6px 6px 6px;">Quick Directory (1,250 FTE)</div>`
+      : `<div class="dropdown-header" style="padding: 4px 6px 6px 6px;">Matching Personnel (${matches.length})</div>`;
 
     const topMatches = matches.slice(0, 6);
     const itemsHtml = topMatches.map(e => {
       const initials = `${(e.FirstName || "")[0] || ""}${(e.LastName || "")[0] || ""}`.toUpperCase() || "HR";
       const statusClass = (e.CurrentStatus || "active").toLowerCase();
       return `
-        <div class="search-res-item" data-empid="${e.EmployeeID}" tabindex="0" role="button">
+        <div class="search-res-item" data-empid="${e.EmployeeID}" tabindex="0" role="button" title="Click to view 360° employee dossier">
           <div class="search-res-left">
             <div class="search-res-avatar">${initials}</div>
-            <div style="overflow: hidden; max-width: 175px;">
+            <div style="overflow: hidden; max-width: 185px;">
               <div class="search-res-name">${e.FirstName} ${e.LastName} <span style="font-weight: 400; color: var(--text-tertiary); font-size: 10px;">${e.EmployeeID}</span></div>
               <div class="search-res-meta">${e.JobTitle} &middot; ${e.DepartmentName}</div>
             </div>
@@ -1447,25 +1544,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const footerHtml = `
       <div class="search-res-footer" id="search-view-all-btn" role="button" tabindex="0">
-        View all ${matches.length} matching in Talent Roster &rarr;
+        ${isDefaultList ? "Browse full Talent Roster (1,250 records) &rarr;" : `View all ${matches.length} matching in Talent Roster &rarr;`}
       </div>
     `;
 
-    searchDropdown.innerHTML = itemsHtml + footerHtml;
-    searchDropdown.style.display = "flex";
+    searchDropdown.innerHTML = headerHtml + itemsHtml + footerHtml;
+    searchDropdown.classList.add("show");
 
     // Attach click and enter listeners to suggestions to open Dossier
     searchDropdown.querySelectorAll(".search-res-item").forEach(item => {
       item.addEventListener("click", () => {
         const empId = item.getAttribute("data-empid");
         if (empId) openEmployeeDossier(empId);
-        searchDropdown.style.display = "none";
+        searchDropdown.classList.remove("show");
       });
       item.addEventListener("keydown", (e) => {
         if (e.key === "Enter") {
           const empId = item.getAttribute("data-empid");
           if (empId) openEmployeeDossier(empId);
-          searchDropdown.style.display = "none";
+          searchDropdown.classList.remove("show");
         }
       });
     });
@@ -1485,10 +1582,10 @@ document.addEventListener("DOMContentLoaded", () => {
     state.searchQuery = (searchInput ? searchInput.value.trim() : "");
     state.currentPage = 1;
     switchTab("tab-performance");
-    if (searchDropdown) searchDropdown.style.display = "none";
+    if (searchDropdown) searchDropdown.classList.remove("show");
     renderEmployeeTable();
     const tableSection = document.getElementById("employee-records-table");
-    if (tableSection) {
+    if (tableSection && typeof tableSection.scrollIntoView === "function") {
       tableSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
@@ -1499,7 +1596,7 @@ document.addEventListener("DOMContentLoaded", () => {
       state.searchQuery = q;
       state.currentPage = 1;
       renderEmployeeTable();
-      renderSearchDropdown(q);
+      openSearchDirectoryDropdown(q);
     });
 
     searchInput.addEventListener("keydown", e => {
@@ -1507,26 +1604,24 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         goToTalentRosterWithSearch();
       } else if (e.key === "Escape") {
-        if (searchDropdown) searchDropdown.style.display = "none";
+        if (searchDropdown) searchDropdown.classList.remove("show");
       }
     });
 
     searchInput.addEventListener("focus", () => {
-      if (searchInput.value.trim().length > 0) {
-        renderSearchDropdown(searchInput.value.trim());
-      }
+      openSearchDirectoryDropdown(searchInput.value.trim());
     });
   }
 
   if (searchActionBtn) {
     searchActionBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      if (searchInput) {
-        if (searchInput.value.trim().length > 0) {
-          goToTalentRosterWithSearch();
-        } else {
-          searchInput.focus();
-        }
+      e.preventDefault();
+      if (searchInput && searchInput.value.trim().length > 0) {
+        goToTalentRosterWithSearch();
+      } else {
+        openSearchDirectoryDropdown("");
+        if (searchInput) searchInput.focus();
       }
     });
   }
@@ -1541,14 +1636,14 @@ document.addEventListener("DOMContentLoaded", () => {
       state.searchQuery = "";
       state.currentPage = 1;
       renderEmployeeTable();
-      renderSearchDropdown("");
+      openSearchDirectoryDropdown("");
     });
   }
 
   document.addEventListener("click", (e) => {
-    const searchWrapper = document.querySelector(".header-search");
+    const searchWrapper = document.getElementById("header-search-wrap") || document.querySelector(".header-search");
     if (searchWrapper && !searchWrapper.contains(e.target)) {
-      if (searchDropdown) searchDropdown.style.display = "none";
+      if (searchDropdown) searchDropdown.classList.remove("show");
     }
   });
 

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css?v=20261029_1800">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -34,7 +34,7 @@
 
       <!-- 2. Workspace Selector with Interactive Dropdown -->
       <div class="workspace-wrapper" id="workspace-wrapper">
-        <button class="workspace-pill" id="workspace-toggle" aria-expanded="false" title="Switch Enterprise Workspace">
+        <button class="workspace-pill" id="workspace-toggle" type="button" aria-expanded="false" title="Switch Enterprise Workspace">
           <div class="workspace-meta">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
@@ -47,7 +47,7 @@
           </svg>
         </button>
 
-        <div class="workspace-dropdown" id="workspace-dropdown" style="display: none;">
+        <div class="workspace-dropdown" id="workspace-dropdown">
           <div class="dropdown-header">Workspaces</div>
           <button class="workspace-option active" data-workspace="Global Enterprise">
             <div class="ws-opt-text">
@@ -186,9 +186,9 @@
       <div class="controls-bar">
         <!-- Subheader Quick Filter Tabs -->
         <div class="sub-tabs">
-          <button class="sub-tab active" data-unit="All Units">All Units</button>
-          <button class="sub-tab" data-unit="Core Operations">Core Operations</button>
-          <button class="sub-tab" data-unit="Leadership">Leadership</button>
+          <button class="sub-tab active" data-unit="All Units" type="button">All Units</button>
+          <button class="sub-tab" data-unit="Core Operations" type="button">Core Operations</button>
+          <button class="sub-tab" data-unit="Leadership" type="button">Leadership</button>
         </div>
 
         <!-- Slicers Row -->
@@ -250,6 +250,118 @@
 
       <!-- Dashboard Scrollable Container -->
       <div class="canvas-container">
+
+        <!-- Focus Section: Core Operations (Opens on sub-tab click) -->
+        <section class="focus-section" id="section-core-operations">
+          <div class="focus-sec-header">
+            <div class="focus-sec-title-wrap">
+              <h2 class="focus-sec-title">Core Operations Intelligence</h2>
+              <span class="focus-sec-badge">Engineering &middot; Product &middot; Sales &middot; Support</span>
+            </div>
+            <button class="focus-sec-close" id="close-core-ops" type="button" title="Return to All Units">
+              <span>Return to All Units</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+
+          <div class="focus-kpis-strip">
+            <div class="focus-kpi-item">
+              <span class="focus-kpi-label">Core Headcount</span>
+              <span class="focus-kpi-val" id="core-headcount-val">920 FTE</span>
+            </div>
+            <div class="focus-kpi-item">
+              <span class="focus-kpi-label">Annual Payroll</span>
+              <span class="focus-kpi-val" id="core-payroll-val">$86.4M</span>
+            </div>
+            <div class="focus-kpi-item">
+              <span class="focus-kpi-label">Retention Rate</span>
+              <span class="focus-kpi-val" id="core-retention-val">91.4%</span>
+            </div>
+            <div class="focus-kpi-item">
+              <span class="focus-kpi-label">Avg Compa-Ratio</span>
+              <span class="focus-kpi-val" id="core-compa-val">1.02</span>
+            </div>
+          </div>
+
+          <div class="focus-cards-grid">
+            <div class="focus-dept-card" data-dept="Engineering">
+              <div class="focus-dept-name">Engineering</div>
+              <div class="focus-dept-meta"><span>Headcount: 360</span><span>Turnover: 8.2%</span></div>
+              <div class="focus-dept-meta"><span>Avg Salary: $118,500</span><span style="color: var(--pastel-purple); font-weight: 600;">Filter View &rarr;</span></div>
+            </div>
+            <div class="focus-dept-card" data-dept="Product & Design">
+              <div class="focus-dept-name">Product &amp; Design</div>
+              <div class="focus-dept-meta"><span>Headcount: 150</span><span>Turnover: 7.5%</span></div>
+              <div class="focus-dept-meta"><span>Avg Salary: $112,000</span><span style="color: var(--pastel-purple); font-weight: 600;">Filter View &rarr;</span></div>
+            </div>
+            <div class="focus-dept-card" data-dept="Sales">
+              <div class="focus-dept-name">Sales</div>
+              <div class="focus-dept-meta"><span>Headcount: 240</span><span>Turnover: 9.8%</span></div>
+              <div class="focus-dept-meta"><span>Avg Salary: $94,200</span><span style="color: var(--pastel-purple); font-weight: 600;">Filter View &rarr;</span></div>
+            </div>
+            <div class="focus-dept-card" data-dept="Customer Support">
+              <div class="focus-dept-name">Customer Support</div>
+              <div class="focus-dept-meta"><span>Headcount: 170</span><span>Turnover: 9.1%</span></div>
+              <div class="focus-dept-meta"><span>Avg Salary: $68,400</span><span style="color: var(--pastel-purple); font-weight: 600;">Filter View &rarr;</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Focus Section: Leadership & Succession (Opens on sub-tab click) -->
+        <section class="focus-section" id="section-leadership">
+          <div class="focus-sec-header">
+            <div class="focus-sec-title-wrap">
+              <h2 class="focus-sec-title">Leadership &amp; Succession Bench</h2>
+              <span class="focus-sec-badge">Executive &middot; Lead / Manager &middot; Senior</span>
+            </div>
+            <button class="focus-sec-close" id="close-leadership" type="button" title="Return to All Units">
+              <span>Return to All Units</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+
+          <div class="focus-kpis-strip">
+            <div class="focus-kpi-item">
+              <span class="focus-kpi-label">Leadership Cohort</span>
+              <span class="focus-kpi-val" id="lead-headcount-val">186 FTE</span>
+            </div>
+            <div class="focus-kpi-item">
+              <span class="focus-kpi-label">Bench Strength</span>
+              <span class="focus-kpi-val" id="lead-bench-val">84.2%</span>
+            </div>
+            <div class="focus-kpi-item">
+              <span class="focus-kpi-label">Avg Compa-Ratio</span>
+              <span class="focus-kpi-val" id="lead-compa-val">1.08</span>
+            </div>
+            <div class="focus-kpi-item">
+              <span class="focus-kpi-label">Executive Retention</span>
+              <span class="focus-kpi-val" id="lead-retention-val">96.8%</span>
+            </div>
+          </div>
+
+          <div class="focus-cards-grid">
+            <div class="focus-dept-card" data-level="Executive">
+              <div class="focus-dept-name">Executive Tier</div>
+              <div class="focus-dept-meta"><span>Headcount: 34</span><span>Retention: 98.2%</span></div>
+              <div class="focus-dept-meta"><span>Avg Salary: $186,000</span><span style="color: var(--pastel-purple); font-weight: 600;">Filter View &rarr;</span></div>
+            </div>
+            <div class="focus-dept-card" data-level="Lead/Manager">
+              <div class="focus-dept-name">Lead / Manager Tier</div>
+              <div class="focus-dept-meta"><span>Headcount: 82</span><span>Retention: 95.4%</span></div>
+              <div class="focus-dept-meta"><span>Avg Salary: $128,400</span><span style="color: var(--pastel-purple); font-weight: 600;">Filter View &rarr;</span></div>
+            </div>
+            <div class="focus-dept-card" data-level="Senior">
+              <div class="focus-dept-name">Senior Specialist Tier</div>
+              <div class="focus-dept-meta"><span>Headcount: 70</span><span>Retention: 94.1%</span></div>
+              <div class="focus-dept-meta"><span>Avg Salary: $114,800</span><span style="color: var(--pastel-purple); font-weight: 600;">Filter View &rarr;</span></div>
+            </div>
+            <div class="focus-dept-card" id="open-succession-grid-btn">
+              <div class="focus-dept-name">9-Box Succession Grid</div>
+              <div class="focus-dept-meta"><span>High Potential: 28</span><span>Flight Risk: 2</span></div>
+              <div class="focus-dept-meta"><span>Status: Ready</span><span style="color: var(--pastel-purple); font-weight: 600;">Open Matrix &rarr;</span></div>
+            </div>
+          </div>
+        </section>
 
         <!-- ========================================== -->
         <!-- TAB 1: WORKFORCE OVERVIEW -->
@@ -1100,6 +1212,6 @@
 
   <!-- Scripts -->
   <script src="app_data.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=20261029_1800"></script>
 </body>
 </html>
