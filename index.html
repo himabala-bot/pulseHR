@@ -32,18 +32,45 @@
         </div>
       </div>
 
-      <!-- 2. Workspace Selector -->
-      <div class="workspace-pill">
-        <div class="workspace-meta">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+      <!-- 2. Workspace Selector with Interactive Dropdown -->
+      <div class="workspace-wrapper" id="workspace-wrapper">
+        <button class="workspace-pill" id="workspace-toggle" aria-expanded="false" title="Switch Enterprise Workspace">
+          <div class="workspace-meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span id="current-workspace-name">Global Enterprise</span>
+          </div>
+          <svg class="workspace-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
-          <span>Global Enterprise</span>
+        </button>
+
+        <div class="workspace-dropdown" id="workspace-dropdown" style="display: none;">
+          <div class="dropdown-header">Workspaces</div>
+          <button class="workspace-option active" data-workspace="Global Enterprise">
+            <div class="ws-opt-text">
+              <span class="ws-opt-title">Global Enterprise</span>
+              <span class="ws-opt-desc">All operating regions (1,250 FTE)</span>
+            </div>
+            <svg class="ws-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <button class="workspace-option" data-workspace="North America">
+            <div class="ws-opt-text">
+              <span class="ws-opt-title">North America Hubs</span>
+              <span class="ws-opt-desc">NYC, SF, Austin, Chicago, Seattle</span>
+            </div>
+            <svg class="ws-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <button class="workspace-option" data-workspace="EMEA">
+            <div class="ws-opt-text">
+              <span class="ws-opt-title">EMEA Operations</span>
+              <span class="ws-opt-desc">London HQ &amp; regional hubs</span>
+            </div>
+            <svg class="ws-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
         </div>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
       </div>
 
       <!-- 3. Section Label -->
@@ -67,7 +94,7 @@
             <circle cx="9" cy="7" r="4"></circle>
             <line x1="23" y1="11" x2="17" y2="11"></line>
           </svg>
-          <span class="nav-label">Attrition & Retention</span>
+          <span class="nav-label">Attrition &amp; Retention</span>
         </button>
 
         <button class="nav-item" data-tab="tab-compensation">
@@ -75,7 +102,7 @@
             <line x1="12" y1="1" x2="12" y2="23"></line>
             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
           </svg>
-          <span class="nav-label">Compensation & Equity</span>
+          <span class="nav-label">Compensation &amp; Equity</span>
         </button>
 
         <button class="nav-item" data-tab="tab-performance">
@@ -84,48 +111,14 @@
             <circle cx="12" cy="12" r="6"></circle>
             <circle cx="12" cy="12" r="2"></circle>
           </svg>
-          <span class="nav-label">Talent & 9-Box Matrix</span>
+          <span class="nav-label">Talent &amp; 9-Box Matrix</span>
         </button>
       </nav>
 
       <!-- 5. Flexible Spacer -->
       <div class="sidebar-spacer"></div>
 
-      <!-- 6. Assistance Card (Pale Green) -->
-      <div class="assistance-card">
-        <div class="assist-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-          </svg>
-          <span>Executive Digest</span>
-        </div>
-        <p class="assist-text">Voluntary turnover dropped 3.1% this cycle. Customer Support retention risks mitigated.</p>
-        <button class="assist-btn" id="open-schema-modal">View Data Schema</button>
-      </div>
-
-      <!-- 7. Secondary Nav Links -->
-      <div class="secondary-nav">
-        <button class="sec-nav-btn" id="open-pbip-modal">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-            <line x1="16" y1="13" x2="8" y2="13"></line>
-            <line x1="16" y1="17" x2="8" y2="17"></line>
-            <polyline points="10 9 9 9 8 9"></polyline>
-          </svg>
-          <span>Power BI Desktop (.pbip)</span>
-        </button>
-        <button class="sec-nav-btn" id="open-dax-modal">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="4 7 4 4 20 4 20 7"></polyline>
-            <line x1="9" y1="20" x2="15" y2="20"></line>
-            <line x1="12" y1="4" x2="12" y2="20"></line>
-          </svg>
-          <span>DAX Library (35+ Measures)</span>
-        </button>
-      </div>
-
-      <!-- 8. User Profile -->
+      <!-- 6. User Profile -->
       <div class="user-profile">
         <div class="user-avatar">HB</div>
         <div class="user-details">
@@ -153,13 +146,20 @@
         </div>
 
         <div class="header-right">
-          <!-- Search input -->
-          <div class="header-search">
-            <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
+          <!-- Search input with action button and live dropdown -->
+          <div class="header-search" id="header-search-wrap">
+            <button class="search-action-btn" id="search-action-btn" title="Search employee directory">
+              <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
             <input type="text" id="employee-search" placeholder="Search employee..." autocomplete="off">
+            <button class="search-clear-btn" id="search-clear-btn" title="Clear search" style="display: none;">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <!-- Live Search Autocomplete Dropdown -->
+            <div class="search-results-dropdown" id="search-results-dropdown" style="display: none;"></div>
           </div>
 
           <!-- Notification Icon Button -->
@@ -186,9 +186,9 @@
       <div class="controls-bar">
         <!-- Subheader Quick Filter Tabs -->
         <div class="sub-tabs">
-          <button class="sub-tab active">All Units</button>
-          <button class="sub-tab">Core Operations</button>
-          <button class="sub-tab">Leadership</button>
+          <button class="sub-tab active" data-unit="All Units">All Units</button>
+          <button class="sub-tab" data-unit="Core Operations">Core Operations</button>
+          <button class="sub-tab" data-unit="Leadership">Leadership</button>
         </div>
 
         <!-- Slicers Row -->
@@ -915,69 +915,6 @@
 
       </div>
     </main>
-  </div>
-
-  <!-- Modal 1: Open in Power BI Desktop Guide -->
-  <div class="modal-overlay" id="modal-pbip">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3 class="modal-title">Open in Power BI Desktop</h3>
-        <button class="modal-close" data-close="modal-pbip">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-      <p class="modal-desc">This project includes a native <strong>Power BI Project (.pbip)</strong> format with semantic models, DAX measures, and star-schema relationships ready for desktop editing.</p>
-      
-      <div class="modal-section">
-        <div class="modal-label">Direct Launch:</div>
-        <pre class="code-box">C:\Users\Himabala\.gemini\antigravity-ide\scratch\hr_analytics_powerbi\HR_Analytics.pbip</pre>
-        <p class="modal-footnote">Double-clicking this file directly launches Power BI Desktop with the complete semantic model loaded.</p>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn-dark" data-close="modal-pbip">Close Guide</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 2: DAX Measures Viewer -->
-  <div class="modal-overlay" id="modal-dax">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3 class="modal-title">DAX Measures Library (35+ Formulas)</h3>
-        <button class="modal-close" data-close="modal-dax">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-      <p class="modal-desc">Production-grade DAX measures organized into 5 folders: Workforce, Attrition, Compensation, Performance, and Time Intelligence.</p>
-      
-      <pre class="code-box">
-// Core Headcount
-Active Headcount = CALCULATE(COUNTROWS('Dim_Employee'), 'Dim_Employee'[CurrentStatus] = "Active")
-
-// Attrition Rate
-Attrition Rate % = DIVIDE(COUNTROWS('Fact_Attrition'), COUNTROWS('Dim_Employee'), 0)
-
-// Gender Pay Equity Ratio
-Gender Pay Equity Ratio = 
-DIVIDE(
-    CALCULATE(AVERAGE('Dim_Employee'[CurrentBaseSalary]), 'Dim_Employee'[Gender] = "Female"),
-    CALCULATE(AVERAGE('Dim_Employee'[CurrentBaseSalary]), 'Dim_Employee'[Gender] = "Male"),
-    1.0
-)
-
-// Compa-Ratio (Salary Midpoint Baseline)
-Avg Compa Ratio = 
-CALCULATE(
-    AVERAGEX('Dim_Employee', DIVIDE('Dim_Employee'[CurrentBaseSalary], RELATED('Dim_JobRole'[MidpointSalary]), 1.0)),
-    'Dim_Employee'[CurrentStatus] = "Active"
-)
-      </pre>
-
-      <div class="modal-footer">
-        <button class="btn-dark" data-close="modal-dax">Close Library</button>
-      </div>
-    </div>
   </div>
 
   <!-- Modal 3: Data Model Schema -->

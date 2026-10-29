@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // State Management
   const state = {
     activeTab: "tab-workforce",
+    workspace: "Global Enterprise",
+    unitFilter: "All Units",
     filters: {
       department: "All",
       jobLevel: "All",
@@ -59,33 +61,47 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Tab Navigation
+  function switchTab(targetTab) {
+    tabButtons.forEach(b => {
+      if (b.getAttribute("data-tab") === targetTab) {
+        b.classList.add("active");
+      } else {
+        b.classList.remove("active");
+      }
+    });
+    tabPages.forEach(p => {
+      if (p.id === targetTab) {
+        p.classList.add("active");
+      } else {
+        p.classList.remove("active");
+      }
+    });
+    state.activeTab = targetTab;
+
+    if (pageMetadata[targetTab]) {
+      pageTitle.textContent = pageMetadata[targetTab].title;
+      pageDesc.textContent = pageMetadata[targetTab].desc;
+    }
+
+    renderCurrentTabPage();
+  }
+
   tabButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       const targetTab = btn.getAttribute("data-tab");
-      tabButtons.forEach(b => b.classList.remove("active"));
-      tabPages.forEach(p => p.classList.remove("active"));
-
-      btn.classList.add("active");
-      const targetPage = document.getElementById(targetTab);
-      if (targetPage) targetPage.classList.add("active");
-      state.activeTab = targetTab;
-
-      if (pageMetadata[targetTab]) {
-        pageTitle.textContent = pageMetadata[targetTab].title;
-        pageDesc.textContent = pageMetadata[targetTab].desc;
-      }
-
-      renderCurrentTabPage();
+      if (targetTab) switchTab(targetTab);
     });
   });
 
   // Modal Setup
   function setupModal(triggerId, modalId) {
-    const trigger = document.getElementById(triggerId);
+    const trigger = triggerId ? document.getElementById(triggerId) : null;
     const modal = document.getElementById(modalId);
-    if (!trigger || !modal) return;
+    if (!modal) return;
 
-    trigger.addEventListener("click", () => modal.classList.add("active"));
+    if (trigger) {
+      trigger.addEventListener("click", () => modal.classList.add("active"));
+    }
     modal.querySelectorAll("[data-close]").forEach(btn => {
       btn.addEventListener("click", () => modal.classList.remove("active"));
     });
@@ -94,10 +110,75 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  setupModal("open-pbip-modal", "modal-pbip");
-  setupModal("open-dax-modal", "modal-dax");
   setupModal("open-schema-modal", "modal-schema");
   setupModal(null, "modal-employee-dossier");
+
+  // ==========================================
+  // WORKSPACE SELECTOR DROPDOWN (Item 3)
+  // Interactive region/hub switcher
+  // ==========================================
+  const wsWrapper = document.getElementById("workspace-wrapper");
+  const wsToggle = document.getElementById("workspace-toggle");
+  const wsDropdown = document.getElementById("workspace-dropdown");
+  const wsCurrentName = document.getElementById("current-workspace-name");
+  const wsOptions = document.querySelectorAll(".workspace-option");
+
+  if (wsToggle && wsDropdown) {
+    wsToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isHidden = wsDropdown.style.display === "none";
+      if (isHidden) {
+        wsDropdown.style.display = "flex";
+        wsWrapper.classList.add("open");
+        wsToggle.setAttribute("aria-expanded", "true");
+      } else {
+        wsDropdown.style.display = "none";
+        wsWrapper.classList.remove("open");
+        wsToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    wsOptions.forEach(opt => {
+      opt.addEventListener("click", () => {
+        const wsKey = opt.getAttribute("data-workspace");
+        state.workspace = wsKey;
+        const optTitle = opt.querySelector(".ws-opt-title");
+        if (wsCurrentName) wsCurrentName.textContent = optTitle ? optTitle.textContent : wsKey;
+        wsOptions.forEach(o => o.classList.remove("active"));
+        opt.classList.add("active");
+
+        wsDropdown.style.display = "none";
+        if (wsWrapper) wsWrapper.classList.remove("open");
+        wsToggle.setAttribute("aria-expanded", "false");
+
+        state.currentPage = 1;
+        applyFiltersAndRefresh();
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (wsWrapper && !wsWrapper.contains(e.target)) {
+        wsDropdown.style.display = "none";
+        wsWrapper.classList.remove("open");
+        wsToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  // ==========================================
+  // SUB-TABS QUICK FILTER (Item 2)
+  // All Units / Core Operations / Leadership
+  // ==========================================
+  const subTabs = document.querySelectorAll(".sub-tab");
+  subTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      subTabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      state.unitFilter = tab.getAttribute("data-unit") || tab.textContent.trim();
+      state.currentPage = 1;
+      applyFiltersAndRefresh();
+    });
+  });
 
   // ==========================================
   // CHART CROSS-FILTERING (Feature 3)
@@ -181,6 +262,19 @@ document.addEventListener("DOMContentLoaded", () => {
       state.filters.workLocation = "All";
       state.nineBoxFilter = null;
       state.searchQuery = "";
+      state.unitFilter = "All Units";
+      state.workspace = "Global Enterprise";
+
+      if (wsCurrentName) wsCurrentName.textContent = "Global Enterprise";
+      wsOptions.forEach((o, idx) => {
+        if (idx === 0) o.classList.add("active");
+        else o.classList.remove("active");
+      });
+
+      subTabs.forEach((t, idx) => {
+        if (idx === 0) t.classList.add("active");
+        else t.classList.remove("active");
+      });
 
       syncCrossFilterUI();
       if (slicerLevel) slicerLevel.value = "All";
@@ -189,6 +283,10 @@ document.addEventListener("DOMContentLoaded", () => {
       
       const searchInput = document.getElementById("employee-search");
       if (searchInput) searchInput.value = "";
+      const searchClear = document.getElementById("search-clear-btn");
+      if (searchClear) searchClear.style.display = "none";
+      const searchDrop = document.getElementById("search-results-dropdown");
+      if (searchDrop) searchDrop.style.display = "none";
 
       document.querySelectorAll(".matrix-cell").forEach(c => c.style.outline = "none");
       state.currentPage = 1;
@@ -199,6 +297,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // Filter Data Core Function
   function getFilteredEmployees() {
     return data.employees.filter(emp => {
+      // 1. Workspace filter
+      if (state.workspace === "North America") {
+        const naCities = ["New York, NY", "San Francisco, CA", "Austin, TX", "Chicago, IL", "Seattle, WA"];
+        if (!naCities.includes(emp.OfficeCity)) return false;
+      } else if (state.workspace === "EMEA") {
+        if (emp.OfficeCity !== "London, UK") return false;
+      }
+
+      // 2. Unit Filter (Core Operations vs Leadership vs All Units)
+      if (state.unitFilter === "Core Operations") {
+        const coreDepts = ["Engineering", "Product & Design", "Sales", "Customer Support"];
+        if (!coreDepts.includes(emp.DepartmentName)) return false;
+      } else if (state.unitFilter === "Leadership") {
+        const leadershipLevels = ["Lead/Manager", "Executive", "Senior"];
+        if (!leadershipLevels.includes(emp.JobLevel)) return false;
+      }
+
+      // 3. Slicer filters
       if (state.filters.department !== "All" && emp.DepartmentName !== state.filters.department) return false;
       if (state.filters.jobLevel !== "All" && emp.JobLevel !== state.filters.jobLevel) return false;
       if (state.filters.gender !== "All" && emp.Gender !== state.filters.gender) return false;
@@ -1271,15 +1387,170 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Search & Pagination Listeners
-  const searchEl = document.getElementById("employee-search");
-  if (searchEl) {
-    searchEl.addEventListener("input", e => {
-      state.searchQuery = e.target.value.trim();
+  // ==========================================
+  // GLOBAL SEARCH CONTROLLER (Item 1)
+  // Search action button, live dropdown suggestions, dossier drilldown, enter navigation
+  // ==========================================
+  const searchInput = document.getElementById("employee-search");
+  const searchActionBtn = document.getElementById("search-action-btn");
+  const searchClearBtn = document.getElementById("search-clear-btn");
+  const searchDropdown = document.getElementById("search-results-dropdown");
+
+  function renderSearchDropdown(query) {
+    if (!searchDropdown) return;
+    const cleanQuery = (query || "").trim().toLowerCase();
+    if (!cleanQuery) {
+      searchDropdown.style.display = "none";
+      searchDropdown.innerHTML = "";
+      if (searchClearBtn) searchClearBtn.style.display = "none";
+      return;
+    }
+
+    if (searchClearBtn) searchClearBtn.style.display = "flex";
+
+    // Match employees across the organization
+    const matches = (data.employees || []).filter(e => {
+      const fullName = `${e.FirstName || ""} ${e.LastName || ""}`.toLowerCase();
+      const id = (e.EmployeeID || "").toLowerCase();
+      const role = (e.JobTitle || "").toLowerCase();
+      const dept = (e.DepartmentName || "").toLowerCase();
+      return fullName.includes(cleanQuery) || id.includes(cleanQuery) || role.includes(cleanQuery) || dept.includes(cleanQuery);
+    });
+
+    if (matches.length === 0) {
+      searchDropdown.innerHTML = `
+        <div class="search-res-empty">
+          No personnel found matching "${cleanQuery.replace(/"/g, '&quot;')}"
+        </div>
+      `;
+      searchDropdown.style.display = "flex";
+      return;
+    }
+
+    const topMatches = matches.slice(0, 6);
+    const itemsHtml = topMatches.map(e => {
+      const initials = `${(e.FirstName || "")[0] || ""}${(e.LastName || "")[0] || ""}`.toUpperCase() || "HR";
+      const statusClass = (e.CurrentStatus || "active").toLowerCase();
+      return `
+        <div class="search-res-item" data-empid="${e.EmployeeID}" tabindex="0" role="button">
+          <div class="search-res-left">
+            <div class="search-res-avatar">${initials}</div>
+            <div style="overflow: hidden; max-width: 175px;">
+              <div class="search-res-name">${e.FirstName} ${e.LastName} <span style="font-weight: 400; color: var(--text-tertiary); font-size: 10px;">${e.EmployeeID}</span></div>
+              <div class="search-res-meta">${e.JobTitle} &middot; ${e.DepartmentName}</div>
+            </div>
+          </div>
+          <span class="status-badge ${statusClass}" style="font-size: 9px; padding: 1px 6px;">${e.CurrentStatus}</span>
+        </div>
+      `;
+    }).join("");
+
+    const footerHtml = `
+      <div class="search-res-footer" id="search-view-all-btn" role="button" tabindex="0">
+        View all ${matches.length} matching in Talent Roster &rarr;
+      </div>
+    `;
+
+    searchDropdown.innerHTML = itemsHtml + footerHtml;
+    searchDropdown.style.display = "flex";
+
+    // Attach click and enter listeners to suggestions to open Dossier
+    searchDropdown.querySelectorAll(".search-res-item").forEach(item => {
+      item.addEventListener("click", () => {
+        const empId = item.getAttribute("data-empid");
+        if (empId) openEmployeeDossier(empId);
+        searchDropdown.style.display = "none";
+      });
+      item.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          const empId = item.getAttribute("data-empid");
+          if (empId) openEmployeeDossier(empId);
+          searchDropdown.style.display = "none";
+        }
+      });
+    });
+
+    const footerBtn = searchDropdown.querySelector("#search-view-all-btn");
+    if (footerBtn) {
+      footerBtn.addEventListener("click", () => {
+        goToTalentRosterWithSearch();
+      });
+      footerBtn.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") goToTalentRosterWithSearch();
+      });
+    }
+  }
+
+  function goToTalentRosterWithSearch() {
+    state.searchQuery = (searchInput ? searchInput.value.trim() : "");
+    state.currentPage = 1;
+    switchTab("tab-performance");
+    if (searchDropdown) searchDropdown.style.display = "none";
+    renderEmployeeTable();
+    const tableSection = document.getElementById("employee-records-table");
+    if (tableSection) {
+      tableSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", e => {
+      const q = e.target.value.trim();
+      state.searchQuery = q;
       state.currentPage = 1;
       renderEmployeeTable();
+      renderSearchDropdown(q);
+    });
+
+    searchInput.addEventListener("keydown", e => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        goToTalentRosterWithSearch();
+      } else if (e.key === "Escape") {
+        if (searchDropdown) searchDropdown.style.display = "none";
+      }
+    });
+
+    searchInput.addEventListener("focus", () => {
+      if (searchInput.value.trim().length > 0) {
+        renderSearchDropdown(searchInput.value.trim());
+      }
     });
   }
+
+  if (searchActionBtn) {
+    searchActionBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (searchInput) {
+        if (searchInput.value.trim().length > 0) {
+          goToTalentRosterWithSearch();
+        } else {
+          searchInput.focus();
+        }
+      }
+    });
+  }
+
+  if (searchClearBtn) {
+    searchClearBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (searchInput) {
+        searchInput.value = "";
+        searchInput.focus();
+      }
+      state.searchQuery = "";
+      state.currentPage = 1;
+      renderEmployeeTable();
+      renderSearchDropdown("");
+    });
+  }
+
+  document.addEventListener("click", (e) => {
+    const searchWrapper = document.querySelector(".header-search");
+    if (searchWrapper && !searchWrapper.contains(e.target)) {
+      if (searchDropdown) searchDropdown.style.display = "none";
+    }
+  });
 
   const prevBtn = document.getElementById("table-prev-btn");
   if (prevBtn) {
