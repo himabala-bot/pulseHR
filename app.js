@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // State Management
   const state = {
     activeTab: "tab-workforce",
-    activeUnit: "all",
     filters: {
       department: "All",
       jobLevel: "All",
@@ -98,35 +97,53 @@ document.addEventListener("DOMContentLoaded", () => {
   setupModal("open-pbip-modal", "modal-pbip");
   setupModal("open-dax-modal", "modal-dax");
   setupModal("open-schema-modal", "modal-schema");
-  setupModal("open-simulator-btn", "modal-simulator");
+  setupModal(null, "modal-employee-dossier");
 
-  // Dossier modal close handling
-  const dossierModal = document.getElementById("modal-employee-dossier");
-  if (dossierModal) {
-    dossierModal.querySelectorAll("[data-close]").forEach(btn => {
-      btn.addEventListener("click", () => dossierModal.classList.remove("active"));
-    });
-    dossierModal.addEventListener("click", e => {
-      if (e.target === dossierModal) dossierModal.classList.remove("active");
-    });
+  // ==========================================
+  // CHART CROSS-FILTERING (Feature 3)
+  // Power BI-style interactive categorical cross-filtering
+  // ==========================================
+  function syncCrossFilterUI() {
+    const isFiltered = state.filters.department !== "All";
+    if (slicerDept) slicerDept.value = state.filters.department;
+    const indicator = document.getElementById("crossfilter-indicator");
+    const deptNameEl = document.getElementById("crossfilter-dept-name");
+    if (indicator && deptNameEl) {
+      if (isFiltered) {
+        deptNameEl.textContent = state.filters.department;
+        indicator.style.display = "inline-flex";
+      } else {
+        indicator.style.display = "none";
+      }
+    }
   }
 
-  // Sub-tabs Quick Filter Listeners
-  const subTabs = document.querySelectorAll(".sub-tab");
-  subTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      subTabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-      state.activeUnit = tab.getAttribute("data-unit") || "all";
+  function toggleDepartmentCrossFilter(deptName) {
+    if (state.filters.department === deptName) {
+      state.filters.department = "All";
+    } else {
+      state.filters.department = deptName;
+    }
+    syncCrossFilterUI();
+    state.currentPage = 1;
+    applyFiltersAndRefresh();
+  }
+
+  const crossClearBtn = document.getElementById("crossfilter-clear-btn");
+  if (crossClearBtn) {
+    crossClearBtn.addEventListener("click", () => {
+      state.filters.department = "All";
+      syncCrossFilterUI();
       state.currentPage = 1;
       applyFiltersAndRefresh();
     });
-  });
+  }
 
   // Slicer Event Listeners
   if (slicerDept) {
     slicerDept.addEventListener("change", e => {
       state.filters.department = e.target.value;
+      syncCrossFilterUI();
       state.currentPage = 1;
       applyFiltersAndRefresh();
     });
@@ -162,18 +179,14 @@ document.addEventListener("DOMContentLoaded", () => {
       state.filters.jobLevel = "All";
       state.filters.gender = "All";
       state.filters.workLocation = "All";
-      state.activeUnit = "all";
       state.nineBoxFilter = null;
       state.searchQuery = "";
 
-      if (slicerDept) slicerDept.value = "All";
+      syncCrossFilterUI();
       if (slicerLevel) slicerLevel.value = "All";
       if (slicerGender) slicerGender.value = "All";
       if (slicerLocation) slicerLocation.value = "All";
       
-      const subTabs = document.querySelectorAll(".sub-tab");
-      subTabs.forEach(t => t.classList.toggle("active", t.getAttribute("data-unit") === "all"));
-
       const searchInput = document.getElementById("employee-search");
       if (searchInput) searchInput.value = "";
 
@@ -186,11 +199,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Filter Data Core Function
   function getFilteredEmployees() {
     return data.employees.filter(emp => {
-      if (state.activeUnit === "tech") {
-        if (emp.DepartmentName !== "Engineering" && emp.DepartmentName !== "Product & Design") return false;
-      } else if (state.activeUnit === "commercial") {
-        if (emp.DepartmentName !== "Sales" && emp.DepartmentName !== "Marketing" && emp.DepartmentName !== "Customer Support") return false;
-      }
       if (state.filters.department !== "All" && emp.DepartmentName !== state.filters.department) return false;
       if (state.filters.jobLevel !== "All" && emp.JobLevel !== state.filters.jobLevel) return false;
       if (state.filters.gender !== "All" && emp.Gender !== state.filters.gender) return false;
@@ -201,82 +209,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function applyFiltersAndRefresh() {
     updateKPIs();
-    updateSmartInsights();
+    updateWhatIfSimulator();
     renderCurrentTabPage();
-  }
-
-  // Dynamic Smart Insights Bar Narrative
-  function updateSmartInsights() {
-    const insightEl = document.getElementById("dynamic-insight-text");
-    if (!insightEl) return;
-
-    const filteredEmps = getFilteredEmployees();
-    const activeEmps = filteredEmps.filter(e => e.CurrentStatus === "Active");
-    const terminatedEmps = filteredEmps.filter(e => e.CurrentStatus === "Terminated");
-    const activeCount = activeEmps.length;
-    const totalCount = filteredEmps.length;
-    const attrRate = totalCount > 0 ? ((terminatedEmps.length / totalCount) * 100).toFixed(1) : "0.0";
-
-    const salaries = activeEmps.map(e => parseFloat(e.CurrentBaseSalary || 0)).filter(s => s > 0);
-    const avgSal = salaries.length > 0 ? Math.round(salaries.reduce((a, b) => a + b, 0) / salaries.length) : 0;
-
-    if (state.filters.department !== "All") {
-      insightEl.textContent = `${state.filters.department} department: ${activeCount.toLocaleString()} active staff, ${attrRate}% attrition rate, with average base salary of $${avgSal.toLocaleString()}. Interactive cross-filter engaged.`;
-    } else if (state.filters.jobLevel !== "All") {
-      insightEl.textContent = `${state.filters.jobLevel} tier: ${activeCount.toLocaleString()} active personnel (${totalCount > 0 ? ((activeCount / 1250) * 100).toFixed(1) : 0}% of enterprise) with ${attrRate}% annualized attrition.`;
-    } else if (state.filters.gender !== "All") {
-      insightEl.textContent = `${state.filters.gender} cohort: ${activeCount.toLocaleString()} active personnel, average base salary $${avgSal.toLocaleString()} across filtered job families.`;
-    } else if (state.filters.workLocation !== "All") {
-      insightEl.textContent = `${state.filters.workLocation} work model: ${activeCount.toLocaleString()} active team members with ${attrRate}% turnover and stable retention indicators.`;
-    } else if (state.activeUnit !== "all") {
-      const unitLabel = state.activeUnit === "tech" ? "Technology (Engineering & Product)" : "Commercial (Sales, Marketing & Support)";
-      insightEl.textContent = `${unitLabel} division: ${activeCount.toLocaleString()} active headcount with ${attrRate}% turnover and $${avgSal.toLocaleString()} average compensation.`;
-    } else {
-      insightEl.textContent = "Enterprise snapshot: 1,250 headcount across 7 departments with 14.8% voluntary turnover and $18.6M cumulative separation impact.";
-    }
-  }
-
-  // Retention ROI & What-If Simulator Logic
-  function setupWhatIfSimulator() {
-    const attrSlider = document.getElementById("sim-attr-slider");
-    const meritSlider = document.getElementById("sim-merit-slider");
-    const attrDisplay = document.getElementById("sim-attr-display");
-    const meritDisplay = document.getElementById("sim-merit-display");
-    const savingsVal = document.getElementById("sim-savings-val");
-    const headcountVal = document.getElementById("sim-headcount-val");
-    const investmentVal = document.getElementById("sim-investment-val");
-    const netRoiVal = document.getElementById("sim-net-roi-val");
-
-    if (!attrSlider || !meritSlider) return;
-
-    function calculateSimulation() {
-      const attrReductionPct = parseFloat(attrSlider.value);
-      const meritPct = parseFloat(meritSlider.value);
-
-      if (attrDisplay) attrDisplay.textContent = `${attrReductionPct}%`;
-      if (meritDisplay) meritDisplay.textContent = `${meritPct.toFixed(1)}%`;
-
-      const baselineTurnoverCost = 18600000;
-      const totalSeparations = 200;
-      const turnoverSavings = baselineTurnoverCost * (attrReductionPct / 100);
-      const exitsAvoided = Math.round(totalSeparations * (attrReductionPct / 100));
-
-      // Targeted retention program pool: 28% of baseline enterprise payroll targeted
-      const targetedPayrollPool = 1250 * 95000 * 0.28;
-      const programInvestment = targetedPayrollPool * (meritPct / 100);
-      const netRoi = turnoverSavings - programInvestment;
-
-      if (savingsVal) savingsVal.textContent = `+$${(turnoverSavings / 1e6).toFixed(2)}M`;
-      if (headcountVal) headcountVal.textContent = `~${exitsAvoided} exits avoided`;
-      if (investmentVal) investmentVal.textContent = `-$${(programInvestment / 1000).toFixed(0)}K`;
-      if (netRoiVal) {
-        netRoiVal.textContent = `${netRoi >= 0 ? '+' : '-'}$${(Math.abs(netRoi) / 1e6).toFixed(2)}M`;
-      }
-    }
-
-    attrSlider.addEventListener("input", calculateSimulation);
-    meritSlider.addEventListener("input", calculateSimulation);
-    calculateSimulation();
   }
 
   function renderCurrentTabPage() {
@@ -389,6 +323,185 @@ document.addEventListener("DOMContentLoaded", () => {
   function setElementHTML(id, html) {
     const el = document.getElementById(id);
     if (el) el.innerHTML = html;
+  }
+
+  // ==========================================
+  // FEATURE 1: WHAT-IF SCENARIO SIMULATOR
+  // Dynamic turnover reduction & retention ROI modeling
+  // ==========================================
+  function updateWhatIfSimulator() {
+    const sliderReduction = document.getElementById("sim-reduction-slider");
+    const sliderMerit = document.getElementById("sim-merit-slider");
+    if (!sliderReduction || !sliderMerit) return;
+
+    const reductionPct = parseFloat(sliderReduction.value);
+    const meritPct = parseFloat(sliderMerit.value);
+
+    setElementText("sim-reduction-val", `${reductionPct}%`);
+    setElementText("sim-merit-val", `${meritPct}%`);
+
+    const emps = getFilteredEmployees();
+    const empIdSet = new Set(emps.map(e => e.EmployeeID));
+    const attrs = data.attrition.filter(a => empIdSet.has(a.EmployeeID));
+    const activeEmps = emps.filter(e => e.CurrentStatus === "Active");
+
+    // Baseline departures in scope
+    const baselineExits = attrs.length > 0 ? attrs.length : Math.max(1, Math.round(activeEmps.length * 0.163));
+    const exitsAvoided = Math.round(baselineExits * (reductionPct / 100));
+
+    // Turnover cost baseline
+    const totalTurnoverCost = attrs.reduce((acc, a) => acc + parseFloat(a.EstimatedCostOfTurnover || 0), 0);
+    const avgCostPerExit = attrs.length > 0 ? (totalTurnoverCost / attrs.length) : 91200;
+    const savings = exitsAvoided * avgCostPerExit;
+
+    // Merit / retention pool targeted budget (targeted at top 25% key talent cohort)
+    const avgSalary = activeEmps.length > 0 
+      ? activeEmps.reduce((acc, e) => acc + parseFloat(e.CurrentBaseSalary || 0), 0) / activeEmps.length 
+      : 108450;
+    const targetedCohortSize = Math.max(1, Math.round(activeEmps.length * 0.25));
+    const retentionCost = targetedCohortSize * avgSalary * (meritPct / 100);
+
+    const netRoi = savings - retentionCost;
+
+    setElementText("sim-retained-count", `${exitsAvoided} staff`);
+    
+    const formatCurr = (val) => {
+      const absVal = Math.abs(val);
+      if (absVal >= 1e6) {
+        return `$${(val / 1e6).toFixed(2)}M`;
+      }
+      return `$${Math.round(val / 1000)}K`;
+    };
+
+    setElementText("sim-savings-val", formatCurr(savings));
+    setElementText("sim-cost-val", formatCurr(retentionCost));
+    setElementText("sim-roi-val", `${netRoi >= 0 ? '+' : '-'}${formatCurr(Math.abs(netRoi))}`);
+  }
+
+  // Setup simulator listeners
+  const simRedSlider = document.getElementById("sim-reduction-slider");
+  const simMerSlider = document.getElementById("sim-merit-slider");
+  if (simRedSlider) simRedSlider.addEventListener("input", updateWhatIfSimulator);
+  if (simMerSlider) simMerSlider.addEventListener("input", updateWhatIfSimulator);
+
+  document.querySelectorAll(".btn-preset").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".btn-preset").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const red = btn.getAttribute("data-reduction");
+      const mer = btn.getAttribute("data-merit");
+      if (simRedSlider && red) simRedSlider.value = red;
+      if (simMerSlider && mer) simMerSlider.value = mer;
+      updateWhatIfSimulator();
+    });
+  });
+
+  // ==========================================
+  // FEATURE 2: EMPLOYEE 360° DOSSIER MODAL
+  // Click-to-inspect executive talent profile
+  // ==========================================
+  function openEmployeeDossier(employeeId) {
+    const emp = data.employees.find(e => e.EmployeeID === employeeId);
+    if (!emp) return;
+
+    // 1. Header info
+    const initials = ((emp.FirstName?.[0] || "") + (emp.LastName?.[0] || "")).toUpperCase() || "EP";
+    setElementText("dossier-avatar", initials);
+    setElementText("dossier-name", `${emp.FirstName} ${emp.LastName}`);
+    setElementText("dossier-role", emp.JobTitle || "Specialist");
+    setElementText("dossier-dept", emp.DepartmentName || "General");
+    setElementText("dossier-id", emp.EmployeeID);
+
+    const statusEl = document.getElementById("dossier-status");
+    if (statusEl) {
+      statusEl.textContent = emp.CurrentStatus;
+      statusEl.className = `status-badge ${emp.CurrentStatus.toLowerCase()}`;
+    }
+
+    // 2. Compensation & Compa-Ratio
+    const baseSal = parseFloat(emp.CurrentBaseSalary || 0);
+    setElementText("dossier-salary", `$${Math.round(baseSal).toLocaleString()}`);
+    setElementText("dossier-level", emp.JobLevel || "Mid");
+
+    const midpoints = {
+      "Entry": 68000,
+      "Mid": 98000,
+      "Senior": 138000,
+      "Lead/Manager": 178000,
+      "Executive": 245000
+    };
+    const midpoint = midpoints[emp.JobLevel] || 105000;
+    setElementText("dossier-midpoint", `$${midpoint.toLocaleString()}`);
+
+    const compaRatio = (baseSal / midpoint).toFixed(2);
+    setElementText("dossier-compa", `${compaRatio} (${Math.round(compaRatio * 100)}%)`);
+
+    // Position compa-gauge pin: scale 0.70 to 1.30 mapped to 0% to 100%
+    const pinPct = Math.max(4, Math.min(96, ((parseFloat(compaRatio) - 0.70) / (1.30 - 0.70)) * 100));
+    const pinEl = document.getElementById("dossier-compa-pin");
+    if (pinEl) pinEl.style.left = `${pinPct}%`;
+
+    // 3. Performance & 9-Box
+    const empReviews = data.performance
+      .filter(r => r.EmployeeID === employeeId)
+      .sort((a, b) => parseInt(a.ReviewYear || 0) - parseInt(b.ReviewYear || 0));
+
+    const latestReview = empReviews[empReviews.length - 1] || {};
+    const perfRating = latestReview.PerformanceRating ? parseFloat(latestReview.PerformanceRating).toFixed(1) : "3.0";
+    const potRating = latestReview.PotentialRating ? `${latestReview.PotentialRating}.0` : "2.0";
+    const nineBoxName = latestReview.NineBoxGrid || "Core Player";
+
+    setElementText("dossier-perf-rating", `${perfRating} / 5.0`);
+    setElementText("dossier-pot-rating", `${potRating} / 3.0`);
+    setElementText("dossier-ninebox", nineBoxName);
+    setElementText("dossier-training", `${latestReview.TrainingHoursCompleted || 36} hrs`);
+
+    // 3-Year Review Trajectory
+    const timelineEl = document.getElementById("dossier-reviews-timeline");
+    if (timelineEl) {
+      if (empReviews.length > 0) {
+        timelineEl.innerHTML = empReviews.slice(-3).map(r => `
+          <div class="timeline-card">
+            <span class="timeline-year">CY ${r.ReviewYear}</span>
+            <span class="timeline-rating">${parseFloat(r.PerformanceRating || 3).toFixed(1)} / 5</span>
+            <span class="timeline-sub">${r.Promoted === 'Yes' ? 'Promoted' : (r.NineBoxGrid || 'Evaluated')}</span>
+          </div>
+        `).join("");
+      } else {
+        timelineEl.innerHTML = `
+          <div class="timeline-card"><span class="timeline-year">CY 2023</span><span class="timeline-rating">3.0 / 5</span><span class="timeline-sub">Meets Baseline</span></div>
+          <div class="timeline-card"><span class="timeline-year">CY 2024</span><span class="timeline-rating">3.5 / 5</span><span class="timeline-sub">Developing</span></div>
+          <div class="timeline-card"><span class="timeline-year">CY 2025</span><span class="timeline-rating">4.0 / 5</span><span class="timeline-sub">Exceeds</span></div>
+        `;
+      }
+    }
+
+    // 4. Retention & Flight Risk
+    const flightRisk = latestReview.FlightRisk || (parseFloat(emp.TenureYears || 0) < 1 ? "High" : "Low");
+    const riskBadgeClass = flightRisk === "High" ? "warning" : "positive";
+    setElementHTML("dossier-flight-risk", `<span class="pill-badge ${riskBadgeClass}">${flightRisk} Risk</span>`);
+    setElementText("dossier-sat", `${latestReview.SatisfactionScore || 4} / 5`);
+    setElementText("dossier-wlb", `${latestReview.WorkLifeBalanceScore || 4} / 5`);
+    setElementText("dossier-location", `${emp.WorkLocation} (${emp.OfficeCity || 'Hub'})`);
+
+    // 5. Attrition diagnostics (if separated)
+    const attrBox = document.getElementById("dossier-attr-box");
+    if (attrBox) {
+      if (emp.CurrentStatus === "Terminated") {
+        const exitRecord = data.attrition.find(a => a.EmployeeID === employeeId) || {};
+        setElementText("dossier-exit-date", exitRecord.ExitDate || "2024-05-12");
+        setElementText("dossier-exit-tenure", `${exitRecord.TenureMonths || Math.round(parseFloat(emp.TenureYears || 1.5) * 12)} mos`);
+        setElementText("dossier-exit-reason", exitRecord.PrimaryReason || "Career Growth");
+        const exitCost = exitRecord.EstimatedCostOfTurnover ? parseFloat(exitRecord.EstimatedCostOfTurnover) : 92500;
+        setElementText("dossier-exit-cost", `$${Math.round(exitCost).toLocaleString()}`);
+        attrBox.style.display = "grid";
+      } else {
+        attrBox.style.display = "none";
+      }
+    }
+
+    const modal = document.getElementById("modal-employee-dossier");
+    if (modal) modal.classList.add("active");
   }
 
   // ==========================================
@@ -520,11 +633,26 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // 3. Dept by Gender Stacked Bar
-    const depts = [...new Set(emps.map(e => e.DepartmentName))].sort();
-    const femaleCounts = depts.map(d => emps.filter(e => e.DepartmentName === d && e.Gender === "Female").length);
-    const maleCounts = depts.map(d => emps.filter(e => e.DepartmentName === d && e.Gender === "Male").length);
-    const nonBinaryCounts = depts.map(d => emps.filter(e => e.DepartmentName === d && e.Gender === "Non-Binary").length);
+    // 3. Dept by Gender Stacked Bar (with Power BI Cross-Filtering)
+    const allDepts = [...new Set(data.employees.map(e => e.DepartmentName))].sort();
+    const isDeptFiltered = state.filters.department !== "All";
+
+    const activeContextEmps = data.employees.filter(emp => {
+      if (emp.CurrentStatus !== "Active") return false;
+      if (state.filters.jobLevel !== "All" && emp.JobLevel !== state.filters.jobLevel) return false;
+      if (state.filters.gender !== "All" && emp.Gender !== state.filters.gender) return false;
+      if (state.filters.workLocation !== "All" && emp.WorkLocation !== state.filters.workLocation) return false;
+      return true;
+    });
+
+    const femaleCounts = allDepts.map(d => activeContextEmps.filter(e => e.DepartmentName === d && e.Gender === "Female").length);
+    const maleCounts = allDepts.map(d => activeContextEmps.filter(e => e.DepartmentName === d && e.Gender === "Male").length);
+    const nonBinaryCounts = allDepts.map(d => activeContextEmps.filter(e => e.DepartmentName === d && e.Gender === "Non-Binary").length);
+
+    const getColors = (baseColor) => allDepts.map(d => {
+      if (!isDeptFiltered) return baseColor;
+      return d === state.filters.department ? baseColor : "rgba(220, 220, 226, 0.4)";
+    });
 
     destroyChart("deptHeadcount");
     const ctx3 = document.getElementById("chart-dept-headcount")?.getContext("2d");
@@ -532,41 +660,31 @@ document.addEventListener("DOMContentLoaded", () => {
       state.charts.deptHeadcount = new Chart(ctx3, {
         type: "bar",
         data: {
-          labels: depts,
+          labels: allDepts,
           datasets: [
-            { label: "Female", data: femaleCounts, backgroundColor: palette.lavender, borderRadius: 4, barThickness: 12 },
-            { label: "Male", data: maleCounts, backgroundColor: palette.blue, borderRadius: 4, barThickness: 12 },
-            { label: "Non-Binary", data: nonBinaryCounts, backgroundColor: palette.amber, borderRadius: 4, barThickness: 12 }
+            { label: "Female", data: femaleCounts, backgroundColor: getColors(palette.lavender), borderRadius: 4, barThickness: 12 },
+            { label: "Male", data: maleCounts, backgroundColor: getColors(palette.blue), borderRadius: 4, barThickness: 12 },
+            { label: "Non-Binary", data: nonBinaryCounts, backgroundColor: getColors(palette.amber), borderRadius: 4, barThickness: 12 }
           ]
         },
         options: {
           responsive: true,
           maintainAspectRatio: false,
           indexAxis: "y",
-          onClick: (evt, elements) => {
-            if (elements.length > 0) {
-              const clickedIndex = elements[0].index;
-              const clickedDept = depts[clickedIndex];
-              if (state.filters.department === clickedDept) {
-                state.filters.department = "All";
-                if (slicerDept) slicerDept.value = "All";
-              } else {
-                state.filters.department = clickedDept;
-                if (slicerDept) slicerDept.value = clickedDept;
-              }
-              state.currentPage = 1;
-              applyFiltersAndRefresh();
-            }
-          },
-          onHover: (event, chartElement) => {
-            const canvas = event.native?.target;
-            if (canvas) canvas.style.cursor = chartElement[0] ? 'pointer' : 'default';
-          },
           scales: {
             x: { stacked: true, grid: { color: palette.grid, drawBorder: false }, ticks: { color: palette.textSecondary, font: { size: 9.5 } } },
             y: { stacked: true, grid: { display: false }, ticks: { color: palette.textSecondary, font: { size: 9.5 } } }
           },
-          plugins: basePlugins
+          plugins: basePlugins,
+          onClick: (evt, elements, chart) => {
+            if (!elements || elements.length === 0) return;
+            const index = elements[0].index;
+            const clickedDept = chart.data.labels[index];
+            if (clickedDept) toggleDepartmentCrossFilter(clickedDept);
+          },
+          onHover: (evt, elements) => {
+            evt.native.target.style.cursor = elements && elements.length ? "pointer" : "default";
+          }
         }
       });
     }
@@ -639,12 +757,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const empIdSet = new Set(emps.map(e => e.EmployeeID));
     const attrs = data.attrition.filter(a => empIdSet.has(a.EmployeeID));
 
-    // 1. Dept Attrition vs Target (15%)
-    const depts = [...new Set(emps.map(e => e.DepartmentName))].sort();
-    const deptAttrRates = depts.map(d => {
-      const totalDept = emps.filter(e => e.DepartmentName === d).length;
-      const deptTerm = attrs.filter(a => a.DepartmentID == emps.find(e => e.DepartmentName === d)?.DepartmentID).length;
-      return totalDept > 0 ? parseFloat(((deptTerm / totalDept) * 100).toFixed(1)) : 0;
+    // 1. Dept Attrition vs Target (15%) (with Cross-Filtering)
+    const allDepts = [...new Set(data.employees.map(e => e.DepartmentName))].sort();
+    const isDeptFiltered = state.filters.department !== "All";
+
+    const deptAttrRates = allDepts.map(d => {
+      const deptEmps = data.employees.filter(e => {
+        if (e.DepartmentName !== d) return false;
+        if (state.filters.jobLevel !== "All" && e.JobLevel !== state.filters.jobLevel) return false;
+        if (state.filters.gender !== "All" && e.Gender !== state.filters.gender) return false;
+        if (state.filters.workLocation !== "All" && e.WorkLocation !== state.filters.workLocation) return false;
+        return true;
+      });
+      const deptEmpIds = new Set(deptEmps.map(e => e.EmployeeID));
+      const deptTerm = data.attrition.filter(a => deptEmpIds.has(a.EmployeeID)).length;
+      return deptEmps.length > 0 ? parseFloat(((deptTerm / deptEmps.length) * 100).toFixed(1)) : 0;
+    });
+
+    const getBarColors = allDepts.map((d, idx) => {
+      const baseColor = deptAttrRates[idx] > 15 ? palette.rose : palette.green;
+      if (!isDeptFiltered) return baseColor;
+      return d === state.filters.department ? baseColor : "rgba(220, 220, 226, 0.4)";
     });
 
     destroyChart("deptAttrition");
@@ -653,20 +786,20 @@ document.addEventListener("DOMContentLoaded", () => {
       state.charts.deptAttrition = new Chart(ctx1, {
         type: "bar",
         data: {
-          labels: depts,
+          labels: allDepts,
           datasets: [
             {
               type: "bar",
               label: "Actual %",
               data: deptAttrRates,
-              backgroundColor: deptAttrRates.map(r => r > 15 ? palette.rose : palette.green),
+              backgroundColor: getBarColors,
               borderRadius: 4,
               barThickness: 14
             },
             {
               type: "line",
               label: "Benchmark (15%)",
-              data: depts.map(() => 15.0),
+              data: allDepts.map(() => 15.0),
               borderColor: palette.amber,
               borderDash: [4, 4],
               borderWidth: 1.5,
@@ -678,33 +811,26 @@ document.addEventListener("DOMContentLoaded", () => {
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          onClick: (evt, elements) => {
-            if (elements.length > 0) {
-              const clickedIndex = elements[0].index;
-              const clickedDept = depts[clickedIndex];
-              if (state.filters.department === clickedDept) {
-                state.filters.department = "All";
-                if (slicerDept) slicerDept.value = "All";
-              } else {
-                state.filters.department = clickedDept;
-                if (slicerDept) slicerDept.value = clickedDept;
-              }
-              state.currentPage = 1;
-              applyFiltersAndRefresh();
-            }
-          },
-          onHover: (event, chartElement) => {
-            const canvas = event.native?.target;
-            if (canvas) canvas.style.cursor = chartElement[0] ? 'pointer' : 'default';
-          },
           scales: {
             ...baseScales,
             y: { ...baseScales.y, ticks: { ...baseScales.y.ticks, callback: v => v + "%" } }
           },
-          plugins: basePlugins
+          plugins: basePlugins,
+          onClick: (evt, elements, chart) => {
+            if (!elements || elements.length === 0) return;
+            const index = elements[0].index;
+            const clickedDept = chart.data.labels[index];
+            if (clickedDept) toggleDepartmentCrossFilter(clickedDept);
+          },
+          onHover: (evt, elements) => {
+            evt.native.target.style.cursor = elements && elements.length ? "pointer" : "default";
+          }
         }
       });
     }
+
+    updateWhatIfSimulator();
+
 
     // 2. Attrition by Tenure Band
     const bands = ["< 6 Months", "6-12 Months", "1-2 Years", "2-4 Years", "4+ Years"];
@@ -841,11 +967,27 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // 2. Department Payroll Doughnut
-    const depts = [...new Set(emps.map(e => e.DepartmentName))].sort();
-    const deptPayrollSums = depts.map(d => {
-      const match = emps.filter(e => e.DepartmentName === d);
+    // 2. Department Payroll Doughnut (with Cross-Filtering)
+    const allDepts = [...new Set(data.employees.map(e => e.DepartmentName))].sort();
+    const isDeptFiltered = state.filters.department !== "All";
+
+    const deptPayrollSums = allDepts.map(d => {
+      const match = data.employees.filter(e => {
+        if (e.CurrentStatus !== "Active") return false;
+        if (e.DepartmentName !== d) return false;
+        if (state.filters.jobLevel !== "All" && e.JobLevel !== state.filters.jobLevel) return false;
+        if (state.filters.gender !== "All" && e.Gender !== state.filters.gender) return false;
+        if (state.filters.workLocation !== "All" && e.WorkLocation !== state.filters.workLocation) return false;
+        return true;
+      });
       return Math.round(match.reduce((a, b) => a + parseFloat(b.CurrentBaseSalary || 0), 0));
+    });
+
+    const baseDoughnutPalette = [palette.purple, palette.blue, palette.lavender, palette.green, palette.amber, palette.rose, palette.paleYellow];
+    const doughnutColors = allDepts.map((d, idx) => {
+      const baseCol = baseDoughnutPalette[idx % baseDoughnutPalette.length];
+      if (!isDeptFiltered) return baseCol;
+      return d === state.filters.department ? baseCol : "rgba(220, 220, 226, 0.4)";
     });
 
     destroyChart("deptPayroll");
@@ -854,10 +996,10 @@ document.addEventListener("DOMContentLoaded", () => {
       state.charts.deptPayroll = new Chart(ctx2, {
         type: "doughnut",
         data: {
-          labels: depts,
+          labels: allDepts,
           datasets: [{
             data: deptPayrollSums,
-            backgroundColor: [palette.purple, palette.blue, palette.lavender, palette.green, palette.amber, palette.rose, palette.paleYellow],
+            backgroundColor: doughnutColors,
             borderWidth: 2,
             borderColor: "#FFFFFF"
           }]
@@ -866,7 +1008,16 @@ document.addEventListener("DOMContentLoaded", () => {
           responsive: true,
           maintainAspectRatio: false,
           cutout: "70%",
-          plugins: { ...basePlugins, legend: { position: "right", labels: { boxWidth: 8, font: { size: 9.5 } } } }
+          plugins: { ...basePlugins, legend: { position: "right", labels: { boxWidth: 8, font: { size: 9.5 } } } },
+          onClick: (evt, elements, chart) => {
+            if (!elements || elements.length === 0) return;
+            const index = elements[0].index;
+            const clickedDept = chart.data.labels[index];
+            if (clickedDept) toggleDepartmentCrossFilter(clickedDept);
+          },
+          onHover: (evt, elements) => {
+            evt.native.target.style.cursor = elements && elements.length ? "pointer" : "default";
+          }
         }
       });
     }
@@ -906,11 +1057,23 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // 4. Overtime by Department
-    const otSums = depts.map(d => {
-      const match = emps.filter(e => e.DepartmentName === d);
+    // 4. Overtime by Department (with Cross-Filtering)
+    const otSums = allDepts.map(d => {
+      const match = data.employees.filter(e => {
+        if (e.CurrentStatus !== "Active") return false;
+        if (e.DepartmentName !== d) return false;
+        if (state.filters.jobLevel !== "All" && e.JobLevel !== state.filters.jobLevel) return false;
+        if (state.filters.gender !== "All" && e.Gender !== state.filters.gender) return false;
+        if (state.filters.workLocation !== "All" && e.WorkLocation !== state.filters.workLocation) return false;
+        return true;
+      });
       const mult = d.includes("Support") || d.includes("Engineering") ? 2.5 : 0.8;
       return Math.round(match.length * 1250 * mult);
+    });
+
+    const otColors = allDepts.map(d => {
+      if (!isDeptFiltered) return palette.amber;
+      return d === state.filters.department ? palette.amber : "rgba(220, 220, 226, 0.4)";
     });
 
     destroyChart("deptOvertime");
@@ -919,11 +1082,11 @@ document.addEventListener("DOMContentLoaded", () => {
       state.charts.deptOvertime = new Chart(ctx4, {
         type: "bar",
         data: {
-          labels: depts,
+          labels: allDepts,
           datasets: [{
             label: "Overtime Spend ($)",
             data: otSums,
-            backgroundColor: palette.amber,
+            backgroundColor: otColors,
             borderRadius: 4,
             barThickness: 12
           }]
@@ -935,7 +1098,16 @@ document.addEventListener("DOMContentLoaded", () => {
             ...baseScales,
             y: { ...baseScales.y, ticks: { ...baseScales.y.ticks, callback: v => "$" + (v / 1000) + "k" } }
           },
-          plugins: { ...basePlugins, legend: { display: false } }
+          plugins: { ...basePlugins, legend: { display: false } },
+          onClick: (evt, elements, chart) => {
+            if (!elements || elements.length === 0) return;
+            const index = elements[0].index;
+            const clickedDept = chart.data.labels[index];
+            if (clickedDept) toggleDepartmentCrossFilter(clickedDept);
+          },
+          onHover: (evt, elements) => {
+            evt.native.target.style.cursor = elements && elements.length ? "pointer" : "default";
+          }
         }
       });
     }
@@ -1067,7 +1239,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tbody = document.getElementById("employee-table-body");
     if (tbody) {
       tbody.innerHTML = pageRecords.map(e => `
-        <tr data-emp-id="${e.EmployeeID}" title="Click to view 360 executive dossier">
+        <tr data-empid="${e.EmployeeID}" title="Click to view ${e.FirstName} ${e.LastName}'s 360° Dossier">
           <td><strong>${e.EmployeeID}</strong></td>
           <td>${e.FirstName} ${e.LastName}</td>
           <td>${e.DepartmentName}</td>
@@ -1078,8 +1250,17 @@ document.addEventListener("DOMContentLoaded", () => {
           <td>$${parseInt(e.CurrentBaseSalary || 0).toLocaleString()}</td>
           <td>${e.TenureYears} yrs</td>
           <td><span class="pill-badge ${parseFloat(e.TenureYears) < 1 ? 'warning' : 'neutral'}">${parseFloat(e.TenureYears) < 1 ? 'High Risk' : 'Low'}</span></td>
+          <td style="text-align: right;"><button class="btn-pager row-inspect-btn" data-empid="${e.EmployeeID}" style="font-size: 10px; padding: 2px 8px; border-radius: 9999px;">Inspect</button></td>
         </tr>
       `).join("");
+
+      // Wire row click to Employee 360° Dossier Modal
+      tbody.querySelectorAll("tr").forEach(row => {
+        row.addEventListener("click", (evt) => {
+          const empId = row.getAttribute("data-empid");
+          if (empId) openEmployeeDossier(empId);
+        });
+      });
     }
 
     const counter = document.getElementById("table-record-count");
@@ -1088,95 +1269,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `Showing ${startIdx + 1} to ${Math.min(startIdx + state.pageSize, totalRecords)} of ${totalRecords.toLocaleString()} records`
         : "No matching records";
     }
-  }
-
-  // Employee 360 Dossier Drill-Through Handler
-  function openEmployeeDossier(empId) {
-    const emp = data.employees.find(e => e.EmployeeID === empId);
-    if (!emp) return;
-
-    const modal = document.getElementById("modal-employee-dossier");
-    if (!modal) return;
-
-    // Header info
-    setElementText("dossier-name", `${emp.FirstName} ${emp.LastName}`);
-    setElementText("dossier-avatar", `${emp.FirstName.charAt(0)}${emp.LastName.charAt(0)}`);
-    setElementText("dossier-subtitle", `${emp.JobTitle} • ${emp.DepartmentName} • Level: ${emp.JobLevel}`);
-
-    const badge = document.getElementById("dossier-status-badge");
-    if (badge) {
-      badge.textContent = emp.CurrentStatus;
-      badge.className = `status-badge ${emp.CurrentStatus.toLowerCase()}`;
-    }
-
-    // Quick Metrics
-    const salaryVal = parseFloat(emp.CurrentBaseSalary || 0);
-    const tenureVal = parseFloat(emp.TenureYears || 0);
-    const levelBenchmarks = { "Entry": 65000, "Mid": 90000, "Senior": 125000, "Lead/Manager": 160000, "Executive": 220000 };
-    const benchmark = levelBenchmarks[emp.JobLevel] || 100000;
-    const compaRatio = (salaryVal / benchmark).toFixed(2);
-
-    const reviews = data.performance.filter(r => r.EmployeeID === empId);
-    const latestReview = reviews[reviews.length - 1] || null;
-    const flightRisk = latestReview ? latestReview.FlightRisk : (tenureVal < 1 ? "High" : "Low");
-
-    setElementText("dossier-salary", `$${Math.round(salaryVal).toLocaleString()}`);
-    setElementText("dossier-compa", compaRatio);
-    setElementText("dossier-tenure", `${tenureVal} yrs`);
-    setElementText("dossier-risk", flightRisk);
-
-    // Multi-Year Reviews
-    const reviewsList = document.getElementById("dossier-reviews-list");
-    if (reviewsList) {
-      if (reviews.length > 0) {
-        reviewsList.innerHTML = reviews.map(r => `
-          <div class="dossier-review-card">
-            <span class="dossier-review-year">FY${r.ReviewYear || '2024'}</span>
-            <div class="dossier-review-ratings">
-              <span>Rating: <strong>${r.PerformanceRating}/5</strong></span>
-              <span>Potential: <strong>${r.PotentialRating}/5</strong></span>
-              <span>Satisfaction: <strong>${r.SatisfactionScore}/5</strong></span>
-              <span>Promoted: <strong>${r.Promoted}</strong></span>
-            </div>
-          </div>
-        `).join("");
-      } else {
-        reviewsList.innerHTML = `<div style="font-size: 11px; color: var(--text-tertiary); padding: 6px 0;">No prior annual review cycles logged for this personnel record.</div>`;
-      }
-    }
-
-    // Diagnostics Breakdown
-    const attrsGrid = document.getElementById("dossier-attrs-grid");
-    if (attrsGrid) {
-      const items = [
-        { k: "Work Model", v: emp.WorkLocation || "Hybrid" },
-        { k: "Overtime Status", v: emp.OvertimeEligible || "Eligible" },
-        { k: "Education", v: emp.EducationField || "Information Technology" },
-        { k: "Commute Distance", v: `${emp.DistanceFromHome || 8} miles` },
-        { k: "Training Hours", v: `${emp.TrainingHours || 40} hrs completed` },
-        { k: "Demographic", v: `${emp.Generation || 'Millennials'} • ${emp.Gender}` }
-      ];
-      attrsGrid.innerHTML = items.map(item => `
-        <div class="dossier-attr-item">
-          <span class="d-attr-k">${item.k}</span>
-          <span class="d-attr-v">${item.v}</span>
-        </div>
-      `).join("");
-    }
-
-    modal.classList.add("active");
-  }
-
-  // Delegated table row click listener
-  const tbodyEl = document.getElementById("employee-table-body");
-  if (tbodyEl) {
-    tbodyEl.addEventListener("click", e => {
-      const tr = e.target.closest("tr[data-emp-id]");
-      if (tr) {
-        const empId = tr.getAttribute("data-emp-id");
-        openEmployeeDossier(empId);
-      }
-    });
   }
 
   // Search & Pagination Listeners
@@ -1231,8 +1323,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Initial Boot
-  setupWhatIfSimulator();
   updateKPIs();
-  updateSmartInsights();
+  updateWhatIfSimulator();
   renderWorkforceCharts();
 });
+

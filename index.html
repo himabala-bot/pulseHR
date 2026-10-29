@@ -170,22 +170,6 @@
             </svg>
           </button>
 
-          <!-- What-If Simulator Button -->
-          <button class="btn-subtle" id="open-simulator-btn" title="Open Retention ROI Simulator">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="4" y1="21" x2="4" y2="14"></line>
-              <line x1="4" y1="10" x2="4" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12" y2="3"></line>
-              <line x1="20" y1="21" x2="20" y2="16"></line>
-              <line x1="20" y1="12" x2="20" y2="3"></line>
-              <line x1="1" y1="14" x2="7" y2="14"></line>
-              <line x1="9" y1="8" x2="15" y2="8"></line>
-              <line x1="17" y1="16" x2="23" y2="16"></line>
-            </svg>
-            <span>What-If Simulator</span>
-          </button>
-
           <!-- Primary Action Button -->
           <button class="btn-dark" id="export-data-btn">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -202,13 +186,22 @@
       <div class="controls-bar">
         <!-- Subheader Quick Filter Tabs -->
         <div class="sub-tabs">
-          <button class="sub-tab active" data-unit="all">All Units</button>
-          <button class="sub-tab" data-unit="tech">Technology</button>
-          <button class="sub-tab" data-unit="commercial">Commercial</button>
+          <button class="sub-tab active">All Units</button>
+          <button class="sub-tab">Core Operations</button>
+          <button class="sub-tab">Leadership</button>
         </div>
 
         <!-- Slicers Row -->
         <div class="slicers-cluster">
+          <!-- Cross-filter notification badge -->
+          <div class="crossfilter-indicator" id="crossfilter-indicator" style="display: none;">
+            <span class="crossfilter-label">Chart Filter:</span>
+            <span class="crossfilter-val" id="crossfilter-dept-name">Sales</span>
+            <button class="crossfilter-clear" id="crossfilter-clear-btn" title="Clear chart cross-filter">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+
           <div class="select-wrap">
             <select id="slicer-dept" class="filter-select">
               <option value="All">All Departments</option>
@@ -253,17 +246,6 @@
 
           <button id="slicer-reset" class="btn-reset" title="Clear Slicers">Reset</button>
         </div>
-      </div>
-
-      <!-- Dynamic Smart Insights Bar -->
-      <div class="insights-bar">
-        <div class="insight-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-          </svg>
-          <span>Live Insight</span>
-        </div>
-        <span class="insight-text" id="dynamic-insight-text">Analyzing organizational workforce metrics and turnover risk across all business units...</span>
       </div>
 
       <!-- Dashboard Scrollable Container -->
@@ -529,6 +511,84 @@
               </div>
               <div class="chart-box">
                 <canvas id="chart-attrition-scatter"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 1: Interactive What-If Scenario Simulator Card -->
+          <div class="card card-full card-simulator">
+            <div class="card-header">
+              <div>
+                <div class="simulator-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  <span>Interactive Scenario Simulator</span>
+                </div>
+                <h2 class="card-title">Turnover reduction &amp; retention ROI modeling</h2>
+                <p class="card-subtitle">Simulate executive budget interventions and projected turnover cost savings in real time</p>
+              </div>
+              <div class="simulator-presets">
+                <button class="btn-preset" data-reduction="10" data-merit="2.5">Conservative (10%)</button>
+                <button class="btn-preset active" data-reduction="15" data-merit="3.5">Balanced (15%)</button>
+                <button class="btn-preset" data-reduction="25" data-merit="5.0">Aggressive (25%)</button>
+              </div>
+            </div>
+
+            <div class="simulator-body">
+              <div class="simulator-controls">
+                <!-- Slider 1 -->
+                <div class="slider-group">
+                  <div class="slider-header">
+                    <label for="sim-reduction-slider">Target Attrition Reduction</label>
+                    <span class="slider-val" id="sim-reduction-val">15%</span>
+                  </div>
+                  <input type="range" id="sim-reduction-slider" min="0" max="30" step="1" value="15" class="minimal-slider">
+                  <div class="slider-hints">
+                    <span>0% (Status Quo)</span>
+                    <span>15% (Recommended)</span>
+                    <span>30%</span>
+                  </div>
+                </div>
+
+                <!-- Slider 2 -->
+                <div class="slider-group">
+                  <div class="slider-header">
+                    <label for="sim-merit-slider">Proposed Merit / Retention Pool</label>
+                    <span class="slider-val" id="sim-merit-val">3.5%</span>
+                  </div>
+                  <input type="range" id="sim-merit-slider" min="0" max="10" step="0.5" value="3.5" class="minimal-slider">
+                  <div class="slider-hints">
+                    <span>0%</span>
+                    <span>3.5% (Market Midpoint)</span>
+                    <span>10%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Simulator Real-Time ROI Output Cards -->
+              <div class="simulator-metrics">
+                <div class="sim-metric-box">
+                  <span class="sim-metric-label">Projected Exits Avoided</span>
+                  <span class="sim-metric-val" id="sim-retained-count">31 staff</span>
+                  <span class="sim-metric-sub">Retained personnel</span>
+                </div>
+
+                <div class="sim-metric-box">
+                  <span class="sim-metric-label">Turnover Costs Saved</span>
+                  <span class="sim-metric-val highlight-green" id="sim-savings-val">$2.79M</span>
+                  <span class="sim-metric-sub">Backfill costs avoided</span>
+                </div>
+
+                <div class="sim-metric-box">
+                  <span class="sim-metric-label">Retention Budget</span>
+                  <span class="sim-metric-val" id="sim-cost-val">$640K</span>
+                  <span class="sim-metric-sub">Allocated merit pool</span>
+                </div>
+
+                <div class="sim-metric-box sim-roi-box">
+                  <span class="sim-metric-label">Net Projected ROI</span>
+                  <span class="sim-metric-val highlight-purple" id="sim-roi-val">+$2.15M</span>
+                  <span class="sim-metric-sub">Net financial gain</span>
+                </div>
               </div>
             </div>
           </div>
@@ -833,6 +893,7 @@
                     <th>Base Salary</th>
                     <th>Tenure</th>
                     <th>Risk Band</th>
+                    <th style="text-align: right;">Dossier</th>
                   </tr>
                 </thead>
                 <tbody id="employee-table-body">
@@ -842,7 +903,7 @@
             </div>
 
             <div class="table-footer">
-              <span class="table-note">Click rows or use the global slicer above to narrow scope.</span>
+              <span class="table-note">Click any employee row to open their 360° Executive Dossier.</span>
               <div class="pager-btns">
                 <button class="btn-pager" id="table-prev-btn">Previous</button>
                 <button class="btn-pager" id="table-next-btn">Next</button>
@@ -945,128 +1006,155 @@ CALCULATE(
     </div>
   </div>
 
-  <!-- Modal 4: What-If Retention ROI Simulator -->
-  <div class="modal-overlay" id="modal-simulator">
-    <div class="modal-card" style="max-width: 620px;">
-      <div class="modal-header">
-        <div>
-          <h3 class="modal-title">Retention ROI &amp; What-If Simulator</h3>
-          <p class="modal-desc" style="margin-top: 2px;">Simulate financial impact of retention strategies against baseline turnover costs ($18.6M).</p>
-        </div>
-        <button class="modal-close" data-close="modal-simulator">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-
-      <!-- Simulator Inputs -->
-      <div class="simulator-box">
-        <div class="sim-group">
-          <div class="sim-label-row">
-            <span class="sim-label">Target Turnover Reduction</span>
-            <span class="sim-badge" id="sim-attr-display">15%</span>
-          </div>
-          <input type="range" id="sim-attr-slider" min="5" max="35" step="5" value="15" class="sim-slider">
-          <div class="sim-ticks">
-            <span>5% (Targeted)</span>
-            <span>15% (Benchmark)</span>
-            <span>35% (Transformation)</span>
-          </div>
-        </div>
-
-        <div class="sim-group">
-          <div class="sim-label-row">
-            <span class="sim-label">Merit / Compensation Realignment Pool</span>
-            <span class="sim-badge" id="sim-merit-display">3.0%</span>
-          </div>
-          <input type="range" id="sim-merit-slider" min="1.0" max="6.0" step="0.5" value="3.0" class="sim-slider">
-          <div class="sim-ticks">
-            <span>1.0% (Selective)</span>
-            <span>3.0% (Standard)</span>
-            <span>6.0% (Aggressive)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- ROI Output Cards -->
-      <div class="sim-metrics-grid">
-        <div class="sim-metric-card green">
-          <span class="sim-m-label">Turnover Savings</span>
-          <span class="sim-m-val" id="sim-savings-val">+$2.79M</span>
-          <span class="sim-m-hint" id="sim-headcount-val">~31 exits avoided</span>
-        </div>
-        <div class="sim-metric-card neutral">
-          <span class="sim-m-label">Program Investment</span>
-          <span class="sim-m-val" id="sim-investment-val">-$780K</span>
-          <span class="sim-m-hint">Targeted merit adjustment</span>
-        </div>
-        <div class="sim-metric-card lavender">
-          <span class="sim-m-label">Projected Net Annual ROI</span>
-          <span class="sim-m-val" id="sim-net-roi-val">+$2.01M</span>
-          <span class="sim-m-hint">Net financial return</span>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn-dark" data-close="modal-simulator">Done</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 5: Employee 360 Dossier Drill-Through -->
+  <!-- Modal 4: Employee 360° Dossier Modal (Feature 2) -->
   <div class="modal-overlay" id="modal-employee-dossier">
-    <div class="modal-card" style="max-width: 660px;">
-      <div class="modal-header">
+    <div class="modal-card dossier-modal-card">
+      <!-- Dossier Header -->
+      <div class="dossier-header">
         <div class="dossier-header-left">
-          <div class="dossier-avatar" id="dossier-avatar">EMP</div>
+          <div class="dossier-avatar" id="dossier-avatar">HB</div>
           <div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <h3 class="modal-title" id="dossier-name">Employee Name</h3>
-              <span class="status-badge active" id="dossier-status-badge">Active</span>
+            <div class="dossier-title-row">
+              <h3 class="modal-title" id="dossier-name">Himabala</h3>
+              <span class="status-badge active" id="dossier-status">Active</span>
             </div>
-            <p class="modal-desc" id="dossier-subtitle">Title &bull; Department</p>
+            <div class="dossier-meta-subtitle">
+              <span id="dossier-role">Senior People Analytics Partner</span> &bull; 
+              <span id="dossier-dept">Human Resources</span> &bull; 
+              <strong id="dossier-id">EMP-0142</strong>
+            </div>
           </div>
         </div>
-        <button class="modal-close" data-close="modal-employee-dossier">
+        <button class="modal-close" data-close="modal-employee-dossier" title="Close Dossier">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </button>
       </div>
 
-      <!-- Quick Metrics Strip -->
-      <div class="dossier-strip">
-        <div class="dossier-metric">
-          <span class="d-label">Base Salary</span>
-          <span class="d-val" id="dossier-salary">$0</span>
+      <!-- Dossier Body Sections -->
+      <div class="dossier-sections-grid">
+        
+        <!-- Section 1: Compensation & Compa-Ratio Benchmark -->
+        <div class="dossier-section-card">
+          <div class="dossier-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <span>Compensation &amp; Market Compa-Ratio Benchmark</span>
+          </div>
+          
+          <div class="dossier-chips-grid">
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Base Salary</span>
+              <span class="dossier-chip-val" id="dossier-salary">$124,000</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Job Seniority</span>
+              <span class="dossier-chip-val" id="dossier-level">Senior</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Grade Midpoint</span>
+              <span class="dossier-chip-val" id="dossier-midpoint">$120,000</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Compa-Ratio</span>
+              <span class="dossier-chip-val highlight-purple" id="dossier-compa">1.03 (103%)</span>
+            </div>
+          </div>
+
+          <!-- Compa-Ratio Visual Gauge -->
+          <div class="compa-gauge">
+            <div class="compa-gauge-bar">
+              <div class="compa-gauge-fill"></div>
+              <div class="compa-gauge-pin" id="dossier-compa-pin" style="left: 55%;"></div>
+            </div>
+            <div class="compa-gauge-labels">
+              <span>0.80 (Under Market)</span>
+              <span>1.00 (Market Midpoint)</span>
+              <span>1.20 (Top of Band)</span>
+            </div>
+          </div>
         </div>
-        <div class="dossier-metric">
-          <span class="d-label">Compa-Ratio</span>
-          <span class="d-val" id="dossier-compa">1.00</span>
+
+        <!-- Section 2: Performance Calibration & 9-Box Placement -->
+        <div class="dossier-section-card">
+          <div class="dossier-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Performance Calibration &amp; 9-Box Placement</span>
+          </div>
+
+          <div class="dossier-chips-grid">
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Latest Rating</span>
+              <span class="dossier-chip-val highlight-green" id="dossier-perf-rating">4.0 / 5.0</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Potential Rating</span>
+              <span class="dossier-chip-val" id="dossier-pot-rating">3.0 / 3.0</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">9-Box Quadrant</span>
+              <span class="dossier-chip-val" id="dossier-ninebox">Future Star</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Annual L&amp;D Hours</span>
+              <span class="dossier-chip-val" id="dossier-training">42.5 hrs</span>
+            </div>
+          </div>
+
+          <!-- 3-Year Review Trajectory Timeline -->
+          <div class="dossier-reviews-timeline" id="dossier-reviews-timeline">
+            <!-- Dynamically populated -->
+          </div>
         </div>
-        <div class="dossier-metric">
-          <span class="d-label">Tenure</span>
-          <span class="d-val" id="dossier-tenure">0 yrs</span>
+
+        <!-- Section 3: Retention & Engagement Diagnostics -->
+        <div class="dossier-section-card">
+          <div class="dossier-section-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <span>Retention Diagnostics &amp; Engagement Index</span>
+          </div>
+
+          <div class="dossier-chips-grid">
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Flight Risk Band</span>
+              <span class="dossier-chip-val" id="dossier-flight-risk"><span class="pill-badge positive">Low Risk</span></span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Job Satisfaction</span>
+              <span class="dossier-chip-val" id="dossier-sat">4.0 / 5</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Work-Life Balance</span>
+              <span class="dossier-chip-val" id="dossier-wlb">4.0 / 5</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Work Model &amp; Hub</span>
+              <span class="dossier-chip-val" id="dossier-location">Hybrid (New York)</span>
+            </div>
+          </div>
+
+          <!-- Departure Context (Visible only if Terminated) -->
+          <div class="dossier-attr-box" id="dossier-attr-box" style="display: none;">
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Separation Date</span>
+              <span class="dossier-chip-val" id="dossier-exit-date">2024-08-15</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Tenure at Exit</span>
+              <span class="dossier-chip-val" id="dossier-exit-tenure">16 mos</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Primary Reason</span>
+              <span class="dossier-chip-val" id="dossier-exit-reason">Career Opportunity</span>
+            </div>
+            <div class="dossier-chip">
+              <span class="dossier-chip-label">Estimated Turnover Cost</span>
+              <span class="dossier-chip-val highlight-rose" id="dossier-exit-cost">$92,500</span>
+            </div>
+          </div>
         </div>
-        <div class="dossier-metric">
-          <span class="d-label">Flight Risk</span>
-          <span class="d-val" id="dossier-risk">Low</span>
-        </div>
+
       </div>
 
-      <!-- Multi-Year Review History -->
-      <div class="dossier-section">
-        <h4 class="dossier-sec-title">Annual Performance &amp; Potential Review History</h4>
-        <div class="dossier-reviews" id="dossier-reviews-list">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-
-      <!-- Diagnostics Breakdown -->
-      <div class="dossier-section">
-        <h4 class="dossier-sec-title">Diagnostic Attributes &amp; Demographics</h4>
-        <div class="dossier-attrs" id="dossier-attrs-grid">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-
+      <!-- Dossier Footer -->
       <div class="modal-footer">
         <button class="btn-dark" data-close="modal-employee-dossier">Close Dossier</button>
       </div>
