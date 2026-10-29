@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // State Management
   const state = {
     activeTab: "tab-workforce",
+    activeUnit: "all",
     filters: {
       department: "All",
       jobLevel: "All",
@@ -97,6 +98,30 @@ document.addEventListener("DOMContentLoaded", () => {
   setupModal("open-pbip-modal", "modal-pbip");
   setupModal("open-dax-modal", "modal-dax");
   setupModal("open-schema-modal", "modal-schema");
+  setupModal("open-simulator-btn", "modal-simulator");
+
+  // Dossier modal close handling
+  const dossierModal = document.getElementById("modal-employee-dossier");
+  if (dossierModal) {
+    dossierModal.querySelectorAll("[data-close]").forEach(btn => {
+      btn.addEventListener("click", () => dossierModal.classList.remove("active"));
+    });
+    dossierModal.addEventListener("click", e => {
+      if (e.target === dossierModal) dossierModal.classList.remove("active");
+    });
+  }
+
+  // Sub-tabs Quick Filter Listeners
+  const subTabs = document.querySelectorAll(".sub-tab");
+  subTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      subTabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      state.activeUnit = tab.getAttribute("data-unit") || "all";
+      state.currentPage = 1;
+      applyFiltersAndRefresh();
+    });
+  });
 
   // Slicer Event Listeners
   if (slicerDept) {
@@ -137,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
       state.filters.jobLevel = "All";
       state.filters.gender = "All";
       state.filters.workLocation = "All";
+      state.activeUnit = "all";
       state.nineBoxFilter = null;
       state.searchQuery = "";
 
@@ -145,6 +171,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (slicerGender) slicerGender.value = "All";
       if (slicerLocation) slicerLocation.value = "All";
       
+      const subTabs = document.querySelectorAll(".sub-tab");
+      subTabs.forEach(t => t.classList.toggle("active", t.getAttribute("data-unit") === "all"));
+
       const searchInput = document.getElementById("employee-search");
       if (searchInput) searchInput.value = "";
 
@@ -157,6 +186,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Filter Data Core Function
   function getFilteredEmployees() {
     return data.employees.filter(emp => {
+      if (state.activeUnit === "tech") {
+        if (emp.DepartmentName !== "Engineering" && emp.DepartmentName !== "Product & Design") return false;
+      } else if (state.activeUnit === "commercial") {
+        if (emp.DepartmentName !== "Sales" && emp.DepartmentName !== "Marketing" && emp.DepartmentName !== "Customer Support") return false;
+      }
       if (state.filters.department !== "All" && emp.DepartmentName !== state.filters.department) return false;
       if (state.filters.jobLevel !== "All" && emp.JobLevel !== state.filters.jobLevel) return false;
       if (state.filters.gender !== "All" && emp.Gender !== state.filters.gender) return false;
@@ -167,7 +201,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function applyFiltersAndRefresh() {
     updateKPIs();
+    updateSmartInsights();
     renderCurrentTabPage();
+  }
+
+  // Dynamic Smart Insights Bar Narrative
+  function updateSmartInsights() {
+    const insightEl = document.getElementById("dynamic-insight-text");
+    if (!insightEl) return;
+
+    const filteredEmps = getFilteredEmployees();
+    const activeEmps = filteredEmps.filter(e => e.CurrentStatus === "Active");
+    const terminatedEmps = filteredEmps.filter(e => e.CurrentStatus === "Terminated");
+    const activeCount = activeEmps.length;
+    const totalCount = filteredEmps.length;
+    const attrRate = totalCount > 0 ? ((terminatedEmps.length / totalCount) * 100).toFixed(1) : "0.0";
+
+    const salaries = activeEmps.map(e => parseFloat(e.CurrentBaseSalary || 0)).filter(s => s > 0);
+    const avgSal = salaries.length > 0 ? Math.round(salaries.reduce((a, b) => a + b, 0) / salaries.length) : 0;
+
+    if (state.filters.department !== "All") {
+      insightEl.textContent = `${state.filters.department} department: ${activeCount.toLocaleString()} active staff, ${attrRate}% attrition rate, with average base salary of $${avgSal.toLocaleString()}. Interactive cross-filter engaged.`;
+    } else if (state.filters.jobLevel !== "All") {
+      insightEl.textContent = `${state.filters.jobLevel} tier: ${activeCount.toLocaleString()} active personnel (${totalCount > 0 ? ((activeCount / 1250) * 100).toFixed(1) : 0}% of enterprise) with ${attrRate}% annualized attrition.`;
+    } else if (state.filters.gender !== "All") {
+      insightEl.textContent = `${state.filters.gender} cohort: ${activeCount.toLocaleString()} active personnel, average base salary $${avgSal.toLocaleString()} across filtered job families.`;
+    } else if (state.filters.workLocation !== "All") {
+      insightEl.textContent = `${state.filters.workLocation} work model: ${activeCount.toLocaleString()} active team members with ${attrRate}% turnover and stable retention indicators.`;
+    } else if (state.activeUnit !== "all") {
+      const unitLabel = state.activeUnit === "tech" ? "Technology (Engineering & Product)" : "Commercial (Sales, Marketing & Support)";
+      insightEl.textContent = `${unitLabel} division: ${activeCount.toLocaleString()} active headcount with ${attrRate}% turnover and $${avgSal.toLocaleString()} average compensation.`;
+    } else {
+      insightEl.textContent = "Enterprise snapshot: 1,250 headcount across 7 departments with 14.8% voluntary turnover and $18.6M cumulative separation impact.";
+    }
+  }
+
+  // Retention ROI & What-If Simulator Logic
+  function setupWhatIfSimulator() {
+    const attrSlider = document.getElementById("sim-attr-slider");
+    const meritSlider = document.getElementById("sim-merit-slider");
+    const attrDisplay = document.getElementById("sim-attr-display");
+    const meritDisplay = document.getElementById("sim-merit-display");
+    const savingsVal = document.getElementById("sim-savings-val");
+    const headcountVal = document.getElementById("sim-headcount-val");
+    const investmentVal = document.getElementById("sim-investment-val");
+    const netRoiVal = document.getElementById("sim-net-roi-val");
+
+    if (!attrSlider || !meritSlider) return;
+
+    function calculateSimulation() {
+      const attrReductionPct = parseFloat(attrSlider.value);
+      const meritPct = parseFloat(meritSlider.value);
+
+      if (attrDisplay) attrDisplay.textContent = `${attrReductionPct}%`;
+      if (meritDisplay) meritDisplay.textContent = `${meritPct.toFixed(1)}%`;
+
+      const baselineTurnoverCost = 18600000;
+      const totalSeparations = 200;
+      const turnoverSavings = baselineTurnoverCost * (attrReductionPct / 100);
+      const exitsAvoided = Math.round(totalSeparations * (attrReductionPct / 100));
+
+      // Targeted retention program pool: 28% of baseline enterprise payroll targeted
+      const targetedPayrollPool = 1250 * 95000 * 0.28;
+      const programInvestment = targetedPayrollPool * (meritPct / 100);
+      const netRoi = turnoverSavings - programInvestment;
+
+      if (savingsVal) savingsVal.textContent = `+$${(turnoverSavings / 1e6).toFixed(2)}M`;
+      if (headcountVal) headcountVal.textContent = `~${exitsAvoided} exits avoided`;
+      if (investmentVal) investmentVal.textContent = `-$${(programInvestment / 1000).toFixed(0)}K`;
+      if (netRoiVal) {
+        netRoiVal.textContent = `${netRoi >= 0 ? '+' : '-'}$${(Math.abs(netRoi) / 1e6).toFixed(2)}M`;
+      }
+    }
+
+    attrSlider.addEventListener("input", calculateSimulation);
+    meritSlider.addEventListener("input", calculateSimulation);
+    calculateSimulation();
   }
 
   function renderCurrentTabPage() {
@@ -434,6 +543,25 @@ document.addEventListener("DOMContentLoaded", () => {
           responsive: true,
           maintainAspectRatio: false,
           indexAxis: "y",
+          onClick: (evt, elements) => {
+            if (elements.length > 0) {
+              const clickedIndex = elements[0].index;
+              const clickedDept = depts[clickedIndex];
+              if (state.filters.department === clickedDept) {
+                state.filters.department = "All";
+                if (slicerDept) slicerDept.value = "All";
+              } else {
+                state.filters.department = clickedDept;
+                if (slicerDept) slicerDept.value = clickedDept;
+              }
+              state.currentPage = 1;
+              applyFiltersAndRefresh();
+            }
+          },
+          onHover: (event, chartElement) => {
+            const canvas = event.native?.target;
+            if (canvas) canvas.style.cursor = chartElement[0] ? 'pointer' : 'default';
+          },
           scales: {
             x: { stacked: true, grid: { color: palette.grid, drawBorder: false }, ticks: { color: palette.textSecondary, font: { size: 9.5 } } },
             y: { stacked: true, grid: { display: false }, ticks: { color: palette.textSecondary, font: { size: 9.5 } } }
@@ -550,6 +678,25 @@ document.addEventListener("DOMContentLoaded", () => {
         options: {
           responsive: true,
           maintainAspectRatio: false,
+          onClick: (evt, elements) => {
+            if (elements.length > 0) {
+              const clickedIndex = elements[0].index;
+              const clickedDept = depts[clickedIndex];
+              if (state.filters.department === clickedDept) {
+                state.filters.department = "All";
+                if (slicerDept) slicerDept.value = "All";
+              } else {
+                state.filters.department = clickedDept;
+                if (slicerDept) slicerDept.value = clickedDept;
+              }
+              state.currentPage = 1;
+              applyFiltersAndRefresh();
+            }
+          },
+          onHover: (event, chartElement) => {
+            const canvas = event.native?.target;
+            if (canvas) canvas.style.cursor = chartElement[0] ? 'pointer' : 'default';
+          },
           scales: {
             ...baseScales,
             y: { ...baseScales.y, ticks: { ...baseScales.y.ticks, callback: v => v + "%" } }
@@ -920,7 +1067,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const tbody = document.getElementById("employee-table-body");
     if (tbody) {
       tbody.innerHTML = pageRecords.map(e => `
-        <tr>
+        <tr data-emp-id="${e.EmployeeID}" title="Click to view 360 executive dossier">
           <td><strong>${e.EmployeeID}</strong></td>
           <td>${e.FirstName} ${e.LastName}</td>
           <td>${e.DepartmentName}</td>
@@ -941,6 +1088,95 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `Showing ${startIdx + 1} to ${Math.min(startIdx + state.pageSize, totalRecords)} of ${totalRecords.toLocaleString()} records`
         : "No matching records";
     }
+  }
+
+  // Employee 360 Dossier Drill-Through Handler
+  function openEmployeeDossier(empId) {
+    const emp = data.employees.find(e => e.EmployeeID === empId);
+    if (!emp) return;
+
+    const modal = document.getElementById("modal-employee-dossier");
+    if (!modal) return;
+
+    // Header info
+    setElementText("dossier-name", `${emp.FirstName} ${emp.LastName}`);
+    setElementText("dossier-avatar", `${emp.FirstName.charAt(0)}${emp.LastName.charAt(0)}`);
+    setElementText("dossier-subtitle", `${emp.JobTitle} • ${emp.DepartmentName} • Level: ${emp.JobLevel}`);
+
+    const badge = document.getElementById("dossier-status-badge");
+    if (badge) {
+      badge.textContent = emp.CurrentStatus;
+      badge.className = `status-badge ${emp.CurrentStatus.toLowerCase()}`;
+    }
+
+    // Quick Metrics
+    const salaryVal = parseFloat(emp.CurrentBaseSalary || 0);
+    const tenureVal = parseFloat(emp.TenureYears || 0);
+    const levelBenchmarks = { "Entry": 65000, "Mid": 90000, "Senior": 125000, "Lead/Manager": 160000, "Executive": 220000 };
+    const benchmark = levelBenchmarks[emp.JobLevel] || 100000;
+    const compaRatio = (salaryVal / benchmark).toFixed(2);
+
+    const reviews = data.performance.filter(r => r.EmployeeID === empId);
+    const latestReview = reviews[reviews.length - 1] || null;
+    const flightRisk = latestReview ? latestReview.FlightRisk : (tenureVal < 1 ? "High" : "Low");
+
+    setElementText("dossier-salary", `$${Math.round(salaryVal).toLocaleString()}`);
+    setElementText("dossier-compa", compaRatio);
+    setElementText("dossier-tenure", `${tenureVal} yrs`);
+    setElementText("dossier-risk", flightRisk);
+
+    // Multi-Year Reviews
+    const reviewsList = document.getElementById("dossier-reviews-list");
+    if (reviewsList) {
+      if (reviews.length > 0) {
+        reviewsList.innerHTML = reviews.map(r => `
+          <div class="dossier-review-card">
+            <span class="dossier-review-year">FY${r.ReviewYear || '2024'}</span>
+            <div class="dossier-review-ratings">
+              <span>Rating: <strong>${r.PerformanceRating}/5</strong></span>
+              <span>Potential: <strong>${r.PotentialRating}/5</strong></span>
+              <span>Satisfaction: <strong>${r.SatisfactionScore}/5</strong></span>
+              <span>Promoted: <strong>${r.Promoted}</strong></span>
+            </div>
+          </div>
+        `).join("");
+      } else {
+        reviewsList.innerHTML = `<div style="font-size: 11px; color: var(--text-tertiary); padding: 6px 0;">No prior annual review cycles logged for this personnel record.</div>`;
+      }
+    }
+
+    // Diagnostics Breakdown
+    const attrsGrid = document.getElementById("dossier-attrs-grid");
+    if (attrsGrid) {
+      const items = [
+        { k: "Work Model", v: emp.WorkLocation || "Hybrid" },
+        { k: "Overtime Status", v: emp.OvertimeEligible || "Eligible" },
+        { k: "Education", v: emp.EducationField || "Information Technology" },
+        { k: "Commute Distance", v: `${emp.DistanceFromHome || 8} miles` },
+        { k: "Training Hours", v: `${emp.TrainingHours || 40} hrs completed` },
+        { k: "Demographic", v: `${emp.Generation || 'Millennials'} • ${emp.Gender}` }
+      ];
+      attrsGrid.innerHTML = items.map(item => `
+        <div class="dossier-attr-item">
+          <span class="d-attr-k">${item.k}</span>
+          <span class="d-attr-v">${item.v}</span>
+        </div>
+      `).join("");
+    }
+
+    modal.classList.add("active");
+  }
+
+  // Delegated table row click listener
+  const tbodyEl = document.getElementById("employee-table-body");
+  if (tbodyEl) {
+    tbodyEl.addEventListener("click", e => {
+      const tr = e.target.closest("tr[data-emp-id]");
+      if (tr) {
+        const empId = tr.getAttribute("data-emp-id");
+        openEmployeeDossier(empId);
+      }
+    });
   }
 
   // Search & Pagination Listeners
@@ -995,6 +1231,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Initial Boot
+  setupWhatIfSimulator();
   updateKPIs();
+  updateSmartInsights();
   renderWorkforceCharts();
 });

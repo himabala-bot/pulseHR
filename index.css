@@ -525,14 +525,81 @@ html, body {
   background: var(--action-dark-hover);
 }
 
+.btn-subtle {
+  height: 32px;
+  padding: 0 12px;
+  background: #FFFFFF;
+  color: var(--text-primary);
+  border: 1px solid var(--border-field);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-subtle:hover {
+  background: var(--bg-subtle);
+  border-color: #D5D5DC;
+}
+
+.btn-subtle svg {
+  stroke: var(--pastel-purple);
+}
+
 /* Controls & Slicers Bar */
 .controls-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4px 12px 10px 12px;
+  padding: 4px 12px 6px 12px;
   gap: 12px;
   flex-shrink: 0;
+}
+
+/* Smart Insights Bar */
+.insights-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 12px 10px 12px;
+  padding: 6px 12px;
+  background: #FAFAFC;
+  border: 1px solid #ECECF0;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.insight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--pastel-lavender-subtle);
+  color: var(--pastel-purple);
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  font-size: 9.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+
+.insight-badge svg {
+  stroke: var(--pastel-purple);
+  fill: var(--pastel-purple);
+}
+
+.insight-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sub-tabs {
@@ -1131,10 +1198,253 @@ html, body {
   line-height: 1.8;
 }
 
+.minimal-table tbody tr {
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.minimal-table tbody tr:hover td {
+  background: #F8F8FC;
+}
+
 .modal-footer {
   margin-top: 8px;
   display: flex;
   justify-content: flex-end;
+}
+
+/* =========================================================================
+   WHAT-IF SIMULATOR STYLES
+   ========================================================================= */
+
+.simulator-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-large);
+  padding: 16px;
+}
+
+.sim-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sim-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sim-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.sim-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--pastel-lavender-subtle);
+  color: var(--pastel-purple);
+  border: 1px solid #DFD0F6;
+}
+
+.sim-slider {
+  width: 100%;
+  accent-color: var(--pastel-purple);
+  cursor: pointer;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+}
+
+.sim-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.sim-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.sim-metric-card {
+  padding: 12px 14px;
+  border-radius: var(--radius-large);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border: 1px solid transparent;
+}
+
+.sim-metric-card.green {
+  background: #EEF8EC;
+  border-color: #CCE6A6;
+}
+
+.sim-metric-card.neutral {
+  background: var(--bg-subtle);
+  border-color: var(--border-subtle);
+}
+
+.sim-metric-card.lavender {
+  background: var(--pastel-lavender-subtle);
+  border-color: #E2D3F7;
+}
+
+.sim-m-label {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.sim-m-val {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-feature-settings: "tnum" on, "lnum" on;
+}
+
+.sim-m-hint {
+  font-size: 10px;
+  color: var(--text-tertiary);
+}
+
+/* =========================================================================
+   EMPLOYEE 360 DOSSIER STYLES
+   ========================================================================= */
+
+.dossier-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dossier-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  background: var(--pastel-lavender-subtle);
+  color: var(--pastel-purple);
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #DFD0F6;
+  flex-shrink: 0;
+}
+
+.dossier-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--bg-subtle);
+  border-radius: var(--radius-large);
+  border: 1px solid var(--border-subtle);
+}
+
+.dossier-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.d-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.d-val {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dossier-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.dossier-sec-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dossier-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dossier-review-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  font-size: 11.5px;
+}
+
+.dossier-review-year {
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 70px;
+}
+
+.dossier-review-ratings {
+  display: flex;
+  gap: 14px;
+  color: var(--text-secondary);
+}
+
+.dossier-attrs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.dossier-attr-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  background: var(--bg-subtle);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.d-attr-k {
+  font-size: 9.5px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.d-attr-v {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 /* =========================================================================

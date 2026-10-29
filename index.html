@@ -170,6 +170,22 @@
             </svg>
           </button>
 
+          <!-- What-If Simulator Button -->
+          <button class="btn-subtle" id="open-simulator-btn" title="Open Retention ROI Simulator">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="21" x2="4" y2="14"></line>
+              <line x1="4" y1="10" x2="4" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="3"></line>
+              <line x1="20" y1="21" x2="20" y2="16"></line>
+              <line x1="20" y1="12" x2="20" y2="3"></line>
+              <line x1="1" y1="14" x2="7" y2="14"></line>
+              <line x1="9" y1="8" x2="15" y2="8"></line>
+              <line x1="17" y1="16" x2="23" y2="16"></line>
+            </svg>
+            <span>What-If Simulator</span>
+          </button>
+
           <!-- Primary Action Button -->
           <button class="btn-dark" id="export-data-btn">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -186,9 +202,9 @@
       <div class="controls-bar">
         <!-- Subheader Quick Filter Tabs -->
         <div class="sub-tabs">
-          <button class="sub-tab active">All Units</button>
-          <button class="sub-tab">Core Operations</button>
-          <button class="sub-tab">Leadership</button>
+          <button class="sub-tab active" data-unit="all">All Units</button>
+          <button class="sub-tab" data-unit="tech">Technology</button>
+          <button class="sub-tab" data-unit="commercial">Commercial</button>
         </div>
 
         <!-- Slicers Row -->
@@ -237,6 +253,17 @@
 
           <button id="slicer-reset" class="btn-reset" title="Clear Slicers">Reset</button>
         </div>
+      </div>
+
+      <!-- Dynamic Smart Insights Bar -->
+      <div class="insights-bar">
+        <div class="insight-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>Live Insight</span>
+        </div>
+        <span class="insight-text" id="dynamic-insight-text">Analyzing organizational workforce metrics and turnover risk across all business units...</span>
       </div>
 
       <!-- Dashboard Scrollable Container -->
@@ -914,6 +941,134 @@ CALCULATE(
 
       <div class="modal-footer">
         <button class="btn-dark" data-close="modal-schema">Close Schema</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: What-If Retention ROI Simulator -->
+  <div class="modal-overlay" id="modal-simulator">
+    <div class="modal-card" style="max-width: 620px;">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title">Retention ROI &amp; What-If Simulator</h3>
+          <p class="modal-desc" style="margin-top: 2px;">Simulate financial impact of retention strategies against baseline turnover costs ($18.6M).</p>
+        </div>
+        <button class="modal-close" data-close="modal-simulator">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Simulator Inputs -->
+      <div class="simulator-box">
+        <div class="sim-group">
+          <div class="sim-label-row">
+            <span class="sim-label">Target Turnover Reduction</span>
+            <span class="sim-badge" id="sim-attr-display">15%</span>
+          </div>
+          <input type="range" id="sim-attr-slider" min="5" max="35" step="5" value="15" class="sim-slider">
+          <div class="sim-ticks">
+            <span>5% (Targeted)</span>
+            <span>15% (Benchmark)</span>
+            <span>35% (Transformation)</span>
+          </div>
+        </div>
+
+        <div class="sim-group">
+          <div class="sim-label-row">
+            <span class="sim-label">Merit / Compensation Realignment Pool</span>
+            <span class="sim-badge" id="sim-merit-display">3.0%</span>
+          </div>
+          <input type="range" id="sim-merit-slider" min="1.0" max="6.0" step="0.5" value="3.0" class="sim-slider">
+          <div class="sim-ticks">
+            <span>1.0% (Selective)</span>
+            <span>3.0% (Standard)</span>
+            <span>6.0% (Aggressive)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROI Output Cards -->
+      <div class="sim-metrics-grid">
+        <div class="sim-metric-card green">
+          <span class="sim-m-label">Turnover Savings</span>
+          <span class="sim-m-val" id="sim-savings-val">+$2.79M</span>
+          <span class="sim-m-hint" id="sim-headcount-val">~31 exits avoided</span>
+        </div>
+        <div class="sim-metric-card neutral">
+          <span class="sim-m-label">Program Investment</span>
+          <span class="sim-m-val" id="sim-investment-val">-$780K</span>
+          <span class="sim-m-hint">Targeted merit adjustment</span>
+        </div>
+        <div class="sim-metric-card lavender">
+          <span class="sim-m-label">Projected Net Annual ROI</span>
+          <span class="sim-m-val" id="sim-net-roi-val">+$2.01M</span>
+          <span class="sim-m-hint">Net financial return</span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-dark" data-close="modal-simulator">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Employee 360 Dossier Drill-Through -->
+  <div class="modal-overlay" id="modal-employee-dossier">
+    <div class="modal-card" style="max-width: 660px;">
+      <div class="modal-header">
+        <div class="dossier-header-left">
+          <div class="dossier-avatar" id="dossier-avatar">EMP</div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <h3 class="modal-title" id="dossier-name">Employee Name</h3>
+              <span class="status-badge active" id="dossier-status-badge">Active</span>
+            </div>
+            <p class="modal-desc" id="dossier-subtitle">Title &bull; Department</p>
+          </div>
+        </div>
+        <button class="modal-close" data-close="modal-employee-dossier">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="dossier-strip">
+        <div class="dossier-metric">
+          <span class="d-label">Base Salary</span>
+          <span class="d-val" id="dossier-salary">$0</span>
+        </div>
+        <div class="dossier-metric">
+          <span class="d-label">Compa-Ratio</span>
+          <span class="d-val" id="dossier-compa">1.00</span>
+        </div>
+        <div class="dossier-metric">
+          <span class="d-label">Tenure</span>
+          <span class="d-val" id="dossier-tenure">0 yrs</span>
+        </div>
+        <div class="dossier-metric">
+          <span class="d-label">Flight Risk</span>
+          <span class="d-val" id="dossier-risk">Low</span>
+        </div>
+      </div>
+
+      <!-- Multi-Year Review History -->
+      <div class="dossier-section">
+        <h4 class="dossier-sec-title">Annual Performance &amp; Potential Review History</h4>
+        <div class="dossier-reviews" id="dossier-reviews-list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Diagnostics Breakdown -->
+      <div class="dossier-section">
+        <h4 class="dossier-sec-title">Diagnostic Attributes &amp; Demographics</h4>
+        <div class="dossier-attrs" id="dossier-attrs-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-dark" data-close="modal-employee-dossier">Close Dossier</button>
       </div>
     </div>
   </div>
