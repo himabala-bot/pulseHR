@@ -1,0 +1,30 @@
+JobRoleID,DepartmentID,JobTitle,JobLevel,PayGrade,MinSalary,MaxSalary
+101,1,Junior Software Engineer,Entry,Grade 1,68000,85000
+102,1,Software Engineer,Mid,Grade 2,90000,120000
+103,1,Senior Software Engineer,Senior,Grade 3,130000,165000
+104,1,Staff Software Architect,Lead/Manager,Grade 4,170000,210000
+105,1,Engineering Director,Executive,Grade 5,220000,280000
+201,2,Sales Development Rep,Entry,Grade 1,52000,68000
+202,2,Account Executive,Mid,Grade 2,75000,105000
+203,2,Senior Enterprise AE,Senior,Grade 3,115000,150000
+204,2,Regional Sales Manager,Lead/Manager,Grade 4,155000,195000
+205,2,VP of Commercial Sales,Executive,Grade 5,210000,270000
+301,3,Marketing Coordinator,Entry,Grade 1,50000,65000
+302,3,Content Marketing Specialist,Mid,Grade 2,70000,92000
+303,3,Growth Marketing Manager,Senior,Grade 3,105000,138000
+304,3,Director of Demand Gen,Lead/Manager,Grade 4,150000,190000
+401,4,HR Coordinator,Entry,Grade 1,52000,66000
+402,4,People Operations Specialist,Mid,Grade 2,72000,95000
+403,4,Senior Talent Acquisition Partner,Senior,Grade 3,100000,135000
+404,4,Head of People & Culture,Lead/Manager,Grade 4,155000,195000
+501,5,Junior Accountant,Entry,Grade 1,55000,70000
+502,5,Financial Analyst,Mid,Grade 2,80000,105000
+503,5,Senior FP&A Manager,Senior,Grade 3,125000,160000
+504,5,VP of Finance & Controller,Lead/Manager,Grade 4,180000,230000
+601,6,Associate Product Designer,Entry,Grade 1,62000,78000
+602,6,Product Manager,Mid,Grade 2,95000,128000
+603,6,Lead Product Designer,Senior,Grade 3,130000,165000
+604,6,Group Product Manager,Lead/Manager,Grade 4,170000,215000
+701,7,Customer Success Associate,Entry,Grade 1,48000,62000
+702,7,Tier 2 Technical Support Specialist,Mid,Grade 2,65000,82000
+703,7,Customer Support Lead,Senior,Grade 3,88000,115000

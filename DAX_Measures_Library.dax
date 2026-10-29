@@ -1,0 +1,315 @@
+// =========================================================================
+// POWER BI DAX MEASURES LIBRARY
+// Enterprise HR & People Analytics Solution
+// Recommended Setup: Create a disconnected table named '_DAX Measures'
+// in Power BI Desktop to store and organize these measures into folders.
+// =========================================================================
+
+// =========================================================================
+// FOLDER: 01 - Workforce & Headcount
+// =========================================================================
+
+Total Employees = 
+COUNTROWS('Dim_Employee')
+
+Active Headcount = 
+CALCULATE(
+    COUNTROWS('Dim_Employee'),
+    'Dim_Employee'[CurrentStatus] = "Active"
+)
+
+Terminated Headcount = 
+CALCULATE(
+    COUNTROWS('Dim_Employee'),
+    'Dim_Employee'[CurrentStatus] = "Terminated"
+)
+
+Female Headcount = 
+CALCULATE(
+    [Active Headcount],
+    'Dim_Employee'[Gender] = "Female"
+)
+
+Male Headcount = 
+CALCULATE(
+    [Active Headcount],
+    'Dim_Employee'[Gender] = "Male"
+)
+
+NonBinary Headcount = 
+CALCULATE(
+    [Active Headcount],
+    'Dim_Employee'[Gender] = "Non-Binary"
+)
+
+Female Representation % = 
+DIVIDE(
+    [Female Headcount],
+    [Active Headcount],
+    0
+)
+
+Average Employee Age = 
+CALCULATE(
+    AVERAGE('Dim_Employee'[Age]),
+    'Dim_Employee'[CurrentStatus] = "Active"
+)
+
+Average Tenure Years = 
+CALCULATE(
+    AVERAGE('Dim_Employee'[TenureYears]),
+    'Dim_Employee'[CurrentStatus] = "Active"
+)
+
+New Hires = 
+CALCULATE(
+    COUNTROWS('Dim_Employee'),
+    USERELATIONSHIP('Dim_Date'[Date], 'Dim_Employee'[HireDate])
+)
+
+// Dynamic Historical Headcount (Active between HireDate and ExitDate)
+Active Headcount As Of Date = 
+VAR MaxDate = MAX('Dim_Date'[Date])
+RETURN
+CALCULATE(
+    COUNTROWS('Dim_Employee'),
+    'Dim_Employee'[HireDate] <= MaxDate,
+    OR(
+        ISBLANK('Dim_Employee'[ExitDate]),
+        'Dim_Employee'[ExitDate] > MaxDate
+    )
+)
+
+// =========================================================================
+// FOLDER: 02 - Attrition & Retention
+// =========================================================================
+
+Total Separations = 
+COUNTROWS('Fact_Attrition')
+
+Voluntary Separations = 
+CALCULATE(
+    COUNTROWS('Fact_Attrition'),
+    'Fact_Attrition'[AttritionType] = "Voluntary"
+)
+
+Involuntary Separations = 
+CALCULATE(
+    COUNTROWS('Fact_Attrition'),
+    'Fact_Attrition'[AttritionType] = "Involuntary"
+)
+
+Retirements = 
+CALCULATE(
+    COUNTROWS('Fact_Attrition'),
+    'Fact_Attrition'[AttritionType] = "Retirement"
+)
+
+Attrition Rate % = 
+DIVIDE(
+    [Total Separations],
+    [Total Employees],
+    0
+)
+
+Voluntary Attrition % = 
+DIVIDE(
+    [Voluntary Separations],
+    [Total Separations],
+    0
+)
+
+Early Attrition Count = 
+CALCULATE(
+    COUNTROWS('Fact_Attrition'),
+    'Fact_Attrition'[TenureMonths] <= 12
+)
+
+Early Attrition Rate % = 
+DIVIDE(
+    [Early Attrition Count],
+    [Total Separations],
+    0
+)
+
+Average Tenure at Exit Months = 
+AVERAGE('Fact_Attrition'[TenureMonths])
+
+Total Cost of Turnover = 
+SUM('Fact_Attrition'[EstimatedCostOfTurnover])
+
+Avg Cost per Turnover = 
+AVERAGE('Fact_Attrition'[EstimatedCostOfTurnover])
+
+// =========================================================================
+// FOLDER: 03 - Compensation & Payroll
+// =========================================================================
+
+Total Payroll Cost = 
+SUM('Fact_Payroll'[TotalCompensation])
+
+Total Base Salary Paid = 
+SUM('Fact_Payroll'[QuarterlyBasePay])
+
+Total Bonus Paid = 
+SUM('Fact_Payroll'[BonusPay])
+
+Total Overtime Paid = 
+SUM('Fact_Payroll'[OvertimePay])
+
+Total Overtime Hours = 
+SUM('Fact_Payroll'[OvertimeHours])
+
+Overtime Cost Ratio % = 
+DIVIDE(
+    [Total Overtime Paid],
+    [Total Base Salary Paid],
+    0
+)
+
+Bonus Payout Ratio % = 
+DIVIDE(
+    [Total Bonus Paid],
+    [Total Base Salary Paid],
+    0
+)
+
+Average Annual Base Salary = 
+CALCULATE(
+    AVERAGE('Dim_Employee'[CurrentBaseSalary]),
+    'Dim_Employee'[CurrentStatus] = "Active"
+)
+
+Median Annual Base Salary = 
+CALCULATE(
+    MEDIAN('Dim_Employee'[CurrentBaseSalary]),
+    'Dim_Employee'[CurrentStatus] = "Active"
+)
+
+Female Average Salary = 
+CALCULATE(
+    [Average Annual Base Salary],
+    'Dim_Employee'[Gender] = "Female"
+)
+
+Male Average Salary = 
+CALCULATE(
+    [Average Annual Base Salary],
+    'Dim_Employee'[Gender] = "Male"
+)
+
+Gender Pay Equity Ratio = 
+DIVIDE(
+    [Female Average Salary],
+    [Male Average Salary],
+    1.0
+)
+
+// Compa-Ratio (Compares salary against job role midpoint)
+Avg Compa Ratio = 
+CALCULATE(
+    AVERAGEX(
+        'Dim_Employee',
+        DIVIDE('Dim_Employee'[CurrentBaseSalary], RELATED('Dim_JobRole'[MidpointSalary]), 1.0)
+    ),
+    'Dim_Employee'[CurrentStatus] = "Active"
+)
+
+// =========================================================================
+// FOLDER: 04 - Performance & Talent Matrix
+// =========================================================================
+
+Total Performance Reviews = 
+COUNTROWS('Fact_Performance')
+
+Average Performance Rating = 
+AVERAGE('Fact_Performance'[PerformanceRating])
+
+Average Potential Rating = 
+AVERAGE('Fact_Performance'[PotentialRating])
+
+High Performers Count = 
+CALCULATE(
+    COUNTROWS('Fact_Performance'),
+    'Fact_Performance'[PerformanceRating] >= 4
+)
+
+High Performer % = 
+DIVIDE(
+    [High Performers Count],
+    [Total Performance Reviews],
+    0
+)
+
+Promotions Count = 
+CALCULATE(
+    COUNTROWS('Fact_Performance'),
+    'Fact_Performance'[Promoted] = "Yes"
+)
+
+Promotion Rate % = 
+DIVIDE(
+    [Promotions Count],
+    [Total Performance Reviews],
+    0
+)
+
+Average Satisfaction Score = 
+AVERAGE('Fact_Performance'[SatisfactionScore])
+
+Average Work-Life Balance Score = 
+AVERAGE('Fact_Performance'[WorkLifeBalanceScore])
+
+High Flight Risk Count = 
+CALCULATE(
+    COUNTROWS('Fact_Performance'),
+    'Fact_Performance'[FlightRisk] = "High"
+)
+
+High Flight Risk % = 
+DIVIDE(
+    [High Flight Risk Count],
+    [Total Performance Reviews],
+    0
+)
+
+Total Training Hours = 
+SUM('Fact_Performance'[TrainingHoursCompleted])
+
+Avg Training Hours Per Employee = 
+AVERAGE('Fact_Performance'[TrainingHoursCompleted])
+
+// =========================================================================
+// FOLDER: 05 - Time Intelligence & Growth
+// =========================================================================
+
+Payroll YTD = 
+TOTALYTD(
+    [Total Payroll Cost],
+    'Dim_Date'[Date]
+)
+
+Payroll Prior Year = 
+CALCULATE(
+    [Total Payroll Cost],
+    SAMEPERIODLASTYEAR('Dim_Date'[Date])
+)
+
+Payroll YoY Growth $ = 
+[Total Payroll Cost] - [Payroll Prior Year]
+
+Payroll YoY Growth % = 
+DIVIDE(
+    [Payroll YoY Growth $],
+    [Payroll Prior Year],
+    0
+)
+
+Separations Prior Year = 
+CALCULATE(
+    [Total Separations],
+    SAMEPERIODLASTYEAR('Dim_Date'[Date])
+)
+
+Separations YoY Change = 
+[Total Separations] - [Separations Prior Year]

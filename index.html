@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseHR | Executive Workforce Intelligence</title>
+  <meta name="description" content="PulseHR - Premium minimal HR & People Analytics dashboard with Star Schema modeling and DAX metrics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Centered Application Shell Container -->
+  <div class="app-shell">
+    
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <!-- 1. Brand Logo -->
+      <div class="brand">
+        <div class="brand-mark">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">PulseHR</span>
+          <span class="brand-subtitle">People Analytics</span>
+        </div>
+      </div>
+
+      <!-- 2. Workspace Selector -->
+      <div class="workspace-pill">
+        <div class="workspace-meta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span>Global Enterprise</span>
+        </div>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
+      <!-- 3. Section Label -->
+      <div class="section-label">Dashboards</div>
+
+      <!-- 4. Vertical Navigation Menu -->
+      <nav class="nav-list">
+        <button class="nav-item active" data-tab="tab-workforce">
+          <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span class="nav-label">Workforce Overview</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-attrition">
+          <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <line x1="23" y1="11" x2="17" y2="11"></line>
+          </svg>
+          <span class="nav-label">Attrition & Retention</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-compensation">
+          <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"></line>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+          <span class="nav-label">Compensation & Equity</span>
+        </button>
+
+        <button class="nav-item" data-tab="tab-performance">
+          <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="6"></circle>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+          <span class="nav-label">Talent & 9-Box Matrix</span>
+        </button>
+      </nav>
+
+      <!-- 5. Flexible Spacer -->
+      <div class="sidebar-spacer"></div>
+
+      <!-- 6. Assistance Card (Pale Green) -->
+      <div class="assistance-card">
+        <div class="assist-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+          <span>Executive Digest</span>
+        </div>
+        <p class="assist-text">Voluntary turnover dropped 3.1% this cycle. Customer Support retention risks mitigated.</p>
+        <button class="assist-btn" id="open-schema-modal">View Data Schema</button>
+      </div>
+
+      <!-- 7. Secondary Nav Links -->
+      <div class="secondary-nav">
+        <button class="sec-nav-btn" id="open-pbip-modal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Power BI Desktop (.pbip)</span>
+        </button>
+        <button class="sec-nav-btn" id="open-dax-modal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 7 4 4 20 4 20 7"></polyline>
+            <line x1="9" y1="20" x2="15" y2="20"></line>
+            <line x1="12" y1="4" x2="12" y2="20"></line>
+          </svg>
+          <span>DAX Library (35+ Measures)</span>
+        </button>
+      </div>
+
+      <!-- 8. User Profile -->
+      <div class="user-profile">
+        <div class="user-avatar">HB</div>
+        <div class="user-details">
+          <div class="user-name">Himabala</div>
+          <div class="user-role">HR Analytics Lead</div>
+        </div>
+        <button class="user-opt-btn" title="Options">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="1"></circle>
+            <circle cx="12" cy="5" r="1"></circle>
+            <circle cx="12" cy="19" r="1"></circle>
+          </svg>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Compact Main Header -->
+      <header class="main-header">
+        <div class="header-left">
+          <h1 class="page-title" id="current-page-title">Workforce overview</h1>
+          <p class="page-subtitle" id="current-page-desc">Comprehensive monitoring of enterprise headcount, departmental distribution, diversity demographics, and hiring trends.</p>
+        </div>
+
+        <div class="header-right">
+          <!-- Search input -->
+          <div class="header-search">
+            <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="employee-search" placeholder="Search employee..." autocomplete="off">
+          </div>
+
+          <!-- Notification Icon Button -->
+          <button class="icon-btn" title="Notifications">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </button>
+
+          <!-- Primary Action Button -->
+          <button class="btn-dark" id="export-data-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Export View</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Subheader / Tabs & Filters Row -->
+      <div class="controls-bar">
+        <!-- Subheader Quick Filter Tabs -->
+        <div class="sub-tabs">
+          <button class="sub-tab active">All Units</button>
+          <button class="sub-tab">Core Operations</button>
+          <button class="sub-tab">Leadership</button>
+        </div>
+
+        <!-- Slicers Row -->
+        <div class="slicers-cluster">
+          <div class="select-wrap">
+            <select id="slicer-dept" class="filter-select">
+              <option value="All">All Departments</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Sales">Sales</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Human Resources">Human Resources</option>
+              <option value="Finance & Accounting">Finance & Accounting</option>
+              <option value="Product & Design">Product & Design</option>
+              <option value="Customer Support">Customer Support</option>
+            </select>
+          </div>
+
+          <div class="select-wrap">
+            <select id="slicer-level" class="filter-select">
+              <option value="All">All Job Levels</option>
+              <option value="Entry">Entry Level</option>
+              <option value="Mid">Mid Level</option>
+              <option value="Senior">Senior Level</option>
+              <option value="Lead/Manager">Lead / Manager</option>
+              <option value="Executive">Executive</option>
+            </select>
+          </div>
+
+          <div class="select-wrap">
+            <select id="slicer-gender" class="filter-select">
+              <option value="All">All Genders</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Non-Binary">Non-Binary</option>
+            </select>
+          </div>
+
+          <div class="select-wrap">
+            <select id="slicer-location" class="filter-select">
+              <option value="All">All Work Models</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Remote">Remote</option>
+              <option value="On-site">On-site</option>
+            </select>
+          </div>
+
+          <button id="slicer-reset" class="btn-reset" title="Clear Slicers">Reset</button>
+        </div>
+      </div>
+
+      <!-- Dashboard Scrollable Container -->
+      <div class="canvas-container">
+
+        <!-- ========================================== -->
+        <!-- TAB 1: WORKFORCE OVERVIEW -->
+        <!-- ========================================== -->
+        <section id="tab-workforce" class="tab-page active">
+          
+          <!-- 5 Equal KPI Cards Row -->
+          <div class="kpi-row">
+            <!-- Card 1: Lavender Pastel Highlight -->
+            <div class="kpi-card pastel-lavender">
+              <div class="kpi-top">
+                <span class="kpi-label">Active Headcount</span>
+                <span class="kpi-sub-icon">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                </span>
+              </div>
+              <div class="kpi-value" id="kpi-active-headcount">1,046</div>
+              <div class="kpi-foot">
+                <span class="pill-badge positive">+3.8% MoM</span>
+                <span class="kpi-hint">Current personnel</span>
+              </div>
+            </div>
+
+            <!-- Card 2: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Total Workforce</span>
+              </div>
+              <div class="kpi-value" id="kpi-total-headcount">1,250</div>
+              <div class="kpi-foot">
+                <span class="pill-badge neutral">Recorded</span>
+                <span class="kpi-hint">All-time headcount</span>
+              </div>
+            </div>
+
+            <!-- Card 3: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Annual Attrition</span>
+              </div>
+              <div class="kpi-value" id="kpi-attrition-rate">16.3%</div>
+              <div class="kpi-foot">
+                <span class="pill-badge warning">Target &lt; 15%</span>
+                <span class="kpi-hint">78.4% voluntary</span>
+              </div>
+            </div>
+
+            <!-- Card 4: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Total Payroll Spend</span>
+              </div>
+              <div class="kpi-value" id="kpi-total-payroll">$112.4M</div>
+              <div class="kpi-foot">
+                <span class="pill-badge positive">+5.2% YoY</span>
+                <span class="kpi-hint">Avg $108.5K base</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Pale Green Highlight -->
+            <div class="kpi-card pastel-green">
+              <div class="kpi-top">
+                <span class="kpi-label">Engagement Index</span>
+                <span class="kpi-sub-icon">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                </span>
+              </div>
+              <div class="kpi-value" id="kpi-satisfaction-score">3.42 <small>/ 5</small></div>
+              <div class="kpi-foot">
+                <span class="pill-badge positive">Healthy</span>
+                <span class="kpi-hint">WLB: 3.38 / 5</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Dashboard Two-Column Grid: Primary Row (62% / 38%) -->
+          <div class="grid-split">
+            <!-- Left: Headcount Growth Trend (62%) -->
+            <div class="card card-primary-left">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Headcount growth & hiring trajectory</h2>
+                  <p class="card-subtitle">Quarterly active personnel trajectory across reporting cycles</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-headcount-trend"></canvas>
+              </div>
+            </div>
+
+            <!-- Right: Generation Breakdown (38%) -->
+            <div class="card card-primary-right">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Generation breakdown</h2>
+                  <p class="card-subtitle">Workforce generational demographic distribution</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-generation"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Dashboard Two-Column Grid: Secondary Row (62% / 38%) -->
+          <div class="grid-split">
+            <!-- Left: Department & Gender Distribution (62%) -->
+            <div class="card card-secondary-left">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Headcount by department & gender</h2>
+                  <p class="card-subtitle">Distribution of active personnel across operational business units</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-dept-headcount"></canvas>
+              </div>
+            </div>
+
+            <!-- Right: Work Model & Office City Split (38%) -->
+            <div class="card card-secondary-right">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Work model & office hubs</h2>
+                  <p class="card-subtitle">Hybrid adoption and key regional distribution</p>
+                </div>
+              </div>
+              <div class="chart-box-duo">
+                <div class="duo-subchart">
+                  <canvas id="chart-work-model"></canvas>
+                </div>
+                <div class="duo-subchart">
+                  <canvas id="chart-office-city"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 2: ATTRITION & RETENTION -->
+        <!-- ========================================== -->
+        <section id="tab-attrition" class="tab-page">
+          
+          <!-- 5 Equal KPI Cards Row -->
+          <div class="kpi-row">
+            <!-- Card 1: Pale Rose Highlight -->
+            <div class="kpi-card pastel-rose">
+              <div class="kpi-top">
+                <span class="kpi-label">Total Separations</span>
+                <span class="kpi-sub-icon">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 17l5-5-5-5"></path><path d="M21 12H9"></path></svg>
+                </span>
+              </div>
+              <div class="kpi-value" id="kpi-total-separations">204</div>
+              <div class="kpi-foot">
+                <span class="pill-badge warning">Departures</span>
+                <span class="kpi-hint">All historical exits</span>
+              </div>
+            </div>
+
+            <!-- Card 2: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Voluntary Attrition</span>
+              </div>
+              <div class="kpi-value" id="kpi-voluntary-pct">78.4%</div>
+              <div class="kpi-foot">
+                <span class="pill-badge neutral">Resignations</span>
+                <span class="kpi-hint">Involuntary: 21.6%</span>
+              </div>
+            </div>
+
+            <!-- Card 3: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Early Attrition (&lt;1 Yr)</span>
+              </div>
+              <div class="kpi-value" id="kpi-early-attrition">24.1%</div>
+              <div class="kpi-foot">
+                <span class="pill-badge warning">Flight window</span>
+                <span class="kpi-hint">Tenure &lt; 12 mos</span>
+              </div>
+            </div>
+
+            <!-- Card 4: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Estimated Turnover Cost</span>
+              </div>
+              <div class="kpi-value" id="kpi-turnover-cost">$18.6M</div>
+              <div class="kpi-foot">
+                <span class="pill-badge neutral">Replacement</span>
+                <span class="kpi-hint">Avg $91.2K per exit</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Pale Blue Highlight -->
+            <div class="kpi-card pastel-blue">
+              <div class="kpi-top">
+                <span class="kpi-label">Avg Tenure at Exit</span>
+              </div>
+              <div class="kpi-value" id="kpi-avg-exit-tenure">18.4 <small>mos</small></div>
+              <div class="kpi-foot">
+                <span class="pill-badge neutral">Duration</span>
+                <span class="kpi-hint">1.53 years avg</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary Row -->
+          <div class="grid-split">
+            <div class="card card-primary-left">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Department attrition vs benchmark</h2>
+                  <p class="card-subtitle">Comparison against the 15.0% enterprise tolerance threshold</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-dept-attrition"></canvas>
+              </div>
+            </div>
+
+            <div class="card card-primary-right">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Attrition by tenure band</h2>
+                  <p class="card-subtitle">Distribution of departures across tenure brackets</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-tenure-band"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Row -->
+          <div class="grid-split">
+            <div class="card card-secondary-left">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Primary reasons for separation</h2>
+                  <p class="card-subtitle">Reported factors motivating talent departures</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-exit-reasons"></canvas>
+              </div>
+            </div>
+
+            <div class="card card-secondary-right">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Exit satisfaction vs tenure</h2>
+                  <p class="card-subtitle">Correlation of engagement scores prior to departure</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-attrition-scatter"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 3: COMPENSATION & EQUITY -->
+        <!-- ========================================== -->
+        <section id="tab-compensation" class="tab-page">
+          
+          <!-- 5 Equal KPI Cards Row -->
+          <div class="kpi-row">
+            <!-- Card 1: Pale Blue Highlight -->
+            <div class="kpi-card pastel-blue">
+              <div class="kpi-top">
+                <span class="kpi-label">Average Base Salary</span>
+                <span class="kpi-sub-icon">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </span>
+              </div>
+              <div class="kpi-value" id="kpi-avg-salary">$108,450</div>
+              <div class="kpi-foot">
+                <span class="pill-badge positive">+4.1% YoY</span>
+                <span class="kpi-hint">Active workforce base</span>
+              </div>
+            </div>
+
+            <!-- Card 2: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Median Base Salary</span>
+              </div>
+              <div class="kpi-value" id="kpi-median-salary">$102,000</div>
+              <div class="kpi-foot">
+                <span class="pill-badge neutral">Midpoint</span>
+                <span class="kpi-hint">Balanced band</span>
+              </div>
+            </div>
+
+            <!-- Card 3: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Gender Pay Equity</span>
+              </div>
+              <div class="kpi-value" id="kpi-pay-equity">0.98</div>
+              <div class="kpi-foot">
+                <span class="pill-badge positive">Target: 1.00</span>
+                <span class="kpi-hint">Female to male ratio</span>
+              </div>
+            </div>
+
+            <!-- Card 4: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Total Overtime Spend</span>
+              </div>
+              <div class="kpi-value" id="kpi-overtime-cost">$4.2M</div>
+              <div class="kpi-foot">
+                <span class="pill-badge neutral">3.7% Base</span>
+                <span class="kpi-hint">78.4K overtime hrs</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Pale Yellow Highlight -->
+            <div class="kpi-card pastel-yellow">
+              <div class="kpi-top">
+                <span class="kpi-label">Average Compa-Ratio</span>
+              </div>
+              <div class="kpi-value" id="kpi-compa-ratio">1.02</div>
+              <div class="kpi-foot">
+                <span class="pill-badge positive">Market Aligned</span>
+                <span class="kpi-hint">Grade baseline: 1.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary Row -->
+          <div class="grid-split">
+            <div class="card card-primary-left">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Quarterly compensation breakdown</h2>
+                  <p class="card-subtitle">Quarter-by-quarter composition of Base Pay, Bonus, and Overtime</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-comp-breakdown"></canvas>
+              </div>
+            </div>
+
+            <div class="card card-primary-right">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Departmental payroll allocation</h2>
+                  <p class="card-subtitle">Percentage share of total compensation spend</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-dept-payroll"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Row -->
+          <div class="grid-split">
+            <div class="card card-secondary-left">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Salary benchmarks by level & gender</h2>
+                  <p class="card-subtitle">Audit of base compensation parity across seniority brackets</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-salary-level-gender"></canvas>
+              </div>
+            </div>
+
+            <div class="card card-secondary-right">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Overtime spend by department</h2>
+                  <p class="card-subtitle">Operational workload and overtime expenditure</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-dept-overtime"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ========================================== -->
+        <!-- TAB 4: TALENT & 9-BOX MATRIX -->
+        <!-- ========================================== -->
+        <section id="tab-performance" class="tab-page">
+          
+          <!-- 5 Equal KPI Cards Row -->
+          <div class="kpi-row">
+            <!-- Card 1: Pale Lavender Highlight -->
+            <div class="kpi-card pastel-lavender">
+              <div class="kpi-top">
+                <span class="kpi-label">Avg Performance Rating</span>
+                <span class="kpi-sub-icon">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </span>
+              </div>
+              <div class="kpi-value" id="kpi-avg-perf">3.32 <small>/ 5.0</small></div>
+              <div class="kpi-foot">
+                <span class="pill-badge positive">Normal Curve</span>
+                <span class="kpi-hint">3,534 evaluations</span>
+              </div>
+            </div>
+
+            <!-- Card 2: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">High Performers</span>
+              </div>
+              <div class="kpi-value" id="kpi-high-perf">27.8%</div>
+              <div class="kpi-foot">
+                <span class="pill-badge positive">Rating 4-5</span>
+                <span class="kpi-hint">Star talent cohort</span>
+              </div>
+            </div>
+
+            <!-- Card 3: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Promotion Rate</span>
+              </div>
+              <div class="kpi-value" id="kpi-promotion-rate">8.4%</div>
+              <div class="kpi-foot">
+                <span class="pill-badge neutral">Career mobility</span>
+                <span class="kpi-hint">Merit advancement</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Pale Rose Highlight -->
+            <div class="kpi-card pastel-rose">
+              <div class="kpi-top">
+                <span class="kpi-label">High Flight Risk</span>
+              </div>
+              <div class="kpi-value" id="kpi-flight-risk">142</div>
+              <div class="kpi-foot">
+                <span class="pill-badge warning">Retention alert</span>
+                <span class="kpi-hint">Requires check-in</span>
+              </div>
+            </div>
+
+            <!-- Card 5: White -->
+            <div class="kpi-card">
+              <div class="kpi-top">
+                <span class="kpi-label">Avg Training Hours</span>
+              </div>
+              <div class="kpi-value" id="kpi-avg-training">38.6 <small>hrs</small></div>
+              <div class="kpi-foot">
+                <span class="pill-badge positive">+6.2% YoY</span>
+                <span class="kpi-hint">L&amp;D investment</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary Row: 9-Box Grid & Training Hours -->
+          <div class="grid-split">
+            <!-- Left: 9-Box Grid (60%) -->
+            <div class="card card-primary-left">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Interactive 9-box succession grid</h2>
+                  <p class="card-subtitle">Click any cell to filter the talent roster below</p>
+                </div>
+              </div>
+              
+              <div class="matrix-layout" id="nine-box-matrix">
+                <div class="matrix-axis-y">Potential (Low to High)</div>
+                
+                <!-- Row 1: High Potential (3) -->
+                <div class="matrix-cell cell-core" data-cell="P1-Pot3">
+                  <span class="cell-title">Enigma</span>
+                  <span class="cell-count" id="cell-count-P1-Pot3">18</span>
+                </div>
+                <div class="matrix-cell cell-star" data-cell="P2-Pot3">
+                  <span class="cell-title">High Potential</span>
+                  <span class="cell-count" id="cell-count-P2-Pot3">82</span>
+                </div>
+                <div class="matrix-cell cell-star" data-cell="P3-Pot3">
+                  <span class="cell-title">Future Star</span>
+                  <span class="cell-count" id="cell-count-P3-Pot3">145</span>
+                </div>
+
+                <!-- Row 2: Medium Potential (2) -->
+                <div class="matrix-cell cell-risk" data-cell="P1-Pot2">
+                  <span class="cell-title">Dilemma</span>
+                  <span class="cell-count" id="cell-count-P1-Pot2">45</span>
+                </div>
+                <div class="matrix-cell cell-core" data-cell="P2-Pot2">
+                  <span class="cell-title">Core Player</span>
+                  <span class="cell-count" id="cell-count-P2-Pot2">380</span>
+                </div>
+                <div class="matrix-cell cell-star" data-cell="P3-Pot2">
+                  <span class="cell-title">High Performer</span>
+                  <span class="cell-count" id="cell-count-P3-Pot2">195</span>
+                </div>
+
+                <!-- Row 3: Low Potential (1) -->
+                <div class="matrix-cell cell-risk" data-cell="P1-Pot1">
+                  <span class="cell-title">Underperformer</span>
+                  <span class="cell-count" id="cell-count-P1-Pot1">32</span>
+                </div>
+                <div class="matrix-cell cell-risk" data-cell="P2-Pot1">
+                  <span class="cell-title">Effective</span>
+                  <span class="cell-count" id="cell-count-P2-Pot1">110</span>
+                </div>
+                <div class="matrix-cell cell-core" data-cell="P3-Pot1">
+                  <span class="cell-title">Trusted Pro</span>
+                  <span class="cell-count" id="cell-count-P3-Pot1">124</span>
+                </div>
+
+                <div class="matrix-axis-x">Performance Rating (Low to High)</div>
+              </div>
+            </div>
+
+            <!-- Right: Training Hours Chart (40%) -->
+            <div class="card card-primary-right">
+              <div class="card-header">
+                <div>
+                  <h2 class="card-title">Training hours vs rating</h2>
+                  <p class="card-subtitle">L&amp;D hours completed across performance ratings</p>
+                </div>
+              </div>
+              <div class="chart-box">
+                <canvas id="chart-training-perf"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Row: Full Width Employee Drill-Down Table -->
+          <div class="card card-full">
+            <div class="card-header">
+              <div>
+                <h2 class="card-title">Employee directory &amp; drill-down roster</h2>
+                <p class="card-subtitle">Showing active and separated personnel matching active filter criteria</p>
+              </div>
+              <div class="table-actions">
+                <span class="record-counter" id="table-record-count">Showing 1 to 15 of 1,250 records</span>
+              </div>
+            </div>
+
+            <div class="table-scroll">
+              <table class="minimal-table" id="employee-table">
+                <thead>
+                  <tr>
+                    <th>Emp ID</th>
+                    <th>Full Name</th>
+                    <th>Department</th>
+                    <th>Job Title</th>
+                    <th>Level</th>
+                    <th>Gender</th>
+                    <th>Status</th>
+                    <th>Base Salary</th>
+                    <th>Tenure</th>
+                    <th>Risk Band</th>
+                  </tr>
+                </thead>
+                <tbody id="employee-table-body">
+                  <!-- Populated dynamically by app.js -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-footer">
+              <span class="table-note">Click rows or use the global slicer above to narrow scope.</span>
+              <div class="pager-btns">
+                <button class="btn-pager" id="table-prev-btn">Previous</button>
+                <button class="btn-pager" id="table-next-btn">Next</button>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal 1: Open in Power BI Desktop Guide -->
+  <div class="modal-overlay" id="modal-pbip">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Open in Power BI Desktop</h3>
+        <button class="modal-close" data-close="modal-pbip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <p class="modal-desc">This project includes a native <strong>Power BI Project (.pbip)</strong> format with semantic models, DAX measures, and star-schema relationships ready for desktop editing.</p>
+      
+      <div class="modal-section">
+        <div class="modal-label">Direct Launch:</div>
+        <pre class="code-box">C:\Users\Himabala\.gemini\antigravity-ide\scratch\hr_analytics_powerbi\HR_Analytics.pbip</pre>
+        <p class="modal-footnote">Double-clicking this file directly launches Power BI Desktop with the complete semantic model loaded.</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-dark" data-close="modal-pbip">Close Guide</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: DAX Measures Viewer -->
+  <div class="modal-overlay" id="modal-dax">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">DAX Measures Library (35+ Formulas)</h3>
+        <button class="modal-close" data-close="modal-dax">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <p class="modal-desc">Production-grade DAX measures organized into 5 folders: Workforce, Attrition, Compensation, Performance, and Time Intelligence.</p>
+      
+      <pre class="code-box">
+// Core Headcount
+Active Headcount = CALCULATE(COUNTROWS('Dim_Employee'), 'Dim_Employee'[CurrentStatus] = "Active")
+
+// Attrition Rate
+Attrition Rate % = DIVIDE(COUNTROWS('Fact_Attrition'), COUNTROWS('Dim_Employee'), 0)
+
+// Gender Pay Equity Ratio
+Gender Pay Equity Ratio = 
+DIVIDE(
+    CALCULATE(AVERAGE('Dim_Employee'[CurrentBaseSalary]), 'Dim_Employee'[Gender] = "Female"),
+    CALCULATE(AVERAGE('Dim_Employee'[CurrentBaseSalary]), 'Dim_Employee'[Gender] = "Male"),
+    1.0
+)
+
+// Compa-Ratio (Salary Midpoint Baseline)
+Avg Compa Ratio = 
+CALCULATE(
+    AVERAGEX('Dim_Employee', DIVIDE('Dim_Employee'[CurrentBaseSalary], RELATED('Dim_JobRole'[MidpointSalary]), 1.0)),
+    'Dim_Employee'[CurrentStatus] = "Active"
+)
+      </pre>
+
+      <div class="modal-footer">
+        <button class="btn-dark" data-close="modal-dax">Close Library</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Data Model Schema -->
+  <div class="modal-overlay" id="modal-schema">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Star Schema Data Model Architecture</h3>
+        <button class="modal-close" data-close="modal-schema">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <p class="modal-desc">The model contains 4 Dimension tables and 3 Fact tables configured in a Star Schema:</p>
+      
+      <ul class="schema-list">
+        <li><strong>Dim_Department</strong> (1) to (N) <strong>Dim_Employee</strong> [DepartmentID]</li>
+        <li><strong>Dim_JobRole</strong> (1) to (N) <strong>Dim_Employee</strong> [JobRoleID]</li>
+        <li><strong>Dim_Employee</strong> (1) to (N) <strong>Fact_Payroll</strong> [EmployeeID]</li>
+        <li><strong>Dim_Employee</strong> (1) to (N) <strong>Fact_Performance</strong> [EmployeeID]</li>
+        <li><strong>Dim_Employee</strong> (1) to (N) <strong>Fact_Attrition</strong> [EmployeeID]</li>
+        <li><strong>Dim_Date</strong> (1) to (N) Fact tables [Active PayDate, ReviewDate, ExitDate]</li>
+      </ul>
+
+      <div class="modal-footer">
+        <button class="btn-dark" data-close="modal-schema">Close Schema</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app_data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

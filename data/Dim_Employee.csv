@@ -1,0 +1,1251 @@
+EmployeeID,FirstName,LastName,Gender,Age,Generation,Ethnicity,MaritalStatus,EducationLevel,DepartmentID,JobRoleID,WorkLocation,OfficeCity,HireDate,CurrentStatus,ExitDate,ExitType,ExitReason,CurrentBaseSalary,TenureMonths,TenureYears
+EMP-1001,Michael,Myers,Male,23,Gen Z (1997-2012),Hispanic/Latino,Single,Doctorate,1,101,Hybrid,"New York, NY",2021-09-20,Active,,,,69700,61.3,5.11
+EMP-1002,Isabella,Collins,Female,26,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,1,101,Hybrid,"Austin, TX",2023-02-25,Active,,,,70300,44.1,3.67
+EMP-1003,Jacqueline,Cox,Female,25,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,2,201,Hybrid,"Austin, TX",2023-04-08,Terminated,2023-09-14,Involuntary,Organizational Restructuring / Layoff,67300,5.2,0.44
+EMP-1004,Janice,Kelly,Female,44,Gen X (1965-1980),White,Married,Bachelor's,2,203,Hybrid,"San Francisco, CA",2025-01-22,Active,,,,145900,21.2,1.77
+EMP-1005,Matthew,Ross,Male,29,Millennials (1981-1996),Asian,Single,Doctorate,6,601,Hybrid,"London, UK",2026-03-26,Active,,,,71300,7.1,0.59
+EMP-1006,Jessica,Howard,Female,27,Gen Z (1997-2012),White,Single,Master's,5,501,On-site,"San Francisco, CA",2020-09-03,Active,,,,58700,73.8,6.15
+EMP-1007,Jason,Gray,Male,29,Millennials (1981-1996),White,Married,Associate's,3,301,Remote,"New York, NY",2020-06-25,Active,,,,57600,76.1,6.34
+EMP-1008,Lucas,Scott,Male,36,Millennials (1981-1996),Two or More Races,Married,Bachelor's,2,202,Hybrid,"Seattle, WA",2021-05-02,Active,,,,80000,65.9,5.49
+EMP-1009,Justin,Rogers,Male,27,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,4,402,Hybrid,"Austin, TX",2021-01-08,Active,,,,84700,69.7,5.8
+EMP-1010,Christine,Cooper,Female,28,Gen Z (1997-2012),White,Divorced,Master's,2,201,Hybrid,"Seattle, WA",2022-01-12,Active,,,,54700,57.5,4.79
+EMP-1011,Kimberly,Stewart,Female,29,Millennials (1981-1996),Asian,Divorced,Bachelor's,4,402,Remote,"San Francisco, CA",2024-03-10,Terminated,2026-08-08,Voluntary,Pursuing Higher Education,79100,28.9,2.41
+EMP-1012,Matthew,Scott,Male,29,Millennials (1981-1996),Asian,Married,Master's,6,601,Hybrid,"San Francisco, CA",2021-04-12,Active,,,,68800,66.6,5.55
+EMP-1013,Kimberly,Brooks,Female,39,Millennials (1981-1996),White,Single,Bachelor's,6,602,Hybrid,"San Francisco, CA",2021-08-04,Terminated,2022-04-03,Voluntary,Relocation / Personal Reasons,125200,8.0,0.66
+EMP-1014,Virginia,Hill,Female,47,Gen X (1965-1980),Asian,Single,Bachelor's,6,604,Hybrid,"Seattle, WA",2023-05-22,Active,,,,179300,41.3,3.44
+EMP-1015,Angela,Brown,Female,56,Gen X (1965-1980),Asian,Divorced,Bachelor's,1,105,Remote,"Chicago, IL",2020-03-16,Active,,,,259900,79.4,6.62
+EMP-1016,Natalie,Nguyen,Female,29,Millennials (1981-1996),Two or More Races,Divorced,Bachelor's,2,201,Hybrid,"Austin, TX",2023-03-28,Active,,,,66300,43.1,3.59
+EMP-1017,Joshua,Martinez,Male,48,Gen X (1965-1980),Asian,Divorced,Bachelor's,2,205,Hybrid,"New York, NY",2025-07-11,Active,,,,246000,15.6,1.3
+EMP-1018,William,Adams,Male,27,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Remote,"San Francisco, CA",2021-02-20,Active,,,,67900,68.2,5.69
+EMP-1019,William,Flores,Male,27,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,5,501,Remote,"San Francisco, CA",2021-09-12,Active,,,,59900,61.5,5.13
+EMP-1020,Alan,Gonzalez,Male,30,Millennials (1981-1996),White,Married,Bachelor's,6,602,On-site,"San Francisco, CA",2020-11-12,Active,,,,115800,71.5,5.96
+EMP-1021,Isabella,Brown,Female,32,Millennials (1981-1996),White,Single,Bachelor's,1,102,Hybrid,"Chicago, IL",2022-03-03,Active,,,,97200,55.9,4.66
+EMP-1022,Grace,Hughes,Female,26,Gen Z (1997-2012),Black/African American,Divorced,Bachelor's,1,101,Hybrid,"New York, NY",2022-03-24,Active,,,,80000,55.2,4.6
+EMP-1023,Jack,Lopez,Male,28,Gen Z (1997-2012),Asian,Married,Bachelor's,2,201,Hybrid,"San Francisco, CA",2021-03-03,Active,,,,60400,67.9,5.66
+EMP-1024,Patrick,Castillo,Male,26,Gen Z (1997-2012),White,Single,Bachelor's,1,102,Hybrid,"San Francisco, CA",2022-05-13,Active,,,,102500,53.6,4.46
+EMP-1025,Bradley,Long,Non-Binary,25,Gen Z (1997-2012),White,Single,Master's,5,501,Remote,"San Francisco, CA",2025-08-15,Active,,,,65200,14.5,1.2
+EMP-1026,Stephen,Edwards,Male,28,Gen Z (1997-2012),White,Single,Associate's,7,701,On-site,"Chicago, IL",2022-07-17,Active,,,,58800,51.4,4.28
+EMP-1027,Grace,Watson,Female,38,Millennials (1981-1996),White,Single,Bachelor's,1,102,Remote,"Austin, TX",2025-11-15,Terminated,2026-09-07,Voluntary,Career Advancement / Growth,96700,9.7,0.81
+EMP-1028,Olivia,Long,Female,48,Gen X (1965-1980),Two or More Races,Divorced,Bachelor's,2,205,On-site,"San Francisco, CA",2021-02-24,Active,,,,246400,68.1,5.68
+EMP-1029,Frances,Torres,Female,44,Gen X (1965-1980),White,Married,Doctorate,4,404,On-site,"San Francisco, CA",2026-03-22,Active,,,,171600,7.3,0.61
+EMP-1030,Austin,Lewis,Male,24,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Remote,"San Francisco, CA",2026-02-20,Active,,,,76200,8.2,0.69
+EMP-1031,Marie,Peterson,Female,24,Gen Z (1997-2012),White,Single,Associate's,3,301,Hybrid,"New York, NY",2021-06-23,Terminated,2022-04-10,Voluntary,Company Culture / Leadership,55300,9.6,0.8
+EMP-1032,Arthur,Baker,Male,39,Millennials (1981-1996),Black/African American,Married,Bachelor's,6,602,Remote,"Seattle, WA",2024-10-14,Active,,,,111700,24.5,2.04
+EMP-1033,Heather,Ward,Female,43,Millennials (1981-1996),Hispanic/Latino,Single,Associate's,2,205,Hybrid,"Chicago, IL",2023-09-15,Active,,,,264300,37.5,3.12
+EMP-1034,Elizabeth,Moore,Female,47,Gen X (1965-1980),Asian,Divorced,Master's,4,403,Hybrid,"San Francisco, CA",2022-07-20,Active,,,,125900,51.3,4.28
+EMP-1035,Juan,Morris,Male,24,Gen Z (1997-2012),Asian,Married,Bachelor's,3,301,Remote,"Austin, TX",2024-12-09,Active,,,,60900,22.6,1.89
+EMP-1036,Evelyn,Ramirez,Female,40,Millennials (1981-1996),Asian,Single,Bachelor's,1,102,Remote,"New York, NY",2021-11-17,Active,,,,110000,59.4,4.95
+EMP-1037,Heather,Walker,Female,27,Gen Z (1997-2012),White,Divorced,Master's,2,201,Remote,"New York, NY",2021-11-04,Active,,,,58300,59.8,4.98
+EMP-1038,Mary,Long,Female,28,Gen Z (1997-2012),White,Single,Bachelor's,1,101,On-site,"Seattle, WA",2026-04-02,Active,,,,79300,6.9,0.57
+EMP-1039,Catherine,Carter,Female,55,Gen X (1965-1980),White,Married,Doctorate,1,105,On-site,"New York, NY",2023-12-08,Active,,,,256400,34.7,2.89
+EMP-1040,Nicole,Jackson,Female,32,Millennials (1981-1996),White,Single,Bachelor's,7,702,On-site,"Seattle, WA",2023-07-18,Active,,,,70800,39.4,3.28
+EMP-1041,Kathleen,Peterson,Female,29,Millennials (1981-1996),Asian,Married,Bachelor's,2,201,Hybrid,"New York, NY",2023-12-16,Terminated,2026-08-16,Voluntary,Career Advancement / Growth,65100,32.0,2.67
+EMP-1042,Hannah,Collins,Female,36,Millennials (1981-1996),Black/African American,Divorced,Associate's,2,202,Hybrid,"Austin, TX",2023-01-01,Active,,,,85000,45.9,3.82
+EMP-1043,Marilyn,Reed,Female,23,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,2,201,Remote,"Austin, TX",2025-01-07,Terminated,2025-09-20,Voluntary,Company Culture / Leadership,59100,8.4,0.7
+EMP-1044,Marilyn,Sanders,Female,42,Millennials (1981-1996),White,Divorced,Bachelor's,1,103,Hybrid,"Chicago, IL",2026-04-25,Active,,,,139100,6.1,0.51
+EMP-1045,Ann,James,Female,40,Millennials (1981-1996),Hispanic/Latino,Divorced,Master's,2,203,Hybrid,"New York, NY",2024-03-24,Active,,,,141800,31.2,2.6
+EMP-1046,Donna,Rodriguez,Female,26,Gen Z (1997-2012),Asian,Divorced,Bachelor's,1,101,Hybrid,"New York, NY",2023-10-07,Active,,,,84100,36.7,3.06
+EMP-1047,Abigail,Morris,Female,40,Millennials (1981-1996),Black/African American,Married,Master's,3,302,Remote,"Austin, TX",2024-09-20,Active,,,,79400,25.3,2.11
+EMP-1048,Daniel,Anderson,Male,42,Millennials (1981-1996),White,Married,Bachelor's,6,603,Hybrid,"New York, NY",2020-12-23,Terminated,2022-03-09,Voluntary,Pursuing Higher Education,159900,14.5,1.21
+EMP-1049,Olivia,Watson,Female,32,Millennials (1981-1996),White,Married,Master's,1,102,Hybrid,"London, UK",2022-12-07,Active,,,,109500,46.7,3.89
+EMP-1050,Pamela,Perez,Female,38,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,5,502,Hybrid,"New York, NY",2024-06-18,Active,,,,90600,28.4,2.36
+EMP-1051,Megan,Mendoza,Female,28,Gen Z (1997-2012),Black/African American,Single,High School Diploma,6,601,Hybrid,"London, UK",2021-12-11,Active,,,,72100,58.6,4.88
+EMP-1052,Larry,Lopez,Male,27,Gen Z (1997-2012),Asian,Divorced,Master's,4,401,Remote,"New York, NY",2024-04-14,Terminated,2025-03-01,Voluntary,Work-Life Balance / Burnout,65800,10.5,0.88
+EMP-1053,Kayla,Moore,Female,27,Gen Z (1997-2012),Asian,Divorced,Bachelor's,4,402,Hybrid,"Austin, TX",2021-12-05,Active,,,,89300,58.8,4.9
+EMP-1054,Martha,Morgan,Female,26,Gen Z (1997-2012),White,Married,Associate's,3,301,Hybrid,"Seattle, WA",2022-11-25,Active,,,,63900,47.1,3.93
+EMP-1055,Patricia,Young,Female,40,Millennials (1981-1996),White,Divorced,Associate's,1,102,Remote,"London, UK",2024-07-08,Terminated,2025-10-22,Voluntary,Pursuing Higher Education,99000,15.5,1.29
+EMP-1056,Gerald,Foster,Male,28,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Remote,"Austin, TX",2026-01-25,Active,,,,63900,9.1,0.76
+EMP-1057,Cynthia,Gutierrez,Female,52,Gen X (1965-1980),Two or More Races,Married,Bachelor's,2,204,Hybrid,"New York, NY",2020-10-02,Active,,,,181100,72.9,6.07
+EMP-1058,Dennis,Gray,Male,35,Millennials (1981-1996),Asian,Single,Associate's,3,302,On-site,"New York, NY",2025-08-26,Terminated,2026-07-16,Voluntary,Pursuing Higher Education,85400,10.6,0.89
+EMP-1059,Stephanie,Chavez,Female,36,Millennials (1981-1996),Two or More Races,Divorced,Bachelor's,6,602,Hybrid,"New York, NY",2022-09-26,Active,,,,112000,49.1,4.09
+EMP-1060,Frances,Sanchez,Female,24,Gen Z (1997-2012),Black/African American,Single,Master's,6,601,Hybrid,"San Francisco, CA",2025-02-28,Active,,,,75400,20.0,1.66
+EMP-1061,Kathryn,Bell,Female,26,Gen Z (1997-2012),White,Married,Master's,1,101,On-site,"Seattle, WA",2025-10-02,Active,,,,71000,12.9,1.07
+EMP-1062,Margaret,Sanders,Female,37,Millennials (1981-1996),White,Married,Bachelor's,1,102,On-site,"San Francisco, CA",2023-02-27,Active,,,,102700,44.0,3.67
+EMP-1063,Grace,King,Female,28,Gen Z (1997-2012),White,Married,Bachelor's,1,102,Hybrid,"New York, NY",2023-04-27,Terminated,2024-07-12,Voluntary,Work-Life Balance / Burnout,97600,14.5,1.21
+EMP-1064,Amanda,Ramirez,Female,28,Gen Z (1997-2012),White,Single,Master's,6,601,Remote,"New York, NY",2025-05-11,Active,,,,77100,17.6,1.47
+EMP-1065,Margaret,Reed,Female,48,Gen X (1965-1980),Black/African American,Divorced,Doctorate,5,503,Remote,"New York, NY",2023-01-06,Terminated,2025-10-02,Involuntary,Violation of Company Policy,136700,32.9,2.74
+EMP-1066,Jose,Moore,Male,35,Millennials (1981-1996),White,Single,Bachelor's,5,502,Remote,"Chicago, IL",2020-01-12,Active,,,,90500,81.5,6.8
+EMP-1067,Dennis,Bailey,Non-Binary,30,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,4,402,Hybrid,"San Francisco, CA",2025-05-21,Active,,,,89200,17.3,1.44
+EMP-1068,Patrick,Sanders,Non-Binary,36,Millennials (1981-1996),Hispanic/Latino,Single,Associate's,4,402,Hybrid,"Austin, TX",2025-09-06,Active,,,,78200,13.7,1.14
+EMP-1069,Judy,Howard,Female,33,Millennials (1981-1996),Black/African American,Married,Bachelor's,3,302,Hybrid,"London, UK",2022-03-05,Active,,,,83100,55.8,4.65
+EMP-1070,Cynthia,Lewis,Female,22,Gen Z (1997-2012),Asian,Single,Bachelor's,5,501,Remote,"San Francisco, CA",2025-05-25,Active,,,,61400,17.1,1.43
+EMP-1071,Austin,Sanders,Male,23,Gen Z (1997-2012),Asian,Married,Master's,3,301,Remote,"Chicago, IL",2022-07-10,Terminated,2023-01-07,Involuntary,Violation of Company Policy,54800,5.9,0.5
+EMP-1072,Emma,King,Female,24,Gen Z (1997-2012),Black/African American,Single,Doctorate,2,201,Remote,"San Francisco, CA",2020-01-01,Active,,,,66000,81.9,6.83
+EMP-1073,Douglas,James,Male,36,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,5,502,Remote,"Chicago, IL",2020-11-06,Active,,,,93200,71.7,5.98
+EMP-1074,Amanda,Murphy,Female,44,Gen X (1965-1980),White,Married,Master's,1,103,On-site,"New York, NY",2021-04-23,Active,,,,158500,66.2,5.52
+EMP-1075,George,Cook,Male,37,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Remote,"San Francisco, CA",2024-11-24,Active,,,,87800,23.1,1.93
+EMP-1076,Danielle,Green,Female,26,Gen Z (1997-2012),White,Single,Doctorate,7,701,Hybrid,"London, UK",2025-12-23,Active,,,,56100,10.2,0.85
+EMP-1077,Joshua,Garcia,Male,22,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,1,101,Hybrid,"Chicago, IL",2023-02-26,Active,,,,78500,44.1,3.67
+EMP-1078,Natalie,Nelson,Female,24,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,1,101,Hybrid,"Austin, TX",2022-11-13,Active,,,,74500,47.5,3.96
+EMP-1079,Raymond,Taylor,Male,26,Gen Z (1997-2012),Asian,Divorced,Associate's,4,401,Hybrid,"San Francisco, CA",2024-12-19,Terminated,2026-02-02,Voluntary,Career Advancement / Growth,54200,13.5,1.12
+EMP-1080,John,Cook,Male,49,Gen X (1965-1980),White,Divorced,Master's,3,303,Remote,"London, UK",2025-09-16,Active,,,,127000,13.4,1.12
+EMP-1081,Dorothy,Reed,Female,28,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,7,702,Hybrid,"San Francisco, CA",2021-05-12,Active,,,,71100,65.6,5.46
+EMP-1082,Brian,Lewis,Male,38,Millennials (1981-1996),Asian,Single,Master's,6,602,Hybrid,"Austin, TX",2024-06-15,Terminated,2026-03-02,Involuntary,Violation of Company Policy,116300,20.5,1.71
+EMP-1083,Jeremy,Perry,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,5,501,On-site,"Chicago, IL",2023-09-14,Active,,,,64100,37.5,3.12
+EMP-1084,Kevin,Roberts,Male,23,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,7,701,Hybrid,"Austin, TX",2022-10-02,Active,,,,57800,48.9,4.07
+EMP-1085,Eugene,Collins,Male,31,Millennials (1981-1996),Asian,Single,Bachelor's,4,403,Remote,"San Francisco, CA",2024-04-26,Active,,,,114400,30.1,2.51
+EMP-1086,Margaret,Thomas,Female,36,Millennials (1981-1996),Asian,Married,Bachelor's,7,702,On-site,"London, UK",2022-06-16,Terminated,2024-11-04,Involuntary,Organizational Restructuring / Layoff,77800,28.6,2.39
+EMP-1087,Olivia,Scott,Female,35,Millennials (1981-1996),Hispanic/Latino,Divorced,Master's,2,202,Remote,"Chicago, IL",2022-07-07,Terminated,2024-02-28,Voluntary,Pursuing Higher Education,91000,19.7,1.65
+EMP-1088,Ashley,Hall,Female,44,Gen X (1965-1980),Asian,Married,Master's,6,604,On-site,"Austin, TX",2022-11-17,Terminated,2023-08-05,Voluntary,Relocation / Personal Reasons,199000,8.6,0.71
+EMP-1089,Janet,Long,Female,51,Gen X (1965-1980),White,Married,Doctorate,3,304,Hybrid,"New York, NY",2025-12-24,Active,,,,178100,10.2,0.85
+EMP-1090,Elizabeth,James,Female,53,Gen X (1965-1980),Asian,Single,Doctorate,2,204,Hybrid,"Seattle, WA",2026-02-19,Active,,,,174900,8.3,0.69
+EMP-1091,Matthew,Cruz,Male,28,Gen Z (1997-2012),White,Married,Bachelor's,2,202,Remote,"Chicago, IL",2022-09-01,Active,,,,89000,49.9,4.16
+EMP-1092,Joyce,Flores,Female,31,Millennials (1981-1996),Asian,Single,Master's,5,502,Remote,"San Francisco, CA",2020-07-03,Active,,,,95300,75.9,6.32
+EMP-1093,Zachary,Patel,Male,42,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,1,103,Remote,"New York, NY",2022-12-16,Active,,,,144700,46.4,3.87
+EMP-1094,Laura,Cox,Female,25,Gen Z (1997-2012),Asian,Single,Associate's,4,401,Hybrid,"Chicago, IL",2022-12-14,Active,,,,65000,46.5,3.87
+EMP-1095,Diane,Smith,Female,57,Gen X (1965-1980),White,Single,Bachelor's,5,504,Hybrid,"London, UK",2021-06-01,Active,,,,203400,64.9,5.41
+EMP-1096,Susan,Mendoza,Female,33,Millennials (1981-1996),Hispanic/Latino,Married,Master's,5,502,Hybrid,"New York, NY",2021-06-03,Active,,,,92100,64.9,5.4
+EMP-1097,Rebecca,Myers,Female,26,Gen Z (1997-2012),Asian,Divorced,Master's,3,301,Remote,"Seattle, WA",2020-10-22,Active,,,,62800,72.2,6.02
+EMP-1098,Roger,Mendoza,Male,29,Millennials (1981-1996),White,Divorced,Master's,3,302,Hybrid,"San Francisco, CA",2022-09-05,Active,,,,77200,49.8,4.15
+EMP-1099,Edward,Roberts,Male,25,Gen Z (1997-2012),White,Married,Bachelor's,2,201,On-site,"Seattle, WA",2021-11-07,Active,,,,65900,59.7,4.97
+EMP-1100,Kelly,Lopez,Female,36,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,103,Hybrid,"New York, NY",2020-12-13,Active,,,,150600,70.5,5.88
+EMP-1101,Gabriel,James,Male,38,Millennials (1981-1996),Asian,Single,Associate's,4,402,Hybrid,"Chicago, IL",2020-05-11,Active,,,,90100,77.6,6.47
+EMP-1102,Sarah,Flores,Female,38,Millennials (1981-1996),White,Divorced,Master's,2,202,Remote,"San Francisco, CA",2026-02-07,Active,,,,84900,8.7,0.72
+EMP-1103,Sean,Nelson,Male,32,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,2,203,Hybrid,"Chicago, IL",2020-10-22,Active,,,,138500,72.2,6.02
+EMP-1104,Christina,Garcia,Female,40,Millennials (1981-1996),White,Single,Master's,1,103,Hybrid,"Austin, TX",2021-05-18,Active,,,,154500,65.4,5.45
+EMP-1105,Jonathan,Campbell,Male,52,Gen X (1965-1980),White,Single,Doctorate,2,203,Hybrid,"San Francisco, CA",2023-06-16,Terminated,2023-12-28,Voluntary,Pursuing Higher Education,126800,6.4,0.53
+EMP-1106,Marilyn,Ramos,Female,56,Gen X (1965-1980),Hispanic/Latino,Single,Bachelor's,2,205,Remote,"New York, NY",2024-12-19,Active,,,,259800,22.3,1.86
+EMP-1107,Brandon,Reed,Male,40,Millennials (1981-1996),Black/African American,Single,Bachelor's,5,502,Hybrid,"Seattle, WA",2023-10-17,Active,,,,94900,36.4,3.03
+EMP-1108,Kyle,Jenkins,Male,57,Gen X (1965-1980),White,Married,Bachelor's,4,404,Hybrid,"Austin, TX",2021-07-20,Active,,,,156700,63.3,5.28
+EMP-1109,Steven,Cook,Male,39,Millennials (1981-1996),White,Single,Bachelor's,1,103,Hybrid,"London, UK",2023-10-24,Active,,,,137300,36.2,3.01
+EMP-1110,Anthony,Morgan,Male,51,Gen X (1965-1980),Asian,Single,Master's,3,304,Hybrid,"New York, NY",2021-10-13,Active,,,,176500,60.5,5.04
+EMP-1111,George,Cruz,Male,44,Gen X (1965-1980),Asian,Married,Bachelor's,1,105,Hybrid,"San Francisco, CA",2021-11-04,Active,,,,233400,59.8,4.98
+EMP-1112,Deborah,Moore,Female,25,Gen Z (1997-2012),Asian,Single,Bachelor's,1,101,Hybrid,"Austin, TX",2025-08-01,Active,,,,71400,14.9,1.24
+EMP-1113,Amanda,Ramos,Female,34,Millennials (1981-1996),Asian,Married,Master's,1,103,Remote,"New York, NY",2022-12-22,Active,,,,142700,46.2,3.85
+EMP-1114,Gloria,Walker,Female,41,Millennials (1981-1996),Asian,Married,Doctorate,1,105,Hybrid,"Seattle, WA",2024-11-07,Active,,,,233700,23.7,1.97
+EMP-1115,Stephanie,Long,Female,23,Gen Z (1997-2012),White,Single,Bachelor's,4,401,On-site,"Chicago, IL",2021-08-19,Active,,,,62500,62.3,5.19
+EMP-1116,Jeremy,Sullivan,Male,45,Gen X (1965-1980),Asian,Married,Bachelor's,5,503,Remote,"Chicago, IL",2025-03-12,Active,,,,150300,19.6,1.63
+EMP-1117,Tyler,Hughes,Male,28,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,2,201,Remote,"Austin, TX",2024-02-20,Active,,,,67100,32.3,2.69
+EMP-1118,Rachel,Edwards,Female,27,Gen Z (1997-2012),Asian,Married,Bachelor's,2,202,On-site,"Chicago, IL",2023-11-23,Active,,,,102500,35.2,2.93
+EMP-1119,Nicole,Reed,Female,36,Millennials (1981-1996),Hispanic/Latino,Single,Bachelor's,1,103,Hybrid,"San Francisco, CA",2021-05-15,Active,,,,148100,65.5,5.46
+EMP-1120,Ryan,Jenkins,Male,22,Gen Z (1997-2012),White,Married,Master's,7,701,On-site,"Austin, TX",2022-08-11,Active,,,,60300,50.6,4.22
+EMP-1121,Joe,Young,Male,46,Gen X (1965-1980),Two or More Races,Divorced,Bachelor's,1,103,Remote,"Chicago, IL",2022-05-21,Active,,,,156400,53.3,4.44
+EMP-1122,Nathan,Collins,Male,24,Gen Z (1997-2012),Black/African American,Married,Bachelor's,7,701,Hybrid,"San Francisco, CA",2025-10-17,Terminated,2026-04-05,Voluntary,Better Compensation & Benefits,59300,5.6,0.47
+EMP-1123,Paul,Cox,Male,43,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,104,Remote,"New York, NY",2025-06-12,Active,,,,178100,16.6,1.38
+EMP-1124,Ethan,Campbell,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,4,401,Hybrid,"San Francisco, CA",2020-06-04,Active,,,,59100,76.8,6.4
+EMP-1125,Jose,Morales,Male,29,Millennials (1981-1996),White,Single,Bachelor's,2,201,Remote,"San Francisco, CA",2020-12-02,Active,,,,67300,70.9,5.91
+EMP-1126,Brittany,Howard,Female,48,Gen X (1965-1980),White,Single,Bachelor's,1,104,Hybrid,"Seattle, WA",2024-04-08,Terminated,2025-06-05,Voluntary,Pursuing Higher Education,198500,13.9,1.16
+EMP-1127,Russell,Bennett,Male,31,Millennials (1981-1996),Two or More Races,Single,Bachelor's,2,202,On-site,"Austin, TX",2025-09-07,Terminated,2026-06-09,Voluntary,Company Culture / Leadership,92300,9.0,0.75
+EMP-1128,Carl,White,Male,34,Millennials (1981-1996),Black/African American,Divorced,Master's,6,602,On-site,"New York, NY",2025-05-21,Active,,,,107200,17.3,1.44
+EMP-1129,Stephen,Coleman,Male,25,Gen Z (1997-2012),White,Married,Bachelor's,2,201,Hybrid,"New York, NY",2023-09-14,Terminated,2026-02-28,Voluntary,Pursuing Higher Education,62800,29.5,2.46
+EMP-1130,Victoria,Ramirez,Female,26,Gen Z (1997-2012),White,Married,Bachelor's,1,101,Hybrid,"Austin, TX",2024-02-11,Active,,,,79900,32.6,2.71
+EMP-1131,Larry,Hernandez,Male,53,Gen X (1965-1980),Hispanic/Latino,Single,Associate's,6,604,Hybrid,"San Francisco, CA",2024-12-09,Active,,,,191000,22.6,1.89
+EMP-1132,Brittany,Moore,Female,41,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,103,Hybrid,"San Francisco, CA",2025-10-08,Active,,,,155100,12.7,1.06
+EMP-1133,Douglas,Jimenez,Male,36,Millennials (1981-1996),Asian,Married,Bachelor's,7,702,On-site,"New York, NY",2022-08-13,Active,,,,69000,50.5,4.21
+EMP-1134,Douglas,Torres,Male,26,Gen Z (1997-2012),Asian,Married,Bachelor's,7,701,Remote,"New York, NY",2024-03-18,Terminated,2025-03-09,Voluntary,Work-Life Balance / Burnout,60400,11.7,0.97
+EMP-1135,Stephen,Reed,Male,35,Millennials (1981-1996),Two or More Races,Single,Bachelor's,6,602,Hybrid,"Chicago, IL",2021-08-22,Terminated,2022-12-07,Voluntary,Better Compensation & Benefits,106700,15.5,1.29
+EMP-1136,Jean,Edwards,Female,49,Gen X (1965-1980),White,Single,Doctorate,2,203,Hybrid,"Chicago, IL",2024-09-20,Active,,,,138500,25.3,2.11
+EMP-1137,Kayla,Diaz,Female,32,Millennials (1981-1996),Asian,Divorced,Bachelor's,6,602,On-site,"San Francisco, CA",2021-11-23,Active,,,,103100,59.2,4.93
+EMP-1138,Diane,Anderson,Female,45,Gen X (1965-1980),Hispanic/Latino,Married,Doctorate,1,103,Remote,"Seattle, WA",2022-10-12,Terminated,2023-05-28,Voluntary,Better Compensation & Benefits,148400,7.5,0.62
+EMP-1139,Nicole,Jimenez,Female,26,Gen Z (1997-2012),White,Married,Associate's,2,202,Hybrid,"Chicago, IL",2023-08-19,Active,,,,89100,38.3,3.2
+EMP-1140,Arthur,Castillo,Male,26,Gen Z (1997-2012),Hispanic/Latino,Divorced,Bachelor's,4,401,On-site,"San Francisco, CA",2024-08-26,Active,,,,61400,26.1,2.17
+EMP-1141,Lucas,Garcia,Non-Binary,40,Millennials (1981-1996),White,Divorced,Master's,5,502,Remote,"San Francisco, CA",2020-08-26,Active,,,,99200,74.1,6.17
+EMP-1142,Lori,Perez,Female,26,Gen Z (1997-2012),Asian,Divorced,Master's,2,202,Hybrid,"London, UK",2026-03-14,Active,,,,88200,7.5,0.63
+EMP-1143,Kenneth,Price,Male,40,Millennials (1981-1996),Asian,Divorced,Master's,2,202,Remote,"Austin, TX",2022-04-10,Active,,,,83400,54.6,4.55
+EMP-1144,Cheryl,Howard,Female,45,Gen X (1965-1980),White,Single,Master's,1,103,Hybrid,"Chicago, IL",2022-03-16,Active,,,,139200,55.5,4.62
+EMP-1145,Rachel,Rodriguez,Female,35,Millennials (1981-1996),White,Divorced,Bachelor's,6,602,Hybrid,"San Francisco, CA",2025-03-25,Terminated,2026-07-13,Voluntary,Work-Life Balance / Burnout,100700,15.6,1.3
+EMP-1146,Jordan,Ross,Male,29,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,1,102,Remote,"New York, NY",2021-01-09,Active,,,,110000,69.6,5.8
+EMP-1147,Amanda,Jenkins,Female,55,Gen X (1965-1980),Asian,Married,Bachelor's,1,105,Remote,"San Francisco, CA",2024-03-01,Active,,,,238200,31.9,2.66
+EMP-1148,Rebecca,Collins,Female,24,Gen Z (1997-2012),Asian,Single,Bachelor's,7,701,On-site,"San Francisco, CA",2022-12-23,Active,,,,59400,46.2,3.85
+EMP-1149,Albert,Bailey,Male,28,Gen Z (1997-2012),Asian,Married,Associate's,6,601,On-site,"New York, NY",2025-07-09,Terminated,2026-05-14,Voluntary,Relocation / Personal Reasons,66400,10.2,0.85
+EMP-1150,Alice,Gonzalez,Female,26,Gen Z (1997-2012),Asian,Single,Master's,1,102,Hybrid,"San Francisco, CA",2023-06-27,Active,,,,92900,40.1,3.34
+EMP-1151,Joseph,Taylor,Male,36,Millennials (1981-1996),Hispanic/Latino,Single,Bachelor's,2,202,Remote,"London, UK",2023-10-11,Terminated,2024-09-08,Voluntary,Company Culture / Leadership,86800,10.9,0.91
+EMP-1152,Alexander,Ward,Male,23,Gen Z (1997-2012),Asian,Single,Master's,2,201,Hybrid,"New York, NY",2021-04-15,Active,,,,59100,66.5,5.54
+EMP-1153,William,Foster,Male,26,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,3,301,Remote,"New York, NY",2025-10-16,Terminated,2026-09-12,Voluntary,Work-Life Balance / Burnout,55500,10.9,0.91
+EMP-1154,Kathleen,Gomez,Female,32,Millennials (1981-1996),Asian,Single,Associate's,1,102,Remote,"San Francisco, CA",2024-05-15,Active,,,,116300,29.5,2.46
+EMP-1155,Justin,Coleman,Male,50,Gen X (1965-1980),Hispanic/Latino,Single,Master's,2,205,Remote,"New York, NY",2025-04-08,Active,,,,257200,18.7,1.56
+EMP-1156,Steven,Flores,Male,27,Gen Z (1997-2012),White,Divorced,Bachelor's,7,701,Hybrid,"Austin, TX",2023-06-19,Active,,,,49300,40.3,3.36
+EMP-1157,Mary,Jackson,Female,50,Gen X (1965-1980),Hispanic/Latino,Married,Bachelor's,2,203,On-site,"London, UK",2023-01-24,Active,,,,118700,45.1,3.76
+EMP-1158,Olivia,Harris,Female,23,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,2,201,Hybrid,"Austin, TX",2020-11-08,Terminated,2023-06-14,Voluntary,Better Compensation & Benefits,62500,31.1,2.6
+EMP-1159,Juan,Castillo,Male,26,Gen Z (1997-2012),White,Single,Master's,4,401,Hybrid,"New York, NY",2025-06-08,Active,,,,64900,16.7,1.39
+EMP-1160,Katherine,Thompson,Female,31,Millennials (1981-1996),White,Divorced,Bachelor's,1,103,Remote,"New York, NY",2023-01-03,Active,,,,147300,45.8,3.82
+EMP-1161,Elizabeth,Walker,Female,33,Millennials (1981-1996),Hispanic/Latino,Single,Bachelor's,7,702,Remote,"New York, NY",2023-07-21,Active,,,,79100,39.3,3.27
+EMP-1162,Douglas,Foster,Male,53,Gen X (1965-1980),White,Married,Bachelor's,1,105,Remote,"London, UK",2023-03-18,Active,,,,260200,43.4,3.62
+EMP-1163,Janet,Watson,Female,24,Gen Z (1997-2012),White,Single,Bachelor's,4,401,Hybrid,"Austin, TX",2026-02-01,Active,,,,54500,8.9,0.74
+EMP-1164,Brian,Diaz,Male,28,Gen Z (1997-2012),Asian,Single,Master's,1,101,On-site,"Chicago, IL",2020-10-25,Active,,,,81700,72.1,6.01
+EMP-1165,Elijah,Phillips,Male,27,Gen Z (1997-2012),Black/African American,Married,Master's,2,201,On-site,"New York, NY",2024-03-01,Active,,,,63300,31.9,2.66
+EMP-1166,Anthony,Patel,Non-Binary,37,Millennials (1981-1996),White,Divorced,Bachelor's,2,202,On-site,"Austin, TX",2020-08-26,Active,,,,82500,74.1,6.17
+EMP-1167,Maria,Taylor,Female,56,Gen X (1965-1980),Hispanic/Latino,Married,Bachelor's,6,604,Hybrid,"Austin, TX",2026-03-25,Active,,,,182200,7.2,0.6
+EMP-1168,Donna,Bell,Female,46,Gen X (1965-1980),Hispanic/Latino,Divorced,Bachelor's,7,703,Remote,"San Francisco, CA",2020-06-10,Active,,,,105800,76.6,6.38
+EMP-1169,Jack,Sanders,Male,24,Gen Z (1997-2012),White,Single,High School Diploma,6,601,Hybrid,"Austin, TX",2022-08-06,Active,,,,71100,50.8,4.23
+EMP-1170,Terry,Morales,Male,48,Gen X (1965-1980),Hispanic/Latino,Divorced,Master's,1,103,Remote,"New York, NY",2025-03-28,Active,,,,149100,19.1,1.59
+EMP-1171,Cheryl,Jenkins,Female,28,Gen Z (1997-2012),Asian,Married,Master's,2,202,On-site,"San Francisco, CA",2023-09-07,Terminated,2024-04-21,Voluntary,Career Advancement / Growth,99800,7.5,0.62
+EMP-1172,Sean,Clark,Male,51,Gen X (1965-1980),Hispanic/Latino,Divorced,Bachelor's,1,103,Remote,"San Francisco, CA",2023-07-27,Active,,,,141800,39.1,3.26
+EMP-1173,Lawrence,Phillips,Non-Binary,22,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,2,201,Hybrid,"Austin, TX",2021-12-21,Active,,,,56300,58.3,4.85
+EMP-1174,Alexis,Ortiz,Female,27,Gen Z (1997-2012),Black/African American,Married,Bachelor's,7,701,Hybrid,"Seattle, WA",2021-02-11,Active,,,,59100,68.5,5.71
+EMP-1175,Albert,Castillo,Male,43,Millennials (1981-1996),Asian,Single,Associate's,1,103,Hybrid,"Chicago, IL",2026-01-05,Active,,,,136300,9.8,0.81
+EMP-1176,Emma,Torres,Female,38,Millennials (1981-1996),Asian,Single,Master's,2,203,Hybrid,"New York, NY",2025-12-08,Terminated,2026-03-07,Involuntary,Violation of Company Policy,137000,2.9,0.24
+EMP-1177,Susan,Carter,Female,25,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"New York, NY",2020-06-09,Active,,,,56600,76.6,6.39
+EMP-1178,Peter,Watson,Non-Binary,33,Millennials (1981-1996),Asian,Single,Bachelor's,4,403,Remote,"Seattle, WA",2023-12-05,Active,,,,126800,34.8,2.9
+EMP-1179,Joe,Young,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,7,701,Hybrid,"Austin, TX",2024-09-09,Terminated,2026-06-08,Voluntary,Relocation / Personal Reasons,56200,20.9,1.74
+EMP-1180,John,Flores,Male,28,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,1,101,Hybrid,"New York, NY",2025-07-04,Terminated,2025-10-15,Voluntary,Pursuing Higher Education,82800,3.4,0.28
+EMP-1181,Robert,Perry,Male,41,Millennials (1981-1996),Black/African American,Married,Bachelor's,1,103,Remote,"New York, NY",2024-05-11,Active,,,,147100,29.6,2.47
+EMP-1182,Paul,Campbell,Male,32,Millennials (1981-1996),Asian,Divorced,Bachelor's,7,703,Remote,"Austin, TX",2022-11-22,Active,,,,101500,47.2,3.93
+EMP-1183,Nancy,Walker,Female,22,Gen Z (1997-2012),White,Married,Bachelor's,2,201,Hybrid,"New York, NY",2022-03-10,Active,,,,59600,55.7,4.64
+EMP-1184,Carl,Castillo,Male,54,Gen X (1965-1980),White,Single,Bachelor's,6,604,Hybrid,"Seattle, WA",2023-03-24,Active,,,,193800,43.2,3.6
+EMP-1185,Carolyn,Ross,Female,29,Millennials (1981-1996),White,Divorced,Bachelor's,2,202,Hybrid,"San Francisco, CA",2020-07-24,Active,,,,85100,75.2,6.26
+EMP-1186,Jonathan,Stewart,Male,33,Millennials (1981-1996),Asian,Single,Bachelor's,7,702,Remote,"New York, NY",2022-05-13,Active,,,,71300,53.6,4.46
+EMP-1187,Sharon,Williams,Female,30,Millennials (1981-1996),White,Single,Bachelor's,7,702,Hybrid,"New York, NY",2022-12-15,Active,,,,76900,46.5,3.87
+EMP-1188,Alexis,Nelson,Female,28,Gen Z (1997-2012),White,Married,Master's,1,101,Hybrid,"New York, NY",2025-12-22,Active,,,,75100,10.2,0.85
+EMP-1189,Mark,Sanchez,Male,49,Gen X (1965-1980),Two or More Races,Divorced,Associate's,6,604,Remote,"San Francisco, CA",2024-07-01,Active,,,,189500,27.9,2.33
+EMP-1190,Diana,Thompson,Female,24,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"Chicago, IL",2024-11-09,Active,,,,57700,23.6,1.97
+EMP-1191,Kelly,Kim,Female,26,Gen Z (1997-2012),Black/African American,Single,Bachelor's,1,101,Hybrid,"San Francisco, CA",2022-08-26,Active,,,,80300,50.1,4.18
+EMP-1192,Henry,Sanchez,Male,36,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,3,302,On-site,"London, UK",2023-05-20,Active,,,,90900,41.3,3.44
+EMP-1193,Bryan,Roberts,Male,22,Gen Z (1997-2012),Asian,Single,Doctorate,1,101,On-site,"Seattle, WA",2025-07-02,Terminated,2026-01-05,Involuntary,Organizational Restructuring / Layoff,84300,6.1,0.51
+EMP-1194,Bruce,Wilson,Male,22,Gen Z (1997-2012),White,Single,High School Diploma,1,101,Remote,"London, UK",2020-12-26,Active,,,,77400,70.1,5.84
+EMP-1195,Jordan,Chavez,Male,27,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,1,102,Hybrid,"London, UK",2023-09-15,Active,,,,102400,37.5,3.12
+EMP-1196,Danielle,Rodriguez,Female,29,Millennials (1981-1996),White,Single,Bachelor's,1,101,Hybrid,"San Francisco, CA",2026-01-06,Active,,,,77700,9.7,0.81
+EMP-1197,Terry,Cook,Male,23,Gen Z (1997-2012),White,Single,Master's,1,101,Hybrid,"San Francisco, CA",2023-11-16,Active,,,,76100,35.4,2.95
+EMP-1198,Michelle,Gutierrez,Female,36,Millennials (1981-1996),White,Married,Bachelor's,7,702,Hybrid,"New York, NY",2020-05-27,Active,,,,76600,77.1,6.42
+EMP-1199,Jean,Cooper,Female,32,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,6,603,Hybrid,"San Francisco, CA",2023-01-03,Terminated,2024-01-25,Voluntary,Pursuing Higher Education,134900,12.7,1.06
+EMP-1200,Joshua,Hill,Male,31,Millennials (1981-1996),Hispanic/Latino,Single,Master's,3,303,Hybrid,"New York, NY",2023-02-17,Active,,,,113500,44.4,3.7
+EMP-1201,Julia,James,Female,27,Gen Z (1997-2012),Two or More Races,Single,Bachelor's,3,301,Hybrid,"Chicago, IL",2022-09-07,Active,,,,57600,49.7,4.14
+EMP-1202,Sarah,Davis,Female,23,Gen Z (1997-2012),White,Single,Bachelor's,3,301,Hybrid,"Austin, TX",2020-08-13,Active,,,,53900,74.5,6.21
+EMP-1203,Thomas,Lee,Male,25,Gen Z (1997-2012),Black/African American,Single,Associate's,7,701,Hybrid,"San Francisco, CA",2024-02-19,Active,,,,56400,32.3,2.69
+EMP-1204,Jerry,Gray,Male,29,Millennials (1981-1996),White,Married,Master's,4,401,Hybrid,"Austin, TX",2023-02-15,Active,,,,56900,44.4,3.7
+EMP-1205,Anna,Green,Female,26,Gen Z (1997-2012),White,Single,Bachelor's,4,402,Hybrid,"Seattle, WA",2021-03-27,Terminated,2024-03-22,Voluntary,Work-Life Balance / Burnout,88700,35.8,2.99
+EMP-1206,Bradley,Baker,Male,49,Gen X (1965-1980),White,Married,Bachelor's,7,703,Remote,"Chicago, IL",2024-12-25,Active,,,,94400,22.1,1.84
+EMP-1207,Paul,Flores,Male,26,Gen Z (1997-2012),Black/African American,Single,Bachelor's,3,301,Hybrid,"New York, NY",2026-04-21,Active,,,,54500,6.3,0.52
+EMP-1208,Larry,King,Male,24,Gen Z (1997-2012),White,Single,Master's,6,601,Hybrid,"New York, NY",2024-08-19,Active,,,,71500,26.3,2.19
+EMP-1209,Dennis,Stewart,Male,22,Gen Z (1997-2012),White,Single,Bachelor's,7,701,On-site,"Seattle, WA",2023-06-17,Active,,,,54500,40.4,3.37
+EMP-1210,Adam,Mendoza,Male,26,Gen Z (1997-2012),Hispanic/Latino,Divorced,Bachelor's,3,301,Hybrid,"New York, NY",2026-04-21,Active,,,,58300,6.3,0.52
+EMP-1211,Elizabeth,Parker,Female,23,Gen Z (1997-2012),White,Single,Doctorate,1,101,On-site,"London, UK",2022-09-08,Active,,,,73800,49.7,4.14
+EMP-1212,Jacob,Bennett,Non-Binary,24,Gen Z (1997-2012),White,Single,Associate's,1,101,Hybrid,"Seattle, WA",2020-01-12,Active,,,,73200,81.5,6.8
+EMP-1213,Edward,Hill,Male,52,Gen X (1965-1980),Asian,Married,Master's,6,603,Hybrid,"San Francisco, CA",2022-04-04,Active,,,,154600,54.8,4.57
+EMP-1214,Alexander,Rivera,Male,36,Millennials (1981-1996),White,Divorced,Bachelor's,5,502,On-site,"Austin, TX",2022-12-08,Active,,,,91900,46.7,3.89
+EMP-1215,Victoria,Lopez,Female,30,Millennials (1981-1996),Asian,Single,Associate's,1,102,Hybrid,"Austin, TX",2026-04-12,Terminated,2026-06-16,Voluntary,Pursuing Higher Education,110900,2.1,0.18
+EMP-1216,Gloria,Perez,Female,56,Gen X (1965-1980),White,Divorced,Bachelor's,1,104,Hybrid,"Austin, TX",2025-04-02,Active,,,,200700,18.9,1.57
+EMP-1217,Dylan,Myers,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,7,701,Hybrid,"New York, NY",2021-04-15,Active,,,,59300,66.5,5.54
+EMP-1218,Sara,Wilson,Female,36,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,102,Remote,"Chicago, IL",2026-04-07,Active,,,,106200,6.7,0.56
+EMP-1219,Joan,Adams,Female,38,Millennials (1981-1996),Asian,Married,Bachelor's,2,203,Hybrid,"San Francisco, CA",2025-06-17,Active,,,,128300,16.4,1.37
+EMP-1220,Amber,Hall,Female,25,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Hybrid,"Chicago, IL",2023-01-19,Active,,,,62400,45.3,3.78
+EMP-1221,Alexander,Mendoza,Male,24,Gen Z (1997-2012),Black/African American,Married,Master's,6,601,Hybrid,"Seattle, WA",2022-11-22,Terminated,2024-11-04,Voluntary,Company Culture / Leadership,67000,23.4,1.95
+EMP-1222,Danielle,Chavez,Female,35,Millennials (1981-1996),White,Divorced,Bachelor's,7,703,Hybrid,"San Francisco, CA",2022-04-27,Active,,,,102800,54.1,4.51
+EMP-1223,Robert,Lee,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"New York, NY",2022-10-15,Active,,,,58900,48.5,4.04
+EMP-1224,Carol,Hall,Female,32,Millennials (1981-1996),Hispanic/Latino,Divorced,Associate's,1,102,Remote,"Austin, TX",2021-02-13,Active,,,,106000,68.5,5.71
+EMP-1225,Dorothy,Diaz,Non-Binary,36,Millennials (1981-1996),White,Married,Bachelor's,3,302,Remote,"Seattle, WA",2021-10-24,Active,,,,88700,60.2,5.01
+EMP-1226,Daniel,Parker,Male,49,Gen X (1965-1980),White,Single,Bachelor's,7,703,On-site,"San Francisco, CA",2024-01-12,Active,,,,100100,33.5,2.8
+EMP-1227,Ethan,Bailey,Male,27,Gen Z (1997-2012),Hispanic/Latino,Divorced,Bachelor's,1,101,Hybrid,"London, UK",2024-11-13,Active,,,,79500,23.5,1.96
+EMP-1228,Raymond,Ross,Male,46,Gen X (1965-1980),White,Divorced,Bachelor's,1,104,On-site,"New York, NY",2024-06-17,Active,,,,192500,28.4,2.37
+EMP-1229,Ethan,Gray,Male,37,Millennials (1981-1996),Asian,Single,Master's,1,102,Hybrid,"San Francisco, CA",2025-03-15,Active,,,,110000,19.5,1.62
+EMP-1230,Adam,Gutierrez,Male,33,Millennials (1981-1996),Hispanic/Latino,Divorced,Associate's,7,703,Hybrid,"London, UK",2024-11-18,Active,,,,99800,23.3,1.94
+EMP-1231,Christian,Ross,Male,26,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,1,101,Hybrid,"San Francisco, CA",2023-03-05,Active,,,,74900,43.8,3.65
+EMP-1232,Elizabeth,Phillips,Female,54,Gen X (1965-1980),White,Single,Master's,3,304,Remote,"Austin, TX",2026-01-15,Active,,,,178100,9.4,0.79
+EMP-1233,Barbara,Cox,Female,25,Gen Z (1997-2012),Hispanic/Latino,Single,Associate's,1,101,Hybrid,"London, UK",2021-04-19,Terminated,2023-10-04,Voluntary,Career Advancement / Growth,83000,29.5,2.46
+EMP-1234,George,Nelson,Male,36,Millennials (1981-1996),White,Divorced,Doctorate,2,202,Hybrid,"New York, NY",2023-11-15,Active,,,,82900,35.4,2.95
+EMP-1235,Nicole,Mitchell,Female,27,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,1,101,Remote,"San Francisco, CA",2020-07-02,Active,,,,78000,75.9,6.32
+EMP-1236,Jeffrey,White,Male,27,Gen Z (1997-2012),White,Divorced,Master's,2,201,Hybrid,"Austin, TX",2025-03-04,Active,,,,58400,19.8,1.65
+EMP-1237,Sean,Lee,Non-Binary,33,Millennials (1981-1996),Asian,Single,Bachelor's,5,503,Hybrid,"Austin, TX",2024-07-27,Active,,,,131000,27.1,2.26
+EMP-1238,Vincent,Kelly,Male,37,Millennials (1981-1996),White,Single,Bachelor's,1,103,On-site,"Austin, TX",2024-09-12,Active,,,,151300,25.5,2.13
+EMP-1239,Rebecca,Thomas,Female,31,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,7,702,On-site,"New York, NY",2022-05-17,Active,,,,79600,53.4,4.45
+EMP-1240,Betty,Johnson,Female,28,Gen Z (1997-2012),Two or More Races,Divorced,Bachelor's,2,201,On-site,"San Francisco, CA",2022-10-26,Terminated,2024-11-26,Voluntary,Company Culture / Leadership,61800,25.0,2.09
+EMP-1241,Kimberly,Adams,Female,49,Gen X (1965-1980),Hispanic/Latino,Divorced,Doctorate,2,203,Remote,"Chicago, IL",2020-04-06,Active,,,,119300,78.8,6.56
+EMP-1242,Ryan,Powell,Male,42,Millennials (1981-1996),Asian,Single,Master's,1,103,Hybrid,"Austin, TX",2024-06-18,Terminated,2025-03-04,Voluntary,Company Culture / Leadership,142200,8.5,0.71
+EMP-1243,Nathan,Stewart,Male,26,Gen Z (1997-2012),White,Divorced,Bachelor's,2,201,Hybrid,"Austin, TX",2023-02-02,Active,,,,63700,44.8,3.74
+EMP-1244,Mason,Hughes,Male,30,Millennials (1981-1996),White,Divorced,Bachelor's,6,602,Remote,"Seattle, WA",2025-04-28,Active,,,,124700,18.0,1.5
+EMP-1245,Marie,Coleman,Female,39,Millennials (1981-1996),Asian,Single,Master's,4,402,Remote,"London, UK",2023-10-27,Active,,,,87100,36.1,3.01
+EMP-1246,Kelly,Price,Female,24,Gen Z (1997-2012),White,Single,Master's,7,701,Hybrid,"Austin, TX",2022-03-28,Active,,,,56500,55.1,4.59
+EMP-1247,Emma,Young,Female,46,Gen X (1965-1980),Black/African American,Married,Bachelor's,7,703,Remote,"Austin, TX",2021-09-19,Active,,,,104600,61.3,5.11
+EMP-1248,Douglas,Alvarez,Male,28,Gen Z (1997-2012),White,Married,Bachelor's,5,501,Remote,"Austin, TX",2021-09-14,Terminated,2023-08-29,Voluntary,Relocation / Personal Reasons,58200,23.5,1.95
+EMP-1249,Beverly,Gray,Female,37,Millennials (1981-1996),Asian,Single,Master's,2,202,Hybrid,"New York, NY",2024-05-16,Active,,,,87400,29.4,2.45
+EMP-1250,Danielle,Martin,Female,40,Millennials (1981-1996),White,Married,Master's,3,302,Hybrid,"Chicago, IL",2020-01-18,Active,,,,90100,81.3,6.78
+EMP-1251,Margaret,Adams,Female,30,Millennials (1981-1996),Asian,Single,Master's,3,302,Remote,"San Francisco, CA",2023-01-07,Active,,,,82000,45.7,3.81
+EMP-1252,Cynthia,Mitchell,Female,24,Gen Z (1997-2012),White,Single,Bachelor's,7,701,On-site,"Austin, TX",2023-11-10,Active,,,,51200,35.6,2.97
+EMP-1253,Frances,Mitchell,Female,22,Gen Z (1997-2012),Asian,Single,Bachelor's,2,201,Remote,"Seattle, WA",2020-01-05,Active,,,,62100,81.8,6.81
+EMP-1254,Judy,Collins,Female,52,Gen X (1965-1980),Asian,Single,Bachelor's,2,204,Remote,"New York, NY",2026-04-09,Active,,,,166100,6.7,0.56
+EMP-1255,Alice,Rivera,Female,40,Millennials (1981-1996),White,Married,Master's,1,102,Hybrid,"San Francisco, CA",2022-11-13,Active,,,,103000,47.5,3.96
+EMP-1256,Michelle,Ramirez,Female,27,Gen Z (1997-2012),Asian,Married,Master's,2,201,Remote,"San Francisco, CA",2022-09-06,Active,,,,58500,49.7,4.15
+EMP-1257,Bryan,Turner,Male,26,Gen Z (1997-2012),White,Married,Bachelor's,7,701,On-site,"San Francisco, CA",2022-03-02,Active,,,,58300,55.9,4.66
+EMP-1258,Donald,Ward,Male,37,Millennials (1981-1996),Black/African American,Single,Associate's,1,103,Remote,"New York, NY",2020-11-08,Active,,,,144400,71.7,5.97
+EMP-1259,Doris,Mendoza,Female,40,Millennials (1981-1996),Black/African American,Divorced,Master's,1,102,On-site,"Austin, TX",2021-06-15,Active,,,,105600,64.5,5.37
+EMP-1260,Helen,Gray,Female,35,Millennials (1981-1996),White,Single,Bachelor's,3,302,Remote,"Chicago, IL",2022-08-03,Active,,,,74200,50.9,4.24
+EMP-1261,Anna,Green,Female,25,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,2,201,Remote,"Seattle, WA",2024-12-07,Active,,,,63000,22.7,1.89
+EMP-1262,Susan,Adams,Female,31,Millennials (1981-1996),Black/African American,Married,Bachelor's,3,302,Hybrid,"New York, NY",2022-06-20,Terminated,2024-09-21,Voluntary,Work-Life Balance / Burnout,78000,27.1,2.26
+EMP-1263,Jonathan,Robinson,Male,34,Millennials (1981-1996),White,Single,Master's,1,102,Hybrid,"Austin, TX",2021-04-05,Active,,,,100400,66.8,5.57
+EMP-1264,Sharon,White,Female,28,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,6,601,Remote,"San Francisco, CA",2023-10-10,Terminated,2025-04-07,Voluntary,Company Culture / Leadership,77500,17.9,1.49
+EMP-1265,Ethan,Thompson,Male,25,Gen Z (1997-2012),Asian,Single,Doctorate,1,101,Hybrid,"Austin, TX",2023-02-24,Terminated,2024-08-09,Involuntary,Organizational Restructuring / Layoff,79600,17.5,1.46
+EMP-1266,Randy,Morales,Male,32,Millennials (1981-1996),White,Divorced,Bachelor's,5,503,Remote,"San Francisco, CA",2021-11-12,Active,,,,151000,59.5,4.96
+EMP-1267,Maria,Peterson,Female,39,Millennials (1981-1996),White,Single,Master's,7,702,Remote,"Chicago, IL",2021-11-15,Active,,,,68200,59.4,4.95
+EMP-1268,Helen,Peterson,Female,37,Millennials (1981-1996),Asian,Divorced,Bachelor's,5,503,Remote,"Austin, TX",2024-09-15,Active,,,,136200,25.4,2.12
+EMP-1269,Laura,Baker,Female,33,Millennials (1981-1996),White,Single,Bachelor's,6,602,On-site,"Austin, TX",2021-03-24,Active,,,,97100,67.2,5.6
+EMP-1270,Evelyn,Ramirez,Female,36,Millennials (1981-1996),Asian,Divorced,Doctorate,1,102,Remote,"New York, NY",2021-02-16,Active,,,,104800,68.4,5.7
+EMP-1271,Jacob,Green,Male,25,Gen Z (1997-2012),Asian,Single,Bachelor's,7,701,Remote,"San Francisco, CA",2022-05-20,Terminated,2024-10-14,Voluntary,Career Advancement / Growth,52500,28.8,2.4
+EMP-1272,Deborah,Sullivan,Female,45,Gen X (1965-1980),Black/African American,Married,Master's,7,703,Hybrid,"Chicago, IL",2021-01-14,Active,,,,110500,69.5,5.79
+EMP-1273,Helen,Parker,Female,32,Millennials (1981-1996),White,Married,Bachelor's,3,302,Hybrid,"Chicago, IL",2022-12-13,Active,,,,91100,46.5,3.88
+EMP-1274,Ann,Chavez,Female,29,Millennials (1981-1996),Black/African American,Single,Associate's,2,202,Remote,"San Francisco, CA",2024-03-03,Active,,,,96800,31.9,2.66
+EMP-1275,Stephen,Bell,Male,38,Millennials (1981-1996),Asian,Single,Master's,5,502,Hybrid,"Chicago, IL",2021-01-11,Active,,,,98400,69.6,5.8
+EMP-1276,Linda,Green,Female,37,Millennials (1981-1996),White,Divorced,Master's,2,203,On-site,"New York, NY",2021-05-13,Active,,,,127900,65.5,5.46
+EMP-1277,Thomas,Martin,Male,29,Millennials (1981-1996),Hispanic/Latino,Single,Master's,7,701,Remote,"New York, NY",2020-07-09,Terminated,2022-05-12,Voluntary,Career Advancement / Growth,56200,22.1,1.84
+EMP-1278,Thomas,Lewis,Male,59,Gen X (1965-1980),Asian,Divorced,Bachelor's,2,205,On-site,"San Francisco, CA",2024-06-28,Active,,,,237700,28.0,2.34
+EMP-1279,Nicholas,Reyes,Male,48,Gen X (1965-1980),Asian,Married,Bachelor's,7,703,Remote,"San Francisco, CA",2020-03-20,Active,,,,110400,79.3,6.61
+EMP-1280,Barbara,Ward,Non-Binary,43,Millennials (1981-1996),Black/African American,Married,Master's,1,104,Hybrid,"San Francisco, CA",2023-09-03,Active,,,,182900,37.8,3.15
+EMP-1281,Kathleen,Castillo,Female,40,Millennials (1981-1996),Asian,Divorced,Associate's,2,202,Remote,"Austin, TX",2021-08-21,Terminated,2024-04-10,Voluntary,Work-Life Balance / Burnout,83700,31.6,2.64
+EMP-1282,Nathan,Jones,Male,37,Millennials (1981-1996),White,Divorced,Master's,5,502,Hybrid,"San Francisco, CA",2021-03-11,Active,,,,91800,67.6,5.63
+EMP-1283,Roy,Perry,Male,50,Gen X (1965-1980),Asian,Divorced,Bachelor's,5,503,Hybrid,"Austin, TX",2022-02-28,Active,,,,136700,56.0,4.67
+EMP-1284,Deborah,Cooper,Female,40,Millennials (1981-1996),Black/African American,Single,Master's,7,702,Hybrid,"Chicago, IL",2021-06-06,Active,,,,77300,64.8,5.4
+EMP-1285,Julie,Martinez,Female,29,Millennials (1981-1996),White,Married,Bachelor's,7,701,On-site,"New York, NY",2021-02-28,Terminated,2024-02-21,Voluntary,Relocation / Personal Reasons,51400,35.7,2.98
+EMP-1286,Evelyn,Garcia,Female,34,Millennials (1981-1996),White,Single,Bachelor's,2,202,On-site,"Seattle, WA",2020-03-06,Terminated,2021-01-13,Voluntary,Career Advancement / Growth,85300,10.3,0.86
+EMP-1287,Adam,Smith,Male,49,Gen X (1965-1980),Hispanic/Latino,Single,Master's,4,403,Hybrid,"New York, NY",2022-10-22,Active,,,,120600,48.2,4.02
+EMP-1288,Larry,Cruz,Male,35,Millennials (1981-1996),White,Divorced,Bachelor's,4,403,On-site,"London, UK",2021-08-09,Active,,,,118500,62.7,5.22
+EMP-1289,Dylan,Ward,Male,43,Millennials (1981-1996),Asian,Married,Associate's,3,304,On-site,"New York, NY",2024-09-14,Active,,,,167900,25.5,2.12
+EMP-1290,Jason,Reyes,Male,40,Millennials (1981-1996),White,Single,High School Diploma,2,205,Remote,"Austin, TX",2024-04-12,Active,,,,215400,30.6,2.55
+EMP-1291,Bradley,Edwards,Male,23,Gen Z (1997-2012),Two or More Races,Married,Master's,3,301,Hybrid,"Austin, TX",2021-01-24,Terminated,2022-07-28,Voluntary,Career Advancement / Growth,57800,18.1,1.51
+EMP-1292,Sarah,Lee,Female,27,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"Chicago, IL",2024-04-03,Active,,,,59500,30.9,2.57
+EMP-1293,John,Sanchez,Male,34,Millennials (1981-1996),Asian,Single,Bachelor's,2,202,Remote,"Austin, TX",2025-04-24,Active,,,,100500,18.2,1.51
+EMP-1294,Jacqueline,Morgan,Female,24,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,1,101,Remote,"San Francisco, CA",2024-12-21,Active,,,,72500,22.2,1.85
+EMP-1295,Keith,Chavez,Male,24,Gen Z (1997-2012),White,Single,Master's,2,201,Remote,"Austin, TX",2023-02-05,Active,,,,57100,44.7,3.73
+EMP-1296,Jean,Powell,Female,54,Gen X (1965-1980),White,Single,Bachelor's,3,304,Hybrid,"New York, NY",2025-05-27,Active,,,,177200,17.1,1.42
+EMP-1297,Beverly,Phillips,Female,24,Gen Z (1997-2012),Asian,Single,Master's,3,301,Hybrid,"Austin, TX",2020-07-25,Active,,,,57600,75.1,6.26
+EMP-1298,Judy,Davis,Female,25,Gen Z (1997-2012),Black/African American,Married,Bachelor's,7,701,Hybrid,"Chicago, IL",2021-06-23,Terminated,2023-09-19,Voluntary,Company Culture / Leadership,50000,26.9,2.24
+EMP-1299,Gabriel,Foster,Male,41,Millennials (1981-1996),Two or More Races,Divorced,Bachelor's,2,203,On-site,"Seattle, WA",2024-09-01,Active,,,,145900,25.9,2.16
+EMP-1300,Madison,Nguyen,Female,33,Millennials (1981-1996),White,Single,Bachelor's,1,102,On-site,"New York, NY",2021-12-06,Active,,,,106600,58.7,4.9
+EMP-1301,Patrick,Hill,Non-Binary,55,Gen X (1965-1980),Hispanic/Latino,Divorced,Bachelor's,1,104,Hybrid,"San Francisco, CA",2022-12-04,Active,,,,178200,46.8,3.9
+EMP-1302,Ronald,Thompson,Male,25,Gen Z (1997-2012),White,Single,Bachelor's,6,601,Hybrid,"Seattle, WA",2025-07-20,Terminated,2026-01-21,Voluntary,Pursuing Higher Education,72400,6.1,0.51
+EMP-1303,Andrew,James,Male,40,Millennials (1981-1996),Hispanic/Latino,Single,Doctorate,6,603,On-site,"Seattle, WA",2026-04-11,Active,,,,132600,6.6,0.55
+EMP-1304,Matthew,Jenkins,Male,31,Millennials (1981-1996),White,Married,Bachelor's,3,302,Hybrid,"Chicago, IL",2024-02-22,Active,,,,82500,32.2,2.68
+EMP-1305,Alexis,Roberts,Female,25,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,2,201,On-site,"Seattle, WA",2020-09-02,Active,,,,63200,73.9,6.15
+EMP-1306,Raymond,Castillo,Male,28,Gen Z (1997-2012),White,Single,Bachelor's,7,701,Hybrid,"New York, NY",2024-02-20,Active,,,,54800,32.3,2.69
+EMP-1307,Charles,Johnson,Male,40,Millennials (1981-1996),Asian,Divorced,Master's,6,602,Hybrid,"Austin, TX",2021-09-14,Active,,,,101800,61.5,5.12
+EMP-1308,Peter,Wilson,Male,28,Gen Z (1997-2012),Hispanic/Latino,Divorced,Bachelor's,4,402,Hybrid,"Chicago, IL",2021-10-13,Active,,,,88100,60.5,5.04
+EMP-1309,Noah,Murphy,Male,34,Millennials (1981-1996),White,Divorced,Master's,3,302,Hybrid,"London, UK",2025-03-11,Active,,,,79800,19.6,1.63
+EMP-1310,Elizabeth,Brown,Female,24,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,4,401,Hybrid,"San Francisco, CA",2022-10-13,Terminated,2024-07-09,Voluntary,Relocation / Personal Reasons,55800,20.9,1.74
+EMP-1311,Patrick,Ortiz,Male,27,Gen Z (1997-2012),White,Married,High School Diploma,3,302,Remote,"San Francisco, CA",2022-01-21,Active,,,,82900,57.2,4.77
+EMP-1312,Jean,Wright,Female,23,Gen Z (1997-2012),White,Single,Master's,7,701,Remote,"New York, NY",2022-09-04,Active,,,,56400,49.8,4.15
+EMP-1313,Samuel,Rodriguez,Male,29,Millennials (1981-1996),White,Single,Bachelor's,1,101,Remote,"Austin, TX",2024-05-10,Active,,,,73700,29.6,2.47
+EMP-1314,Bruce,Lopez,Male,33,Millennials (1981-1996),Asian,Divorced,Bachelor's,1,103,Hybrid,"San Francisco, CA",2023-01-18,Active,,,,140600,45.3,3.78
+EMP-1315,Linda,Adams,Female,25,Gen Z (1997-2012),Hispanic/Latino,Single,Doctorate,1,101,Remote,"Seattle, WA",2024-10-03,Active,,,,77700,24.8,2.07
+EMP-1316,Carol,Davis,Female,50,Gen X (1965-1980),Asian,Married,Bachelor's,2,203,Hybrid,"San Francisco, CA",2024-06-05,Active,,,,142400,28.8,2.4
+EMP-1317,Edward,Walker,Male,26,Gen Z (1997-2012),Hispanic/Latino,Single,Associate's,3,302,Remote,"Chicago, IL",2021-05-10,Active,,,,85400,65.6,5.47
+EMP-1318,Melissa,Garcia,Female,45,Gen X (1965-1980),White,Married,Bachelor's,1,103,Hybrid,"Chicago, IL",2025-04-20,Active,,,,156800,18.3,1.52
+EMP-1319,Albert,Gomez,Male,27,Gen Z (1997-2012),Black/African American,Divorced,Master's,3,301,Hybrid,"San Francisco, CA",2022-03-01,Active,,,,59300,56.0,4.66
+EMP-1320,Kathryn,Williams,Female,26,Gen Z (1997-2012),Asian,Single,Associate's,2,201,Hybrid,"New York, NY",2024-11-21,Active,,,,59600,23.2,1.94
+EMP-1321,Sandra,Garcia,Female,47,Gen X (1965-1980),White,Married,Bachelor's,3,303,Remote,"Chicago, IL",2023-02-15,Active,,,,130400,44.4,3.7
+EMP-1322,Peter,Diaz,Male,33,Millennials (1981-1996),White,Divorced,Bachelor's,4,402,Hybrid,"New York, NY",2024-04-20,Active,,,,86300,30.3,2.52
+EMP-1323,Gerald,Jimenez,Male,26,Gen Z (1997-2012),Asian,Married,Bachelor's,7,701,Remote,"Austin, TX",2024-01-09,Active,,,,53000,33.6,2.8
+EMP-1324,Jonathan,Perez,Male,52,Gen X (1965-1980),White,Divorced,Bachelor's,6,603,Hybrid,"New York, NY",2025-02-03,Active,,,,143300,20.8,1.73
+EMP-1325,Peter,Jackson,Male,29,Millennials (1981-1996),Two or More Races,Married,Master's,6,601,Remote,"Austin, TX",2025-09-01,Active,,,,76000,13.9,1.16
+EMP-1326,Samantha,Stewart,Female,36,Millennials (1981-1996),Black/African American,Single,Bachelor's,4,403,Remote,"New York, NY",2024-11-03,Active,,,,123100,23.8,1.98
+EMP-1327,Willie,Sullivan,Male,31,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,4,402,Hybrid,"Chicago, IL",2024-07-06,Active,,,,80000,27.8,2.31
+EMP-1328,Stephen,Morgan,Male,38,Millennials (1981-1996),Asian,Married,Doctorate,2,203,Hybrid,"New York, NY",2021-09-15,Terminated,2022-02-27,Voluntary,Better Compensation & Benefits,147400,5.4,0.45
+EMP-1329,Julie,Wilson,Female,32,Millennials (1981-1996),Black/African American,Married,Bachelor's,1,102,Hybrid,"Seattle, WA",2022-09-04,Active,,,,100500,49.8,4.15
+EMP-1330,Kathryn,King,Female,32,Millennials (1981-1996),White,Single,Master's,7,703,Remote,"Chicago, IL",2025-08-12,Active,,,,105900,14.6,1.21
+EMP-1331,Maria,Kim,Female,26,Gen Z (1997-2012),White,Married,Master's,1,102,Remote,"Austin, TX",2023-10-09,Active,,,,101800,36.7,3.06
+EMP-1332,Denise,Diaz,Female,24,Gen Z (1997-2012),White,Married,Bachelor's,1,101,Hybrid,"Chicago, IL",2023-11-16,Terminated,2024-05-04,Voluntary,Pursuing Higher Education,77000,5.6,0.47
+EMP-1333,Andrea,Bailey,Non-Binary,43,Millennials (1981-1996),Asian,Single,Doctorate,1,104,On-site,"San Francisco, CA",2025-05-15,Active,,,,176300,17.5,1.46
+EMP-1334,Richard,Reyes,Male,58,Gen X (1965-1980),White,Single,High School Diploma,3,304,Hybrid,"Seattle, WA",2021-09-23,Terminated,2023-11-14,Involuntary,Organizational Restructuring / Layoff,170500,25.7,2.14
+EMP-1335,Daniel,Edwards,Male,37,Millennials (1981-1996),White,Married,Bachelor's,2,203,Remote,"Austin, TX",2021-04-28,Active,,,,136900,66.0,5.5
+EMP-1336,Jean,Ramirez,Female,34,Millennials (1981-1996),White,Divorced,Master's,2,203,Remote,"Chicago, IL",2022-11-20,Active,,,,129500,47.3,3.94
+EMP-1337,George,Gutierrez,Male,60,Boomers (1946-1964),Asian,Single,Associate's,6,604,Hybrid,"New York, NY",2020-04-06,Active,,,,199900,78.8,6.56
+EMP-1338,Karen,Nelson,Female,44,Gen X (1965-1980),White,Single,Doctorate,1,103,Hybrid,"San Francisco, CA",2020-11-13,Active,,,,133700,71.5,5.96
+EMP-1339,Alice,Gutierrez,Non-Binary,36,Millennials (1981-1996),White,Divorced,Bachelor's,3,303,On-site,"New York, NY",2022-03-03,Terminated,2023-10-12,Voluntary,Pursuing Higher Education,127600,19.3,1.61
+EMP-1340,Douglas,Wright,Male,29,Millennials (1981-1996),White,Married,Master's,1,101,Remote,"San Francisco, CA",2024-06-09,Terminated,2025-11-26,Voluntary,Career Advancement / Growth,78600,17.6,1.46
+EMP-1341,Liam,Jenkins,Male,29,Millennials (1981-1996),Asian,Divorced,Associate's,1,101,Hybrid,"Chicago, IL",2021-08-08,Active,,,,77800,62.7,5.22
+EMP-1342,Daniel,Ramirez,Male,27,Gen Z (1997-2012),White,Divorced,Bachelor's,7,702,Remote,"New York, NY",2023-04-22,Active,,,,72600,42.3,3.52
+EMP-1343,Gerald,Nelson,Male,22,Gen Z (1997-2012),Asian,Single,Master's,7,701,Remote,"Chicago, IL",2025-02-03,Terminated,2026-08-22,Voluntary,Pursuing Higher Education,54600,18.6,1.55
+EMP-1344,Joyce,Foster,Female,40,Millennials (1981-1996),White,Married,Bachelor's,6,604,On-site,"London, UK",2026-03-15,Active,,,,211100,7.5,0.62
+EMP-1345,Noah,Kim,Male,60,Boomers (1946-1964),Hispanic/Latino,Divorced,Master's,3,304,On-site,"Austin, TX",2024-02-02,Active,,,,171200,32.9,2.74
+EMP-1346,Heather,Martinez,Female,33,Millennials (1981-1996),Asian,Married,Master's,1,102,Hybrid,"Austin, TX",2025-09-02,Active,,,,97300,13.9,1.16
+EMP-1347,Patricia,Ramirez,Female,22,Gen Z (1997-2012),White,Married,Bachelor's,1,101,Hybrid,"San Francisco, CA",2021-02-15,Active,,,,82500,68.4,5.7
+EMP-1348,Rachel,Lee,Female,31,Millennials (1981-1996),White,Divorced,Bachelor's,1,103,Hybrid,"Seattle, WA",2024-03-03,Active,,,,139500,31.9,2.66
+EMP-1349,Jeffrey,Rodriguez,Male,28,Gen Z (1997-2012),Asian,Married,Master's,3,302,Remote,"London, UK",2022-05-28,Active,,,,74000,53.1,4.42
+EMP-1350,William,Powell,Male,32,Millennials (1981-1996),White,Divorced,Bachelor's,5,502,Hybrid,"New York, NY",2026-01-12,Active,,,,96600,9.5,0.79
+EMP-1351,Alan,Lee,Male,23,Gen Z (1997-2012),Asian,Single,Bachelor's,7,701,On-site,"Austin, TX",2024-09-07,Active,,,,53600,25.7,2.14
+EMP-1352,Ruth,Gomez,Female,35,Millennials (1981-1996),Hispanic/Latino,Married,Master's,7,702,Hybrid,"Austin, TX",2023-07-06,Active,,,,77100,39.8,3.32
+EMP-1353,Shirley,Sanchez,Female,25,Gen Z (1997-2012),White,Single,Master's,7,701,Remote,"San Francisco, CA",2020-12-09,Active,,,,52500,70.6,5.89
+EMP-1354,Carol,Turner,Female,27,Gen Z (1997-2012),Black/African American,Married,Bachelor's,6,601,Hybrid,"Chicago, IL",2021-08-08,Active,,,,65100,62.7,5.22
+EMP-1355,Dennis,Adams,Male,26,Gen Z (1997-2012),White,Divorced,Associate's,4,402,Remote,"San Francisco, CA",2021-05-06,Active,,,,91600,65.8,5.48
+EMP-1356,Nancy,Cook,Female,28,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"Seattle, WA",2022-08-26,Active,,,,64000,50.1,4.18
+EMP-1357,Jean,Baker,Female,43,Millennials (1981-1996),White,Single,Doctorate,1,103,Hybrid,"Chicago, IL",2020-11-04,Terminated,2021-10-01,Voluntary,Pursuing Higher Education,145100,10.9,0.91
+EMP-1358,Alan,Bailey,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"San Francisco, CA",2024-04-19,Active,,,,64500,30.3,2.53
+EMP-1359,Raymond,Sullivan,Male,26,Gen Z (1997-2012),Hispanic/Latino,Divorced,Bachelor's,1,102,On-site,"New York, NY",2020-10-28,Active,,,,111400,72.0,6.0
+EMP-1360,Helen,Flores,Female,46,Gen X (1965-1980),White,Single,Master's,3,303,On-site,"Austin, TX",2022-04-13,Active,,,,124500,54.5,4.54
+EMP-1361,Scott,Long,Male,33,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,1,103,Remote,"New York, NY",2023-10-08,Active,,,,159000,36.7,3.06
+EMP-1362,Barbara,Morris,Female,54,Gen X (1965-1980),White,Married,Bachelor's,2,204,Hybrid,"Austin, TX",2023-10-05,Active,,,,175300,36.8,3.07
+EMP-1363,Madison,Peterson,Female,47,Gen X (1965-1980),Black/African American,Divorced,Bachelor's,2,204,On-site,"San Francisco, CA",2021-04-07,Terminated,2022-05-10,Voluntary,Work-Life Balance / Burnout,177500,13.1,1.09
+EMP-1364,Julia,Green,Female,49,Gen X (1965-1980),Black/African American,Divorced,Bachelor's,4,403,Hybrid,"Austin, TX",2020-11-16,Terminated,2021-09-14,Involuntary,Performance Standards Not Met,117800,9.9,0.83
+EMP-1365,Susan,Lee,Female,30,Millennials (1981-1996),White,Single,Bachelor's,1,102,Hybrid,"San Francisco, CA",2021-03-17,Active,,,,108900,67.4,5.62
+EMP-1366,Shirley,Evans,Female,50,Gen X (1965-1980),Black/African American,Divorced,Bachelor's,1,103,Hybrid,"New York, NY",2023-09-28,Terminated,2024-06-03,Voluntary,Better Compensation & Benefits,154800,8.2,0.68
+EMP-1367,Janice,Jimenez,Female,34,Millennials (1981-1996),White,Divorced,Bachelor's,7,703,Hybrid,"New York, NY",2020-12-12,Active,,,,113100,70.5,5.88
+EMP-1368,Cheryl,Murphy,Female,31,Millennials (1981-1996),White,Married,Bachelor's,2,202,Hybrid,"Chicago, IL",2023-07-25,Terminated,2025-09-20,Voluntary,Relocation / Personal Reasons,88900,25.9,2.16
+EMP-1369,Kevin,Martin,Male,27,Gen Z (1997-2012),Black/African American,Single,Associate's,3,301,Hybrid,"Chicago, IL",2023-06-25,Active,,,,61400,40.1,3.35
+EMP-1370,Vincent,Mitchell,Male,48,Gen X (1965-1980),White,Single,Bachelor's,3,303,On-site,"San Francisco, CA",2024-02-17,Active,,,,131000,32.4,2.7
+EMP-1371,Frances,Jackson,Female,28,Gen Z (1997-2012),White,Single,Bachelor's,4,402,Remote,"New York, NY",2022-10-09,Active,,,,90300,48.7,4.05
+EMP-1372,Carl,Hughes,Male,38,Millennials (1981-1996),Asian,Single,Master's,1,102,Remote,"Austin, TX",2023-09-23,Active,,,,99900,37.2,3.1
+EMP-1373,Evelyn,Murphy,Female,44,Gen X (1965-1980),Hispanic/Latino,Divorced,Master's,2,203,Hybrid,"Chicago, IL",2025-09-17,Active,,,,128100,13.4,1.11
+EMP-1374,Andrea,Thompson,Female,24,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,5,501,Remote,"Austin, TX",2024-10-28,Active,,,,65400,24.0,2.0
+EMP-1375,Jean,Gomez,Female,34,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,2,202,Hybrid,"Austin, TX",2022-10-28,Active,,,,100400,48.0,4.0
+EMP-1376,Jordan,Bailey,Male,32,Millennials (1981-1996),White,Divorced,Bachelor's,1,103,Remote,"Chicago, IL",2023-08-09,Active,,,,161500,38.7,3.22
+EMP-1377,Alan,Thomas,Male,22,Gen Z (1997-2012),White,Single,Master's,3,301,Hybrid,"New York, NY",2020-05-10,Terminated,2021-12-16,Voluntary,Relocation / Personal Reasons,60100,19.2,1.6
+EMP-1378,Rachel,Ward,Female,35,Millennials (1981-1996),White,Single,Bachelor's,3,303,On-site,"New York, NY",2021-01-11,Active,,,,114600,69.6,5.8
+EMP-1379,Rachel,Moore,Female,28,Gen Z (1997-2012),White,Married,Bachelor's,4,401,Remote,"San Francisco, CA",2020-06-02,Active,,,,60700,76.9,6.41
+EMP-1380,Samantha,Gray,Female,29,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,101,Hybrid,"Chicago, IL",2024-08-26,Terminated,2026-02-02,Voluntary,Career Advancement / Growth,83200,17.2,1.44
+EMP-1381,Sean,Robinson,Male,31,Millennials (1981-1996),White,Divorced,Master's,6,602,Hybrid,"Austin, TX",2022-05-06,Active,,,,110200,53.8,4.48
+EMP-1382,Rebecca,Diaz,Female,54,Gen X (1965-1980),Two or More Races,Single,High School Diploma,2,204,Hybrid,"New York, NY",2023-04-17,Active,,,,187700,42.4,3.53
+EMP-1383,Kimberly,Mendoza,Female,34,Millennials (1981-1996),White,Divorced,Bachelor's,2,203,Hybrid,"Austin, TX",2021-10-16,Active,,,,133400,60.4,5.03
+EMP-1384,Raymond,Hall,Male,28,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Hybrid,"Austin, TX",2025-04-16,Active,,,,63400,18.4,1.54
+EMP-1385,Gregory,Brooks,Male,26,Gen Z (1997-2012),White,Single,Bachelor's,6,601,On-site,"Seattle, WA",2021-09-18,Active,,,,62900,61.3,5.11
+EMP-1386,Paul,Jenkins,Male,39,Millennials (1981-1996),Hispanic/Latino,Married,Master's,1,102,Hybrid,"Chicago, IL",2025-10-17,Active,,,,110100,12.4,1.03
+EMP-1387,Frank,Harris,Male,32,Millennials (1981-1996),Two or More Races,Married,Bachelor's,2,202,Hybrid,"New York, NY",2024-01-09,Terminated,2025-01-07,Voluntary,Better Compensation & Benefits,79700,12.0,1.0
+EMP-1388,Gabriel,Flores,Male,28,Gen Z (1997-2012),White,Divorced,Bachelor's,1,102,Hybrid,"Seattle, WA",2024-08-05,Terminated,2026-03-25,Involuntary,Performance Standards Not Met,114300,19.6,1.63
+EMP-1389,Joyce,Sanders,Female,29,Millennials (1981-1996),White,Married,Bachelor's,1,102,Hybrid,"New York, NY",2023-01-02,Active,,,,99800,45.9,3.82
+EMP-1390,Kenneth,Patel,Male,26,Gen Z (1997-2012),Asian,Married,Bachelor's,7,702,Remote,"Chicago, IL",2025-07-20,Active,,,,67500,15.3,1.28
+EMP-1391,Margaret,Kelly,Female,23,Gen Z (1997-2012),White,Single,Bachelor's,4,401,On-site,"London, UK",2024-09-14,Active,,,,55100,25.5,2.12
+EMP-1392,Janice,Myers,Female,39,Millennials (1981-1996),Hispanic/Latino,Divorced,Associate's,5,502,Remote,"New York, NY",2023-04-26,Active,,,,90100,42.1,3.51
+EMP-1393,Harold,Lopez,Male,22,Gen Z (1997-2012),White,Single,Associate's,1,101,Hybrid,"London, UK",2023-04-05,Active,,,,79000,42.8,3.57
+EMP-1394,Julie,Brown,Female,35,Millennials (1981-1996),Asian,Married,Bachelor's,2,202,Remote,"Austin, TX",2022-03-23,Active,,,,80700,55.2,4.6
+EMP-1395,Jennifer,Torres,Non-Binary,34,Millennials (1981-1996),Black/African American,Married,Bachelor's,4,403,Hybrid,"Austin, TX",2022-01-02,Terminated,2024-04-11,Involuntary,Performance Standards Not Met,107800,27.3,2.27
+EMP-1396,Helen,Wood,Female,29,Millennials (1981-1996),White,Single,Bachelor's,1,101,Hybrid,"Austin, TX",2020-02-11,Active,,,,72300,80.6,6.71
+EMP-1397,Douglas,Allen,Male,36,Millennials (1981-1996),White,Divorced,Master's,3,303,On-site,"New York, NY",2024-05-21,Active,,,,134600,29.3,2.44
+EMP-1398,Anthony,Garcia,Male,27,Gen Z (1997-2012),White,Single,Master's,1,101,Remote,"New York, NY",2021-01-04,Active,,,,78700,69.8,5.82
+EMP-1399,James,Stewart,Male,38,Millennials (1981-1996),White,Married,Bachelor's,1,102,Hybrid,"New York, NY",2020-12-17,Active,,,,98000,70.4,5.86
+EMP-1400,Sharon,Price,Female,25,Gen Z (1997-2012),Asian,Single,Bachelor's,5,501,Hybrid,"London, UK",2020-02-24,Active,,,,66500,80.1,6.68
+EMP-1401,Russell,Bennett,Male,29,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,6,602,Hybrid,"San Francisco, CA",2025-06-25,Terminated,2026-01-05,Voluntary,Career Advancement / Growth,108700,6.4,0.53
+EMP-1402,Judith,Green,Female,22,Gen Z (1997-2012),Hispanic/Latino,Single,Doctorate,2,201,Hybrid,"San Francisco, CA",2025-12-15,Active,,,,64900,10.4,0.87
+EMP-1403,Jerry,Gray,Male,27,Gen Z (1997-2012),Black/African American,Divorced,Master's,1,102,Hybrid,"Seattle, WA",2026-04-16,Active,,,,102600,6.4,0.54
+EMP-1404,Wayne,Brown,Male,40,Millennials (1981-1996),Asian,Divorced,Bachelor's,5,502,Hybrid,"Austin, TX",2022-06-25,Active,,,,101600,52.1,4.34
+EMP-1405,Henry,Cox,Male,32,Millennials (1981-1996),White,Married,Master's,1,102,On-site,"New York, NY",2020-05-27,Active,,,,111300,77.1,6.42
+EMP-1406,Ryan,Taylor,Male,29,Millennials (1981-1996),White,Married,Doctorate,2,201,Remote,"New York, NY",2021-11-02,Active,,,,55500,59.9,4.99
+EMP-1407,Rebecca,Thompson,Female,27,Gen Z (1997-2012),White,Married,Bachelor's,1,101,Remote,"San Francisco, CA",2022-01-04,Terminated,2024-08-26,Voluntary,Company Culture / Leadership,74700,31.7,2.64
+EMP-1408,Paul,Jackson,Male,29,Millennials (1981-1996),White,Single,Bachelor's,1,102,Hybrid,"Austin, TX",2025-07-06,Active,,,,104800,15.8,1.31
+EMP-1409,Austin,Watson,Male,23,Gen Z (1997-2012),Black/African American,Single,Bachelor's,7,701,Remote,"New York, NY",2024-04-01,Active,,,,48500,30.9,2.58
+EMP-1410,Willie,Adams,Male,27,Gen Z (1997-2012),Asian,Divorced,Master's,4,402,Hybrid,"Seattle, WA",2023-01-14,Active,,,,83000,45.5,3.79
+EMP-1411,Billy,Green,Male,28,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Hybrid,"New York, NY",2023-06-24,Active,,,,66100,40.2,3.35
+EMP-1412,Natalie,Robinson,Female,23,Gen Z (1997-2012),Asian,Single,Bachelor's,3,301,Hybrid,"Chicago, IL",2021-08-03,Active,,,,59500,62.9,5.24
+EMP-1413,Joyce,Ross,Female,44,Gen X (1965-1980),Hispanic/Latino,Married,Master's,1,104,On-site,"New York, NY",2025-02-16,Active,,,,186800,20.4,1.7
+EMP-1414,Christine,Perry,Female,49,Gen X (1965-1980),White,Married,Master's,1,103,Hybrid,"Seattle, WA",2024-06-24,Terminated,2026-08-27,Voluntary,Career Advancement / Growth,151700,26.1,2.17
+EMP-1415,Billy,Evans,Male,29,Millennials (1981-1996),Asian,Single,Associate's,5,501,Hybrid,"New York, NY",2022-07-03,Active,,,,61800,51.9,4.32
+EMP-1416,Isabella,Cruz,Female,28,Gen Z (1997-2012),Asian,Single,Master's,4,401,Hybrid,"London, UK",2021-03-14,Active,,,,56300,67.5,5.63
+EMP-1417,Jesse,Thompson,Male,35,Millennials (1981-1996),White,Married,High School Diploma,5,502,On-site,"Chicago, IL",2020-03-14,Active,,,,91700,79.5,6.63
+EMP-1418,Marilyn,Mendoza,Female,23,Gen Z (1997-2012),White,Single,Bachelor's,6,601,Hybrid,"London, UK",2023-11-08,Active,,,,70600,35.7,2.97
+EMP-1419,Scott,Hill,Male,22,Gen Z (1997-2012),Asian,Single,Bachelor's,6,601,Hybrid,"New York, NY",2022-10-06,Active,,,,73600,48.8,4.06
+EMP-1420,Grace,Mitchell,Female,35,Millennials (1981-1996),White,Single,Associate's,1,102,Hybrid,"Seattle, WA",2020-09-09,Active,,,,100500,73.6,6.14
+EMP-1421,Kelly,Reed,Female,27,Gen Z (1997-2012),White,Divorced,High School Diploma,3,301,On-site,"London, UK",2024-10-24,Active,,,,58300,24.1,2.01
+EMP-1422,Daniel,Martin,Male,22,Gen Z (1997-2012),White,Single,Bachelor's,7,701,Remote,"San Francisco, CA",2023-07-05,Terminated,2023-11-06,Involuntary,Violation of Company Policy,59400,4.1,0.34
+EMP-1423,Walter,Adams,Male,34,Millennials (1981-1996),Asian,Married,Bachelor's,1,102,Hybrid,"Austin, TX",2025-07-10,Active,,,,110900,15.6,1.3
+EMP-1424,Dennis,Phillips,Male,33,Millennials (1981-1996),Asian,Divorced,Bachelor's,3,303,Hybrid,"Austin, TX",2022-02-17,Active,,,,121400,56.3,4.7
+EMP-1425,Benjamin,Scott,Male,22,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,6,601,Remote,"New York, NY",2025-04-11,Active,,,,74500,18.6,1.55
+EMP-1426,Carolyn,Roberts,Female,23,Gen Z (1997-2012),Asian,Single,Bachelor's,1,101,Hybrid,"New York, NY",2024-02-11,Active,,,,75700,32.6,2.71
+EMP-1427,Albert,Scott,Male,26,Gen Z (1997-2012),Asian,Single,Bachelor's,3,302,Hybrid,"New York, NY",2023-06-03,Active,,,,87300,40.9,3.41
+EMP-1428,Brenda,Peterson,Female,24,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,2,201,Hybrid,"Austin, TX",2020-08-26,Active,,,,65200,74.1,6.17
+EMP-1429,Diane,Walker,Female,22,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Remote,"Austin, TX",2025-10-18,Active,,,,62200,12.4,1.03
+EMP-1430,Jacob,Anderson,Male,43,Millennials (1981-1996),White,Married,Master's,3,303,Hybrid,"Austin, TX",2022-08-10,Active,,,,129300,50.6,4.22
+EMP-1431,Bradley,Turner,Male,24,Gen Z (1997-2012),White,Single,Master's,7,701,Hybrid,"New York, NY",2022-04-22,Terminated,2023-12-11,Voluntary,Relocation / Personal Reasons,48500,19.6,1.64
+EMP-1432,Danielle,Sullivan,Female,52,Gen X (1965-1980),Asian,Divorced,Bachelor's,2,204,Remote,"San Francisco, CA",2020-11-17,Active,,,,180400,71.4,5.95
+EMP-1433,Aaron,Russell,Male,35,Millennials (1981-1996),Black/African American,Single,Master's,6,602,Hybrid,"New York, NY",2023-12-06,Terminated,2026-02-05,Voluntary,Company Culture / Leadership,109900,26.0,2.17
+EMP-1434,Laura,Thomas,Female,43,Millennials (1981-1996),Hispanic/Latino,Married,High School Diploma,1,103,Hybrid,"New York, NY",2026-02-05,Active,,,,154300,8.7,0.73
+EMP-1435,Nicole,Patel,Female,52,Gen X (1965-1980),White,Single,Master's,2,204,Hybrid,"New York, NY",2022-06-06,Active,,,,187300,52.8,4.4
+EMP-1436,Christian,Long,Male,30,Millennials (1981-1996),Black/African American,Divorced,Master's,3,302,Remote,"New York, NY",2023-01-19,Active,,,,86900,45.3,3.78
+EMP-1437,Judy,Lee,Female,47,Gen X (1965-1980),Hispanic/Latino,Single,Bachelor's,2,203,Hybrid,"San Francisco, CA",2025-03-07,Active,,,,129300,19.7,1.65
+EMP-1438,Kayla,Mendoza,Non-Binary,33,Millennials (1981-1996),Asian,Divorced,Master's,2,202,Hybrid,"Chicago, IL",2023-01-28,Terminated,2025-09-03,Voluntary,Company Culture / Leadership,98800,31.2,2.6
+EMP-1439,Cheryl,Jenkins,Female,35,Millennials (1981-1996),White,Married,Bachelor's,6,603,Hybrid,"New York, NY",2022-03-06,Active,,,,160200,55.8,4.65
+EMP-1440,Judith,Coleman,Female,35,Millennials (1981-1996),Black/African American,Single,Bachelor's,6,603,Hybrid,"New York, NY",2022-10-09,Active,,,,151800,48.7,4.05
+EMP-1441,Sandra,James,Female,32,Millennials (1981-1996),Hispanic/Latino,Single,High School Diploma,2,202,Remote,"Austin, TX",2020-09-25,Active,,,,97200,73.1,6.09
+EMP-1442,Theresa,Jackson,Female,33,Millennials (1981-1996),Asian,Single,Associate's,1,102,Hybrid,"New York, NY",2021-11-27,Active,,,,100700,59.0,4.92
+EMP-1443,Gerald,Gonzalez,Male,38,Millennials (1981-1996),Asian,Single,Master's,1,102,Remote,"Chicago, IL",2023-03-27,Active,,,,111300,43.1,3.59
+EMP-1444,Bruce,Cox,Male,47,Gen X (1965-1980),White,Divorced,Master's,4,403,Hybrid,"New York, NY",2023-02-03,Active,,,,114900,44.8,3.73
+EMP-1445,Lori,Diaz,Female,30,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,5,502,Hybrid,"New York, NY",2023-08-17,Active,,,,97300,38.4,3.2
+EMP-1446,Heather,Stewart,Female,37,Millennials (1981-1996),White,Divorced,Master's,4,402,Hybrid,"Austin, TX",2020-11-16,Terminated,2022-09-15,Voluntary,Pursuing Higher Education,86200,21.9,1.83
+EMP-1447,Joseph,Alvarez,Male,37,Millennials (1981-1996),Hispanic/Latino,Single,Master's,3,303,Remote,"San Francisco, CA",2023-12-28,Active,,,,111800,34.0,2.84
+EMP-1448,Ryan,Wright,Male,27,Gen Z (1997-2012),Black/African American,Single,Bachelor's,3,302,Hybrid,"San Francisco, CA",2025-08-12,Active,,,,88000,14.6,1.21
+EMP-1449,Catherine,Bell,Female,29,Millennials (1981-1996),Asian,Married,Bachelor's,1,102,Remote,"New York, NY",2024-11-13,Active,,,,100900,23.5,1.96
+EMP-1450,Janet,Scott,Female,33,Millennials (1981-1996),White,Married,Bachelor's,2,203,Hybrid,"Austin, TX",2020-05-23,Active,,,,138800,77.2,6.43
+EMP-1451,Liam,Martinez,Male,25,Gen Z (1997-2012),White,Married,Bachelor's,2,201,Hybrid,"New York, NY",2022-06-21,Active,,,,60200,52.3,4.36
+EMP-1452,Jack,White,Male,41,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,2,205,Hybrid,"Chicago, IL",2024-06-05,Active,,,,234600,28.8,2.4
+EMP-1453,Marie,Lopez,Female,28,Gen Z (1997-2012),Two or More Races,Single,Bachelor's,2,201,Remote,"Chicago, IL",2021-07-06,Active,,,,57900,63.8,5.31
+EMP-1454,Anna,Ramirez,Female,27,Gen Z (1997-2012),Asian,Single,Bachelor's,7,701,Hybrid,"Austin, TX",2022-09-05,Active,,,,52600,49.8,4.15
+EMP-1455,Jonathan,Cook,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,6,601,Remote,"London, UK",2020-07-15,Terminated,2021-01-28,Involuntary,Performance Standards Not Met,74400,6.5,0.54
+EMP-1456,Marie,Castillo,Female,37,Millennials (1981-1996),Asian,Married,Master's,1,102,Hybrid,"New York, NY",2026-02-16,Active,,,,99000,8.4,0.7
+EMP-1457,Angela,Cooper,Female,30,Millennials (1981-1996),Asian,Single,Master's,1,102,Hybrid,"Austin, TX",2020-05-21,Active,,,,99400,77.3,6.44
+EMP-1458,Arthur,Ramirez,Male,34,Millennials (1981-1996),White,Single,Bachelor's,7,702,Hybrid,"London, UK",2021-02-02,Active,,,,74200,68.8,5.74
+EMP-1459,Linda,King,Female,22,Gen Z (1997-2012),Asian,Single,Bachelor's,2,201,Remote,"London, UK",2025-01-27,Active,,,,61700,21.0,1.75
+EMP-1460,Amanda,Harris,Female,27,Gen Z (1997-2012),Black/African American,Single,Master's,2,201,Hybrid,"New York, NY",2021-09-05,Active,,,,58700,61.8,5.15
+EMP-1461,Steven,Jenkins,Male,34,Millennials (1981-1996),Black/African American,Married,Bachelor's,5,503,Hybrid,"San Francisco, CA",2022-11-05,Active,,,,141400,47.8,3.98
+EMP-1462,Roger,Cox,Male,32,Millennials (1981-1996),White,Single,Bachelor's,6,602,Hybrid,"San Francisco, CA",2023-05-12,Active,,,,113200,41.6,3.47
+EMP-1463,Patrick,Young,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,7,701,Remote,"San Francisco, CA",2020-03-27,Active,,,,60900,79.1,6.59
+EMP-1464,Kathleen,Chavez,Female,29,Millennials (1981-1996),Asian,Divorced,Bachelor's,1,102,Hybrid,"Austin, TX",2020-12-19,Active,,,,110200,70.3,5.86
+EMP-1465,Sandra,Gomez,Female,40,Millennials (1981-1996),White,Single,Bachelor's,2,202,Remote,"Chicago, IL",2022-03-05,Terminated,2022-10-22,Voluntary,Pursuing Higher Education,84600,7.6,0.63
+EMP-1466,Andrea,Hernandez,Female,50,Gen X (1965-1980),White,Married,Bachelor's,1,103,Remote,"New York, NY",2025-04-19,Active,,,,149400,18.3,1.53
+EMP-1467,Grace,Peterson,Female,44,Gen X (1965-1980),White,Divorced,Bachelor's,1,103,On-site,"Seattle, WA",2021-02-04,Active,,,,163000,68.8,5.73
+EMP-1468,Lauren,Turner,Female,25,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,4,401,Remote,"Austin, TX",2024-05-28,Active,,,,60100,29.0,2.42
+EMP-1469,Cynthia,Wood,Female,26,Gen Z (1997-2012),Asian,Single,Master's,3,301,On-site,"Seattle, WA",2024-04-15,Active,,,,57300,30.5,2.54
+EMP-1470,Roger,Nguyen,Male,28,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,2,201,Hybrid,"London, UK",2022-08-22,Active,,,,61900,50.2,4.19
+EMP-1471,Jordan,Brooks,Male,40,Millennials (1981-1996),White,Single,Bachelor's,5,503,Hybrid,"San Francisco, CA",2022-07-17,Active,,,,137500,51.4,4.28
+EMP-1472,Roger,Sanchez,Male,23,Gen Z (1997-2012),Asian,Married,Bachelor's,4,401,Hybrid,"San Francisco, CA",2023-06-07,Active,,,,62300,40.7,3.39
+EMP-1473,Gloria,Sullivan,Female,23,Gen Z (1997-2012),Asian,Single,Master's,4,401,Hybrid,"Chicago, IL",2023-05-14,Active,,,,53900,41.5,3.46
+EMP-1474,Sharon,Mendoza,Female,29,Millennials (1981-1996),Black/African American,Divorced,Master's,7,701,Hybrid,"San Francisco, CA",2025-12-14,Active,,,,56900,10.5,0.87
+EMP-1475,Willie,Carter,Male,38,Millennials (1981-1996),Asian,Single,Bachelor's,4,402,Hybrid,"Austin, TX",2023-05-08,Active,,,,86500,41.7,3.48
+EMP-1476,Angela,Roberts,Female,54,Gen X (1965-1980),Black/African American,Single,High School Diploma,1,104,Hybrid,"San Francisco, CA",2024-01-07,Active,,,,179700,33.7,2.81
+EMP-1477,Rebecca,Coleman,Female,50,Gen X (1965-1980),Two or More Races,Divorced,Bachelor's,1,104,Remote,"New York, NY",2021-04-11,Active,,,,197200,66.6,5.55
+EMP-1478,Jordan,Hill,Male,39,Millennials (1981-1996),Hispanic/Latino,Single,Master's,5,503,On-site,"London, UK",2020-02-02,Active,,,,151500,80.9,6.74
+EMP-1479,Diane,Hernandez,Female,41,Millennials (1981-1996),White,Divorced,Master's,7,703,Remote,"Austin, TX",2023-10-01,Active,,,,105900,36.9,3.08
+EMP-1480,Nancy,Morgan,Female,23,Gen Z (1997-2012),Black/African American,Single,Bachelor's,3,301,Hybrid,"San Francisco, CA",2024-01-23,Active,,,,57900,33.2,2.77
+EMP-1481,Joshua,White,Male,51,Gen X (1965-1980),Asian,Single,Master's,1,104,Hybrid,"Austin, TX",2025-01-26,Active,,,,188000,21.1,1.75
+EMP-1482,Diane,James,Female,28,Gen Z (1997-2012),Hispanic/Latino,Divorced,Associate's,7,701,Remote,"New York, NY",2025-04-12,Active,,,,57400,18.6,1.55
+EMP-1483,Jeffrey,Parker,Male,47,Gen X (1965-1980),White,Married,Bachelor's,7,703,Remote,"London, UK",2022-08-01,Active,,,,111700,50.9,4.24
+EMP-1484,Gloria,Brown,Female,27,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Remote,"New York, NY",2022-06-01,Active,,,,82500,52.9,4.41
+EMP-1485,Randy,Jones,Male,33,Millennials (1981-1996),White,Married,Master's,7,702,Hybrid,"San Francisco, CA",2021-02-27,Active,,,,71600,68.0,5.67
+EMP-1486,Denise,Jackson,Female,38,Millennials (1981-1996),White,Married,Bachelor's,3,303,Remote,"San Francisco, CA",2022-03-20,Active,,,,127400,55.3,4.61
+EMP-1487,Kevin,Gonzalez,Male,23,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,3,301,Hybrid,"Austin, TX",2024-06-05,Active,,,,58500,28.8,2.4
+EMP-1488,Kathleen,Wood,Female,25,Gen Z (1997-2012),White,Single,Master's,5,501,Hybrid,"San Francisco, CA",2023-12-05,Active,,,,60500,34.8,2.9
+EMP-1489,Amy,Myers,Female,26,Gen Z (1997-2012),Asian,Married,Bachelor's,2,201,Hybrid,"New York, NY",2021-05-23,Active,,,,62700,65.2,5.43
+EMP-1490,Janet,Murphy,Female,29,Millennials (1981-1996),Hispanic/Latino,Single,Master's,1,101,Remote,"New York, NY",2024-12-25,Active,,,,82400,22.1,1.84
+EMP-1491,Gloria,Powell,Female,26,Gen Z (1997-2012),Asian,Married,Bachelor's,7,701,Remote,"Austin, TX",2024-12-27,Active,,,,54300,22.0,1.84
+EMP-1492,Roy,Perry,Male,30,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,6,602,Remote,"San Francisco, CA",2023-06-06,Active,,,,111200,40.8,3.4
+EMP-1493,Sharon,Ortiz,Female,36,Millennials (1981-1996),Asian,Single,Master's,6,602,On-site,"San Francisco, CA",2024-02-25,Active,,,,106500,32.1,2.67
+EMP-1494,Marilyn,Turner,Female,38,Millennials (1981-1996),Hispanic/Latino,Single,Associate's,7,703,Remote,"Austin, TX",2023-05-24,Active,,,,104300,41.2,3.43
+EMP-1495,Robert,Jimenez,Male,34,Millennials (1981-1996),Asian,Divorced,Bachelor's,6,602,Hybrid,"Seattle, WA",2022-11-10,Active,,,,109000,47.6,3.97
+EMP-1496,Helen,Johnson,Female,36,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,1,102,Remote,"New York, NY",2025-05-05,Active,,,,114300,17.8,1.48
+EMP-1497,Jean,Cooper,Female,25,Gen Z (1997-2012),Asian,Married,Bachelor's,3,301,Hybrid,"Chicago, IL",2026-01-17,Active,,,,60200,9.4,0.78
+EMP-1498,Judy,Thompson,Female,32,Millennials (1981-1996),White,Single,Master's,1,102,Remote,"Seattle, WA",2023-04-08,Active,,,,110800,42.7,3.56
+EMP-1499,Frank,Lee,Male,51,Gen X (1965-1980),Black/African American,Married,Bachelor's,7,703,Hybrid,"Austin, TX",2025-08-27,Active,,,,101500,14.1,1.17
+EMP-1500,Patrick,Scott,Male,33,Millennials (1981-1996),White,Divorced,Bachelor's,1,102,Remote,"San Francisco, CA",2022-07-17,Active,,,,103500,51.4,4.28
+EMP-1501,Joan,Price,Female,27,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,3,301,Remote,"Seattle, WA",2020-11-28,Active,,,,53900,71.0,5.92
+EMP-1502,Marie,Kim,Female,38,Millennials (1981-1996),White,Single,Bachelor's,2,203,Hybrid,"Austin, TX",2022-11-14,Active,,,,118100,47.5,3.96
+EMP-1503,Michelle,Williams,Female,33,Millennials (1981-1996),White,Single,Bachelor's,7,702,Hybrid,"San Francisco, CA",2020-08-25,Active,,,,77300,74.1,6.18
+EMP-1504,Joe,Evans,Male,39,Millennials (1981-1996),Hispanic/Latino,Married,Master's,2,203,Remote,"San Francisco, CA",2023-03-23,Active,,,,131000,43.2,3.6
+EMP-1505,Patrick,Perez,Male,26,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,1,101,Hybrid,"San Francisco, CA",2020-12-28,Active,,,,81100,70.0,5.83
+EMP-1506,Timothy,Morgan,Male,28,Gen Z (1997-2012),White,Married,Bachelor's,1,101,Remote,"Austin, TX",2025-02-23,Active,,,,78300,20.1,1.68
+EMP-1507,Deborah,Davis,Female,29,Millennials (1981-1996),White,Divorced,Bachelor's,6,601,On-site,"Chicago, IL",2026-04-12,Active,,,,68600,6.6,0.55
+EMP-1508,Benjamin,Adams,Male,24,Gen Z (1997-2012),Asian,Married,Bachelor's,7,701,Remote,"San Francisco, CA",2021-03-02,Active,,,,52600,67.9,5.66
+EMP-1509,Megan,Russell,Female,28,Gen Z (1997-2012),Black/African American,Single,Associate's,4,402,Remote,"San Francisco, CA",2022-01-06,Active,,,,90500,57.7,4.81
+EMP-1510,Ronald,Bailey,Male,53,Gen X (1965-1980),Black/African American,Single,Bachelor's,2,204,On-site,"Chicago, IL",2024-10-01,Active,,,,166800,24.9,2.08
+EMP-1511,Sara,Nelson,Female,28,Gen Z (1997-2012),Asian,Divorced,Master's,5,501,Hybrid,"New York, NY",2022-11-17,Active,,,,62100,47.4,3.95
+EMP-1512,Evelyn,Adams,Female,37,Millennials (1981-1996),White,Married,Master's,6,602,Remote,"London, UK",2022-12-15,Active,,,,119300,46.5,3.87
+EMP-1513,Caleb,Ramirez,Male,36,Millennials (1981-1996),Asian,Married,Bachelor's,2,203,Remote,"New York, NY",2022-12-02,Terminated,2024-01-03,Voluntary,Better Compensation & Benefits,144600,13.0,1.09
+EMP-1514,Jose,Brooks,Male,26,Gen Z (1997-2012),Asian,Married,Master's,4,402,Remote,"San Francisco, CA",2023-02-04,Active,,,,84900,44.8,3.73
+EMP-1515,Randy,Reed,Male,27,Gen Z (1997-2012),Asian,Divorced,Bachelor's,7,702,Remote,"New York, NY",2022-02-26,Active,,,,73700,56.0,4.67
+EMP-1516,Karen,Bell,Female,29,Millennials (1981-1996),White,Married,Bachelor's,6,601,On-site,"San Francisco, CA",2022-02-08,Terminated,2023-11-06,Voluntary,Pursuing Higher Education,66800,20.9,1.74
+EMP-1517,Doris,Kim,Non-Binary,40,Millennials (1981-1996),Asian,Divorced,Master's,2,202,Hybrid,"San Francisco, CA",2024-05-21,Active,,,,94500,29.3,2.44
+EMP-1518,Barbara,Gutierrez,Female,30,Millennials (1981-1996),White,Single,Master's,4,402,Hybrid,"New York, NY",2023-07-04,Active,,,,74100,39.9,3.32
+EMP-1519,Judith,Davis,Female,25,Gen Z (1997-2012),White,Married,Bachelor's,2,201,Remote,"New York, NY",2024-10-01,Active,,,,54900,24.9,2.08
+EMP-1520,Kyle,Mendoza,Male,51,Gen X (1965-1980),White,Single,Bachelor's,5,503,Hybrid,"Chicago, IL",2023-06-06,Active,,,,132100,40.8,3.4
+EMP-1521,Edward,Mitchell,Male,26,Gen Z (1997-2012),Black/African American,Divorced,Bachelor's,4,401,Remote,"New York, NY",2024-12-11,Terminated,2026-02-20,Voluntary,Career Advancement / Growth,55600,14.3,1.19
+EMP-1522,Timothy,Young,Male,41,Millennials (1981-1996),White,Single,Bachelor's,2,205,On-site,"Austin, TX",2021-09-16,Active,,,,257700,61.4,5.12
+EMP-1523,Christian,Chavez,Male,27,Gen Z (1997-2012),Hispanic/Latino,Divorced,High School Diploma,1,101,Remote,"Austin, TX",2020-09-03,Active,,,,78500,73.8,6.15
+EMP-1524,Robert,Lewis,Male,50,Gen X (1965-1980),Asian,Divorced,Bachelor's,2,203,On-site,"San Francisco, CA",2020-01-12,Terminated,2020-12-26,Involuntary,Violation of Company Policy,143700,11.5,0.96
+EMP-1525,Cynthia,Foster,Female,31,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Hybrid,"Austin, TX",2023-07-15,Active,,,,84000,39.5,3.29
+EMP-1526,Mark,Cooper,Male,22,Gen Z (1997-2012),Black/African American,Single,Master's,1,101,Hybrid,"New York, NY",2025-06-27,Terminated,2026-01-13,Voluntary,Company Culture / Leadership,74300,6.6,0.55
+EMP-1527,Danielle,Brown,Female,35,Millennials (1981-1996),Asian,Divorced,Associate's,5,502,On-site,"San Francisco, CA",2022-07-13,Active,,,,100400,51.5,4.3
+EMP-1528,Gary,Miller,Male,25,Gen Z (1997-2012),White,Married,Bachelor's,5,501,Remote,"Chicago, IL",2025-07-19,Active,,,,61300,15.3,1.28
+EMP-1529,Eric,Ortiz,Male,30,Millennials (1981-1996),Asian,Divorced,Master's,6,602,Hybrid,"San Francisco, CA",2023-09-26,Active,,,,117700,37.1,3.09
+EMP-1530,Roger,Murphy,Male,33,Millennials (1981-1996),White,Married,Bachelor's,1,103,Hybrid,"San Francisco, CA",2021-02-16,Terminated,2021-05-21,Voluntary,Better Compensation & Benefits,152000,3.1,0.26
+EMP-1531,Lisa,Martin,Female,24,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,7,701,Remote,"New York, NY",2022-05-03,Active,,,,53600,53.9,4.49
+EMP-1532,Jeremy,Bennett,Male,31,Millennials (1981-1996),White,Divorced,Bachelor's,1,102,Remote,"New York, NY",2024-06-05,Active,,,,98800,28.8,2.4
+EMP-1533,Roger,Cooper,Male,26,Gen Z (1997-2012),Asian,Divorced,Associate's,1,101,On-site,"Seattle, WA",2022-11-14,Active,,,,81900,47.5,3.96
+EMP-1534,Alexis,Hernandez,Female,22,Gen Z (1997-2012),Black/African American,Married,Master's,4,401,Hybrid,"New York, NY",2020-08-06,Active,,,,61500,74.7,6.23
+EMP-1535,Hannah,Morales,Female,41,Millennials (1981-1996),White,Single,Master's,1,103,On-site,"New York, NY",2023-02-13,Active,,,,145800,44.5,3.71
+EMP-1536,Cynthia,Diaz,Female,35,Millennials (1981-1996),White,Divorced,Bachelor's,2,203,Remote,"New York, NY",2022-12-27,Active,,,,141400,46.1,3.84
+EMP-1537,Natalie,Stewart,Female,41,Millennials (1981-1996),White,Single,Associate's,1,103,Hybrid,"London, UK",2021-09-21,Active,,,,152900,61.2,5.1
+EMP-1538,Diane,James,Female,55,Gen X (1965-1980),Asian,Divorced,Bachelor's,1,104,Remote,"San Francisco, CA",2022-09-27,Active,,,,198200,49.1,4.09
+EMP-1539,Jonathan,Roberts,Male,32,Millennials (1981-1996),White,Divorced,Bachelor's,2,202,Hybrid,"San Francisco, CA",2022-08-04,Active,,,,82800,50.8,4.24
+EMP-1540,Patrick,Adams,Male,27,Gen Z (1997-2012),White,Single,High School Diploma,1,101,Remote,"San Francisco, CA",2024-10-18,Active,,,,80500,24.3,2.03
+EMP-1541,Sophia,Russell,Female,24,Gen Z (1997-2012),Asian,Single,Bachelor's,2,201,Hybrid,"San Francisco, CA",2020-04-10,Active,,,,54800,78.6,6.55
+EMP-1542,Karen,Hill,Female,23,Gen Z (1997-2012),Black/African American,Single,Doctorate,2,201,Hybrid,"London, UK",2024-11-19,Active,,,,60500,23.3,1.94
+EMP-1543,Teresa,Bennett,Female,22,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Remote,"New York, NY",2020-09-21,Active,,,,66000,73.2,6.1
+EMP-1544,Brandon,Martinez,Male,29,Millennials (1981-1996),White,Single,Master's,1,102,Hybrid,"San Francisco, CA",2024-09-02,Active,,,,105000,25.9,2.15
+EMP-1545,Kyle,Russell,Male,45,Gen X (1965-1980),Asian,Married,Associate's,2,203,Remote,"London, UK",2023-05-20,Active,,,,126400,41.3,3.44
+EMP-1546,Jean,Hughes,Female,32,Millennials (1981-1996),Asian,Single,Associate's,5,502,Hybrid,"New York, NY",2026-04-21,Active,,,,95000,6.3,0.52
+EMP-1547,Timothy,Perry,Male,31,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,5,502,Remote,"San Francisco, CA",2021-08-22,Terminated,2024-06-24,Involuntary,Organizational Restructuring / Layoff,95500,34.1,2.84
+EMP-1548,Kathryn,Morgan,Female,27,Gen Z (1997-2012),Black/African American,Married,Master's,4,402,Hybrid,"Austin, TX",2020-04-20,Active,,,,91400,78.3,6.52
+EMP-1549,Stephanie,Mendoza,Female,26,Gen Z (1997-2012),Asian,Married,Bachelor's,7,701,On-site,"San Francisco, CA",2025-04-21,Active,,,,61100,18.3,1.52
+EMP-1550,Wayne,Watson,Male,25,Gen Z (1997-2012),White,Single,Master's,2,201,Hybrid,"Austin, TX",2022-04-05,Terminated,2023-01-03,Involuntary,Performance Standards Not Met,63500,9.0,0.75
+EMP-1551,Ann,King,Female,31,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,3,302,Hybrid,"New York, NY",2022-05-09,Active,,,,75800,53.7,4.47
+EMP-1552,Aaron,Gomez,Male,25,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Hybrid,"Austin, TX",2022-10-19,Active,,,,60800,48.3,4.03
+EMP-1553,Austin,Reyes,Male,43,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,1,104,Remote,"San Francisco, CA",2021-03-21,Active,,,,194700,67.3,5.61
+EMP-1554,Timothy,Collins,Male,23,Gen Z (1997-2012),Two or More Races,Single,Master's,2,201,On-site,"New York, NY",2023-07-23,Active,,,,56000,39.2,3.27
+EMP-1555,Adam,Ward,Male,27,Gen Z (1997-2012),Hispanic/Latino,Divorced,Master's,3,302,Remote,"New York, NY",2022-03-23,Active,,,,76400,55.2,4.6
+EMP-1556,Bryan,Stewart,Male,27,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,1,102,On-site,"San Francisco, CA",2023-04-12,Active,,,,104700,42.6,3.55
+EMP-1557,Hannah,Brooks,Female,35,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,3,302,Hybrid,"Seattle, WA",2025-12-04,Active,,,,83800,10.8,0.9
+EMP-1558,Gerald,Gutierrez,Male,35,Millennials (1981-1996),Asian,Divorced,Master's,4,403,Remote,"Seattle, WA",2023-09-21,Active,,,,113600,37.3,3.1
+EMP-1559,Harold,Wilson,Male,26,Gen Z (1997-2012),White,Divorced,Master's,4,401,Hybrid,"London, UK",2023-11-21,Active,,,,64600,35.3,2.94
+EMP-1560,Christian,Rogers,Male,28,Gen Z (1997-2012),White,Single,Bachelor's,3,302,Hybrid,"Chicago, IL",2021-04-14,Active,,,,87500,66.5,5.54
+EMP-1561,Nicholas,James,Male,42,Millennials (1981-1996),Asian,Married,Master's,3,304,Remote,"Chicago, IL",2020-12-13,Active,,,,154100,70.5,5.88
+EMP-1562,Edward,Martin,Male,31,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,102,Remote,"San Francisco, CA",2023-08-01,Active,,,,114900,38.9,3.24
+EMP-1563,Brittany,Cooper,Female,28,Gen Z (1997-2012),Black/African American,Single,Associate's,3,302,Hybrid,"New York, NY",2024-09-27,Active,,,,87900,25.0,2.09
+EMP-1564,Wayne,Allen,Male,34,Millennials (1981-1996),White,Married,Bachelor's,2,202,Remote,"Chicago, IL",2022-08-15,Terminated,2023-09-22,Voluntary,Company Culture / Leadership,88200,13.2,1.1
+EMP-1565,Joe,Gutierrez,Male,28,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,7,701,Remote,"San Francisco, CA",2024-11-13,Active,,,,55500,23.5,1.96
+EMP-1566,Donald,Campbell,Male,36,Millennials (1981-1996),White,Married,Associate's,1,102,Hybrid,"San Francisco, CA",2021-07-18,Active,,,,105300,63.4,5.28
+EMP-1567,Marie,Ward,Female,44,Gen X (1965-1980),Hispanic/Latino,Divorced,Bachelor's,5,503,Remote,"Austin, TX",2022-09-04,Active,,,,147600,49.8,4.15
+EMP-1568,Victoria,Rogers,Female,37,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Hybrid,"New York, NY",2022-09-22,Active,,,,78200,49.2,4.1
+EMP-1569,Albert,Stewart,Male,33,Millennials (1981-1996),White,Single,Bachelor's,7,703,Hybrid,"New York, NY",2024-06-26,Active,,,,101500,28.1,2.34
+EMP-1570,Christine,Cox,Female,41,Millennials (1981-1996),Asian,Married,Bachelor's,2,203,Hybrid,"Austin, TX",2025-09-20,Active,,,,122500,13.3,1.11
+EMP-1571,Randy,Walker,Male,29,Millennials (1981-1996),White,Married,Bachelor's,6,601,Hybrid,"Austin, TX",2026-01-13,Active,,,,64700,9.5,0.79
+EMP-1572,Julia,Castillo,Female,34,Millennials (1981-1996),White,Married,Master's,5,502,Hybrid,"San Francisco, CA",2022-02-26,Active,,,,99200,56.0,4.67
+EMP-1573,Elizabeth,Nelson,Female,25,Gen Z (1997-2012),Black/African American,Married,Bachelor's,1,101,Remote,"Austin, TX",2020-12-25,Active,,,,80600,70.1,5.84
+EMP-1574,William,Foster,Male,27,Gen Z (1997-2012),White,Divorced,Associate's,5,501,Remote,"San Francisco, CA",2024-10-26,Terminated,2026-03-25,Voluntary,Company Culture / Leadership,62800,16.9,1.41
+EMP-1575,Douglas,Murphy,Male,24,Gen Z (1997-2012),Asian,Single,Bachelor's,5,501,Hybrid,"Austin, TX",2022-08-23,Active,,,,58900,50.2,4.18
+EMP-1576,Julia,Edwards,Female,33,Millennials (1981-1996),White,Divorced,Bachelor's,2,202,Remote,"San Francisco, CA",2023-08-23,Active,,,,90000,38.2,3.18
+EMP-1577,Edward,Lopez,Male,53,Gen X (1965-1980),White,Single,Bachelor's,2,204,Remote,"New York, NY",2024-11-05,Terminated,2026-07-13,Voluntary,Company Culture / Leadership,172500,20.2,1.68
+EMP-1578,Jack,Castillo,Male,29,Millennials (1981-1996),Asian,Married,Master's,6,601,Hybrid,"New York, NY",2023-05-03,Active,,,,69100,41.9,3.49
+EMP-1579,Dylan,Jones,Male,35,Millennials (1981-1996),White,Married,Bachelor's,1,102,Hybrid,"San Francisco, CA",2024-05-26,Active,,,,102100,29.1,2.43
+EMP-1580,Nicholas,Wright,Male,27,Gen Z (1997-2012),White,Married,Associate's,7,701,On-site,"New York, NY",2024-06-02,Active,,,,59000,28.9,2.41
+EMP-1581,Andrew,Jimenez,Male,32,Millennials (1981-1996),White,Single,Bachelor's,1,103,Hybrid,"Austin, TX",2024-10-16,Active,,,,157200,24.4,2.03
+EMP-1582,Debra,Long,Female,23,Gen Z (1997-2012),White,Single,Master's,1,101,On-site,"London, UK",2026-03-17,Active,,,,82500,7.4,0.62
+EMP-1583,David,King,Male,33,Millennials (1981-1996),White,Divorced,Bachelor's,4,402,Remote,"San Francisco, CA",2022-08-23,Terminated,2023-07-12,Voluntary,Relocation / Personal Reasons,81000,10.6,0.88
+EMP-1584,Dorothy,Cooper,Female,25,Gen Z (1997-2012),Hispanic/Latino,Single,Doctorate,1,101,Hybrid,"New York, NY",2022-01-28,Active,,,,79300,57.0,4.75
+EMP-1585,Gregory,Mendoza,Male,25,Gen Z (1997-2012),White,Single,Master's,3,301,Hybrid,"Austin, TX",2025-01-18,Active,,,,52100,21.3,1.78
+EMP-1586,Jordan,Nelson,Male,24,Gen Z (1997-2012),Asian,Single,Bachelor's,6,601,Remote,"San Francisco, CA",2022-03-27,Active,,,,64500,55.1,4.59
+EMP-1587,Peter,Phillips,Male,29,Millennials (1981-1996),White,Divorced,Bachelor's,7,702,On-site,"Seattle, WA",2022-05-03,Active,,,,78800,53.9,4.49
+EMP-1588,Nicole,Thompson,Female,29,Millennials (1981-1996),White,Divorced,Master's,5,501,Hybrid,"Chicago, IL",2025-06-23,Active,,,,58300,16.2,1.35
+EMP-1589,Dylan,Brown,Male,24,Gen Z (1997-2012),White,Single,Master's,3,301,Remote,"Austin, TX",2022-01-05,Active,,,,56200,57.8,4.81
+EMP-1590,Gerald,Cruz,Male,43,Millennials (1981-1996),Asian,Divorced,Bachelor's,6,604,Remote,"London, UK",2025-06-13,Active,,,,189700,16.5,1.38
+EMP-1591,Dorothy,Gomez,Female,39,Millennials (1981-1996),White,Married,Master's,3,304,On-site,"San Francisco, CA",2022-06-15,Active,,,,171000,52.5,4.37
+EMP-1592,Joan,Coleman,Female,40,Millennials (1981-1996),White,Single,Bachelor's,5,502,Hybrid,"Austin, TX",2021-01-07,Active,,,,85200,69.7,5.81
+EMP-1593,Isabella,Cox,Female,35,Millennials (1981-1996),White,Single,Master's,2,202,On-site,"New York, NY",2023-10-02,Terminated,2025-01-15,Voluntary,Career Advancement / Growth,79800,15.5,1.29
+EMP-1594,Joyce,Stewart,Female,28,Gen Z (1997-2012),White,Divorced,Master's,1,101,Remote,"San Francisco, CA",2020-09-11,Terminated,2021-12-05,Voluntary,Work-Life Balance / Burnout,73900,14.8,1.23
+EMP-1595,Nathan,Robinson,Male,27,Gen Z (1997-2012),Black/African American,Married,Bachelor's,3,301,Remote,"New York, NY",2024-05-14,Active,,,,55400,29.5,2.46
+EMP-1596,Sara,Ramirez,Female,28,Gen Z (1997-2012),White,Married,Bachelor's,3,301,Remote,"New York, NY",2023-07-13,Active,,,,57400,39.6,3.3
+EMP-1597,Eric,Murphy,Non-Binary,29,Millennials (1981-1996),Asian,Divorced,Master's,5,502,Remote,"London, UK",2022-09-19,Terminated,2023-07-01,Voluntary,Relocation / Personal Reasons,84100,9.4,0.78
+EMP-1598,Barbara,Gomez,Female,24,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Remote,"Austin, TX",2022-10-21,Active,,,,75300,48.3,4.02
+EMP-1599,Samuel,Long,Male,43,Millennials (1981-1996),Asian,Single,Master's,1,104,Remote,"San Francisco, CA",2020-01-03,Active,,,,186400,81.8,6.82
+EMP-1600,Alexis,Harris,Female,28,Gen Z (1997-2012),White,Single,Doctorate,1,102,Remote,"London, UK",2024-04-16,Active,,,,112600,30.4,2.54
+EMP-1601,Ann,Long,Female,37,Millennials (1981-1996),Black/African American,Married,Bachelor's,2,202,Hybrid,"Chicago, IL",2024-06-20,Active,,,,89500,28.3,2.36
+EMP-1602,Doris,Perry,Female,48,Gen X (1965-1980),Hispanic/Latino,Single,Master's,6,603,Hybrid,"San Francisco, CA",2024-09-27,Active,,,,146400,25.0,2.09
+EMP-1603,Donna,Bennett,Non-Binary,27,Gen Z (1997-2012),Asian,Single,Doctorate,3,301,On-site,"Austin, TX",2022-04-22,Active,,,,60400,54.2,4.52
+EMP-1604,Caleb,Morales,Male,24,Gen Z (1997-2012),White,Single,Bachelor's,6,601,On-site,"Seattle, WA",2024-03-11,Active,,,,69700,31.6,2.63
+EMP-1605,Justin,James,Non-Binary,23,Gen Z (1997-2012),White,Single,Bachelor's,1,101,On-site,"New York, NY",2021-12-08,Active,,,,81000,58.7,4.89
+EMP-1606,Emma,Long,Female,29,Millennials (1981-1996),White,Divorced,Bachelor's,1,102,Hybrid,"San Francisco, CA",2024-09-01,Active,,,,107500,25.9,2.16
+EMP-1607,Betty,James,Female,30,Millennials (1981-1996),Hispanic/Latino,Single,Associate's,4,402,On-site,"New York, NY",2020-02-01,Active,,,,86700,80.9,6.74
+EMP-1608,Laura,Rogers,Female,56,Gen X (1965-1980),Black/African American,Single,Associate's,1,104,Hybrid,"New York, NY",2021-10-11,Active,,,,186600,60.6,5.05
+EMP-1609,Jose,Phillips,Male,40,Millennials (1981-1996),White,Married,Bachelor's,4,402,Hybrid,"New York, NY",2024-05-07,Active,,,,88700,29.7,2.48
+EMP-1610,Jordan,King,Male,33,Millennials (1981-1996),Asian,Married,Bachelor's,1,102,Remote,"New York, NY",2021-12-13,Active,,,,103200,58.5,4.88
+EMP-1611,Evelyn,Lewis,Female,50,Gen X (1965-1980),Asian,Married,Associate's,3,304,Remote,"San Francisco, CA",2023-01-19,Active,,,,166900,45.3,3.78
+EMP-1612,Adam,Rogers,Male,36,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,3,302,On-site,"New York, NY",2022-10-16,Active,,,,79000,48.4,4.04
+EMP-1613,Virginia,Murphy,Female,34,Millennials (1981-1996),Hispanic/Latino,Married,Master's,1,102,Remote,"Chicago, IL",2025-11-20,Active,,,,106500,11.3,0.94
+EMP-1614,Abigail,Carter,Female,32,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,2,203,Hybrid,"Chicago, IL",2021-05-03,Active,,,,132800,65.9,5.49
+EMP-1615,Mark,Gomez,Male,35,Millennials (1981-1996),Black/African American,Single,Bachelor's,2,202,Hybrid,"Austin, TX",2026-01-14,Active,,,,80300,9.5,0.79
+EMP-1616,Frank,Bennett,Male,28,Gen Z (1997-2012),White,Divorced,Bachelor's,5,502,Remote,"San Francisco, CA",2023-07-25,Active,,,,90700,39.2,3.26
+EMP-1617,Stephen,Garcia,Male,54,Gen X (1965-1980),White,Divorced,Bachelor's,2,205,Hybrid,"Austin, TX",2021-04-26,Active,,,,220000,66.1,5.51
+EMP-1618,Alan,Jones,Male,35,Millennials (1981-1996),Asian,Divorced,Bachelor's,6,602,Hybrid,"New York, NY",2024-03-08,Active,,,,112600,31.7,2.64
+EMP-1619,Cheryl,Taylor,Female,23,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,6,601,On-site,"New York, NY",2022-09-10,Active,,,,72100,49.6,4.13
+EMP-1620,Brandon,King,Male,27,Gen Z (1997-2012),Hispanic/Latino,Divorced,Bachelor's,5,502,Remote,"Chicago, IL",2023-10-24,Active,,,,88900,36.2,3.01
+EMP-1621,Charlotte,Thomas,Female,28,Gen Z (1997-2012),Black/African American,Divorced,Master's,1,102,Hybrid,"Chicago, IL",2023-01-01,Active,,,,97800,45.9,3.82
+EMP-1622,Debra,Campbell,Female,34,Millennials (1981-1996),White,Married,Master's,7,703,Hybrid,"Seattle, WA",2024-11-16,Active,,,,106400,23.4,1.95
+EMP-1623,Eugene,Ward,Male,23,Gen Z (1997-2012),Asian,Married,Bachelor's,4,401,On-site,"San Francisco, CA",2026-03-21,Active,,,,64900,7.3,0.61
+EMP-1624,George,Garcia,Male,22,Gen Z (1997-2012),Asian,Single,Bachelor's,1,101,Hybrid,"Austin, TX",2023-04-16,Active,,,,84600,42.4,3.54
+EMP-1625,Sara,Perez,Female,36,Millennials (1981-1996),White,Single,Associate's,2,202,Remote,"New York, NY",2026-03-08,Active,,,,78600,7.7,0.64
+EMP-1626,Jesse,Foster,Male,35,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,102,Hybrid,"Seattle, WA",2024-09-03,Active,,,,106000,25.8,2.15
+EMP-1627,Kyle,Cook,Male,32,Millennials (1981-1996),Black/African American,Married,Bachelor's,2,203,Hybrid,"Chicago, IL",2023-08-21,Active,,,,133700,38.3,3.19
+EMP-1628,Victoria,Evans,Female,29,Millennials (1981-1996),Hispanic/Latino,Single,Master's,4,401,Hybrid,"New York, NY",2021-02-01,Active,,,,56500,68.9,5.74
+EMP-1629,Pamela,Young,Non-Binary,26,Gen Z (1997-2012),White,Married,Bachelor's,1,101,Hybrid,"San Francisco, CA",2025-03-08,Active,,,,74600,19.7,1.64
+EMP-1630,William,Diaz,Male,23,Gen Z (1997-2012),Hispanic/Latino,Married,Associate's,3,301,Hybrid,"New York, NY",2023-12-20,Active,,,,57600,34.3,2.86
+EMP-1631,Thomas,Adams,Male,26,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,4,402,Hybrid,"Austin, TX",2024-12-08,Active,,,,80500,22.7,1.89
+EMP-1632,Brian,Peterson,Male,38,Millennials (1981-1996),Black/African American,Married,Associate's,6,603,Remote,"Austin, TX",2020-11-27,Active,,,,146700,71.0,5.92
+EMP-1633,Patricia,Stewart,Female,32,Millennials (1981-1996),White,Divorced,Associate's,3,302,Hybrid,"New York, NY",2024-07-01,Active,,,,79900,27.9,2.33
+EMP-1634,Terry,Brown,Male,52,Gen X (1965-1980),Asian,Married,Bachelor's,2,203,Hybrid,"San Francisco, CA",2024-02-09,Active,,,,132500,32.6,2.72
+EMP-1635,Diana,Reed,Female,38,Millennials (1981-1996),White,Single,Bachelor's,7,702,Hybrid,"Austin, TX",2020-06-04,Active,,,,68900,76.8,6.4
+EMP-1636,Christine,Thompson,Female,24,Gen Z (1997-2012),Asian,Single,Bachelor's,2,201,Hybrid,"Austin, TX",2021-03-18,Active,,,,55700,67.4,5.62
+EMP-1637,Beverly,Mitchell,Female,32,Millennials (1981-1996),White,Married,Master's,2,202,Remote,"New York, NY",2023-08-01,Active,,,,98500,38.9,3.24
+EMP-1638,Jacqueline,Flores,Female,33,Millennials (1981-1996),White,Married,Bachelor's,5,503,On-site,"San Francisco, CA",2023-07-02,Active,,,,148300,39.9,3.33
+EMP-1639,Charles,Miller,Male,49,Gen X (1965-1980),White,Divorced,Bachelor's,2,205,Hybrid,"New York, NY",2020-03-01,Terminated,2022-02-10,Voluntary,Relocation / Personal Reasons,249100,23.4,1.95
+EMP-1640,Cheryl,Baker,Female,40,Millennials (1981-1996),White,Divorced,Associate's,7,702,On-site,"Austin, TX",2020-11-20,Terminated,2022-01-21,Voluntary,Relocation / Personal Reasons,69400,14.0,1.17
+EMP-1641,Scott,Anderson,Male,37,Millennials (1981-1996),Hispanic/Latino,Divorced,Associate's,2,203,Hybrid,"Austin, TX",2023-10-04,Active,,,,138700,36.8,3.07
+EMP-1642,Michelle,Sanders,Female,34,Millennials (1981-1996),White,Single,Bachelor's,1,103,Hybrid,"San Francisco, CA",2022-09-25,Active,,,,145400,49.1,4.09
+EMP-1643,George,Perry,Male,31,Millennials (1981-1996),White,Single,Bachelor's,2,203,Remote,"New York, NY",2020-11-27,Terminated,2023-05-23,Voluntary,Career Advancement / Growth,130700,29.8,2.48
+EMP-1644,Melissa,Lewis,Female,24,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,3,301,Hybrid,"New York, NY",2024-03-25,Active,,,,61400,31.1,2.6
+EMP-1645,James,Murphy,Non-Binary,26,Gen Z (1997-2012),Asian,Married,Master's,2,201,Remote,"Austin, TX",2021-06-15,Terminated,2022-08-12,Involuntary,Organizational Restructuring / Layoff,64600,13.9,1.16
+EMP-1646,Stephanie,Bell,Female,22,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,6,601,Hybrid,"San Francisco, CA",2024-06-04,Active,,,,74100,28.8,2.4
+EMP-1647,Willie,Thompson,Male,34,Millennials (1981-1996),White,Divorced,Bachelor's,1,103,Remote,"New York, NY",2024-11-24,Active,,,,150800,23.1,1.93
+EMP-1648,Alexander,Jenkins,Male,52,Gen X (1965-1980),Black/African American,Divorced,Bachelor's,7,703,Hybrid,"Chicago, IL",2024-04-23,Terminated,2024-09-05,Voluntary,Company Culture / Leadership,103000,4.4,0.37
+EMP-1649,Emily,Gutierrez,Female,32,Millennials (1981-1996),Asian,Single,Bachelor's,1,102,Remote,"San Francisco, CA",2021-02-10,Active,,,,99200,68.6,5.71
+EMP-1650,Joe,Brooks,Male,29,Millennials (1981-1996),White,Married,Bachelor's,5,501,Hybrid,"New York, NY",2024-07-17,Active,,,,62900,27.4,2.28
+EMP-1651,Deborah,Jimenez,Female,23,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,1,101,Hybrid,"New York, NY",2025-08-01,Terminated,2026-06-24,Voluntary,Career Advancement / Growth,76000,10.7,0.9
+EMP-1652,Russell,Jones,Non-Binary,28,Gen Z (1997-2012),Hispanic/Latino,Divorced,Bachelor's,5,502,Remote,"New York, NY",2022-02-04,Active,,,,102100,56.8,4.73
+EMP-1653,Denise,Davis,Female,26,Gen Z (1997-2012),White,Married,Associate's,5,502,Hybrid,"San Francisco, CA",2022-10-24,Active,,,,98900,48.2,4.01
+EMP-1654,Jason,Thomas,Male,23,Gen Z (1997-2012),Asian,Single,Bachelor's,1,101,On-site,"Chicago, IL",2020-01-16,Active,,,,71300,81.4,6.78
+EMP-1655,Andrea,Green,Female,36,Millennials (1981-1996),Asian,Married,Master's,1,102,Remote,"London, UK",2024-06-09,Active,,,,113800,28.6,2.39
+EMP-1656,Betty,Moore,Female,46,Gen X (1965-1980),White,Married,Bachelor's,1,104,Remote,"San Francisco, CA",2024-10-14,Active,,,,190000,24.5,2.04
+EMP-1657,Brandon,Young,Non-Binary,40,Millennials (1981-1996),Asian,Divorced,Associate's,4,402,Hybrid,"Seattle, WA",2022-11-08,Active,,,,83100,47.7,3.97
+EMP-1658,Ashley,Williams,Female,60,Boomers (1946-1964),Black/African American,Married,Bachelor's,2,204,Hybrid,"Chicago, IL",2024-05-22,Active,,,,186500,29.2,2.44
+EMP-1659,Rachel,Thomas,Female,22,Gen Z (1997-2012),Asian,Single,Master's,1,101,Hybrid,"New York, NY",2021-12-17,Active,,,,74200,58.4,4.87
+EMP-1660,Lucas,Jones,Male,27,Gen Z (1997-2012),Hispanic/Latino,Married,Associate's,1,101,Hybrid,"London, UK",2025-02-15,Terminated,2026-09-02,Voluntary,Better Compensation & Benefits,82600,18.5,1.54
+EMP-1661,Jordan,Ross,Male,26,Gen Z (1997-2012),Asian,Married,Associate's,1,101,Hybrid,"New York, NY",2023-11-13,Active,,,,73300,35.5,2.96
+EMP-1662,Nancy,Cook,Non-Binary,29,Millennials (1981-1996),Asian,Single,Doctorate,2,201,Hybrid,"New York, NY",2026-03-19,Active,,,,58200,7.4,0.61
+EMP-1663,Amy,Cruz,Female,22,Gen Z (1997-2012),White,Single,Bachelor's,3,301,Hybrid,"Austin, TX",2023-08-12,Active,,,,62400,38.6,3.21
+EMP-1664,Adam,Wood,Male,29,Millennials (1981-1996),White,Single,Associate's,3,302,Remote,"New York, NY",2024-07-11,Active,,,,83200,27.6,2.3
+EMP-1665,Benjamin,Torres,Male,27,Gen Z (1997-2012),Asian,Divorced,Master's,1,102,Hybrid,"Chicago, IL",2025-08-14,Active,,,,102300,14.5,1.21
+EMP-1666,Cynthia,Watson,Female,29,Millennials (1981-1996),White,Single,Bachelor's,1,101,Remote,"New York, NY",2023-03-07,Active,,,,78100,43.8,3.65
+EMP-1667,Patrick,Chavez,Male,31,Millennials (1981-1996),Black/African American,Married,Associate's,1,102,Hybrid,"New York, NY",2023-09-17,Active,,,,104600,37.4,3.12
+EMP-1668,Gregory,Baker,Male,24,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,3,301,Hybrid,"Austin, TX",2021-10-15,Active,,,,61000,60.5,5.04
+EMP-1669,Evelyn,Reed,Female,26,Gen Z (1997-2012),White,Married,Doctorate,5,502,On-site,"New York, NY",2024-10-25,Active,,,,83900,24.1,2.01
+EMP-1670,Victoria,Evans,Female,50,Gen X (1965-1980),White,Single,Master's,1,103,Hybrid,"New York, NY",2024-07-05,Active,,,,155700,27.8,2.32
+EMP-1671,Harold,Cox,Male,26,Gen Z (1997-2012),White,Divorced,Bachelor's,5,501,Hybrid,"Chicago, IL",2020-08-04,Active,,,,62700,74.8,6.23
+EMP-1672,Lauren,Stewart,Female,49,Gen X (1965-1980),White,Single,Bachelor's,1,103,On-site,"London, UK",2022-02-23,Active,,,,151400,56.1,4.68
+EMP-1673,Alice,Cook,Female,48,Gen X (1965-1980),White,Single,Bachelor's,7,703,On-site,"New York, NY",2023-06-07,Active,,,,107600,40.7,3.39
+EMP-1674,Austin,Campbell,Non-Binary,46,Gen X (1965-1980),White,Married,Master's,1,103,Remote,"San Francisco, CA",2025-07-11,Active,,,,148400,15.6,1.3
+EMP-1675,Nancy,Patel,Female,40,Millennials (1981-1996),Asian,Single,Bachelor's,1,102,Hybrid,"Chicago, IL",2021-07-14,Active,,,,104100,63.5,5.29
+EMP-1676,John,Ortiz,Male,31,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,2,202,Remote,"Austin, TX",2022-03-07,Terminated,2023-02-10,Voluntary,Relocation / Personal Reasons,98500,11.2,0.93
+EMP-1677,Denise,Gray,Female,40,Millennials (1981-1996),Black/African American,Single,Bachelor's,1,102,Hybrid,"San Francisco, CA",2025-05-20,Active,,,,108800,17.3,1.44
+EMP-1678,Gregory,Turner,Male,26,Gen Z (1997-2012),White,Divorced,Doctorate,6,601,Hybrid,"Seattle, WA",2021-02-18,Terminated,2021-10-04,Voluntary,Career Advancement / Growth,71800,7.5,0.62
+EMP-1679,Frances,Peterson,Female,24,Gen Z (1997-2012),White,Single,Master's,6,601,Hybrid,"New York, NY",2022-01-01,Terminated,2022-10-17,Voluntary,Work-Life Balance / Burnout,75400,9.5,0.79
+EMP-1680,Mary,Ramos,Female,29,Millennials (1981-1996),White,Married,Bachelor's,3,301,On-site,"Austin, TX",2021-02-06,Terminated,2023-07-07,Voluntary,Pursuing Higher Education,54400,28.9,2.41
+EMP-1681,Sharon,Jenkins,Female,46,Gen X (1965-1980),White,Married,Associate's,6,603,Remote,"San Francisco, CA",2022-02-04,Terminated,2025-01-19,Voluntary,Better Compensation & Benefits,148600,35.5,2.96
+EMP-1682,Kevin,Lopez,Male,29,Millennials (1981-1996),Asian,Divorced,Master's,1,101,On-site,"New York, NY",2021-07-16,Active,,,,75800,63.4,5.29
+EMP-1683,Patrick,Rogers,Male,22,Gen Z (1997-2012),White,Single,Associate's,1,101,Hybrid,"San Francisco, CA",2022-12-05,Active,,,,81500,46.8,3.9
+EMP-1684,Alexander,Price,Male,43,Millennials (1981-1996),Asian,Single,Bachelor's,2,203,On-site,"New York, NY",2021-07-24,Active,,,,119300,63.2,5.26
+EMP-1685,Timothy,Castillo,Male,38,Millennials (1981-1996),White,Single,Bachelor's,3,302,Remote,"New York, NY",2023-04-11,Active,,,,82000,42.6,3.55
+EMP-1686,Nathan,White,Male,29,Millennials (1981-1996),White,Single,Bachelor's,6,601,Remote,"San Francisco, CA",2024-11-10,Active,,,,72300,23.6,1.97
+EMP-1687,Eric,James,Male,29,Millennials (1981-1996),White,Divorced,Bachelor's,2,201,Hybrid,"New York, NY",2023-08-12,Terminated,2025-02-27,Voluntary,Better Compensation & Benefits,65900,18.6,1.55
+EMP-1688,Caleb,Morris,Male,32,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,3,302,On-site,"Chicago, IL",2020-05-21,Terminated,2020-09-15,Voluntary,Company Culture / Leadership,77400,3.8,0.32
+EMP-1689,Margaret,Sullivan,Female,40,Millennials (1981-1996),Asian,Married,Bachelor's,1,104,Remote,"Seattle, WA",2022-07-03,Active,,,,190500,51.9,4.32
+EMP-1690,Judith,Perez,Female,44,Gen X (1965-1980),White,Divorced,Associate's,1,103,Hybrid,"Austin, TX",2025-06-24,Active,,,,154700,16.2,1.35
+EMP-1691,Sean,Clark,Male,33,Millennials (1981-1996),White,Divorced,Master's,2,202,Remote,"New York, NY",2022-11-18,Active,,,,85800,47.3,3.95
+EMP-1692,Diana,Ramos,Female,44,Gen X (1965-1980),Black/African American,Single,Associate's,2,203,Hybrid,"Chicago, IL",2023-05-18,Terminated,2023-11-01,Voluntary,Relocation / Personal Reasons,142200,5.5,0.46
+EMP-1693,Richard,Hernandez,Male,36,Millennials (1981-1996),Black/African American,Single,Doctorate,4,403,Remote,"Austin, TX",2023-10-22,Active,,,,126500,36.2,3.02
+EMP-1694,Alexander,Lee,Male,30,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Hybrid,"New York, NY",2022-01-13,Active,,,,81900,57.5,4.79
+EMP-1695,Christina,Collins,Female,38,Millennials (1981-1996),Two or More Races,Divorced,Bachelor's,1,102,Hybrid,"San Francisco, CA",2025-04-09,Active,,,,104000,18.7,1.56
+EMP-1696,Doris,Jenkins,Female,28,Gen Z (1997-2012),White,Married,Bachelor's,1,101,Hybrid,"Chicago, IL",2022-12-04,Active,,,,72800,46.8,3.9
+EMP-1697,Michelle,Myers,Non-Binary,31,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Hybrid,"New York, NY",2023-08-20,Active,,,,88400,38.3,3.19
+EMP-1698,Justin,Chavez,Male,40,Millennials (1981-1996),Asian,Married,Bachelor's,1,102,Remote,"New York, NY",2023-09-11,Active,,,,111900,37.6,3.13
+EMP-1699,Peter,Myers,Male,38,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,6,602,Hybrid,"San Francisco, CA",2023-09-21,Active,,,,120000,37.3,3.1
+EMP-1700,Michelle,Thompson,Female,31,Millennials (1981-1996),White,Married,Bachelor's,1,102,Hybrid,"Chicago, IL",2022-12-10,Active,,,,102700,46.6,3.89
+EMP-1701,Cynthia,Gomez,Female,47,Gen X (1965-1980),Asian,Married,Bachelor's,4,404,Hybrid,"Austin, TX",2023-05-11,Active,,,,174800,41.6,3.47
+EMP-1702,Arthur,Martinez,Male,25,Gen Z (1997-2012),Asian,Single,Doctorate,2,201,On-site,"London, UK",2021-10-15,Active,,,,59200,60.5,5.04
+EMP-1703,Austin,Harris,Male,27,Gen Z (1997-2012),Two or More Races,Single,Master's,1,101,Hybrid,"Chicago, IL",2025-10-25,Terminated,2026-04-14,Voluntary,Company Culture / Leadership,75200,5.6,0.47
+EMP-1704,Alexis,Kelly,Female,33,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Hybrid,"New York, NY",2022-05-25,Terminated,2024-05-28,Voluntary,Relocation / Personal Reasons,78500,24.1,2.01
+EMP-1705,Alan,Morgan,Male,60,Boomers (1946-1964),Asian,Divorced,Master's,2,205,Hybrid,"San Francisco, CA",2021-03-11,Active,,,,233600,67.6,5.63
+EMP-1706,Emma,Taylor,Female,30,Millennials (1981-1996),Asian,Single,Master's,7,702,Hybrid,"San Francisco, CA",2026-01-07,Active,,,,78100,9.7,0.81
+EMP-1707,Andrew,Young,Male,36,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Hybrid,"London, UK",2022-03-27,Terminated,2023-01-17,Voluntary,Relocation / Personal Reasons,86400,9.7,0.81
+EMP-1708,Austin,Sanchez,Male,25,Gen Z (1997-2012),Asian,Single,Doctorate,2,201,Remote,"Chicago, IL",2024-04-17,Terminated,2025-03-01,Involuntary,Performance Standards Not Met,56000,10.4,0.87
+EMP-1709,Dylan,Peterson,Male,38,Millennials (1981-1996),White,Married,Bachelor's,3,303,On-site,"Seattle, WA",2024-05-02,Active,,,,134900,29.9,2.49
+EMP-1710,Nicole,Sullivan,Female,47,Gen X (1965-1980),Asian,Divorced,High School Diploma,2,203,Remote,"San Francisco, CA",2025-10-19,Active,,,,146300,12.3,1.03
+EMP-1711,Maria,Davis,Female,48,Gen X (1965-1980),White,Single,Master's,4,403,Remote,"New York, NY",2025-04-09,Active,,,,124400,18.7,1.56
+EMP-1712,Brenda,Jimenez,Non-Binary,23,Gen Z (1997-2012),White,Single,Doctorate,2,201,Hybrid,"San Francisco, CA",2026-02-13,Active,,,,61000,8.5,0.71
+EMP-1713,Jacqueline,Long,Female,47,Gen X (1965-1980),Black/African American,Married,Bachelor's,4,403,On-site,"Seattle, WA",2023-12-26,Active,,,,117700,34.1,2.84
+EMP-1714,Maria,Scott,Female,28,Gen Z (1997-2012),White,Single,Doctorate,1,102,On-site,"London, UK",2021-01-02,Active,,,,101900,69.8,5.82
+EMP-1715,Justin,Jenkins,Male,35,Millennials (1981-1996),White,Divorced,Bachelor's,6,602,Hybrid,"Chicago, IL",2024-11-02,Active,,,,103300,23.9,1.99
+EMP-1716,Austin,Flores,Male,28,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,3,301,Remote,"Chicago, IL",2021-07-01,Active,,,,55000,63.9,5.33
+EMP-1717,Debra,Robinson,Female,38,Millennials (1981-1996),White,Married,Master's,7,702,Remote,"New York, NY",2022-12-26,Terminated,2025-05-05,Voluntary,Career Advancement / Growth,66800,28.3,2.36
+EMP-1718,Alexis,Mendoza,Female,32,Millennials (1981-1996),White,Divorced,Bachelor's,6,602,Hybrid,"Austin, TX",2023-06-24,Active,,,,110000,40.2,3.35
+EMP-1719,Diane,Ortiz,Female,30,Millennials (1981-1996),Black/African American,Single,Bachelor's,4,402,On-site,"San Francisco, CA",2023-05-20,Active,,,,83900,41.3,3.44
+EMP-1720,Sarah,Collins,Female,23,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"San Francisco, CA",2025-09-08,Active,,,,65000,13.7,1.14
+EMP-1721,Kathleen,Nguyen,Female,23,Gen Z (1997-2012),White,Single,Master's,4,401,Remote,"San Francisco, CA",2022-12-16,Active,,,,57200,46.4,3.87
+EMP-1722,Danielle,Cook,Female,36,Millennials (1981-1996),Asian,Divorced,Bachelor's,4,402,On-site,"Chicago, IL",2023-07-11,Terminated,2023-11-10,Voluntary,Relocation / Personal Reasons,85300,4.0,0.33
+EMP-1723,Kenneth,Roberts,Male,28,Gen Z (1997-2012),Asian,Divorced,Bachelor's,2,202,Remote,"Seattle, WA",2025-03-28,Active,,,,88100,19.1,1.59
+EMP-1724,Natalie,Robinson,Female,37,Millennials (1981-1996),Asian,Divorced,Bachelor's,1,103,Hybrid,"New York, NY",2022-08-01,Active,,,,142700,50.9,4.24
+EMP-1725,Gregory,Scott,Male,54,Gen X (1965-1980),Black/African American,Divorced,Bachelor's,2,204,On-site,"Austin, TX",2026-02-22,Active,,,,188600,8.2,0.68
+EMP-1726,Wayne,Sullivan,Male,27,Gen Z (1997-2012),White,Married,Bachelor's,2,201,Hybrid,"Chicago, IL",2025-12-01,Active,,,,61900,10.9,0.91
+EMP-1727,Jordan,Alvarez,Non-Binary,33,Millennials (1981-1996),White,Married,Master's,5,502,Hybrid,"San Francisco, CA",2021-12-15,Terminated,2024-09-30,Voluntary,Work-Life Balance / Burnout,92200,33.5,2.79
+EMP-1728,Charlotte,Perry,Female,24,Gen Z (1997-2012),White,Married,Bachelor's,4,401,Remote,"New York, NY",2023-02-28,Active,,,,54900,44.0,3.67
+EMP-1729,Maria,Moore,Female,22,Gen Z (1997-2012),White,Single,High School Diploma,2,201,Hybrid,"San Francisco, CA",2022-03-20,Active,,,,63700,55.3,4.61
+EMP-1730,Wayne,Lee,Male,51,Gen X (1965-1980),Hispanic/Latino,Single,Bachelor's,1,104,Hybrid,"Austin, TX",2025-07-25,Active,,,,197300,15.1,1.26
+EMP-1731,Marie,Bailey,Female,46,Gen X (1965-1980),White,Divorced,Master's,3,304,Remote,"Seattle, WA",2024-12-04,Active,,,,178000,22.8,1.9
+EMP-1732,Richard,Baker,Male,45,Gen X (1965-1980),White,Divorced,Master's,2,204,Remote,"Chicago, IL",2023-11-06,Active,,,,182200,35.7,2.98
+EMP-1733,Joyce,Gray,Female,34,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,2,203,On-site,"San Francisco, CA",2023-04-01,Terminated,2024-11-24,Voluntary,Work-Life Balance / Burnout,132200,19.8,1.65
+EMP-1734,Diana,Peterson,Female,23,Gen Z (1997-2012),Black/African American,Single,Bachelor's,7,701,Remote,"London, UK",2024-06-16,Active,,,,57200,28.4,2.37
+EMP-1735,Cynthia,Allen,Female,27,Gen Z (1997-2012),Two or More Races,Divorced,Master's,1,101,Remote,"San Francisco, CA",2024-01-06,Active,,,,78300,33.7,2.81
+EMP-1736,Caleb,Allen,Male,28,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,2,202,Remote,"New York, NY",2022-09-08,Active,,,,91400,49.7,4.14
+EMP-1737,Brandon,Thompson,Male,26,Gen Z (1997-2012),Asian,Divorced,Associate's,6,601,On-site,"Austin, TX",2021-11-17,Active,,,,74000,59.4,4.95
+EMP-1738,Denise,Sanchez,Female,43,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,2,203,Remote,"Chicago, IL",2025-11-15,Active,,,,133600,11.4,0.95
+EMP-1739,Melissa,Green,Female,35,Millennials (1981-1996),White,Single,Bachelor's,1,102,Remote,"Austin, TX",2023-07-15,Active,,,,95400,39.5,3.29
+EMP-1740,Jeremy,Adams,Male,31,Millennials (1981-1996),White,Single,Master's,1,103,Hybrid,"San Francisco, CA",2023-08-03,Active,,,,157200,38.9,3.24
+EMP-1741,Jack,Adams,Male,43,Millennials (1981-1996),Asian,Single,Bachelor's,3,303,On-site,"New York, NY",2024-11-16,Active,,,,113200,23.4,1.95
+EMP-1742,Laura,Howard,Female,27,Gen Z (1997-2012),White,Married,Master's,6,601,On-site,"San Francisco, CA",2021-01-02,Active,,,,75000,69.8,5.82
+EMP-1743,Emma,Alvarez,Female,53,Gen X (1965-1980),White,Divorced,Master's,3,304,Hybrid,"Austin, TX",2024-04-05,Terminated,2024-09-07,Voluntary,Company Culture / Leadership,169200,5.1,0.42
+EMP-1744,Bobby,Cox,Male,28,Gen Z (1997-2012),Hispanic/Latino,Married,Master's,7,702,Remote,"New York, NY",2024-08-14,Terminated,2026-03-23,Voluntary,Company Culture / Leadership,77000,19.3,1.6
+EMP-1745,Walter,Wright,Male,41,Millennials (1981-1996),White,Single,Master's,2,203,Hybrid,"London, UK",2025-02-18,Active,,,,122600,20.3,1.69
+EMP-1746,Ruth,Hernandez,Non-Binary,38,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,3,302,Hybrid,"San Francisco, CA",2024-05-13,Active,,,,87900,29.5,2.46
+EMP-1747,Emma,Johnson,Female,30,Millennials (1981-1996),Asian,Divorced,Master's,2,202,Hybrid,"New York, NY",2023-03-20,Active,,,,80600,43.3,3.61
+EMP-1748,Sara,Green,Female,33,Millennials (1981-1996),Asian,Single,Bachelor's,1,102,Hybrid,"San Francisco, CA",2021-05-17,Active,,,,97900,65.4,5.45
+EMP-1749,Victoria,Young,Non-Binary,52,Gen X (1965-1980),White,Married,Master's,1,104,Hybrid,"San Francisco, CA",2025-07-01,Active,,,,196400,15.9,1.33
+EMP-1750,Albert,Hernandez,Male,29,Millennials (1981-1996),Hispanic/Latino,Married,Master's,1,102,Hybrid,"New York, NY",2023-06-10,Active,,,,101700,40.6,3.39
+EMP-1751,Heather,Peterson,Female,26,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,1,102,Hybrid,"London, UK",2021-10-27,Active,,,,110300,60.1,5.0
+EMP-1752,Logan,Martin,Male,26,Gen Z (1997-2012),Black/African American,Married,Bachelor's,1,101,Hybrid,"San Francisco, CA",2024-05-19,Active,,,,82900,29.3,2.44
+EMP-1753,Willie,Lewis,Male,34,Millennials (1981-1996),White,Married,Bachelor's,5,502,Hybrid,"New York, NY",2022-09-24,Active,,,,102500,49.1,4.1
+EMP-1754,Dylan,Wilson,Male,26,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Hybrid,"New York, NY",2020-05-11,Active,,,,77400,77.6,6.47
+EMP-1755,Eric,Kim,Male,35,Millennials (1981-1996),White,Single,Bachelor's,2,203,Hybrid,"Austin, TX",2023-06-24,Terminated,2025-12-20,Voluntary,Pursuing Higher Education,120600,29.9,2.49
+EMP-1756,Madison,Cook,Female,30,Millennials (1981-1996),Asian,Single,Bachelor's,3,302,Hybrid,"New York, NY",2023-03-13,Active,,,,75200,43.6,3.63
+EMP-1757,Diana,Ross,Female,30,Millennials (1981-1996),Hispanic/Latino,Married,Master's,6,602,On-site,"London, UK",2021-11-14,Active,,,,113200,59.5,4.96
+EMP-1758,John,Mendoza,Male,34,Millennials (1981-1996),White,Married,Bachelor's,2,202,Hybrid,"Chicago, IL",2022-03-14,Active,,,,90000,55.5,4.63
+EMP-1759,Bradley,Sanchez,Male,22,Gen Z (1997-2012),Asian,Married,Associate's,3,301,Hybrid,"New York, NY",2024-07-06,Active,,,,55700,27.8,2.31
+EMP-1760,Willie,Young,Male,47,Gen X (1965-1980),Asian,Divorced,Doctorate,3,304,Remote,"San Francisco, CA",2023-05-12,Active,,,,185200,41.6,3.47
+EMP-1761,Justin,Harris,Male,27,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,1,101,Hybrid,"New York, NY",2022-01-03,Terminated,2023-05-05,Voluntary,Career Advancement / Growth,80100,16.0,1.33
+EMP-1762,Paul,Cox,Male,29,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,5,501,Hybrid,"San Francisco, CA",2023-06-01,Active,,,,60000,40.9,3.41
+EMP-1763,Ronald,Martin,Male,36,Millennials (1981-1996),Asian,Divorced,Master's,1,102,Remote,"Chicago, IL",2024-03-13,Active,,,,102900,31.5,2.63
+EMP-1764,Benjamin,Green,Male,33,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,4,402,On-site,"New York, NY",2026-01-16,Active,,,,83300,9.4,0.78
+EMP-1765,Martha,Lewis,Female,34,Millennials (1981-1996),Asian,Single,Master's,6,602,Hybrid,"San Francisco, CA",2026-04-19,Terminated,2026-09-21,Voluntary,Pursuing Higher Education,111600,5.1,0.42
+EMP-1766,Jessica,Alvarez,Female,39,Millennials (1981-1996),Two or More Races,Married,Doctorate,6,602,Hybrid,"New York, NY",2021-12-06,Active,,,,117600,58.7,4.9
+EMP-1767,Caleb,Perry,Male,22,Gen Z (1997-2012),Black/African American,Single,Bachelor's,1,101,Hybrid,"Chicago, IL",2022-11-24,Active,,,,81500,47.1,3.93
+EMP-1768,Hannah,Miller,Female,24,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"Austin, TX",2021-12-24,Terminated,2023-08-05,Voluntary,Company Culture / Leadership,58800,19.4,1.61
+EMP-1769,Edward,Nelson,Male,31,Millennials (1981-1996),White,Married,Master's,2,202,Hybrid,"Chicago, IL",2025-07-04,Active,,,,85900,15.8,1.32
+EMP-1770,Willie,Flores,Male,26,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Hybrid,"New York, NY",2022-09-15,Active,,,,59600,49.4,4.12
+EMP-1771,Deborah,Mitchell,Female,28,Gen Z (1997-2012),Black/African American,Married,Bachelor's,7,702,On-site,"Austin, TX",2024-02-06,Terminated,2024-06-09,Voluntary,Career Advancement / Growth,75600,4.1,0.34
+EMP-1772,Bradley,Foster,Male,23,Gen Z (1997-2012),White,Married,Bachelor's,4,401,Hybrid,"San Francisco, CA",2026-02-16,Active,,,,57300,8.4,0.7
+EMP-1773,Peter,Rodriguez,Non-Binary,27,Gen Z (1997-2012),Black/African American,Divorced,Master's,2,202,Remote,"San Francisco, CA",2023-04-18,Active,,,,77300,42.4,3.53
+EMP-1774,Larry,Morales,Male,62,Boomers (1946-1964),White,Married,Bachelor's,2,205,Hybrid,"San Francisco, CA",2020-06-14,Active,,,,262100,76.5,6.37
+EMP-1775,Nicole,Parker,Non-Binary,45,Gen X (1965-1980),White,Married,Doctorate,3,304,Hybrid,"London, UK",2025-03-19,Active,,,,167700,19.4,1.61
+EMP-1776,Martha,Gonzalez,Non-Binary,44,Gen X (1965-1980),Asian,Married,Master's,3,303,Hybrid,"Seattle, WA",2022-12-15,Active,,,,119100,46.5,3.87
+EMP-1777,Emma,Jones,Female,39,Millennials (1981-1996),Black/African American,Single,Bachelor's,1,103,Hybrid,"San Francisco, CA",2022-09-26,Active,,,,149100,49.1,4.09
+EMP-1778,Anthony,Watson,Male,45,Gen X (1965-1980),Hispanic/Latino,Married,Bachelor's,1,105,Remote,"New York, NY",2023-03-12,Active,,,,247900,43.6,3.63
+EMP-1779,Jordan,Flores,Male,26,Gen Z (1997-2012),White,Married,Doctorate,1,101,Hybrid,"London, UK",2021-10-05,Active,,,,75700,60.8,5.07
+EMP-1780,Juan,Hill,Male,46,Gen X (1965-1980),Two or More Races,Married,Associate's,6,603,Hybrid,"Seattle, WA",2024-08-02,Active,,,,151400,26.9,2.24
+EMP-1781,Kathleen,Coleman,Female,24,Gen Z (1997-2012),White,Married,Associate's,2,201,On-site,"San Francisco, CA",2026-01-22,Terminated,2026-09-18,Voluntary,Pursuing Higher Education,58800,7.9,0.65
+EMP-1782,Henry,Bell,Male,28,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,2,201,Hybrid,"Chicago, IL",2022-05-09,Active,,,,58000,53.7,4.47
+EMP-1783,Benjamin,Coleman,Male,25,Gen Z (1997-2012),Black/African American,Single,Bachelor's,5,501,Remote,"New York, NY",2025-03-25,Active,,,,63600,19.2,1.6
+EMP-1784,Bryan,Hall,Male,24,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Remote,"New York, NY",2020-06-20,Active,,,,81300,76.3,6.36
+EMP-1785,Daniel,Russell,Male,32,Millennials (1981-1996),White,Divorced,Bachelor's,1,102,Hybrid,"San Francisco, CA",2022-10-03,Active,,,,98600,48.9,4.07
+EMP-1786,Linda,Russell,Female,24,Gen Z (1997-2012),Black/African American,Married,Master's,2,201,On-site,"Austin, TX",2021-04-08,Active,,,,62500,66.7,5.56
+EMP-1787,Olivia,Kim,Female,39,Millennials (1981-1996),Hispanic/Latino,Married,High School Diploma,5,503,Hybrid,"San Francisco, CA",2022-06-09,Active,,,,154900,52.7,4.39
+EMP-1788,Larry,Long,Male,46,Gen X (1965-1980),Hispanic/Latino,Divorced,Master's,1,105,Remote,"San Francisco, CA",2023-12-12,Active,,,,259900,34.6,2.88
+EMP-1789,Andrea,Parker,Female,45,Gen X (1965-1980),White,Single,Associate's,1,103,Hybrid,"Chicago, IL",2020-08-16,Active,,,,153700,74.4,6.2
+EMP-1790,Patrick,Ross,Male,25,Gen Z (1997-2012),White,Single,Master's,2,201,Hybrid,"London, UK",2023-11-02,Active,,,,66800,35.9,2.99
+EMP-1791,Jack,Garcia,Male,38,Millennials (1981-1996),White,Married,Bachelor's,6,604,Remote,"Austin, TX",2024-11-28,Active,,,,185500,23.0,1.92
+EMP-1792,Randy,Watson,Male,26,Gen Z (1997-2012),Asian,Single,Master's,2,201,Hybrid,"New York, NY",2022-08-20,Terminated,2024-02-27,Voluntary,Relocation / Personal Reasons,58700,18.3,1.52
+EMP-1793,Katherine,Jenkins,Female,27,Gen Z (1997-2012),White,Married,Bachelor's,1,101,On-site,"Austin, TX",2020-06-02,Active,,,,74900,76.9,6.41
+EMP-1794,Laura,Parker,Non-Binary,25,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Remote,"San Francisco, CA",2024-12-11,Active,,,,59100,22.6,1.88
+EMP-1795,Wayne,Gutierrez,Male,34,Millennials (1981-1996),Asian,Divorced,Bachelor's,3,303,Hybrid,"Chicago, IL",2024-11-05,Active,,,,134800,23.8,1.98
+EMP-1796,Gloria,Powell,Female,44,Gen X (1965-1980),White,Divorced,Doctorate,3,304,Hybrid,"Austin, TX",2024-10-18,Active,,,,178700,24.3,2.03
+EMP-1797,Terry,Rodriguez,Male,22,Gen Z (1997-2012),White,Single,Doctorate,6,601,Hybrid,"San Francisco, CA",2022-01-14,Active,,,,71200,57.5,4.79
+EMP-1798,Samantha,Brooks,Female,36,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,3,302,Hybrid,"New York, NY",2020-12-07,Active,,,,78200,70.7,5.89
+EMP-1799,Russell,Anderson,Male,32,Millennials (1981-1996),Two or More Races,Divorced,Bachelor's,2,202,Remote,"Austin, TX",2024-07-11,Terminated,2025-09-16,Voluntary,Work-Life Balance / Burnout,95400,14.2,1.18
+EMP-1800,Cheryl,Lee,Female,45,Gen X (1965-1980),Asian,Divorced,Master's,2,204,On-site,"San Francisco, CA",2021-04-27,Active,,,,176200,66.1,5.51
+EMP-1801,Theresa,Young,Female,26,Gen Z (1997-2012),Black/African American,Married,Bachelor's,1,101,Hybrid,"Chicago, IL",2025-11-23,Active,,,,71900,11.2,0.93
+EMP-1802,Martha,Mendoza,Female,33,Millennials (1981-1996),Black/African American,Married,Master's,4,403,Remote,"New York, NY",2020-03-12,Active,,,,114500,79.6,6.63
+EMP-1803,Roy,Robinson,Male,51,Gen X (1965-1980),Two or More Races,Married,Bachelor's,1,103,Hybrid,"Seattle, WA",2022-05-08,Active,,,,151400,53.7,4.48
+EMP-1804,Rachel,Cox,Female,36,Millennials (1981-1996),White,Married,Master's,2,203,Remote,"New York, NY",2023-10-03,Active,,,,130100,36.9,3.07
+EMP-1805,Judy,Gonzalez,Female,26,Gen Z (1997-2012),Asian,Married,Bachelor's,5,501,Hybrid,"Austin, TX",2021-08-18,Terminated,2022-01-14,Voluntary,Better Compensation & Benefits,63200,4.9,0.41
+EMP-1806,Grace,Foster,Female,28,Gen Z (1997-2012),White,Divorced,Bachelor's,6,601,Hybrid,"Seattle, WA",2020-12-16,Active,,,,64000,70.4,5.87
+EMP-1807,Eugene,Robinson,Male,51,Gen X (1965-1980),White,Divorced,Bachelor's,1,103,On-site,"London, UK",2025-12-04,Active,,,,143800,10.8,0.9
+EMP-1808,Lori,Smith,Female,31,Millennials (1981-1996),White,Married,Doctorate,2,202,Remote,"New York, NY",2021-10-23,Active,,,,75400,60.2,5.02
+EMP-1809,Vincent,Jackson,Non-Binary,36,Millennials (1981-1996),White,Divorced,Bachelor's,5,502,Hybrid,"London, UK",2022-06-01,Active,,,,92500,52.9,4.41
+EMP-1810,Deborah,Sanders,Female,33,Millennials (1981-1996),Two or More Races,Divorced,Bachelor's,1,102,Hybrid,"New York, NY",2022-01-26,Active,,,,113900,57.1,4.76
+EMP-1811,Carl,Reyes,Male,27,Gen Z (1997-2012),Black/African American,Single,Bachelor's,1,102,Hybrid,"London, UK",2023-08-18,Active,,,,106800,38.4,3.2
+EMP-1812,Peter,Hernandez,Male,26,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,2,201,Hybrid,"Chicago, IL",2022-10-14,Terminated,2024-11-11,Involuntary,Performance Standards Not Met,61200,24.9,2.08
+EMP-1813,Mason,Watson,Male,36,Millennials (1981-1996),White,Divorced,Master's,7,702,Hybrid,"Austin, TX",2023-07-22,Active,,,,67300,39.3,3.27
+EMP-1814,Jeffrey,White,Male,22,Gen Z (1997-2012),White,Single,Bachelor's,7,701,Hybrid,"London, UK",2025-03-05,Active,,,,53300,19.8,1.65
+EMP-1815,Willie,Mitchell,Male,27,Gen Z (1997-2012),Two or More Races,Single,Master's,6,601,On-site,"New York, NY",2023-01-17,Active,,,,74800,45.4,3.78
+EMP-1816,Caleb,White,Male,45,Gen X (1965-1980),White,Married,Bachelor's,3,303,Remote,"Chicago, IL",2025-08-24,Active,,,,119000,14.2,1.18
+EMP-1817,Brandon,Jimenez,Male,47,Gen X (1965-1980),Black/African American,Divorced,Bachelor's,1,104,Remote,"London, UK",2023-12-22,Active,,,,201200,34.2,2.85
+EMP-1818,Madison,James,Female,28,Gen Z (1997-2012),Black/African American,Divorced,Master's,1,101,Hybrid,"Chicago, IL",2024-07-04,Active,,,,79800,27.8,2.32
+EMP-1819,Jack,Carter,Male,36,Millennials (1981-1996),Hispanic/Latino,Divorced,Associate's,3,302,Hybrid,"San Francisco, CA",2022-05-03,Active,,,,75900,53.9,4.49
+EMP-1820,Keith,Davis,Male,26,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,6,601,Hybrid,"Austin, TX",2022-07-17,Active,,,,75700,51.4,4.28
+EMP-1821,Donald,Johnson,Male,22,Gen Z (1997-2012),White,Married,Doctorate,3,301,Remote,"New York, NY",2024-02-08,Terminated,2024-12-14,Voluntary,Better Compensation & Benefits,60500,10.2,0.85
+EMP-1822,Karen,Ross,Female,27,Gen Z (1997-2012),Black/African American,Married,Bachelor's,1,102,On-site,"San Francisco, CA",2021-08-06,Active,,,,96100,62.8,5.23
+EMP-1823,William,Lopez,Male,29,Millennials (1981-1996),Asian,Single,Bachelor's,4,402,On-site,"San Francisco, CA",2021-05-25,Active,,,,82700,65.1,5.43
+EMP-1824,Walter,Jenkins,Male,22,Gen Z (1997-2012),White,Married,Associate's,7,701,Hybrid,"Austin, TX",2024-07-26,Terminated,2025-08-18,Voluntary,Pursuing Higher Education,56800,12.7,1.06
+EMP-1825,Frank,Flores,Non-Binary,51,Gen X (1965-1980),Black/African American,Divorced,Bachelor's,2,205,Remote,"Chicago, IL",2021-07-21,Active,,,,221900,63.3,5.27
+EMP-1826,Alexis,Foster,Female,38,Millennials (1981-1996),Asian,Single,Master's,6,602,Hybrid,"Seattle, WA",2021-01-26,Active,,,,103200,69.1,5.75
+EMP-1827,Edward,Ortiz,Male,32,Millennials (1981-1996),Black/African American,Single,Bachelor's,6,603,Hybrid,"New York, NY",2025-12-22,Active,,,,154800,10.2,0.85
+EMP-1828,Patricia,Morales,Female,26,Gen Z (1997-2012),Asian,Married,Associate's,6,602,On-site,"San Francisco, CA",2022-12-09,Active,,,,95900,46.7,3.89
+EMP-1829,Jacob,Martin,Male,45,Gen X (1965-1980),White,Married,Master's,7,703,Remote,"New York, NY",2020-06-26,Active,,,,100700,76.1,6.34
+EMP-1830,Judy,Sanders,Female,36,Millennials (1981-1996),Asian,Single,Master's,1,102,Hybrid,"New York, NY",2022-11-12,Active,,,,104800,47.5,3.96
+EMP-1831,Randy,Powell,Male,31,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Hybrid,"Austin, TX",2023-01-06,Terminated,2025-04-18,Voluntary,Company Culture / Leadership,78300,27.4,2.28
+EMP-1832,Joseph,Powell,Male,24,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,3,301,Hybrid,"San Francisco, CA",2021-06-08,Active,,,,60700,64.7,5.39
+EMP-1833,Lauren,Collins,Female,28,Gen Z (1997-2012),Two or More Races,Divorced,Bachelor's,7,701,Remote,"London, UK",2020-04-14,Active,,,,60200,78.5,6.54
+EMP-1834,Megan,Bell,Female,25,Gen Z (1997-2012),Asian,Married,Bachelor's,5,501,Remote,"New York, NY",2025-09-24,Active,,,,65900,13.1,1.1
+EMP-1835,Amanda,Mendoza,Female,30,Millennials (1981-1996),White,Married,Associate's,2,202,On-site,"New York, NY",2022-06-11,Terminated,2022-09-20,Voluntary,Pursuing Higher Education,95700,3.3,0.28
+EMP-1836,Jessica,Baker,Female,34,Millennials (1981-1996),Hispanic/Latino,Divorced,Master's,7,702,Hybrid,"Chicago, IL",2022-01-24,Active,,,,77800,57.1,4.76
+EMP-1837,Doris,Roberts,Female,29,Millennials (1981-1996),Black/African American,Divorced,Master's,1,102,Hybrid,"London, UK",2025-04-01,Terminated,2025-12-14,Voluntary,Career Advancement / Growth,110800,8.4,0.7
+EMP-1838,Olivia,Roberts,Female,48,Gen X (1965-1980),Asian,Married,Associate's,5,503,Remote,"New York, NY",2022-09-07,Active,,,,138500,49.7,4.14
+EMP-1839,Madison,Gutierrez,Female,35,Millennials (1981-1996),White,Married,Doctorate,2,202,Hybrid,"San Francisco, CA",2021-02-10,Active,,,,86000,68.6,5.71
+EMP-1840,Linda,Wilson,Female,50,Gen X (1965-1980),White,Married,Master's,1,103,On-site,"Austin, TX",2026-04-27,Active,,,,154300,6.1,0.51
+EMP-1841,Evelyn,Rodriguez,Female,28,Gen Z (1997-2012),Hispanic/Latino,Married,Master's,2,201,Hybrid,"London, UK",2025-04-25,Active,,,,60600,18.1,1.51
+EMP-1842,Marie,Green,Female,25,Gen Z (1997-2012),Hispanic/Latino,Single,Associate's,1,101,Hybrid,"Austin, TX",2024-07-06,Active,,,,73900,27.8,2.31
+EMP-1843,Marilyn,Wright,Female,28,Gen Z (1997-2012),Asian,Married,Associate's,4,401,Remote,"New York, NY",2022-12-27,Active,,,,62800,46.1,3.84
+EMP-1844,Bruce,Thompson,Male,35,Millennials (1981-1996),White,Single,Bachelor's,4,402,Hybrid,"New York, NY",2022-11-09,Active,,,,91500,47.6,3.97
+EMP-1845,Kyle,Ramirez,Male,25,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,3,301,Hybrid,"San Francisco, CA",2026-03-09,Active,,,,61300,7.7,0.64
+EMP-1846,Bradley,Clark,Male,40,Millennials (1981-1996),White,Married,Bachelor's,1,102,Hybrid,"San Francisco, CA",2024-10-01,Active,,,,99600,24.9,2.08
+EMP-1847,Carl,Cruz,Male,22,Gen Z (1997-2012),Hispanic/Latino,Married,Master's,3,301,Remote,"San Francisco, CA",2021-08-17,Active,,,,60400,62.4,5.2
+EMP-1848,William,Martin,Male,39,Millennials (1981-1996),White,Single,Bachelor's,2,203,Remote,"Austin, TX",2025-11-20,Active,,,,128800,11.3,0.94
+EMP-1849,Melissa,Cruz,Female,37,Millennials (1981-1996),Hispanic/Latino,Single,Bachelor's,2,202,Remote,"New York, NY",2020-01-03,Active,,,,81300,81.8,6.82
+EMP-1850,Judy,Mendoza,Female,27,Gen Z (1997-2012),Asian,Divorced,Bachelor's,2,201,On-site,"Austin, TX",2021-11-15,Active,,,,63200,59.4,4.95
+EMP-1851,Richard,Harris,Male,24,Gen Z (1997-2012),White,Single,Master's,6,601,Hybrid,"New York, NY",2021-01-18,Terminated,2023-10-15,Voluntary,Pursuing Higher Education,67500,32.9,2.74
+EMP-1852,Grace,Collins,Female,38,Millennials (1981-1996),Black/African American,Married,Bachelor's,7,703,On-site,"San Francisco, CA",2021-11-15,Active,,,,105800,59.4,4.95
+EMP-1853,Logan,Myers,Male,26,Gen Z (1997-2012),Asian,Single,Bachelor's,1,101,Remote,"San Francisco, CA",2024-06-21,Active,,,,77600,28.3,2.35
+EMP-1854,Gabriel,Watson,Male,38,Millennials (1981-1996),White,Divorced,Bachelor's,7,703,Hybrid,"London, UK",2022-07-05,Active,,,,92000,51.8,4.32
+EMP-1855,Steven,Hill,Male,34,Millennials (1981-1996),Hispanic/Latino,Single,Associate's,2,202,Remote,"New York, NY",2023-02-15,Active,,,,80700,44.4,3.7
+EMP-1856,Paul,Roberts,Male,40,Millennials (1981-1996),White,Married,Bachelor's,6,602,Hybrid,"New York, NY",2022-02-26,Terminated,2022-09-06,Voluntary,Work-Life Balance / Burnout,102900,6.3,0.53
+EMP-1857,Logan,Perez,Male,36,Millennials (1981-1996),White,Divorced,Master's,6,602,Hybrid,"San Francisco, CA",2020-02-05,Active,,,,102700,80.8,6.73
+EMP-1858,Madison,Brown,Female,22,Gen Z (1997-2012),White,Single,Bachelor's,4,401,On-site,"New York, NY",2021-07-28,Active,,,,62500,63.0,5.25
+EMP-1859,Katherine,Hall,Female,24,Gen Z (1997-2012),Hispanic/Latino,Married,Master's,3,301,Hybrid,"Seattle, WA",2023-08-28,Active,,,,57700,38.0,3.17
+EMP-1860,Daniel,Sullivan,Male,41,Millennials (1981-1996),Asian,Married,Bachelor's,1,105,Remote,"New York, NY",2023-08-09,Active,,,,273200,38.7,3.22
+EMP-1861,Henry,Bell,Male,23,Gen Z (1997-2012),White,Single,Master's,3,301,Remote,"New York, NY",2021-12-06,Active,,,,54600,58.7,4.9
+EMP-1862,Rachel,Collins,Female,51,Gen X (1965-1980),Two or More Races,Married,Master's,1,105,On-site,"Chicago, IL",2022-08-12,Active,,,,264200,50.6,4.21
+EMP-1863,Margaret,Ramos,Female,29,Millennials (1981-1996),Black/African American,Married,Bachelor's,2,201,Hybrid,"Austin, TX",2021-10-17,Active,,,,61900,60.4,5.03
+EMP-1864,Samantha,Lee,Female,45,Gen X (1965-1980),Black/African American,Married,Master's,5,503,Hybrid,"Austin, TX",2021-02-05,Active,,,,144000,68.7,5.73
+EMP-1865,Kimberly,Rogers,Female,29,Millennials (1981-1996),Hispanic/Latino,Single,Bachelor's,6,601,Hybrid,"New York, NY",2021-12-03,Active,,,,63500,58.8,4.9
+EMP-1866,Jack,Russell,Male,28,Gen Z (1997-2012),Black/African American,Single,Associate's,6,601,Remote,"Seattle, WA",2021-11-17,Active,,,,69200,59.4,4.95
+EMP-1867,Caleb,Jones,Male,28,Gen Z (1997-2012),Black/African American,Single,Bachelor's,4,401,Remote,"Chicago, IL",2021-03-10,Active,,,,63600,67.6,5.64
+EMP-1868,Jessica,Chavez,Female,27,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,3,302,Hybrid,"New York, NY",2026-01-21,Active,,,,90300,9.2,0.77
+EMP-1869,Jessica,Jimenez,Female,57,Gen X (1965-1980),Black/African American,Single,Bachelor's,3,304,Hybrid,"Seattle, WA",2025-01-18,Active,,,,169500,21.3,1.78
+EMP-1870,Abigail,Bennett,Female,33,Millennials (1981-1996),Black/African American,Married,Bachelor's,3,302,Hybrid,"Chicago, IL",2021-09-05,Active,,,,73800,61.8,5.15
+EMP-1871,Stephanie,Baker,Female,38,Millennials (1981-1996),White,Married,Bachelor's,3,303,On-site,"San Francisco, CA",2024-02-24,Terminated,2026-03-09,Voluntary,Relocation / Personal Reasons,137100,24.4,2.04
+EMP-1872,Frank,Perez,Male,25,Gen Z (1997-2012),Hispanic/Latino,Single,Associate's,5,501,Hybrid,"San Francisco, CA",2024-10-05,Active,,,,60600,24.8,2.06
+EMP-1873,Harold,Coleman,Male,27,Gen Z (1997-2012),Asian,Married,Bachelor's,1,101,Hybrid,"New York, NY",2021-05-27,Active,,,,80100,65.1,5.42
+EMP-1874,Donald,Anderson,Male,37,Millennials (1981-1996),Asian,Single,Bachelor's,5,502,Remote,"New York, NY",2024-12-02,Active,,,,89500,22.9,1.91
+EMP-1875,Joyce,Johnson,Female,38,Millennials (1981-1996),White,Married,Bachelor's,5,502,Hybrid,"New York, NY",2025-06-13,Active,,,,84900,16.5,1.38
+EMP-1876,Eric,Clark,Male,30,Millennials (1981-1996),White,Married,Bachelor's,5,502,Hybrid,"Austin, TX",2020-05-23,Active,,,,95400,77.2,6.43
+EMP-1877,Kathryn,Allen,Female,39,Millennials (1981-1996),Asian,Married,Bachelor's,3,303,Hybrid,"San Francisco, CA",2022-11-06,Active,,,,117700,47.7,3.98
+EMP-1878,Carol,Williams,Female,35,Millennials (1981-1996),Asian,Married,Associate's,1,103,Remote,"Chicago, IL",2023-07-02,Terminated,2026-06-13,Voluntary,Relocation / Personal Reasons,157400,35.4,2.95
+EMP-1879,Jean,White,Female,49,Gen X (1965-1980),Hispanic/Latino,Married,Master's,2,203,On-site,"San Francisco, CA",2025-05-10,Active,,,,134400,17.6,1.47
+EMP-1880,Bobby,Flores,Male,32,Millennials (1981-1996),Asian,Single,Bachelor's,3,302,Hybrid,"New York, NY",2022-05-19,Terminated,2024-07-26,Involuntary,Performance Standards Not Met,86600,26.3,2.19
+EMP-1881,Ethan,Mitchell,Male,41,Millennials (1981-1996),Black/African American,Married,Doctorate,6,603,Remote,"New York, NY",2022-10-05,Terminated,2025-04-28,Voluntary,Career Advancement / Growth,155600,30.8,2.56
+EMP-1882,Jose,Castillo,Male,42,Millennials (1981-1996),White,Married,Bachelor's,1,105,Remote,"San Francisco, CA",2021-02-01,Active,,,,235700,68.9,5.74
+EMP-1883,Diane,Ross,Female,29,Millennials (1981-1996),Asian,Married,Bachelor's,1,102,Hybrid,"Austin, TX",2025-03-21,Active,,,,108300,19.3,1.61
+EMP-1884,Steven,Myers,Male,34,Millennials (1981-1996),White,Divorced,Master's,2,202,Hybrid,"Austin, TX",2023-01-21,Active,,,,97700,45.2,3.77
+EMP-1885,Billy,Russell,Male,46,Gen X (1965-1980),Hispanic/Latino,Divorced,Bachelor's,1,105,Hybrid,"Austin, TX",2024-06-09,Active,,,,269100,28.6,2.39
+EMP-1886,Doris,Green,Female,58,Gen X (1965-1980),Asian,Married,Master's,2,204,Remote,"Chicago, IL",2025-04-07,Active,,,,173200,18.7,1.56
+EMP-1887,Nicole,Cooper,Female,28,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,2,202,Hybrid,"Chicago, IL",2024-02-09,Active,,,,78900,32.6,2.72
+EMP-1888,Rachel,Anderson,Female,36,Millennials (1981-1996),Black/African American,Married,Master's,6,602,Remote,"Austin, TX",2024-11-25,Active,,,,109700,23.1,1.92
+EMP-1889,Jonathan,Cruz,Male,26,Gen Z (1997-2012),Asian,Single,Bachelor's,1,101,Remote,"San Francisco, CA",2023-12-28,Active,,,,78600,34.0,2.84
+EMP-1890,Benjamin,Cruz,Male,27,Gen Z (1997-2012),White,Single,Bachelor's,6,601,On-site,"San Francisco, CA",2022-07-04,Terminated,2024-10-30,Voluntary,Work-Life Balance / Burnout,66100,27.9,2.32
+EMP-1891,Helen,Reyes,Female,28,Gen Z (1997-2012),White,Divorced,Bachelor's,3,302,On-site,"Austin, TX",2022-01-22,Active,,,,81700,57.2,4.77
+EMP-1892,Elijah,Cox,Male,44,Gen X (1965-1980),White,Single,Master's,1,104,Hybrid,"London, UK",2023-04-13,Active,,,,190700,42.5,3.55
+EMP-1893,Megan,Rogers,Female,45,Gen X (1965-1980),White,Married,Bachelor's,4,404,On-site,"San Francisco, CA",2026-03-24,Active,,,,173900,7.2,0.6
+EMP-1894,Billy,Brown,Male,31,Millennials (1981-1996),White,Divorced,Doctorate,2,203,Hybrid,"Austin, TX",2025-02-03,Active,,,,136500,20.8,1.73
+EMP-1895,Keith,Harris,Male,50,Gen X (1965-1980),Black/African American,Divorced,Associate's,3,303,On-site,"New York, NY",2026-03-20,Active,,,,118400,7.3,0.61
+EMP-1896,Diana,Brown,Female,59,Gen X (1965-1980),Two or More Races,Divorced,Bachelor's,1,105,Hybrid,"San Francisco, CA",2024-02-27,Active,,,,246000,32.0,2.67
+EMP-1897,Sara,Brown,Female,51,Gen X (1965-1980),Hispanic/Latino,Divorced,Bachelor's,6,604,Hybrid,"Chicago, IL",2021-12-14,Active,,,,179600,58.5,4.87
+EMP-1898,Harold,Clark,Male,36,Millennials (1981-1996),White,Married,Bachelor's,2,202,Hybrid,"Chicago, IL",2024-07-16,Terminated,2026-06-22,Voluntary,Work-Life Balance / Burnout,82400,23.2,1.93
+EMP-1899,Kayla,Hernandez,Female,34,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,102,Hybrid,"Austin, TX",2021-01-15,Active,,,,100500,69.4,5.79
+EMP-1900,Andrew,Mendoza,Male,23,Gen Z (1997-2012),White,Single,Master's,2,201,Remote,"Seattle, WA",2025-11-02,Active,,,,60400,11.9,0.99
+EMP-1901,Emma,Walker,Female,28,Gen Z (1997-2012),White,Divorced,Bachelor's,2,202,Hybrid,"Chicago, IL",2023-06-07,Terminated,2025-09-21,Voluntary,Better Compensation & Benefits,86700,27.5,2.29
+EMP-1902,Dennis,Baker,Male,35,Millennials (1981-1996),White,Married,Associate's,2,202,Remote,"San Francisco, CA",2021-06-05,Active,,,,91500,64.8,5.4
+EMP-1903,Frances,Moore,Female,46,Gen X (1965-1980),White,Divorced,Master's,5,503,Remote,"San Francisco, CA",2023-10-21,Active,,,,138700,36.3,3.02
+EMP-1904,Robert,Patel,Male,27,Gen Z (1997-2012),Black/African American,Single,Master's,2,201,Remote,"New York, NY",2021-09-03,Active,,,,56900,61.8,5.15
+EMP-1905,Walter,Ortiz,Male,22,Gen Z (1997-2012),White,Single,Master's,1,101,Remote,"Chicago, IL",2021-05-08,Terminated,2022-06-18,Voluntary,Work-Life Balance / Burnout,77300,13.3,1.11
+EMP-1906,Joe,Lewis,Male,30,Millennials (1981-1996),Asian,Divorced,Bachelor's,2,202,Hybrid,"San Francisco, CA",2021-04-23,Terminated,2022-09-20,Voluntary,Relocation / Personal Reasons,86300,16.9,1.41
+EMP-1907,Linda,Sanders,Female,32,Millennials (1981-1996),Asian,Divorced,Bachelor's,2,203,Hybrid,"New York, NY",2022-04-01,Terminated,2023-06-24,Voluntary,Better Compensation & Benefits,131900,14.8,1.23
+EMP-1908,Donald,Murphy,Male,31,Millennials (1981-1996),White,Single,Bachelor's,2,202,Hybrid,"Austin, TX",2024-12-09,Terminated,2025-09-14,Voluntary,Relocation / Personal Reasons,85500,9.2,0.76
+EMP-1909,Susan,Richardson,Female,52,Gen X (1965-1980),White,Single,Bachelor's,2,205,On-site,"Austin, TX",2024-06-13,Active,,,,258400,28.5,2.38
+EMP-1910,Christian,Phillips,Male,28,Gen Z (1997-2012),White,Divorced,Associate's,5,501,Hybrid,"New York, NY",2026-04-11,Active,,,,58500,6.6,0.55
+EMP-1911,Lisa,Wright,Female,24,Gen Z (1997-2012),White,Single,Bachelor's,4,401,Hybrid,"New York, NY",2024-08-15,Active,,,,56700,26.4,2.2
+EMP-1912,Jesse,Martin,Male,31,Millennials (1981-1996),Black/African American,Single,Bachelor's,7,702,Hybrid,"New York, NY",2021-09-26,Active,,,,66900,61.1,5.09
+EMP-1913,Martha,Foster,Female,27,Gen Z (1997-2012),White,Married,Master's,6,602,Hybrid,"London, UK",2024-03-28,Terminated,2025-11-11,Voluntary,Better Compensation & Benefits,104200,19.5,1.62
+EMP-1914,Jeremy,Roberts,Male,36,Millennials (1981-1996),Asian,Married,Bachelor's,1,102,On-site,"New York, NY",2025-09-28,Active,,,,95600,13.0,1.08
+EMP-1915,Dennis,Turner,Male,22,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"Seattle, WA",2022-01-09,Terminated,2024-07-10,Voluntary,Work-Life Balance / Burnout,64800,30.0,2.5
+EMP-1916,Kayla,Flores,Female,38,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,1,102,Remote,"Seattle, WA",2023-11-22,Active,,,,104300,35.2,2.93
+EMP-1917,Gregory,Wilson,Male,32,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,102,Hybrid,"Chicago, IL",2022-03-21,Terminated,2024-05-15,Voluntary,Better Compensation & Benefits,110300,25.8,2.15
+EMP-1918,Lawrence,Carter,Male,33,Millennials (1981-1996),White,Married,Master's,7,702,Hybrid,"New York, NY",2023-10-26,Terminated,2025-12-20,Voluntary,Career Advancement / Growth,75400,25.8,2.15
+EMP-1919,Nicole,Green,Female,40,Millennials (1981-1996),Two or More Races,Divorced,Bachelor's,1,105,Hybrid,"San Francisco, CA",2024-04-03,Active,,,,254500,30.9,2.57
+EMP-1920,Liam,Allen,Male,26,Gen Z (1997-2012),White,Divorced,Bachelor's,2,202,Hybrid,"San Francisco, CA",2023-10-22,Active,,,,100900,36.2,3.02
+EMP-1921,Gary,Russell,Male,26,Gen Z (1997-2012),Black/African American,Single,Master's,1,101,Remote,"San Francisco, CA",2026-04-15,Active,,,,78500,6.5,0.54
+EMP-1922,Logan,Edwards,Male,48,Gen X (1965-1980),White,Single,Bachelor's,2,203,Hybrid,"Seattle, WA",2023-03-21,Active,,,,140200,43.3,3.61
+EMP-1923,Jeffrey,Coleman,Male,27,Gen Z (1997-2012),Asian,Divorced,Master's,6,601,Remote,"San Francisco, CA",2023-08-14,Active,,,,66700,38.5,3.21
+EMP-1924,Marilyn,Watson,Female,29,Millennials (1981-1996),Hispanic/Latino,Married,Master's,1,102,Hybrid,"San Francisco, CA",2025-12-04,Active,,,,104100,10.8,0.9
+EMP-1925,Timothy,Mitchell,Non-Binary,32,Millennials (1981-1996),Black/African American,Divorced,Master's,1,102,On-site,"New York, NY",2025-10-26,Active,,,,117500,12.1,1.01
+EMP-1926,Michelle,Moore,Female,27,Gen Z (1997-2012),White,Divorced,Master's,1,101,Hybrid,"Austin, TX",2024-01-03,Active,,,,72800,33.8,2.82
+EMP-1927,Richard,Bailey,Male,22,Gen Z (1997-2012),White,Single,Master's,1,101,Remote,"San Francisco, CA",2025-05-26,Active,,,,76300,17.1,1.43
+EMP-1928,Sean,Lee,Male,26,Gen Z (1997-2012),Black/African American,Single,Master's,1,102,On-site,"Austin, TX",2023-07-15,Active,,,,94200,39.5,3.29
+EMP-1929,Andrew,Gutierrez,Male,35,Millennials (1981-1996),White,Single,Master's,6,602,On-site,"Austin, TX",2020-12-16,Active,,,,106600,70.4,5.87
+EMP-1930,Terry,Walker,Male,25,Gen Z (1997-2012),White,Single,Master's,3,301,Hybrid,"New York, NY",2021-02-02,Active,,,,59100,68.8,5.74
+EMP-1931,Russell,Cruz,Male,29,Millennials (1981-1996),Hispanic/Latino,Married,Associate's,2,201,Hybrid,"Seattle, WA",2025-09-12,Active,,,,60000,13.5,1.13
+EMP-1932,Betty,Mitchell,Female,24,Gen Z (1997-2012),Black/African American,Single,Master's,3,301,Hybrid,"San Francisco, CA",2021-05-13,Active,,,,56300,65.5,5.46
+EMP-1933,Kayla,Sullivan,Female,27,Gen Z (1997-2012),White,Divorced,Master's,3,301,Hybrid,"London, UK",2022-10-21,Active,,,,60200,48.3,4.02
+EMP-1934,Jonathan,Mendoza,Male,26,Gen Z (1997-2012),White,Divorced,Bachelor's,7,701,Hybrid,"San Francisco, CA",2025-02-17,Active,,,,52100,20.3,1.69
+EMP-1935,Amber,Diaz,Female,27,Gen Z (1997-2012),Hispanic/Latino,Divorced,Bachelor's,3,301,Remote,"Austin, TX",2021-10-11,Active,,,,56400,60.6,5.05
+EMP-1936,Matthew,Watson,Male,37,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,5,502,Remote,"New York, NY",2022-11-06,Active,,,,92800,47.7,3.98
+EMP-1937,Austin,Nguyen,Male,23,Gen Z (1997-2012),Asian,Married,Master's,1,101,Remote,"Austin, TX",2026-01-08,Active,,,,73000,9.7,0.8
+EMP-1938,Jacob,Evans,Male,32,Millennials (1981-1996),White,Divorced,Doctorate,2,203,Remote,"London, UK",2023-07-18,Active,,,,138300,39.4,3.28
+EMP-1939,Daniel,Coleman,Male,35,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,3,302,On-site,"New York, NY",2022-10-15,Active,,,,73000,48.5,4.04
+EMP-1940,Randy,Cox,Male,30,Millennials (1981-1996),Asian,Single,Master's,3,302,Hybrid,"San Francisco, CA",2024-08-24,Active,,,,82100,26.2,2.18
+EMP-1941,Arthur,Bailey,Male,33,Millennials (1981-1996),Black/African American,Single,Bachelor's,4,402,Hybrid,"Seattle, WA",2023-09-07,Active,,,,76400,37.7,3.14
+EMP-1942,Deborah,Sullivan,Female,29,Millennials (1981-1996),Hispanic/Latino,Married,Master's,2,201,Remote,"San Francisco, CA",2020-10-22,Active,,,,54300,72.2,6.02
+EMP-1943,Madison,Clark,Female,56,Gen X (1965-1980),Asian,Married,Bachelor's,1,104,Hybrid,"San Francisco, CA",2025-01-04,Active,,,,189600,21.8,1.82
+EMP-1944,Ethan,Chavez,Male,29,Millennials (1981-1996),Two or More Races,Married,Master's,1,101,Remote,"New York, NY",2024-06-17,Terminated,2026-05-14,Voluntary,Company Culture / Leadership,69500,22.9,1.91
+EMP-1945,Ryan,Sullivan,Male,30,Millennials (1981-1996),White,Married,Doctorate,1,102,Hybrid,"Seattle, WA",2022-06-24,Active,,,,117600,52.2,4.35
+EMP-1946,Joseph,Alvarez,Male,31,Millennials (1981-1996),Asian,Married,Bachelor's,3,303,Remote,"San Francisco, CA",2025-09-21,Active,,,,116600,13.2,1.1
+EMP-1947,Amanda,Russell,Female,30,Millennials (1981-1996),Asian,Divorced,Bachelor's,2,202,Hybrid,"Austin, TX",2025-08-17,Terminated,2026-09-01,Voluntary,Work-Life Balance / Burnout,101300,12.5,1.04
+EMP-1948,Gabriel,Ramos,Male,25,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Remote,"London, UK",2023-06-28,Active,,,,79700,40.0,3.34
+EMP-1949,Beverly,Robinson,Female,41,Millennials (1981-1996),Two or More Races,Divorced,Master's,2,205,Hybrid,"Chicago, IL",2021-05-14,Active,,,,215000,65.5,5.46
+EMP-1950,Jeremy,Rodriguez,Male,47,Gen X (1965-1980),Asian,Married,Bachelor's,1,105,On-site,"Chicago, IL",2021-03-18,Active,,,,255200,67.4,5.62
+EMP-1951,Ronald,Martin,Male,23,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,1,101,Hybrid,"Austin, TX",2023-08-14,Active,,,,80600,38.5,3.21
+EMP-1952,Jesse,Ramirez,Male,29,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,3,301,Hybrid,"Chicago, IL",2024-07-11,Active,,,,54700,27.6,2.3
+EMP-1953,Amy,Flores,Female,25,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Hybrid,"San Francisco, CA",2024-10-24,Active,,,,62600,24.1,2.01
+EMP-1954,Doris,Jimenez,Female,39,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Hybrid,"New York, NY",2020-06-18,Active,,,,82300,76.4,6.36
+EMP-1955,Abigail,Cook,Female,46,Gen X (1965-1980),Two or More Races,Single,Bachelor's,6,603,On-site,"New York, NY",2022-05-05,Active,,,,152500,53.8,4.48
+EMP-1956,Jennifer,Johnson,Female,35,Millennials (1981-1996),White,Divorced,Bachelor's,1,102,Hybrid,"Chicago, IL",2022-05-12,Active,,,,98200,53.6,4.47
+EMP-1957,Ethan,Rodriguez,Male,27,Gen Z (1997-2012),Two or More Races,Divorced,Doctorate,2,201,On-site,"New York, NY",2023-10-03,Terminated,2025-03-19,Voluntary,Work-Life Balance / Burnout,60500,17.5,1.46
+EMP-1958,Samantha,Lewis,Female,28,Gen Z (1997-2012),White,Married,Master's,2,202,Remote,"London, UK",2020-07-13,Active,,,,88300,75.5,6.29
+EMP-1959,Stephanie,Brown,Female,38,Millennials (1981-1996),White,Married,Master's,1,102,Hybrid,"London, UK",2023-05-04,Active,,,,109500,41.9,3.49
+EMP-1960,Ruth,Gutierrez,Female,41,Millennials (1981-1996),Asian,Single,Master's,2,203,Hybrid,"New York, NY",2023-11-05,Active,,,,122500,35.8,2.98
+EMP-1961,Steven,Evans,Male,27,Gen Z (1997-2012),White,Single,Master's,1,102,Hybrid,"Austin, TX",2025-07-28,Active,,,,113900,15.0,1.25
+EMP-1962,Amy,Morales,Female,27,Gen Z (1997-2012),Black/African American,Married,Doctorate,2,202,Remote,"San Francisco, CA",2023-06-04,Active,,,,89600,40.8,3.4
+EMP-1963,Austin,Cooper,Male,39,Millennials (1981-1996),Hispanic/Latino,Single,Doctorate,7,703,Hybrid,"San Francisco, CA",2022-04-10,Active,,,,112700,54.6,4.55
+EMP-1964,Betty,Jones,Female,52,Gen X (1965-1980),Asian,Single,Bachelor's,6,603,Hybrid,"San Francisco, CA",2023-12-02,Active,,,,145500,34.9,2.91
+EMP-1965,Matthew,Collins,Male,30,Millennials (1981-1996),White,Divorced,Master's,7,702,On-site,"Austin, TX",2024-03-26,Active,,,,70800,31.1,2.59
+EMP-1966,Ethan,Parker,Male,51,Gen X (1965-1980),Hispanic/Latino,Divorced,Bachelor's,1,103,On-site,"Austin, TX",2022-11-22,Active,,,,147800,47.2,3.93
+EMP-1967,Larry,Wilson,Male,29,Millennials (1981-1996),White,Divorced,Bachelor's,7,702,Remote,"London, UK",2021-02-07,Active,,,,73900,68.7,5.72
+EMP-1968,Denise,Reyes,Female,25,Gen Z (1997-2012),Black/African American,Single,Master's,1,101,Hybrid,"Austin, TX",2024-01-22,Active,,,,83000,33.2,2.77
+EMP-1969,Jose,Cook,Male,29,Millennials (1981-1996),Asian,Divorced,Bachelor's,2,202,Remote,"Seattle, WA",2022-05-11,Terminated,2023-01-02,Voluntary,Work-Life Balance / Burnout,92400,7.8,0.65
+EMP-1970,Emily,Lee,Female,25,Gen Z (1997-2012),Hispanic/Latino,Married,Bachelor's,2,201,Remote,"Chicago, IL",2022-12-21,Active,,,,63500,46.3,3.85
+EMP-1971,Ann,Perry,Female,23,Gen Z (1997-2012),Two or More Races,Single,Bachelor's,3,301,Hybrid,"London, UK",2025-07-12,Active,,,,56300,15.6,1.3
+EMP-1972,Eric,Kim,Male,37,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,2,203,Remote,"London, UK",2022-09-13,Active,,,,140600,49.5,4.13
+EMP-1973,Martha,Coleman,Female,29,Millennials (1981-1996),White,Married,Bachelor's,2,202,On-site,"San Francisco, CA",2021-08-13,Active,,,,99000,62.5,5.21
+EMP-1974,Billy,Cruz,Male,24,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,2,201,Remote,"London, UK",2026-02-08,Active,,,,57600,8.6,0.72
+EMP-1975,Marilyn,Parker,Non-Binary,22,Gen Z (1997-2012),Black/African American,Single,Bachelor's,4,401,On-site,"San Francisco, CA",2023-01-04,Terminated,2024-03-25,Voluntary,Relocation / Personal Reasons,53000,14.7,1.22
+EMP-1976,Martha,Ward,Female,37,Millennials (1981-1996),Asian,Married,Master's,2,203,Remote,"Austin, TX",2022-10-07,Active,,,,126200,48.7,4.06
+EMP-1977,Carolyn,Miller,Female,55,Gen X (1965-1980),Black/African American,Married,Master's,2,204,Hybrid,"Austin, TX",2020-12-24,Active,,,,176300,70.1,5.85
+EMP-1978,Jessica,Campbell,Female,22,Gen Z (1997-2012),Black/African American,Single,Doctorate,1,101,Remote,"Austin, TX",2023-10-07,Terminated,2025-09-12,Voluntary,Relocation / Personal Reasons,78400,23.2,1.93
+EMP-1979,Alice,Peterson,Female,25,Gen Z (1997-2012),White,Single,Associate's,1,101,Hybrid,"Austin, TX",2026-02-16,Active,,,,83900,8.4,0.7
+EMP-1980,Olivia,Peterson,Female,32,Millennials (1981-1996),Hispanic/Latino,Single,Associate's,2,203,Hybrid,"London, UK",2024-09-19,Terminated,2026-04-12,Involuntary,Performance Standards Not Met,132200,18.7,1.56
+EMP-1981,Amber,Ross,Female,41,Millennials (1981-1996),Two or More Races,Divorced,Bachelor's,6,604,On-site,"San Francisco, CA",2023-05-04,Active,,,,196100,41.9,3.49
+EMP-1982,Anthony,Flores,Male,25,Gen Z (1997-2012),White,Single,Master's,2,201,Hybrid,"Austin, TX",2021-02-22,Active,,,,64300,68.2,5.68
+EMP-1983,Frank,Evans,Male,35,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,2,202,On-site,"New York, NY",2022-03-11,Active,,,,82000,55.6,4.64
+EMP-1984,Theresa,Richardson,Female,29,Millennials (1981-1996),Asian,Married,Bachelor's,1,101,Hybrid,"New York, NY",2023-02-22,Active,,,,77300,44.2,3.68
+EMP-1985,Sharon,Miller,Female,39,Millennials (1981-1996),White,Single,Master's,1,102,On-site,"New York, NY",2021-08-08,Active,,,,114000,62.7,5.22
+EMP-1986,Jordan,James,Male,26,Gen Z (1997-2012),White,Divorced,Doctorate,1,101,Remote,"Austin, TX",2023-06-19,Active,,,,74400,40.3,3.36
+EMP-1987,Logan,Robinson,Male,37,Millennials (1981-1996),Asian,Single,Bachelor's,3,303,On-site,"New York, NY",2020-04-11,Active,,,,128500,78.6,6.55
+EMP-1988,Samantha,Sanchez,Female,22,Gen Z (1997-2012),White,Married,Bachelor's,7,701,Hybrid,"Austin, TX",2023-09-26,Active,,,,53900,37.1,3.09
+EMP-1989,Frances,Foster,Female,35,Millennials (1981-1996),Two or More Races,Divorced,Master's,3,302,Hybrid,"San Francisco, CA",2022-10-13,Terminated,2024-08-16,Involuntary,Performance Standards Not Met,86000,22.1,1.84
+EMP-1990,Joan,Jones,Female,49,Gen X (1965-1980),Asian,Divorced,Bachelor's,1,103,Hybrid,"San Francisco, CA",2022-09-27,Terminated,2024-12-24,Voluntary,Work-Life Balance / Burnout,160900,26.9,2.24
+EMP-1991,Arthur,Harris,Male,40,Millennials (1981-1996),White,Married,Associate's,7,703,Hybrid,"New York, NY",2024-03-24,Active,,,,90700,31.2,2.6
+EMP-1992,Jeremy,Watson,Male,28,Gen Z (1997-2012),Black/African American,Single,Master's,1,101,On-site,"New York, NY",2024-05-15,Active,,,,71400,29.5,2.46
+EMP-1993,Eugene,Jimenez,Male,33,Millennials (1981-1996),White,Divorced,Bachelor's,3,302,Hybrid,"Chicago, IL",2020-07-22,Active,,,,84900,75.2,6.27
+EMP-1994,Ruth,Sanchez,Female,25,Gen Z (1997-2012),White,Single,Doctorate,1,101,On-site,"Austin, TX",2024-05-23,Active,,,,78900,29.2,2.43
+EMP-1995,Walter,Smith,Male,22,Gen Z (1997-2012),Two or More Races,Married,Bachelor's,7,701,On-site,"New York, NY",2024-02-11,Active,,,,55600,32.6,2.71
+EMP-1996,Helen,Roberts,Female,43,Millennials (1981-1996),White,Single,Bachelor's,2,204,Hybrid,"Austin, TX",2024-04-08,Active,,,,165300,30.7,2.56
+EMP-1997,Aaron,Brown,Male,28,Gen Z (1997-2012),Black/African American,Married,Associate's,6,602,Hybrid,"San Francisco, CA",2020-02-25,Active,,,,98700,80.1,6.67
+EMP-1998,Laura,Kelly,Female,27,Gen Z (1997-2012),White,Divorced,Bachelor's,3,302,Remote,"New York, NY",2023-12-16,Active,,,,89100,34.4,2.87
+EMP-1999,Kathryn,Rogers,Female,22,Gen Z (1997-2012),Asian,Married,Bachelor's,1,101,Remote,"Austin, TX",2025-10-23,Active,,,,82300,12.2,1.02
+EMP-2000,Alan,Smith,Male,36,Millennials (1981-1996),White,Divorced,Associate's,1,102,Hybrid,"Chicago, IL",2022-04-22,Active,,,,97800,54.2,4.52
+EMP-2001,Heather,Garcia,Female,42,Millennials (1981-1996),White,Divorced,Bachelor's,1,103,On-site,"Chicago, IL",2021-10-01,Active,,,,152700,60.9,5.08
+EMP-2002,Cynthia,Williams,Female,28,Gen Z (1997-2012),Asian,Married,Bachelor's,1,101,Hybrid,"Austin, TX",2023-04-10,Active,,,,82100,42.6,3.55
+EMP-2003,Noah,Perez,Male,28,Gen Z (1997-2012),Black/African American,Divorced,Master's,1,101,Hybrid,"San Francisco, CA",2020-01-22,Active,,,,81900,81.2,6.77
+EMP-2004,Adam,White,Male,42,Millennials (1981-1996),White,Single,Bachelor's,2,204,Remote,"San Francisco, CA",2021-10-26,Active,,,,178000,60.1,5.01
+EMP-2005,Gabriel,Davis,Male,61,Boomers (1946-1964),Asian,Single,Bachelor's,1,104,Hybrid,"San Francisco, CA",2024-10-04,Active,,,,190800,24.8,2.07
+EMP-2006,Heather,Richardson,Female,60,Boomers (1946-1964),Asian,Single,Master's,1,104,Hybrid,"London, UK",2024-05-04,Active,,,,186100,29.8,2.49
+EMP-2007,Linda,Gonzalez,Female,40,Millennials (1981-1996),Asian,Divorced,Bachelor's,1,102,On-site,"New York, NY",2020-03-01,Active,,,,96000,79.9,6.66
+EMP-2008,Carol,Green,Female,27,Gen Z (1997-2012),White,Divorced,High School Diploma,2,202,Hybrid,"Austin, TX",2020-08-25,Active,,,,97900,74.1,6.18
+EMP-2009,Sandra,Foster,Female,28,Gen Z (1997-2012),Asian,Single,Master's,2,201,Remote,"San Francisco, CA",2025-08-12,Active,,,,62200,14.6,1.21
+EMP-2010,Steven,Wood,Male,31,Millennials (1981-1996),White,Single,Bachelor's,3,302,Hybrid,"New York, NY",2022-02-18,Terminated,2023-03-06,Voluntary,Work-Life Balance / Burnout,84600,12.5,1.04
+EMP-2011,Sarah,Ortiz,Female,36,Millennials (1981-1996),Asian,Married,Doctorate,3,303,On-site,"Seattle, WA",2024-09-26,Active,,,,119400,25.1,2.09
+EMP-2012,Steven,Watson,Male,33,Millennials (1981-1996),Asian,Divorced,Bachelor's,3,302,Hybrid,"Chicago, IL",2022-02-21,Terminated,2022-06-05,Voluntary,Pursuing Higher Education,74600,3.4,0.28
+EMP-2013,Marilyn,Nelson,Female,43,Millennials (1981-1996),White,Married,Bachelor's,2,204,On-site,"New York, NY",2022-12-22,Active,,,,187200,46.2,3.85
+EMP-2014,Joe,Johnson,Male,34,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,3,302,On-site,"New York, NY",2025-09-09,Active,,,,85000,13.6,1.14
+EMP-2015,Michael,Kelly,Male,26,Gen Z (1997-2012),Hispanic/Latino,Divorced,Bachelor's,2,202,Hybrid,"Chicago, IL",2026-04-06,Active,,,,83500,6.8,0.56
+EMP-2016,Kyle,Flores,Male,39,Millennials (1981-1996),White,Single,Bachelor's,3,302,Hybrid,"Austin, TX",2021-02-11,Terminated,2022-06-08,Voluntary,Better Compensation & Benefits,81500,15.8,1.32
+EMP-2017,Walter,Stewart,Male,38,Millennials (1981-1996),White,Married,Bachelor's,2,202,Hybrid,"Seattle, WA",2021-08-17,Active,,,,96000,62.4,5.2
+EMP-2018,Kyle,Murphy,Male,37,Millennials (1981-1996),Two or More Races,Married,Master's,6,602,Remote,"Austin, TX",2021-12-27,Terminated,2024-08-02,Voluntary,Pursuing Higher Education,107500,31.2,2.6
+EMP-2019,Frank,Jones,Male,27,Gen Z (1997-2012),Asian,Single,Bachelor's,6,602,Remote,"New York, NY",2021-08-27,Active,,,,105500,62.1,5.17
+EMP-2020,Mark,Johnson,Male,24,Gen Z (1997-2012),White,Single,Bachelor's,6,601,Remote,"San Francisco, CA",2024-08-07,Active,,,,71700,26.7,2.23
+EMP-2021,Willie,Hall,Male,40,Millennials (1981-1996),Asian,Divorced,Associate's,1,104,Hybrid,"Austin, TX",2024-07-10,Active,,,,189100,27.6,2.3
+EMP-2022,Theresa,James,Female,29,Millennials (1981-1996),Asian,Single,Master's,4,402,Remote,"London, UK",2025-04-24,Active,,,,87000,18.2,1.51
+EMP-2023,Kevin,Chavez,Male,38,Millennials (1981-1996),White,Divorced,Bachelor's,5,502,On-site,"Seattle, WA",2024-02-10,Active,,,,84100,32.6,2.72
+EMP-2024,Judy,Green,Female,51,Gen X (1965-1980),Asian,Divorced,Bachelor's,1,103,On-site,"San Francisco, CA",2022-02-18,Active,,,,138200,56.3,4.69
+EMP-2025,Steven,Lopez,Male,48,Gen X (1965-1980),Asian,Single,Bachelor's,4,404,Remote,"San Francisco, CA",2023-06-08,Terminated,2025-06-11,Voluntary,Company Culture / Leadership,167000,24.1,2.01
+EMP-2026,Patricia,Sanchez,Female,22,Gen Z (1997-2012),Asian,Single,Master's,5,501,Hybrid,"Chicago, IL",2026-03-24,Active,,,,60900,7.2,0.6
+EMP-2027,Bradley,White,Male,52,Gen X (1965-1980),Black/African American,Married,Master's,2,205,Remote,"San Francisco, CA",2020-10-27,Active,,,,259700,72.0,6.0
+EMP-2028,Kenneth,Wright,Male,37,Millennials (1981-1996),White,Divorced,Bachelor's,2,202,Hybrid,"San Francisco, CA",2025-05-14,Active,,,,93900,17.5,1.46
+EMP-2029,Arthur,White,Male,26,Gen Z (1997-2012),Black/African American,Single,Master's,4,402,Hybrid,"New York, NY",2025-07-12,Active,,,,82600,15.6,1.3
+EMP-2030,Willie,Brown,Non-Binary,36,Millennials (1981-1996),White,Married,Master's,4,402,On-site,"San Francisco, CA",2025-12-14,Active,,,,83200,10.5,0.87
+EMP-2031,Diana,Young,Female,25,Gen Z (1997-2012),Asian,Married,Bachelor's,5,501,Remote,"Chicago, IL",2024-07-16,Active,,,,64800,27.4,2.29
+EMP-2032,Frank,Nelson,Male,46,Gen X (1965-1980),White,Single,Master's,5,503,Hybrid,"New York, NY",2023-11-02,Active,,,,137400,35.9,2.99
+EMP-2033,Frances,Allen,Female,58,Gen X (1965-1980),Hispanic/Latino,Married,Master's,1,104,Hybrid,"San Francisco, CA",2020-10-13,Active,,,,197900,72.5,6.04
+EMP-2034,Karen,Turner,Non-Binary,50,Gen X (1965-1980),White,Single,Master's,5,503,Hybrid,"San Francisco, CA",2022-04-17,Active,,,,143700,54.4,4.53
+EMP-2035,Jason,Kim,Male,51,Gen X (1965-1980),Hispanic/Latino,Married,Bachelor's,1,103,Hybrid,"Chicago, IL",2020-01-10,Active,,,,154900,81.6,6.8
+EMP-2036,Sandra,Turner,Female,29,Millennials (1981-1996),White,Divorced,Master's,2,201,Hybrid,"Austin, TX",2024-02-16,Terminated,2024-12-13,Voluntary,Relocation / Personal Reasons,56200,9.9,0.82
+EMP-2037,Carolyn,Price,Female,26,Gen Z (1997-2012),Hispanic/Latino,Single,High School Diploma,6,601,Remote,"Austin, TX",2021-08-22,Active,,,,71000,62.2,5.19
+EMP-2038,Rachel,Collins,Female,26,Gen Z (1997-2012),White,Divorced,Bachelor's,3,302,Hybrid,"Chicago, IL",2021-03-09,Active,,,,78500,67.7,5.64
+EMP-2039,Dylan,Miller,Male,29,Millennials (1981-1996),Asian,Single,Doctorate,2,201,Hybrid,"Austin, TX",2021-01-19,Active,,,,63500,69.3,5.77
+EMP-2040,Megan,Bailey,Female,35,Millennials (1981-1996),White,Married,Master's,5,502,Hybrid,"Austin, TX",2020-03-05,Terminated,2022-01-10,Voluntary,Pursuing Higher Education,86900,22.2,1.85
+EMP-2041,Emma,Cook,Female,24,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,5,501,Remote,"Chicago, IL",2021-10-19,Active,,,,60600,60.3,5.03
+EMP-2042,Katherine,Morgan,Female,51,Gen X (1965-1980),Two or More Races,Divorced,Bachelor's,7,703,Hybrid,"Chicago, IL",2023-11-08,Terminated,2026-08-17,Involuntary,Performance Standards Not Met,109600,33.3,2.77
+EMP-2043,Edward,Scott,Male,28,Gen Z (1997-2012),White,Married,Bachelor's,6,601,Remote,"London, UK",2020-09-20,Active,,,,70100,73.3,6.11
+EMP-2044,Cheryl,Anderson,Female,26,Gen Z (1997-2012),Asian,Married,Bachelor's,1,102,Hybrid,"San Francisco, CA",2023-01-18,Active,,,,103800,45.3,3.78
+EMP-2045,Heather,Reyes,Female,31,Millennials (1981-1996),White,Married,Doctorate,2,203,Remote,"Seattle, WA",2023-07-11,Active,,,,138400,39.6,3.3
+EMP-2046,Willie,Miller,Male,37,Millennials (1981-1996),White,Married,Bachelor's,2,202,Hybrid,"New York, NY",2021-04-04,Terminated,2024-02-01,Involuntary,Violation of Company Policy,97100,33.9,2.83
+EMP-2047,Peter,Thompson,Male,23,Gen Z (1997-2012),Black/African American,Single,Bachelor's,6,601,Hybrid,"Chicago, IL",2024-05-05,Active,,,,73100,29.8,2.48
+EMP-2048,Brittany,Bailey,Female,23,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,6,601,Remote,"Seattle, WA",2022-03-04,Active,,,,71500,55.9,4.65
+EMP-2049,Ethan,Parker,Male,62,Boomers (1946-1964),Hispanic/Latino,Single,Bachelor's,5,504,Hybrid,"New York, NY",2020-02-24,Active,,,,194900,80.1,6.68
+EMP-2050,Nicholas,Martinez,Male,23,Gen Z (1997-2012),White,Married,Master's,1,101,Hybrid,"New York, NY",2021-01-10,Terminated,2022-10-23,Involuntary,Organizational Restructuring / Layoff,78600,21.4,1.78
+EMP-2051,Abigail,Johnson,Female,36,Millennials (1981-1996),White,Married,Bachelor's,1,103,On-site,"Austin, TX",2024-07-20,Active,,,,157200,27.3,2.28
+EMP-2052,Danielle,Thomas,Female,25,Gen Z (1997-2012),Asian,Single,Bachelor's,3,301,Remote,"New York, NY",2023-11-26,Active,,,,57400,35.1,2.92
+EMP-2053,Janice,Powell,Female,24,Gen Z (1997-2012),Black/African American,Single,Bachelor's,1,101,Hybrid,"San Francisco, CA",2024-01-20,Active,,,,69800,33.3,2.77
+EMP-2054,Hannah,Nelson,Female,51,Gen X (1965-1980),White,Single,Bachelor's,2,205,Remote,"Seattle, WA",2024-12-06,Active,,,,223400,22.7,1.89
+EMP-2055,Joe,Cook,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Remote,"San Francisco, CA",2023-10-23,Terminated,2026-01-19,Voluntary,Pursuing Higher Education,56200,26.9,2.24
+EMP-2056,Kenneth,Lopez,Male,25,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Remote,"New York, NY",2024-07-14,Active,,,,78400,27.5,2.29
+EMP-2057,Roy,Gomez,Male,26,Gen Z (1997-2012),Hispanic/Latino,Divorced,Master's,1,101,Remote,"Seattle, WA",2024-11-18,Active,,,,78900,23.3,1.94
+EMP-2058,James,Cruz,Male,57,Gen X (1965-1980),Black/African American,Single,Bachelor's,3,304,Remote,"Austin, TX",2025-09-12,Active,,,,176000,13.5,1.13
+EMP-2059,Christian,Bell,Male,23,Gen Z (1997-2012),White,Single,Associate's,3,301,Remote,"Austin, TX",2020-11-07,Terminated,2023-01-21,Voluntary,Work-Life Balance / Burnout,57000,26.4,2.2
+EMP-2060,Hannah,Hill,Female,50,Gen X (1965-1980),Asian,Single,Master's,1,104,Hybrid,"New York, NY",2024-05-14,Active,,,,197500,29.5,2.46
+EMP-2061,Nancy,Johnson,Female,24,Gen Z (1997-2012),Asian,Single,Master's,1,101,Hybrid,"Austin, TX",2021-11-25,Active,,,,72300,59.1,4.93
+EMP-2062,Ann,Cruz,Female,32,Millennials (1981-1996),Asian,Divorced,Master's,7,703,Remote,"Austin, TX",2024-06-13,Active,,,,112600,28.5,2.38
+EMP-2063,Judy,Williams,Female,40,Millennials (1981-1996),Asian,Single,Master's,6,602,Remote,"New York, NY",2020-11-01,Active,,,,97600,71.9,5.99
+EMP-2064,Ann,Reed,Non-Binary,23,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,2,201,On-site,"New York, NY",2023-08-25,Active,,,,60400,38.1,3.18
+EMP-2065,Richard,Phillips,Male,48,Gen X (1965-1980),White,Married,Master's,4,403,Hybrid,"San Francisco, CA",2024-07-16,Active,,,,126000,27.4,2.29
+EMP-2066,Margaret,Ward,Female,54,Gen X (1965-1980),White,Divorced,Master's,1,104,Hybrid,"London, UK",2022-05-18,Active,,,,175000,53.4,4.45
+EMP-2067,Pamela,Ross,Female,22,Gen Z (1997-2012),Two or More Races,Married,Bachelor's,3,301,Hybrid,"New York, NY",2023-02-25,Active,,,,54800,44.1,3.67
+EMP-2068,David,Richardson,Male,38,Millennials (1981-1996),Black/African American,Single,Master's,3,303,Hybrid,"Austin, TX",2025-02-21,Active,,,,113300,20.2,1.68
+EMP-2069,Sean,Long,Male,46,Gen X (1965-1980),White,Single,Bachelor's,2,204,Hybrid,"New York, NY",2020-06-09,Active,,,,173800,76.6,6.39
+EMP-2070,Joseph,Ward,Male,30,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,2,202,Remote,"San Francisco, CA",2023-07-23,Active,,,,82200,39.2,3.27
+EMP-2071,Joshua,Lee,Male,58,Gen X (1965-1980),White,Married,Bachelor's,2,204,Hybrid,"Austin, TX",2024-08-06,Active,,,,169700,26.7,2.23
+EMP-2072,Samuel,Sanders,Male,37,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,3,303,Remote,"San Francisco, CA",2020-02-06,Active,,,,116000,80.7,6.73
+EMP-2073,Stephen,Miller,Male,29,Millennials (1981-1996),White,Divorced,Bachelor's,3,301,On-site,"San Francisco, CA",2025-05-17,Active,,,,58400,17.4,1.45
+EMP-2074,Patrick,Lopez,Male,27,Gen Z (1997-2012),Black/African American,Divorced,Bachelor's,7,701,Hybrid,"Chicago, IL",2025-12-09,Active,,,,56000,10.6,0.89
+EMP-2075,Paul,James,Male,46,Gen X (1965-1980),White,Married,Bachelor's,1,103,Remote,"San Francisco, CA",2025-11-01,Active,,,,153200,11.9,0.99
+EMP-2076,Jose,Diaz,Male,50,Gen X (1965-1980),Black/African American,Single,Bachelor's,1,103,Remote,"Austin, TX",2023-08-24,Active,,,,136600,38.2,3.18
+EMP-2077,Megan,Brooks,Female,29,Millennials (1981-1996),Black/African American,Single,Master's,2,202,Hybrid,"San Francisco, CA",2023-11-26,Active,,,,95500,35.1,2.92
+EMP-2078,Karen,Wilson,Female,54,Gen X (1965-1980),Asian,Single,Bachelor's,3,304,Hybrid,"San Francisco, CA",2020-11-15,Active,,,,156600,71.4,5.95
+EMP-2079,William,Phillips,Male,26,Gen Z (1997-2012),Asian,Married,Bachelor's,7,701,Hybrid,"New York, NY",2024-09-07,Active,,,,59400,25.7,2.14
+EMP-2080,Patricia,Rogers,Female,39,Millennials (1981-1996),White,Married,Master's,4,403,On-site,"Austin, TX",2026-02-16,Active,,,,125000,8.4,0.7
+EMP-2081,Lisa,Martin,Female,41,Millennials (1981-1996),White,Divorced,Bachelor's,1,104,Hybrid,"New York, NY",2026-02-16,Active,,,,173500,8.4,0.7
+EMP-2082,Jeffrey,Ortiz,Male,32,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,1,103,Hybrid,"Austin, TX",2024-05-10,Active,,,,150700,29.6,2.47
+EMP-2083,Brenda,Bailey,Female,32,Millennials (1981-1996),Asian,Divorced,Master's,5,502,On-site,"New York, NY",2024-11-28,Terminated,2026-07-07,Involuntary,Organizational Restructuring / Layoff,102600,19.3,1.6
+EMP-2084,Patrick,Perry,Male,39,Millennials (1981-1996),White,Single,Master's,7,703,Hybrid,"Austin, TX",2024-02-01,Active,,,,100700,32.9,2.74
+EMP-2085,Tyler,Bell,Male,22,Gen Z (1997-2012),Two or More Races,Single,Master's,1,101,Hybrid,"Chicago, IL",2020-06-28,Active,,,,73500,76.0,6.34
+EMP-2086,Marie,Brown,Female,27,Gen Z (1997-2012),Hispanic/Latino,Single,Doctorate,1,101,Hybrid,"New York, NY",2020-10-16,Terminated,2022-08-31,Voluntary,Career Advancement / Growth,69100,22.5,1.87
+EMP-2087,Keith,Nguyen,Male,31,Millennials (1981-1996),Asian,Married,Bachelor's,4,402,Hybrid,"New York, NY",2022-09-12,Active,,,,84500,49.5,4.13
+EMP-2088,Rachel,Clark,Female,36,Millennials (1981-1996),White,Single,Bachelor's,1,102,Hybrid,"San Francisco, CA",2025-12-14,Active,,,,102500,10.5,0.87
+EMP-2089,Gregory,Ortiz,Male,52,Gen X (1965-1980),Hispanic/Latino,Single,Master's,7,703,Remote,"Austin, TX",2025-09-28,Terminated,2026-07-03,Voluntary,Pursuing Higher Education,105800,9.1,0.76
+EMP-2090,Maria,Bailey,Female,29,Millennials (1981-1996),White,Single,Bachelor's,3,301,Remote,"Chicago, IL",2024-12-06,Active,,,,59800,22.7,1.89
+EMP-2091,Diana,Smith,Female,28,Gen Z (1997-2012),Asian,Single,Bachelor's,4,402,Remote,"Seattle, WA",2021-08-12,Active,,,,92800,62.6,5.21
+EMP-2092,Jennifer,Baker,Female,28,Gen Z (1997-2012),White,Divorced,Doctorate,1,101,Remote,"New York, NY",2022-03-21,Terminated,2024-12-03,Voluntary,Career Advancement / Growth,77200,32.5,2.7
+EMP-2093,Anna,Hall,Female,22,Gen Z (1997-2012),White,Married,Bachelor's,6,601,Hybrid,"Austin, TX",2025-09-07,Active,,,,64600,13.7,1.14
+EMP-2094,Marilyn,King,Female,30,Millennials (1981-1996),Two or More Races,Divorced,Bachelor's,3,302,Hybrid,"Austin, TX",2024-04-06,Active,,,,73200,30.8,2.56
+EMP-2095,Elijah,Lee,Male,32,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,7,703,Remote,"New York, NY",2021-01-07,Active,,,,98100,69.7,5.81
+EMP-2096,David,Cox,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Hybrid,"Austin, TX",2022-05-22,Active,,,,75800,53.3,4.44
+EMP-2097,Anthony,Sullivan,Male,40,Millennials (1981-1996),Asian,Single,Bachelor's,2,202,Remote,"San Francisco, CA",2023-09-08,Active,,,,79700,37.7,3.14
+EMP-2098,Kayla,Wright,Female,26,Gen Z (1997-2012),Hispanic/Latino,Single,Master's,1,101,Hybrid,"Austin, TX",2025-08-10,Active,,,,77900,14.6,1.22
+EMP-2099,Nancy,Bailey,Female,22,Gen Z (1997-2012),White,Single,Doctorate,3,301,Hybrid,"London, UK",2024-03-18,Active,,,,57500,31.4,2.61
+EMP-2100,Kevin,Lewis,Male,34,Millennials (1981-1996),White,Divorced,Bachelor's,6,602,Hybrid,"London, UK",2024-09-23,Active,,,,122600,25.2,2.1
+EMP-2101,Jean,Cook,Female,40,Millennials (1981-1996),Asian,Married,Associate's,2,203,Hybrid,"Chicago, IL",2021-02-09,Active,,,,130600,68.6,5.72
+EMP-2102,Martha,Cooper,Female,28,Gen Z (1997-2012),Hispanic/Latino,Married,Master's,1,101,Remote,"New York, NY",2022-07-11,Active,,,,77400,51.6,4.3
+EMP-2103,Ethan,Alvarez,Male,40,Millennials (1981-1996),Two or More Races,Single,High School Diploma,2,202,Hybrid,"Austin, TX",2025-07-19,Active,,,,94300,15.3,1.28
+EMP-2104,Timothy,Price,Male,22,Gen Z (1997-2012),White,Single,Master's,2,201,Hybrid,"New York, NY",2025-02-22,Active,,,,62300,20.2,1.68
+EMP-2105,Roger,Howard,Male,26,Gen Z (1997-2012),White,Divorced,Master's,1,102,Remote,"Seattle, WA",2024-01-16,Active,,,,95000,33.4,2.78
+EMP-2106,Sophia,Rodriguez,Female,57,Gen X (1965-1980),Black/African American,Married,Bachelor's,2,204,Remote,"Austin, TX",2024-12-26,Terminated,2026-06-02,Voluntary,Pursuing Higher Education,186400,17.2,1.43
+EMP-2107,Walter,Campbell,Male,27,Gen Z (1997-2012),White,Single,Bachelor's,5,502,Hybrid,"Seattle, WA",2024-09-24,Terminated,2026-02-19,Voluntary,Relocation / Personal Reasons,102100,16.9,1.4
+EMP-2108,Pamela,Morris,Female,29,Millennials (1981-1996),Asian,Single,Master's,1,101,Hybrid,"San Francisco, CA",2021-12-17,Active,,,,76000,58.4,4.87
+EMP-2109,Ruth,Taylor,Female,39,Millennials (1981-1996),Asian,Married,Bachelor's,3,302,Remote,"Chicago, IL",2023-10-21,Active,,,,81800,36.3,3.02
+EMP-2110,Alice,Perez,Female,32,Millennials (1981-1996),Hispanic/Latino,Single,Master's,1,103,Hybrid,"San Francisco, CA",2020-08-26,Active,,,,138900,74.1,6.17
+EMP-2111,Isabella,Morales,Female,30,Millennials (1981-1996),Black/African American,Divorced,Associate's,7,702,Remote,"San Francisco, CA",2020-03-26,Active,,,,71900,79.1,6.59
+EMP-2112,Isabella,Hill,Female,29,Millennials (1981-1996),Asian,Single,Bachelor's,1,101,Hybrid,"New York, NY",2021-05-24,Active,,,,80900,65.2,5.43
+EMP-2113,Roy,Brown,Male,33,Millennials (1981-1996),White,Single,Master's,6,603,Hybrid,"San Francisco, CA",2023-05-19,Terminated,2026-01-21,Involuntary,Violation of Company Policy,134500,32.1,2.68
+EMP-2114,Kenneth,Ross,Male,44,Gen X (1965-1980),Asian,Married,Bachelor's,4,404,Hybrid,"San Francisco, CA",2024-11-09,Active,,,,175200,23.6,1.97
+EMP-2115,Susan,Murphy,Female,57,Gen X (1965-1980),Two or More Races,Divorced,Bachelor's,1,104,Hybrid,"Chicago, IL",2025-07-07,Active,,,,190400,15.7,1.31
+EMP-2116,Bryan,Collins,Male,50,Gen X (1965-1980),White,Divorced,Master's,6,603,Hybrid,"Austin, TX",2024-12-13,Active,,,,142000,22.5,1.88
+EMP-2117,Laura,White,Female,29,Millennials (1981-1996),Asian,Single,Associate's,5,501,Remote,"Seattle, WA",2022-08-16,Active,,,,63600,50.4,4.2
+EMP-2118,Brittany,Mendoza,Female,29,Millennials (1981-1996),White,Single,Bachelor's,1,101,Hybrid,"London, UK",2020-05-15,Active,,,,75200,77.5,6.46
+EMP-2119,Nathan,Diaz,Male,55,Gen X (1965-1980),Asian,Single,Bachelor's,1,104,Hybrid,"London, UK",2025-03-22,Active,,,,187900,19.3,1.6
+EMP-2120,Janice,Thompson,Female,61,Boomers (1946-1964),Asian,Married,Bachelor's,1,105,Hybrid,"Austin, TX",2025-02-15,Active,,,,246300,20.4,1.7
+EMP-2121,Kayla,Richardson,Female,28,Gen Z (1997-2012),Hispanic/Latino,Divorced,Master's,1,101,Hybrid,"Austin, TX",2023-05-16,Active,,,,73200,41.5,3.46
+EMP-2122,Marie,Roberts,Female,48,Gen X (1965-1980),White,Divorced,Bachelor's,2,203,Hybrid,"Austin, TX",2024-03-14,Active,,,,120500,31.5,2.63
+EMP-2123,Ryan,Jenkins,Male,26,Gen Z (1997-2012),White,Divorced,Bachelor's,6,601,Hybrid,"New York, NY",2022-07-18,Active,,,,72000,51.4,4.28
+EMP-2124,Shirley,Jimenez,Female,24,Gen Z (1997-2012),Black/African American,Single,Bachelor's,1,101,On-site,"Seattle, WA",2022-09-13,Active,,,,76900,49.5,4.13
+EMP-2125,Samuel,Davis,Male,36,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,7,702,Hybrid,"Austin, TX",2021-02-25,Active,,,,78700,68.1,5.67
+EMP-2126,Kimberly,Cox,Female,39,Millennials (1981-1996),Asian,Divorced,Bachelor's,1,102,Hybrid,"New York, NY",2024-11-06,Active,,,,104600,23.7,1.98
+EMP-2127,David,Kelly,Male,26,Gen Z (1997-2012),White,Divorced,Master's,3,302,Remote,"New York, NY",2023-03-01,Active,,,,85300,44.0,3.66
+EMP-2128,Brenda,Thompson,Female,23,Gen Z (1997-2012),White,Single,Master's,1,101,Hybrid,"Chicago, IL",2022-09-25,Terminated,2024-11-17,Voluntary,Work-Life Balance / Burnout,77600,25.8,2.15
+EMP-2129,Virginia,Bailey,Female,37,Millennials (1981-1996),Two or More Races,Married,Doctorate,2,202,Remote,"New York, NY",2021-02-09,Active,,,,97500,68.6,5.72
+EMP-2130,Carol,Nelson,Female,34,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,5,502,Remote,"Chicago, IL",2022-10-14,Active,,,,96200,48.5,4.04
+EMP-2131,Diane,Perez,Female,33,Millennials (1981-1996),White,Married,Bachelor's,1,102,Hybrid,"San Francisco, CA",2020-03-23,Active,,,,114400,79.2,6.6
+EMP-2132,Scott,Jones,Male,29,Millennials (1981-1996),White,Married,Master's,3,302,Hybrid,"Seattle, WA",2023-01-13,Active,,,,76300,45.5,3.79
+EMP-2133,Laura,Campbell,Female,22,Gen Z (1997-2012),White,Single,Bachelor's,4,401,Hybrid,"Austin, TX",2022-10-12,Terminated,2025-05-06,Voluntary,Better Compensation & Benefits,61700,30.8,2.57
+EMP-2134,Matthew,Allen,Male,40,Millennials (1981-1996),White,Single,Bachelor's,3,302,Remote,"Austin, TX",2024-08-18,Active,,,,78700,26.3,2.2
+EMP-2135,Diana,Rodriguez,Female,27,Gen Z (1997-2012),White,Divorced,Master's,1,101,On-site,"London, UK",2026-03-22,Active,,,,71300,7.3,0.61
+EMP-2136,Ethan,Robinson,Male,22,Gen Z (1997-2012),White,Married,Master's,1,101,Remote,"Chicago, IL",2025-04-01,Active,,,,71600,18.9,1.58
+EMP-2137,Roger,Scott,Male,29,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,1,101,Remote,"San Francisco, CA",2024-08-07,Active,,,,76100,26.7,2.23
+EMP-2138,Lisa,Mendoza,Female,25,Gen Z (1997-2012),White,Married,Master's,7,701,Remote,"New York, NY",2023-11-27,Terminated,2026-05-24,Voluntary,Relocation / Personal Reasons,54200,29.9,2.49
+EMP-2139,Billy,Hill,Male,26,Gen Z (1997-2012),White,Divorced,Master's,5,502,Hybrid,"Seattle, WA",2024-12-25,Active,,,,98000,22.1,1.84
+EMP-2140,Heather,Perry,Non-Binary,46,Gen X (1965-1980),Asian,Divorced,Bachelor's,2,203,Hybrid,"New York, NY",2020-09-22,Active,,,,124800,73.2,6.1
+EMP-2141,Linda,Moore,Female,60,Boomers (1946-1964),Hispanic/Latino,Single,Bachelor's,1,104,Hybrid,"Austin, TX",2023-05-16,Active,,,,191400,41.5,3.46
+EMP-2142,Deborah,Moore,Female,39,Millennials (1981-1996),Hispanic/Latino,Married,Master's,6,602,Hybrid,"Seattle, WA",2024-11-02,Active,,,,107100,23.9,1.99
+EMP-2143,Zachary,Gomez,Male,40,Millennials (1981-1996),White,Married,Bachelor's,2,202,Hybrid,"New York, NY",2024-12-08,Active,,,,81000,22.7,1.89
+EMP-2144,Madison,Roberts,Female,24,Gen Z (1997-2012),White,Single,Doctorate,1,101,Hybrid,"Austin, TX",2024-02-23,Active,,,,78000,32.2,2.68
+EMP-2145,Randy,King,Male,50,Gen X (1965-1980),Asian,Single,Doctorate,4,403,On-site,"London, UK",2024-03-03,Active,,,,131200,31.9,2.66
+EMP-2146,Eric,Rodriguez,Male,38,Millennials (1981-1996),Two or More Races,Single,Master's,5,503,Hybrid,"Austin, TX",2021-08-27,Active,,,,138500,62.1,5.17
+EMP-2147,Jason,King,Male,27,Gen Z (1997-2012),Hispanic/Latino,Single,Associate's,1,101,Hybrid,"New York, NY",2023-02-15,Active,,,,76800,44.4,3.7
+EMP-2148,John,Murphy,Male,26,Gen Z (1997-2012),White,Single,Master's,1,101,Remote,"San Francisco, CA",2021-01-13,Terminated,2022-08-16,Voluntary,Company Culture / Leadership,74600,19.1,1.59
+EMP-2149,Joseph,Carter,Male,47,Gen X (1965-1980),Hispanic/Latino,Divorced,Bachelor's,4,404,Remote,"New York, NY",2023-04-11,Active,,,,183900,42.6,3.55
+EMP-2150,Christina,Anderson,Female,44,Gen X (1965-1980),White,Divorced,Bachelor's,5,503,Remote,"San Francisco, CA",2025-03-17,Active,,,,133900,19.4,1.62
+EMP-2151,Isabella,Bennett,Female,27,Gen Z (1997-2012),Asian,Single,Master's,6,602,Remote,"Chicago, IL",2020-01-26,Active,,,,106800,81.1,6.76
+EMP-2152,Melissa,Lewis,Female,61,Boomers (1946-1964),Hispanic/Latino,Single,Bachelor's,2,204,Hybrid,"Austin, TX",2020-09-06,Active,,,,171100,73.7,6.14
+EMP-2153,William,Thomas,Male,38,Millennials (1981-1996),Asian,Single,Bachelor's,7,702,Remote,"San Francisco, CA",2020-10-12,Terminated,2022-02-09,Voluntary,Work-Life Balance / Burnout,69900,15.9,1.33
+EMP-2154,Kyle,Alvarez,Male,27,Gen Z (1997-2012),Two or More Races,Divorced,Doctorate,2,201,Hybrid,"San Francisco, CA",2021-03-22,Active,,,,61100,67.3,5.6
+EMP-2155,Dorothy,Ward,Female,23,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Remote,"New York, NY",2020-03-24,Active,,,,75700,79.2,6.6
+EMP-2156,Brandon,Hill,Male,38,Millennials (1981-1996),Black/African American,Single,Bachelor's,5,502,Hybrid,"London, UK",2021-08-11,Active,,,,102700,62.6,5.22
+EMP-2157,Janice,Gutierrez,Female,38,Millennials (1981-1996),Asian,Married,Bachelor's,1,102,Hybrid,"San Francisco, CA",2023-04-01,Active,,,,108700,42.9,3.58
+EMP-2158,Stephanie,Coleman,Female,27,Gen Z (1997-2012),White,Divorced,Bachelor's,1,101,Hybrid,"New York, NY",2021-03-26,Terminated,2022-05-02,Voluntary,Company Culture / Leadership,79900,13.2,1.1
+EMP-2159,Samantha,Bell,Female,31,Millennials (1981-1996),Hispanic/Latino,Single,Bachelor's,1,102,Hybrid,"Chicago, IL",2024-06-17,Active,,,,108300,28.4,2.37
+EMP-2160,Alice,Thompson,Female,30,Millennials (1981-1996),Asian,Married,Bachelor's,4,402,Remote,"San Francisco, CA",2025-09-19,Active,,,,88000,13.3,1.11
+EMP-2161,Angela,Harris,Female,35,Millennials (1981-1996),White,Single,Bachelor's,6,602,Remote,"Chicago, IL",2025-03-09,Active,,,,117300,19.7,1.64
+EMP-2162,Bobby,Thompson,Male,38,Millennials (1981-1996),Black/African American,Married,Master's,7,702,Remote,"New York, NY",2020-12-10,Active,,,,74400,70.6,5.88
+EMP-2163,Amanda,Sanders,Female,54,Gen X (1965-1980),White,Divorced,Doctorate,1,104,On-site,"Austin, TX",2020-04-14,Active,,,,197400,78.5,6.54
+EMP-2164,Hannah,Collins,Female,27,Gen Z (1997-2012),Two or More Races,Married,Bachelor's,2,202,Hybrid,"Austin, TX",2022-11-03,Terminated,2023-05-28,Voluntary,Better Compensation & Benefits,100200,6.8,0.56
+EMP-2165,Harold,Phillips,Male,28,Gen Z (1997-2012),White,Single,Bachelor's,4,401,Hybrid,"Chicago, IL",2024-05-28,Active,,,,52700,29.0,2.42
+EMP-2166,Roger,Myers,Male,30,Millennials (1981-1996),Hispanic/Latino,Single,Associate's,1,102,Remote,"New York, NY",2022-06-14,Active,,,,104800,52.5,4.38
+EMP-2167,Laura,Bell,Female,39,Millennials (1981-1996),White,Married,Bachelor's,6,602,Hybrid,"New York, NY",2022-11-05,Active,,,,103400,47.8,3.98
+EMP-2168,Kelly,Adams,Female,30,Millennials (1981-1996),White,Divorced,Master's,4,402,Hybrid,"Austin, TX",2024-09-07,Active,,,,72500,25.7,2.14
+EMP-2169,Diana,Ortiz,Female,28,Gen Z (1997-2012),Two or More Races,Married,Master's,7,702,On-site,"Austin, TX",2020-09-15,Active,,,,75500,73.4,6.12
+EMP-2170,Amanda,Perry,Female,46,Gen X (1965-1980),White,Married,Bachelor's,3,304,Hybrid,"San Francisco, CA",2020-12-27,Active,,,,180500,70.0,5.84
+EMP-2171,Amber,Hall,Female,43,Millennials (1981-1996),White,Divorced,Associate's,5,503,Remote,"Chicago, IL",2025-03-25,Active,,,,139700,19.2,1.6
+EMP-2172,Jean,Martinez,Female,29,Millennials (1981-1996),White,Single,Bachelor's,4,402,Hybrid,"Austin, TX",2020-01-15,Active,,,,80000,81.4,6.79
+EMP-2173,Kathleen,Rivera,Female,36,Millennials (1981-1996),Asian,Married,Master's,7,702,Remote,"Austin, TX",2025-08-12,Active,,,,73900,14.6,1.21
+EMP-2174,Willie,Torres,Male,24,Gen Z (1997-2012),White,Single,Bachelor's,5,501,Hybrid,"New York, NY",2022-10-02,Active,,,,64000,48.9,4.07
+EMP-2175,Randy,Gonzalez,Male,49,Gen X (1965-1980),Asian,Single,Master's,2,204,Remote,"Chicago, IL",2025-02-20,Active,,,,182600,20.2,1.69
+EMP-2176,Beverly,Alvarez,Female,28,Gen Z (1997-2012),Hispanic/Latino,Divorced,Master's,3,302,Hybrid,"San Francisco, CA",2021-02-04,Terminated,2022-09-22,Voluntary,Better Compensation & Benefits,86500,19.5,1.63
+EMP-2177,Ryan,Lopez,Male,23,Gen Z (1997-2012),White,Married,Doctorate,1,101,On-site,"Chicago, IL",2021-04-09,Active,,,,76900,66.7,5.56
+EMP-2178,Brittany,Kim,Female,56,Gen X (1965-1980),White,Single,Master's,1,104,Hybrid,"San Francisco, CA",2022-07-15,Active,,,,190700,51.5,4.29
+EMP-2179,Kevin,Richardson,Male,39,Millennials (1981-1996),Black/African American,Single,Bachelor's,6,603,On-site,"New York, NY",2022-09-10,Active,,,,140700,49.6,4.13
+EMP-2180,Roy,Hall,Male,41,Millennials (1981-1996),Asian,Married,Master's,3,304,Remote,"New York, NY",2022-11-15,Active,,,,180600,47.4,3.95
+EMP-2181,Bradley,Sanders,Male,27,Gen Z (1997-2012),Black/African American,Married,Bachelor's,5,502,Hybrid,"Chicago, IL",2020-03-07,Terminated,2022-08-18,Voluntary,Better Compensation & Benefits,96800,29.4,2.45
+EMP-2182,Logan,James,Non-Binary,59,Gen X (1965-1980),White,Married,Master's,2,205,On-site,"London, UK",2023-12-09,Active,,,,242000,34.7,2.89
+EMP-2183,Abigail,Cook,Female,49,Gen X (1965-1980),White,Divorced,Bachelor's,4,403,Remote,"Austin, TX",2021-01-28,Active,,,,118300,69.0,5.75
+EMP-2184,Christina,Wright,Female,25,Gen Z (1997-2012),Black/African American,Married,Bachelor's,6,601,On-site,"Chicago, IL",2023-09-15,Active,,,,68100,37.5,3.12
+EMP-2185,Janet,Peterson,Female,22,Gen Z (1997-2012),Black/African American,Single,Associate's,1,101,Remote,"London, UK",2020-07-21,Active,,,,75300,75.3,6.27
+EMP-2186,Beverly,Lewis,Female,33,Millennials (1981-1996),White,Divorced,Bachelor's,2,202,Remote,"Seattle, WA",2022-09-18,Active,,,,79400,49.3,4.11
+EMP-2187,Alan,Roberts,Male,39,Millennials (1981-1996),Asian,Single,Master's,6,604,Hybrid,"New York, NY",2026-02-15,Active,,,,206200,8.4,0.7
+EMP-2188,Bradley,Lewis,Male,23,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Remote,"San Francisco, CA",2024-05-11,Active,,,,64000,29.6,2.47
+EMP-2189,Ethan,Chavez,Male,34,Millennials (1981-1996),White,Divorced,Bachelor's,2,203,Hybrid,"San Francisco, CA",2022-07-26,Active,,,,141300,51.1,4.26
+EMP-2190,Cynthia,Ramos,Female,39,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,2,202,Hybrid,"Seattle, WA",2021-12-25,Active,,,,77900,58.1,4.84
+EMP-2191,Alan,Sullivan,Male,31,Millennials (1981-1996),Hispanic/Latino,Divorced,Bachelor's,1,102,Hybrid,"San Francisco, CA",2023-11-13,Active,,,,101100,35.5,2.96
+EMP-2192,Doris,Garcia,Female,50,Gen X (1965-1980),White,Divorced,Doctorate,2,204,Hybrid,"Chicago, IL",2024-07-19,Active,,,,189800,27.3,2.28
+EMP-2193,Jessica,Lopez,Non-Binary,32,Millennials (1981-1996),Asian,Single,Master's,5,503,Hybrid,"San Francisco, CA",2024-12-13,Active,,,,140500,22.5,1.88
+EMP-2194,Samuel,King,Male,24,Gen Z (1997-2012),Asian,Single,Master's,2,201,Remote,"Austin, TX",2023-02-08,Active,,,,57400,44.6,3.72
+EMP-2195,Brandon,Rivera,Male,23,Gen Z (1997-2012),Asian,Married,Master's,1,101,On-site,"London, UK",2022-12-07,Active,,,,77500,46.7,3.89
+EMP-2196,Eric,Patel,Male,24,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,2,201,Remote,"Seattle, WA",2021-09-11,Terminated,2024-05-30,Voluntary,Work-Life Balance / Burnout,55900,32.6,2.72
+EMP-2197,Bobby,Martin,Male,23,Gen Z (1997-2012),Asian,Single,Bachelor's,1,101,Hybrid,"Austin, TX",2023-10-19,Terminated,2025-06-28,Voluntary,Company Culture / Leadership,80800,20.3,1.69
+EMP-2198,Grace,Bell,Non-Binary,33,Millennials (1981-1996),White,Married,Bachelor's,3,302,Hybrid,"New York, NY",2021-03-07,Active,,,,83000,67.7,5.65
+EMP-2199,Ronald,Wood,Male,37,Millennials (1981-1996),White,Single,Bachelor's,5,503,Hybrid,"San Francisco, CA",2020-08-12,Active,,,,137700,74.5,6.21
+EMP-2200,Sharon,Perry,Female,31,Millennials (1981-1996),Asian,Single,Associate's,2,203,Hybrid,"Austin, TX",2023-01-08,Active,,,,127700,45.7,3.81
+EMP-2201,Denise,Miller,Female,41,Millennials (1981-1996),Two or More Races,Single,Bachelor's,1,103,Hybrid,"New York, NY",2020-12-26,Active,,,,148400,70.1,5.84
+EMP-2202,Cynthia,Reyes,Non-Binary,30,Millennials (1981-1996),Black/African American,Divorced,Associate's,2,202,Hybrid,"San Francisco, CA",2024-10-07,Active,,,,79100,24.7,2.06
+EMP-2203,Daniel,Ramirez,Male,25,Gen Z (1997-2012),White,Single,Master's,2,201,Hybrid,"London, UK",2025-08-15,Active,,,,61200,14.5,1.2
+EMP-2204,Vincent,Turner,Male,52,Gen X (1965-1980),White,Married,Bachelor's,7,703,Remote,"Austin, TX",2025-11-07,Active,,,,94100,11.7,0.97
+EMP-2205,Roy,Kelly,Male,25,Gen Z (1997-2012),Asian,Single,Doctorate,2,201,Remote,"New York, NY",2021-01-17,Active,,,,56900,69.4,5.78
+EMP-2206,Sean,Peterson,Male,49,Gen X (1965-1980),White,Divorced,Master's,6,603,Hybrid,"San Francisco, CA",2025-04-21,Terminated,2025-12-07,Voluntary,Relocation / Personal Reasons,157100,7.6,0.63
+EMP-2207,Melissa,Martin,Female,38,Millennials (1981-1996),White,Divorced,Associate's,1,103,Hybrid,"Austin, TX",2025-08-18,Active,,,,143800,14.4,1.2
+EMP-2208,Charlotte,Patel,Female,38,Millennials (1981-1996),Black/African American,Single,Bachelor's,3,302,Remote,"Chicago, IL",2020-07-27,Terminated,2021-02-26,Voluntary,Work-Life Balance / Burnout,77600,7.0,0.59
+EMP-2209,Betty,Mitchell,Female,41,Millennials (1981-1996),Asian,Divorced,Bachelor's,6,604,Hybrid,"San Francisco, CA",2025-12-24,Active,,,,211100,10.2,0.85
+EMP-2210,Melissa,Murphy,Female,24,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Remote,"Seattle, WA",2020-12-25,Active,,,,71400,70.1,5.84
+EMP-2211,Lori,Mitchell,Female,49,Gen X (1965-1980),Two or More Races,Divorced,Master's,1,103,On-site,"New York, NY",2024-01-24,Active,,,,146100,33.1,2.76
+EMP-2212,Carl,Parker,Male,40,Millennials (1981-1996),Hispanic/Latino,Divorced,Master's,6,602,Hybrid,"Seattle, WA",2021-12-12,Active,,,,116700,58.5,4.88
+EMP-2213,Timothy,Clark,Male,43,Millennials (1981-1996),Black/African American,Single,Associate's,1,105,Remote,"San Francisco, CA",2023-07-09,Active,,,,268200,39.7,3.31
+EMP-2214,Justin,Howard,Male,24,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Remote,"New York, NY",2023-08-28,Active,,,,57600,38.0,3.17
+EMP-2215,Lisa,Parker,Female,27,Gen Z (1997-2012),White,Single,Doctorate,7,701,Hybrid,"San Francisco, CA",2025-05-27,Terminated,2026-08-16,Voluntary,Relocation / Personal Reasons,58100,14.7,1.22
+EMP-2216,Kyle,King,Male,27,Gen Z (1997-2012),Hispanic/Latino,Divorced,Doctorate,4,402,Hybrid,"London, UK",2022-06-15,Active,,,,87000,52.5,4.37
+EMP-2217,Rebecca,Nelson,Female,34,Millennials (1981-1996),White,Married,Master's,7,703,Hybrid,"Austin, TX",2023-09-21,Active,,,,104000,37.3,3.1
+EMP-2218,Elijah,Harris,Male,44,Gen X (1965-1980),White,Divorced,Bachelor's,2,203,Hybrid,"Austin, TX",2024-08-21,Active,,,,134400,26.3,2.19
+EMP-2219,Charles,Bailey,Male,38,Millennials (1981-1996),White,Single,High School Diploma,1,102,Hybrid,"New York, NY",2022-07-16,Active,,,,98600,51.4,4.29
+EMP-2220,Alexis,Ramos,Female,39,Millennials (1981-1996),White,Divorced,Master's,1,102,Hybrid,"Chicago, IL",2021-11-10,Active,,,,106900,59.6,4.97
+EMP-2221,Gary,Mitchell,Male,24,Gen Z (1997-2012),White,Married,High School Diploma,7,701,Remote,"San Francisco, CA",2021-09-14,Terminated,2023-10-26,Voluntary,Work-Life Balance / Burnout,48500,25.4,2.11
+EMP-2222,Gregory,Sullivan,Male,27,Gen Z (1997-2012),Two or More Races,Divorced,Associate's,3,301,Hybrid,"London, UK",2020-06-21,Active,,,,57400,76.3,6.35
+EMP-2223,Jonathan,Roberts,Male,53,Gen X (1965-1980),White,Single,Master's,2,204,Remote,"Austin, TX",2026-04-07,Active,,,,175200,6.7,0.56
+EMP-2224,Hannah,James,Female,39,Millennials (1981-1996),White,Divorced,Master's,2,202,Hybrid,"New York, NY",2024-06-09,Active,,,,82500,28.6,2.39
+EMP-2225,Natalie,Lewis,Female,27,Gen Z (1997-2012),Hispanic/Latino,Single,Bachelor's,7,701,Hybrid,"Chicago, IL",2026-03-06,Active,,,,57400,7.8,0.65
+EMP-2226,Austin,Chavez,Male,42,Millennials (1981-1996),White,Divorced,Doctorate,7,703,Hybrid,"New York, NY",2020-12-13,Active,,,,97300,70.5,5.88
+EMP-2227,Adam,Thompson,Male,40,Millennials (1981-1996),Black/African American,Divorced,Bachelor's,6,602,On-site,"Chicago, IL",2024-08-18,Active,,,,121200,26.3,2.2
+EMP-2228,Austin,Clark,Male,32,Millennials (1981-1996),Black/African American,Divorced,Master's,4,402,Remote,"London, UK",2023-09-05,Terminated,2025-03-04,Voluntary,Career Advancement / Growth,77600,17.9,1.49
+EMP-2229,Virginia,Cruz,Female,25,Gen Z (1997-2012),White,Single,Bachelor's,2,201,Hybrid,"Seattle, WA",2022-11-24,Terminated,2023-08-09,Voluntary,Pursuing Higher Education,64200,8.5,0.71
+EMP-2230,Gloria,Patel,Female,30,Millennials (1981-1996),Asian,Divorced,Bachelor's,3,302,Hybrid,"Austin, TX",2024-09-10,Active,,,,86000,25.6,2.13
+EMP-2231,Nicole,Miller,Female,30,Millennials (1981-1996),White,Single,Master's,3,302,Remote,"Seattle, WA",2020-05-05,Active,,,,83100,77.8,6.48
+EMP-2232,Vincent,Campbell,Male,45,Gen X (1965-1980),Black/African American,Married,Doctorate,2,205,Hybrid,"Seattle, WA",2024-08-18,Active,,,,251800,26.3,2.2
+EMP-2233,Rebecca,Reyes,Female,29,Millennials (1981-1996),White,Single,Bachelor's,2,201,On-site,"New York, NY",2024-01-02,Terminated,2026-02-01,Voluntary,Work-Life Balance / Burnout,57300,25.0,2.08
+EMP-2234,Brenda,Stewart,Female,24,Gen Z (1997-2012),White,Single,Bachelor's,1,101,Hybrid,"San Francisco, CA",2025-03-20,Active,,,,76500,19.3,1.61
+EMP-2235,Sarah,Harris,Female,43,Millennials (1981-1996),Hispanic/Latino,Married,Bachelor's,5,504,Remote,"London, UK",2023-09-28,Active,,,,217100,37.0,3.09
+EMP-2236,Evelyn,Jones,Female,26,Gen Z (1997-2012),Asian,Divorced,Associate's,5,501,Hybrid,"New York, NY",2023-02-16,Active,,,,65200,44.4,3.7
+EMP-2237,Eugene,Jackson,Male,34,Millennials (1981-1996),White,Divorced,Doctorate,7,702,Hybrid,"Chicago, IL",2023-01-17,Terminated,2025-09-15,Voluntary,Company Culture / Leadership,74600,31.9,2.66
+EMP-2238,Charles,Williams,Male,23,Gen Z (1997-2012),Asian,Single,Bachelor's,4,401,Remote,"Seattle, WA",2021-02-15,Active,,,,65300,68.4,5.7
+EMP-2239,Alan,Gonzalez,Male,46,Gen X (1965-1980),White,Divorced,Master's,2,204,Hybrid,"Chicago, IL",2021-03-06,Active,,,,165100,67.8,5.65
+EMP-2240,Donald,White,Male,22,Gen Z (1997-2012),Asian,Single,Bachelor's,7,701,On-site,"Seattle, WA",2025-02-21,Active,,,,54000,20.2,1.68
+EMP-2241,Maria,Watson,Female,40,Millennials (1981-1996),Black/African American,Divorced,Doctorate,1,105,Hybrid,"London, UK",2022-03-27,Active,,,,240000,55.1,4.59
+EMP-2242,Joseph,Rivera,Male,25,Gen Z (1997-2012),Black/African American,Married,Master's,1,101,Hybrid,"San Francisco, CA",2024-10-28,Active,,,,74500,24.0,2.0
+EMP-2243,Joan,Clark,Female,29,Millennials (1981-1996),Asian,Divorced,Bachelor's,7,702,Hybrid,"London, UK",2024-08-18,Active,,,,66800,26.3,2.2
+EMP-2244,Beverly,Ward,Female,48,Gen X (1965-1980),Black/African American,Divorced,Associate's,4,404,Remote,"Austin, TX",2021-08-16,Active,,,,166300,62.4,5.2
+EMP-2245,Roy,Lee,Male,38,Millennials (1981-1996),Asian,Married,Bachelor's,6,602,Hybrid,"Austin, TX",2024-05-04,Active,,,,118100,29.8,2.49
+EMP-2246,Amanda,Clark,Female,40,Millennials (1981-1996),Hispanic/Latino,Married,Master's,1,103,Hybrid,"New York, NY",2022-04-27,Terminated,2023-04-14,Voluntary,Career Advancement / Growth,142800,11.6,0.96
+EMP-2247,Dorothy,Miller,Female,62,Boomers (1946-1964),White,Married,Bachelor's,2,204,Remote,"San Francisco, CA",2024-02-24,Terminated,2024-06-09,Voluntary,Company Culture / Leadership,179700,3.5,0.29
+EMP-2248,Joe,Alvarez,Male,28,Gen Z (1997-2012),Black/African American,Single,Master's,3,302,Hybrid,"New York, NY",2020-11-18,Active,,,,78700,71.3,5.94
+EMP-2249,Daniel,Davis,Male,33,Millennials (1981-1996),White,Married,Bachelor's,2,202,Hybrid,"Chicago, IL",2023-04-27,Active,,,,85200,42.1,3.51
+EMP-2250,Kelly,Anderson,Female,30,Millennials (1981-1996),White,Married,Master's,4,402,Hybrid,"London, UK",2022-05-02,Active,,,,76800,53.9,4.49

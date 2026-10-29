@@ -1,0 +1,8 @@
+DepartmentID,DepartmentName,Division,CostCenter,DepartmentHead
+1,Engineering,Technology,CC-ENG-100,Dr. Sarah Chen
+2,Sales,Commercial,CC-SLS-200,Marcus Vance
+3,Marketing,Commercial,CC-MKT-300,Elena Rostova
+4,Human Resources,Corporate Services,CC-HR-400,Patricia Gomez
+5,Finance & Accounting,Corporate Services,CC-FIN-500,David Kim
+6,Product & Design,Technology,CC-PRD-600,Amina Al-Mansoor
+7,Customer Support,Operations,CC-SUP-700,Brian O'Connor
